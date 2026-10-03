@@ -1,0 +1,7 @@
+{
+  "$ref": "#/definitions/Stage 09: Aggregation & Final Report",
+  "definitions": {
+    "Stage 09: Aggregation & Final Report": {}
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}
