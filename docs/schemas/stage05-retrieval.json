@@ -1,7 +1,118 @@
 {
-  "$ref": "#/definitions/Stage 05: Retrieval Output",
-  "definitions": {
-    "Stage 05: Retrieval Output": {}
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "contexts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "clauseId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "checklistItemId": {
+            "type": "string"
+          },
+          "retrievedUnits": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "unitType": {
+                  "type": "string",
+                  "enum": [
+                    "statute",
+                    "uokik_clause",
+                    "court_ruling",
+                    "official_guidance"
+                  ]
+                },
+                "actTitle": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "publicationAddress": {
+                  "type": "string"
+                },
+                "editorialUnit": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "content": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "sourceUrl": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "legalStateDate": {
+                  "type": "string"
+                },
+                "contentHashSha256": {
+                  "type": "string",
+                  "minLength": 64,
+                  "maxLength": 64
+                },
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "active",
+                    "repealed",
+                    "amended"
+                  ]
+                },
+                "relevanceScore": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                }
+              },
+              "required": [
+                "id",
+                "unitType",
+                "actTitle",
+                "editorialUnit",
+                "content",
+                "sourceUrl",
+                "legalStateDate",
+                "contentHashSha256",
+                "status"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "clauseId",
+          "retrievedUnits"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "allRetrievedUnitIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "missingRequiredSources": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
   },
-  "$schema": "http://json-schema.org/draft-07/schema#"
+  "required": [
+    "contexts",
+    "allRetrievedUnitIds",
+    "missingRequiredSources"
+  ],
+  "additionalProperties": false
 }

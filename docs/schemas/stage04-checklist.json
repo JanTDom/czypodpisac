@@ -1,7 +1,85 @@
 {
-  "$ref": "#/definitions/Stage 04: Checklist Output",
-  "definitions": {
-    "Stage 04: Checklist Output": {}
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "contractType": {
+      "type": "string",
+      "enum": [
+        "najem_lokalu_mieszkalnego",
+        "najem_okazjonalny",
+        "najem_instytucjonalny",
+        "najem_lokalu_uzytkowego",
+        "umowa_o_prace",
+        "b2b_uslugi_freelancer",
+        "zlecenie",
+        "dzielo",
+        "umowa_deweloperska",
+        "kredyt_konsumencki",
+        "leasing_konsumencki",
+        "owu_ubezpieczenie",
+        "telekomunikacyjna",
+        "inna_nieznana"
+      ]
+    },
+    "totalItemsChecked": {
+      "type": "integer",
+      "exclusiveMinimum": 0,
+      "maximum": 9007199254740991
+    },
+    "matches": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "checklistItemId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "matchedClauseIds": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "isMissing": {
+            "type": "boolean"
+          },
+          "missingRiskSeverity": {
+            "default": "none",
+            "type": "string",
+            "enum": [
+              "red",
+              "yellow",
+              "none"
+            ]
+          },
+          "notes": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "checklistItemId",
+          "matchedClauseIds",
+          "isMissing",
+          "missingRiskSeverity"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "unmatchedClauseIds": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
   },
-  "$schema": "http://json-schema.org/draft-07/schema#"
+  "required": [
+    "contractType",
+    "totalItemsChecked",
+    "matches",
+    "unmatchedClauseIds"
+  ],
+  "additionalProperties": false
 }

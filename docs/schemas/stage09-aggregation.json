@@ -1,7 +1,562 @@
 {
-  "$ref": "#/definitions/Stage 09: Aggregation & Final Report",
-  "definitions": {
-    "Stage 09: Aggregation & Final Report": {}
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "analysisId": {
+      "type": "string",
+      "format": "uuid",
+      "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+    },
+    "contractType": {
+      "type": "string",
+      "enum": [
+        "najem_lokalu_mieszkalnego",
+        "najem_okazjonalny",
+        "najem_instytucjonalny",
+        "najem_lokalu_uzytkowego",
+        "umowa_o_prace",
+        "b2b_uslugi_freelancer",
+        "zlecenie",
+        "dzielo",
+        "umowa_deweloperska",
+        "kredyt_konsumencki",
+        "leasing_konsumencki",
+        "owu_ubezpieczenie",
+        "telekomunikacyjna",
+        "inna_nieznana"
+      ]
+    },
+    "userRole": {
+      "type": "string",
+      "enum": [
+        "najemca",
+        "wynajmujacy",
+        "zamawiajacy",
+        "wykonawca",
+        "pracownik",
+        "pracodawca",
+        "nabywca",
+        "deweloper",
+        "klient"
+      ]
+    },
+    "partyStatus": {
+      "type": "string",
+      "enum": [
+        "consumer",
+        "consumer_entrepreneur",
+        "business"
+      ]
+    },
+    "verdictOneSentence": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 180
+    },
+    "counts": {
+      "type": "object",
+      "properties": {
+        "red": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "yellow": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "missing": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "green": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        }
+      },
+      "required": [
+        "red",
+        "yellow",
+        "missing",
+        "green"
+      ],
+      "additionalProperties": false
+    },
+    "totalRiskAmount": {
+      "type": "number",
+      "minimum": 0
+    },
+    "totalRiskAssumptions": {
+      "type": "string"
+    },
+    "recommendedAction": {
+      "type": "string",
+      "enum": [
+        "mozesz_podpisac",
+        "popros_o_zmiany",
+        "negocjuj",
+        "skonsultuj_z_prawnikiem"
+      ]
+    },
+    "findings": {
+      "type": "object",
+      "properties": {
+        "red": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "format": "uuid",
+                "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+              },
+              "clauseId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "checklistItemId": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "verified",
+                  "needs_verification",
+                  "rejected"
+                ]
+              },
+              "ocena": {
+                "type": "string",
+                "enum": [
+                  "czerwony",
+                  "żółty",
+                  "zielony"
+                ]
+              },
+              "tytulPoLudzku": {
+                "type": "string"
+              },
+              "doslownyCytatZUmowy": {
+                "type": "string"
+              },
+              "cytatZweryfikowany": {
+                "type": "boolean"
+              },
+              "uzasadnienie": {
+                "type": "string"
+              },
+              "zweryfikowaneZrodlaIds": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "odrzuconeZrodlaIds": {
+                "default": [],
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "pewnosc": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "geminiVerifierVerdict": {
+                "type": "string",
+                "enum": [
+                  "popiera",
+                  "nie_popiera",
+                  "niepewne"
+                ]
+              },
+              "kwotaRyzyka": {
+                "type": "number",
+                "minimum": 0
+              },
+              "zalozeniaKwoty": {
+                "type": "string"
+              },
+              "powodOdrzuceniaLubNiepewnosci": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "clauseId",
+              "status",
+              "ocena",
+              "tytulPoLudzku",
+              "doslownyCytatZUmowy",
+              "cytatZweryfikowany",
+              "uzasadnienie",
+              "zweryfikowaneZrodlaIds",
+              "odrzuconeZrodlaIds",
+              "pewnosc"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "yellow": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "format": "uuid",
+                "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+              },
+              "clauseId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "checklistItemId": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "verified",
+                  "needs_verification",
+                  "rejected"
+                ]
+              },
+              "ocena": {
+                "type": "string",
+                "enum": [
+                  "czerwony",
+                  "żółty",
+                  "zielony"
+                ]
+              },
+              "tytulPoLudzku": {
+                "type": "string"
+              },
+              "doslownyCytatZUmowy": {
+                "type": "string"
+              },
+              "cytatZweryfikowany": {
+                "type": "boolean"
+              },
+              "uzasadnienie": {
+                "type": "string"
+              },
+              "zweryfikowaneZrodlaIds": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "odrzuconeZrodlaIds": {
+                "default": [],
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "pewnosc": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "geminiVerifierVerdict": {
+                "type": "string",
+                "enum": [
+                  "popiera",
+                  "nie_popiera",
+                  "niepewne"
+                ]
+              },
+              "kwotaRyzyka": {
+                "type": "number",
+                "minimum": 0
+              },
+              "zalozeniaKwoty": {
+                "type": "string"
+              },
+              "powodOdrzuceniaLubNiepewnosci": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "clauseId",
+              "status",
+              "ocena",
+              "tytulPoLudzku",
+              "doslownyCytatZUmowy",
+              "cytatZweryfikowany",
+              "uzasadnienie",
+              "zweryfikowaneZrodlaIds",
+              "odrzuconeZrodlaIds",
+              "pewnosc"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "missing": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "format": "uuid",
+                "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+              },
+              "checklistItemId": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string",
+                "minLength": 5
+              },
+              "severity": {
+                "type": "string",
+                "enum": [
+                  "czerwony",
+                  "żółty"
+                ]
+              },
+              "whyImportant": {
+                "type": "string",
+                "minLength": 10
+              },
+              "recommendedClauseText": {
+                "type": "string",
+                "minLength": 10
+              },
+              "sourceIds": {
+                "default": [],
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "id",
+              "checklistItemId",
+              "title",
+              "severity",
+              "whyImportant",
+              "recommendedClauseText",
+              "sourceIds"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "green": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "format": "uuid",
+                "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+              },
+              "clauseId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "checklistItemId": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "verified",
+                  "needs_verification",
+                  "rejected"
+                ]
+              },
+              "ocena": {
+                "type": "string",
+                "enum": [
+                  "czerwony",
+                  "żółty",
+                  "zielony"
+                ]
+              },
+              "tytulPoLudzku": {
+                "type": "string"
+              },
+              "doslownyCytatZUmowy": {
+                "type": "string"
+              },
+              "cytatZweryfikowany": {
+                "type": "boolean"
+              },
+              "uzasadnienie": {
+                "type": "string"
+              },
+              "zweryfikowaneZrodlaIds": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "odrzuconeZrodlaIds": {
+                "default": [],
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "pewnosc": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "geminiVerifierVerdict": {
+                "type": "string",
+                "enum": [
+                  "popiera",
+                  "nie_popiera",
+                  "niepewne"
+                ]
+              },
+              "kwotaRyzyka": {
+                "type": "number",
+                "minimum": 0
+              },
+              "zalozeniaKwoty": {
+                "type": "string"
+              },
+              "powodOdrzuceniaLubNiepewnosci": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "clauseId",
+              "status",
+              "ocena",
+              "tytulPoLudzku",
+              "doslownyCytatZUmowy",
+              "cytatZweryfikowany",
+              "uzasadnienie",
+              "zweryfikowaneZrodlaIds",
+              "odrzuconeZrodlaIds",
+              "pewnosc"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "red",
+        "yellow",
+        "missing",
+        "green"
+      ],
+      "additionalProperties": false
+    },
+    "benchmarks": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "paramKey": {
+            "type": "string",
+            "minLength": 1
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "contractValue": {
+            "type": [
+              "number",
+              "string"
+            ]
+          },
+          "marketMedianValue": {
+            "type": [
+              "number",
+              "string"
+            ]
+          },
+          "sampleSize": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "hasSufficientSample": {
+            "type": "boolean"
+          },
+          "classification": {
+            "type": "string",
+            "enum": [
+              "standard_rynkowy",
+              "odbiega_od_normy",
+              "skrajny",
+              "brak_danych"
+            ]
+          },
+          "explanation": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "paramKey",
+          "label",
+          "contractValue",
+          "sampleSize",
+          "hasSufficientSample",
+          "classification",
+          "explanation"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "aiGeneratedDisclaimer": {
+          "type": "string",
+          "const": "Niniejsza analiza została wygenerowana przy użyciu systemu sztucznej inteligencji czypodpisac.pl i ma charakter informacyjny. Nie stanowi pomocy prawnej w rozumieniu ustawy o radcach prawnych."
+        },
+        "analyzedAt": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?(?:Z))$"
+        },
+        "legalKbVersion": {
+          "type": "string"
+        },
+        "checklistVersion": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "aiGeneratedDisclaimer",
+        "analyzedAt",
+        "legalKbVersion",
+        "checklistVersion"
+      ],
+      "additionalProperties": false
+    }
   },
-  "$schema": "http://json-schema.org/draft-07/schema#"
+  "required": [
+    "analysisId",
+    "contractType",
+    "userRole",
+    "partyStatus",
+    "verdictOneSentence",
+    "counts",
+    "recommendedAction",
+    "findings",
+    "benchmarks",
+    "meta"
+  ],
+  "additionalProperties": false
 }

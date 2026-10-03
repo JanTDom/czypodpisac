@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "werdykt": {
+      "type": "string",
+      "enum": [
+        "popiera",
+        "nie_popiera",
+        "niepewne"
+      ]
+    },
+    "uzasadnienie": {
+      "type": "string",
+      "minLength": 5
+    },
+    "popierajaceZrodlaIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "watpliwosci": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "werdykt",
+    "uzasadnienie",
+    "popierajaceZrodlaIds"
+  ],
+  "additionalProperties": false
+}

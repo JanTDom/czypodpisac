@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "clauseId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "checklistItemId": {
+      "type": "string"
+    },
+    "ocena": {
+      "type": "string",
+      "enum": [
+        "czerwony",
+        "żółty",
+        "zielony"
+      ]
+    },
+    "tytulPoLudzku": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 120
+    },
+    "doslownyCytatZUmowy": {
+      "type": "string",
+      "minLength": 1
+    },
+    "uzasadnienie": {
+      "type": "string",
+      "minLength": 10
+    },
+    "zrodlaIds": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "pewnosc": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "kwotaRyzyka": {
+      "type": "number",
+      "minimum": 0
+    },
+    "zalozeniaKwoty": {
+      "type": "string"
+    },
+    "propozycjaZmianyKierunek": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "clauseId",
+    "ocena",
+    "tytulPoLudzku",
+    "doslownyCytatZUmowy",
+    "uzasadnienie",
+    "zrodlaIds",
+    "pewnosc"
+  ],
+  "additionalProperties": false
+}

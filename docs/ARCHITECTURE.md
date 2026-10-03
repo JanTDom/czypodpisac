@@ -1,20 +1,23 @@
-# Architektura Umowa.check
+# Architektura czypodpisac.pl
 
-## 1. Przegląd systemu i misja
+## 1. Przegląd systemu i obietnica dla użytkownika
 
-Umowa.check to weryfikator umów dla konsumentów i mikroprzedsiębiorców w Polsce.
-System weryfikuje umowę w czasie poniżej 60 sekund i generuje:
-1. Jednozdaniowy werdykt („Można podpisać po zmianie §7 i §12”).
-2. Raport świetlny (czerwone, żółte, braki, zielone) z odnośnikiem do paragrafu i podświetleniem w tekście.
-3. Kwotowe oszacowanie ryzyka oparte na faktach i precyzyjnych założeniach.
-4. Listę braków (klauzul wymaganych przez prawo lub standard rynkowy).
-5. Gotowe propozycje poprawek (wersja miękka i stanowcza) oraz gotowe maile negocjacyjne.
-6. Opcję bezpiecznej eskalacji do radcy prawnego lub adwokata.
+**Obietnica produktu:**  
+*„Wrzuć umowę. W minutę wiesz, czy podpisać, co zmienić i jak o to poprosić.”*
+
+System weryfikuje umowę w czasie poniżej 60 sekund i dostarcza:
+1. **Werdykt w jednym zdaniu:** PODPISZ / PODPISZ PO ZMIANACH / NIE PODPISUJ BEZ PRAWNIKA.
+2. **Najważniejsze ryzyka po ludzku:** z cytatem z umowy i wyliczoną kwotą, ile mogą kosztować.
+3. **Braki:** czego w umowie nie ma, a powinno być.
+4. **Gotowe nowe brzmienie złych zapisów:** wariant dyplomatyczny (miękki) i stanowczy.
+5. **Gotowy mail do drugiej strony:** gotowy do skopiowania lub pobrania.
+6. **Eksport:** DOCX ze śledzeniem zmian (`track changes`) oraz PDF raportu.
+7. **Bezpieczna eskalacja:** konsultacja z prawnikiem jednym kliknięciem przy wyniku czerwonym.
 
 ### Główne pryncypia architektoniczne
 - **Zero zmyślania (Grounding First):** Żadna uwaga prawna nie może trafić do raportu bez zweryfikowanego identyfikatora jednostki prawnej w `legal-kb/` oraz dosłownego cytatu z dokumentu.
-- **Dekompozycja zamiast megamonolitu:** Pipeline podzielony na 10 niezależnych, deterministycznie testowalnych etapów z kontraktami wejścia/wyjścia (Zod).
-- **Prywatność i RODO by Design:** Przetwarzanie i bazy danych wyłącznie w regionie Unii Europejskiej, automatyczne usuwanie danych po 7 dniach (z opcją natychmiastowego usunięcia jednym kliknięciem), anonimizacja przed jakimkolwiek benchmarkingiem.
+- **Dekompozycja zamiast monolitu:** Pipeline podzielony na 10 niezależnych, deterministycznie testowalnych etapów z kontraktami wejścia/wyjścia wymuszanymi schematami Zod.
+- **Prywatność i RODO by Design:** Przetwarzanie i bazy danych wyłącznie w regionie Unii Europejskiej, automatyczne usuwanie danych po 7 dniach (z opcją natychmiastowego usunięcia jednym kliknięciem), zakaz trenowania AI na umowach.
 - **Dostępność WCAG 2.2 AA:** Pełna obsługa z klawiatury, widoczne wskaźniki focusu, kontrast, czytniki ekranu (`aria-live`), responsywność od 360 px (scenariusz zdjęcia telefonem).
 
 ---
@@ -33,22 +36,23 @@ System weryfikuje umowę w czasie poniżej 60 sekund i generuje:
 [ Warstwa API / Serverless ]
    - Zod Boundary Validation na każdym punkcie wejścia
    - Autoryzacja sesyjna i anonimowe tokeny sesyjne
-   - Ochrona kosztowa (Rate Limiting, Access Tokens dla AI)
    - Orkiestrator Pipeline'u Analizy (10 etapów)
+   - Asynchroniczna kolejka zadań w tle (analysis_jobs)
          │
-         ├───► [ Supabase EU (Frankfurt) ]
+         ├───► [ Supabase EU (Frankfurt / eu-central-1) ]
          │        - PostgreSQL 16 + Row Level Security (RLS)
-         │        - pgvector (wyszukiwanie semantyczne w legal-kb)
+         │        - pgvector (wyszukiwanie semantyczne 768-dim w legal-kb)
          │        - Supabase Storage (szyfrowane pliki umów, path-based RLS)
          │        - Automatyczny retencyjny cleanup (pg_cron / TTL 7 dni)
+         │        - Kolejka zadań w tle (analysis_jobs z heartbeat i retry)
          │
-         ├───► [ Usługa OCR / Parser Dokumentów (Region UE) ]
-         │        - PDF / DOCX / Obrazy wielostronicowe
-         │        - Ekstrakcja układu, tekstu i współrzędnych do podświetleń
-         │
-         ├───► [ Modele LLM (Region UE, Zero-Data Retention, No-Training) ]
-         │        - Klasyfikacja, ekstrakcja klauzul, ocena ryzyk na bazie źródeł
-         │        - Ścisły format JSON wymuszany schematami Zod
+         ├───► [ Google Cloud Vertex AI (Region UE: europe-central2 / europe-west1) ]
+         │        - Fast Model: gemini-2.0-flash (OCR, klasyfikacja, segmentacja)
+         │        - Flagship Model: gemini-1.5-pro-002 (ocena klauzul, poprawki)
+         │        - Verifier Model: gemini-1.5-pro-002 (odizolowany weryfikator tezy)
+         │        - Multilingual Embedding: text-embedding-004 (768 wymiarów)
+         │        - Context Caching dla stałych części instrukcji i checklist
+         │        - Structured Output wymuszany przez JSON Schema
          │
          └───► [ Bramka Płatności Stripe ]
                   - Obsługa BLIK, Przelewy24, kart
@@ -71,62 +75,54 @@ Pipeline realizuje przepływ od nieustrukturyzowanego pliku do zweryfikowanego r
        │
        ▼
 [7. Walidacja] ───► [8. Benchmark] ───► [9. Agregacja] ──► [10. Generowanie]
-(ID w KB? Cytat OK?) (Odchylenie rynkowe) (Werdykt, kwoty)   (Poprawki, mail)
+(Audyt kodu + Gemini) (Odchylenie rynkowe) (Werdykt, kwoty)   (Poprawki, mail)
 ```
 
 1. **Etap 1: INGEST (`stage01-ingest`)**  
-   Przyjęcie pliku (PDF, DOCX, zdjęcia), normalizacja stron, OCR dla skanów/zdjęć, budowa mapy współrzędnych bloków tekstu dla widoku podświetleń.
+   Przyjęcie pliku (PDF, DOCX, zdjęcia), normalizacja stron, multimodalny OCR Gemini + OCR klasyczny, budowa mapy współrzędnych bloków tekstu dla widoku podświetleń.
 2. **Etap 2: KLASYFIKACJA (`stage02-classification`)**  
-   Automatyczna identyfikacja typu umowy (np. najem lokalu mieszkalnego, najem okazjonalny), roli użytkownika (najemca / wynajmujący) oraz statusu prawnego (konsument / przedsiębiorca na prawach konsumenta / przedsiębiorca). W przypadku niejednoznaczności generowane są maksymalnie 3 precyzyjne pytania do użytkownika.
+   Automatyczna identyfikacja typu umowy, roli stron oraz statusu konsumenckiego (konsument / przedsiębiorca na prawach konsumenta / przedsiębiorca). Maksymalnie 2 precyzyjne pytania kontekstowe w formie przycisków tylko wtedy, gdy odpowiedź zmienia ocenę prawną.
 3. **Etap 3: SEGMENTACJA (`stage03-segmentation`)**  
-   Parsowanie struktury dokumentu na logiczne jednostki: paragrafy (§), ustępy, punkty, załączniki oraz powiązania wewnętrzne (definicje).
+   Parsowanie struktury dokumentu na logiczne jednostki: paragrafy (§), ustępy, punkty, załączniki oraz powiązania wewnętrzne (definicje, odesłania do OWU).
 4. **Etap 4: CHECKLISTA (`stage04-checklist`)**  
-   Dopasowanie klauzul do stałej, zdefiniowanej checklisty prawnej dla danego typu umowy. Identyfikacja klauzul obecnych oraz stwierdzenie braków krytycznych.
+   Dopasowanie klauzul do checklisty uniwersalnej oraz checklisty właściwej dla danego typu umowy. Wykrywanie braków krytycznych.
 5. **Etap 5: RETRIEVAL (`stage05-retrieval`)**  
-   Hybrydowe wyszukiwanie w `legal-kb/` (filtry po typie umowy, jednostkach redakcyjnych, słowach kluczowych i wektorach pgvector). Przygotowanie minimalnego, autorytatywnego kontekstu prawnego.
+   Hybrydowe wyszukiwanie w `legal-kb/` (filtry po typie umowy, jednostkach redakcyjnych, słowach kluczowych i wektorach pgvector).
 6. **Etap 6: OCENA RYZYKA (`stage06-evaluation`)**  
-   Model językowy otrzymuje wyizolowaną klauzulę, punkt checklisty oraz WYŁĄCZNIE pobrane źródła z `legal-kb/`. Zwraca strukturalny JSON: kolor (czerwony/żółty/zielony), proste uzasadnienie, identyfikatory źródeł, pewność oraz scenariusz kwotowy.
-7. **Etap 7: WALIDACJA ŹRÓDEŁ I CYTATÓW (`stage07-validation`)**  
-   Deterministyczny kod walidacyjny sprawdza:
-   - Czy każde zgłoszone `source_id` istnieje w `legal-kb/` i jest w statusie `active`.
-   - Czy cytat z umowy występuje dosłownie w treści dokumentu.
-   - W przypadku braku dopasowania: uwaga zostaje odrzucona lub oznaczona jako „wymaga weryfikacji” (nie publikowana jako fakt).
+   Najmocniejszy model otrzymuje wyizolowaną klauzulę oraz WYŁĄCZNIE pobrane źródła z `legal-kb/`. Zwraca strukturalny JSON: ocena (czerwony/żółty/zielony), proste uzasadnienie, ID źródeł, pewność i scenariusz kwotowy.
+7. **Etap 7: WALIDACJA DWUWARSTWOWA (`stage07-validation`)**  
+   - Warstwa A (kod): deterministyczny audyt istnienia ID źródła w `legal-kb/`, statusu obowiązywania oraz dosłowności cytatu w dokumencie.
+   - Warstwa B (Gemini-weryfikator): odizolowane zapytanie do najmocniejszego modelu, które bez wglądu w pierwotne uzasadnienie weryfikuje, czy źródło faktycznie popiera tezę (`popiera` / `nie_popiera` / `niepewne`).
 8. **Etap 8: BENCHMARK RYNKOWY (`stage08-benchmark`)**  
-   Porównanie parametrów (np. wysokość kaucji, termin wypowiedzenia, kary umowne) z bazą rynkową. Oznaczenie jako standard / odchylenie / skrajność następuje tylko przy spełnieniu progu minimalnej próby statystycznej (N >= 50).
+   Porównanie parametrów (wysokość kaucji, terminy, kary umowne) z bazą rynkową. Oznaczenie jako standard / odchylenie / skrajność następuje tylko przy próbie statystycznej N >= 50.
 9. **Etap 9: AGREGACJA I WERDYKT (`stage09-aggregation`)**  
-   Generowanie jednozdaniowego werdyktu, kategoryzacja uwag (czerwone, żółte, braki, zielone), obliczenie sumarycznego ryzyka finansowego w oparciu o jawne formuły matematyczne.
+   Generowanie jednozdaniowego werdyktu (`PODPISZ` / `PODPISZ PO ZMIANACH` / `NIE PODPISUJ BEZ PRAWNIKA`), kategoryzacja uwag, matematyczne podsumowanie kwot ryzyka.
 10. **Etap 10: GENEROWANIE POPRAWEK I MAILI (`stage10-generation`)**  
-    Przygotowanie gotowych klauzul zamiennych (wersja miękka i stanowcza) na bazie zatwierdzonych szablonów oraz generowanie szablonu maila do drugiej strony umowy.
+    Przygotowanie gotowych klauzul zamiennych (wersja miękka i stanowcza) na bazie zatwierdzonych szablonów, generowanie maila negocjacyjnego oraz eksportu DOCX ze śledzeniem zmian i PDF.
 
 ---
 
-## 4. Bezpieczeństwo, RODO i ochrona przed atakami
+## 4. Plan kolejki zadań i odporność na awarie (ADR 0008)
 
-1. **Przetwarzanie w UE:**
-   - Supabase hostowany w regionie UE (Frankfurt).
-   - Funkcje Vercel skonfigurowane na region `fra1` (Frankfurt).
-   - Dostawca LLM z podpisaną umową DPA (Data Processing Agreement), przetwarzaniem w UE i zerową retencją logów treningowych.
-2. **Izolacja danych i RLS:**
-   - Każda tabela chroniona przez PostgreSQL Row Level Security (RLS).
-   - Anonimowi użytkownicy otrzymują kryptograficzny token sesji (`session_token`), z dostępem wyłącznie do własnych analiz. Brak możliwości listowania cudzych umów.
-   - Ścieżki w Supabase Storage izolowane identyfikatorem sesji: `analyses/<session_id>/original.<ext>`.
-3. **Retencja danych (7 dni):**
-   - Każda analiza posiada pole `expires_at = NOW() + INTERVAL '7 days'`.
-   - Automatyczny worker usuwa pliki ze storage i rekordy po upływie terminu.
-   - W UI dostępny jest przycisk natychmiastowego usunięcia danych („Usuń moje dane teraz”).
-4. **Ochrona przed Prompt Injection:**
-   - Treść umowy jest traktowana jako w 100% niezaufany ciąg znaków (`Untrusted External Input`).
-   - Treść przekazywana do modeli jest ściśle izolowana w wyodrębnionych blokach XML/JSON, z dyrektywami systemowymi blokującymi interpretację instrukcji zawartych w treści umowy.
-   - Format wyjściowy jest walidowany schematem Zod z odrzuceniem jakichkolwiek nadmiarowych pól.
-5. **Brak PII w logach:**
-   - Logi aplikacyjne rejestrują wyłącznie metadane techniczne: czas wykonania etapów, liczbę tokenów, koszt zapytania, liczbę wykrytych klauzul.
-   - Nazwiska, adresy, numery PESEL, numery kont i cytaty z umów są wykluczone z logów i analityki.
+Analiza dużych dokumentów jest orkiestrowana dwufazowo za pośrednictwem tabeli `public.analysis_jobs` w PostgreSQL:
+1. **Faza 1 (Fast-Path, cel < 60 s):**
+   - Ingest → Klasyfikacja → Segmentacja → Checklista → Ocena ryzyk czerwonych → Wstępny werdykt i 3 kluczowe uwagi.
+   - Użytkownik natychmiast widzi wynik bez czekania na pełne generowanie eksportów.
+2. **Faza 2 (Background Enrichment):**
+   - Pełna ocena pozostałych klauzul, generowanie poprawek, DOCX i maili dociągane w tle.
+3. **Idempotencja i wznawianie:**
+   - Każdy etap zapisuje stan do bazy. W razie timeoutu funkcja wznawia pracę dokładnie od ostatniego niezakończonego etapu.
+   - Ponawianie z exponential backoff (1s, 2s, 4s) przy limitach rate limit.
 
 ---
 
-## 5. Dostępność i UX (WCAG 2.2 AA)
+## 5. Rejestr Decyzji Architektonicznych (ADR)
 
-- **Podstawowy scenariusz mobilny:** Szybkie wykonanie serii zdjęć umowy smartfonem (viewport 360px), podgląd miniatur, automatyczne prostowanie i scalenie przed wysyłką.
-- **Wielokanałowa informacja:** Kolor nigdy nie jest jedynym wskaźnikiem ryzyka. Zawsze towarzyszy mu czytelna ikona SVG oraz tekstowa etykieta („Krytyczne ryzyko”, „Wymaga uwagi”, „Brak w umowie”, „Zgodne z prawem”).
-- **Synchronizacja widoków na desktopie:** Dwukolumnowy układ (podgląd umowy po lewej, lista uwag po prawej). Kliknięcie w uwagę automatycznie centruje i podświetla odpowiedni fragment dokumentu.
-- **Płynna informacja o postępie:** Dynamiczne etykiety postępu z atrybutem `aria-live="polite"` informujące użytkowników czytników ekranu o aktualnym etapie przetwarzania.
+- [ADR 0001: Wybór stosu technologicznego i lokalizacja danych w UE](docs/adr/0001-stack-technologiczny-i-lokalizacja-danych-ue.md)
+- [ADR 0002: Dekompozycja pipeline analizy umów na 10 etapów](docs/adr/0002-dekompozycja-pipeline-analizy-umow.md)
+- [ADR 0003: Bezpieczeństwo danych, polityki RLS i retencja 7 dni](docs/adr/0003-bezpieczenstwo-danych-i-izolacja-najemcow-rls.md)
+- [ADR 0004: Struktura bazy wiedzy prawnej (legal-kb) i deterministyczna weryfikacja źródeł](docs/adr/0004-struktura-bazy-wiedzy-prawnej-i-weryfikacja-zrodel.md)
+- [ADR 0005: Architektura generowania raportów PDF i eksportu DOCX ze śledzeniem zmian](docs/adr/0005-generowanie-eksportow-pdf-i-docx.md)
+- [ADR 0006: Czułość na zmiany prawa i synchronizacja z oficjalnym API Sejmu RP (ELI)](docs/adr/0006-czulosc-na-zmiany-prawa-i-synchronizacja-z-api-sejmu-eli.md)
+- [ADR 0007: Konfiguracja modeli Gemini przez Vertex AI w regionie UE, role modeli i Context Caching](docs/adr/0007-konfiguracja-modeli-gemini-vertex-ai-i-context-caching.md)
+- [ADR 0008: Architektura kolejki zadań asynchronicznych w tle z wznawianiem i limitami czasu](docs/adr/0008-architektura-kolejki-zadan-w-tle-i-odpornosc-na-awarie.md)

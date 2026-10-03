@@ -88,7 +88,7 @@ export const ClassificationOutputSchema = z.object({
   partyStatus: PartyStatusSchema,
   confidence: z.number().min(0).max(1),
   needsUserClarification: z.boolean(),
-  clarificationQuestions: z.array(ContextQuestionSchema).max(3),
+  clarificationQuestions: z.array(ContextQuestionSchema).max(2),
   detectedParties: z.array(
     z.object({
       role: z.string(),

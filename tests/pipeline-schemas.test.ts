@@ -10,7 +10,10 @@ import {
   BenchmarkOutputSchema,
   AggregatedReportSchema,
   GenerationOutputSchema,
+  GeminiVerifierInputSchema,
+  GeminiVerifierOutputSchema,
 } from "../src/pipeline/schemas";
+import { geminiConfig } from "../src/config/models";
 
 describe("Weryfikacja schematów Zod dla 10 etapów pipeline'u analizy", () => {
   it("Etap 1: IngestOutputSchema poprawnie waliduje strukturę dokumentu", () => {
@@ -151,6 +154,7 @@ describe("Weryfikacja schematów Zod dla 10 etapów pipeline'u analizy", () => {
           zweryfikowaneZrodlaIds: ["uopl-art-6-ust-1"],
           odrzuconeZrodlaIds: [],
           pewnosc: 0.99,
+          geminiVerifierVerdict: "popiera",
         },
       ],
       unverifiedFindings: [],
@@ -158,6 +162,38 @@ describe("Weryfikacja schematów Zod dla 10 etapów pipeline'u analizy", () => {
       isGroundingClean: true,
     };
     expect(ValidationOutputSchema.parse(validData)).toBeDefined();
+  });
+
+  it("Etap 7: GeminiVerifierOutputSchema i GeminiVerifierInputSchema poprawnie walidują zapytanie weryfikatora", () => {
+    const input = {
+      findingId: "987fcdeb-51a2-43d7-9876-543210987654",
+      quoteFromContract: "Kaucja wynosi 50 000 zł.",
+      thesis: "Kaucja przekracza dopuszczalny limit ustawowy",
+      sources: [
+        {
+          sourceId: "uopl-art-6-ust-1",
+          editorialUnit: "art. 6 ust. 1",
+          legalText: "Kaucja nie może przekraczać dwunastokrotności miesięcznego czynszu...",
+        },
+      ],
+    };
+    expect(GeminiVerifierInputSchema.parse(input)).toBeDefined();
+
+    const output = {
+      werdykt: "popiera",
+      uzasadnienie: "Przepis art. 6 ust. 1 wyraźnie ogranicza kaucję do 12-krotności czynszu.",
+      popierajaceZrodlaIds: ["uopl-art-6-ust-1"],
+    };
+    expect(GeminiVerifierOutputSchema.parse(output)).toBeDefined();
+  });
+
+  it("Konfiguracja modeli: geminiConfig poprawnie ładuje ustawienia modeli z walidacją ról", () => {
+    expect(geminiConfig.fastModel).toBeDefined();
+    expect(geminiConfig.flagshipModel).toBeDefined();
+    expect(geminiConfig.verifierModel).toBeDefined();
+    expect(geminiConfig.embeddingModel).toBeDefined();
+    expect(geminiConfig.embeddingDimensions).toBe(768);
+    expect(geminiConfig.samplingParams.evaluation.temperature).toBe(0.0);
   });
 
   it("Etap 8: BenchmarkOutputSchema stosuje próg minimalnej próby (N >= 50)", () => {
@@ -213,7 +249,7 @@ describe("Weryfikacja schematów Zod dla 10 etapów pipeline'u analizy", () => {
       benchmarks: [],
       meta: {
         aiGeneratedDisclaimer:
-          "Niniejsza analiza została wygenerowana przy użyciu systemu sztucznej inteligencji Umowa.check i ma charakter informacyjny. Nie stanowi pomocy prawnej w rozumieniu ustawy o radcach prawnych.",
+          "Niniejsza analiza została wygenerowana przy użyciu systemu sztucznej inteligencji czypodpisac.pl i ma charakter informacyjny. Nie stanowi pomocy prawnej w rozumieniu ustawy o radcach prawnych.",
         analyzedAt: new Date().toISOString(),
         legalKbVersion: "2026.1",
         checklistVersion: "najem-2026-v1",

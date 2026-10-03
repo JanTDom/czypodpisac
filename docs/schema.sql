@@ -70,7 +70,7 @@ CREATE TABLE IF NOT EXISTS public.legal_kb_units (
     content_hash TEXT NOT NULL, -- SHA-256
     status TEXT NOT NULL DEFAULT 'active', -- 'active' | 'repealed' | 'amended'
     contract_type_tags TEXT[] NOT NULL DEFAULT '{}',
-    embedding vector(1536), -- dla modeli embeddings OpenAI text-embedding-3-small
+    embedding vector(768), -- dla wielojęzycznego modelu embeddingów Gemini (text-embedding-004)
     created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
     updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
@@ -177,13 +177,48 @@ CREATE TABLE IF NOT EXISTS public.pricing_tiers (
     created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 
+-- 10. OPINIE I ZWĄTPIENIA UŻYTKOWNIKÓW (ANALYSIS_FINDING_FEEDBACKS)
+-- Przycisk „Nie zgadzam się” zbierający sygnały jakości dla prawników bez PII
+CREATE TABLE IF NOT EXISTS public.analysis_finding_feedbacks (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    analysis_id UUID NOT NULL REFERENCES public.analyses(id) ON DELETE CASCADE,
+    finding_id UUID NOT NULL REFERENCES public.analysis_findings(id) ON DELETE CASCADE,
+    dispute_reason TEXT NOT NULL,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+CREATE INDEX IF NOT EXISTS idx_feedbacks_finding_id ON public.analysis_finding_feedbacks(finding_id);
+CREATE INDEX IF NOT EXISTS idx_feedbacks_analysis_id ON public.analysis_finding_feedbacks(analysis_id);
+
+-- 11. KOLEJKA ZADAŃ ASYNCHRONICZNYCH (ANALYSIS_JOBS)
+-- Długie analizy jako zadania w tle z wznawianiem, retry i idempotencją
+CREATE TABLE IF NOT EXISTS public.analysis_jobs (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    analysis_id UUID NOT NULL REFERENCES public.analyses(id) ON DELETE CASCADE,
+    stage TEXT NOT NULL, -- 'ingest' | 'classification' | 'segmentation' | 'checklist' | 'retrieval' | 'evaluation' | 'validation' | 'benchmark' | 'aggregation' | 'generation'
+    status TEXT NOT NULL DEFAULT 'queued', -- 'queued' | 'running' | 'completed' | 'failed' | 'retrying'
+    attempts INT NOT NULL DEFAULT 0,
+    max_attempts INT NOT NULL DEFAULT 3,
+    payload JSONB NOT NULL DEFAULT '{}'::jsonb,
+    error_message TEXT,
+    last_heartbeat TIMESTAMPTZ,
+    scheduled_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+CREATE INDEX IF NOT EXISTS idx_jobs_status_scheduled ON public.analysis_jobs(status, scheduled_at);
+CREATE INDEX IF NOT EXISTS idx_jobs_analysis_id ON public.analysis_jobs(analysis_id);
+
 -- ==============================================================================
--- 10. POLITYKI BEZPIECZEŃSTWA (ROW LEVEL SECURITY - RLS)
+-- 12. POLITYKI BEZPIECZEŃSTWA (ROW LEVEL SECURITY - RLS)
 -- ==============================================================================
 
 ALTER TABLE public.analyses ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.analysis_clauses ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.analysis_findings ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.analysis_finding_feedbacks ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.analysis_jobs ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.legal_kb_units ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.checklist_items ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.amendment_templates ENABLE ROW LEVEL SECURITY;
@@ -268,6 +303,26 @@ CREATE POLICY "findings_select_owner" ON public.analysis_findings
     FOR SELECT TO anon, authenticated
     USING (public.can_access_analysis(analysis_id));
 
+-- RLS: ANALYSIS_FINDING_FEEDBACKS
+CREATE POLICY "feedbacks_insert_owner" ON public.analysis_finding_feedbacks
+    FOR INSERT TO anon, authenticated
+    WITH CHECK (public.can_access_analysis(analysis_id));
+
+CREATE POLICY "feedbacks_select_owner" ON public.analysis_finding_feedbacks
+    FOR SELECT TO anon, authenticated
+    USING (public.can_access_analysis(analysis_id));
+
+-- RLS: ANALYSIS_JOBS
+-- Zadania kolejki w tle: odczyt i aktualizacja stanu przez właściciela sesji lub serwer
+CREATE POLICY "jobs_select_owner" ON public.analysis_jobs
+    FOR SELECT TO anon, authenticated
+    USING (public.can_access_analysis(analysis_id));
+
+CREATE POLICY "jobs_manage_service" ON public.analysis_jobs
+    FOR ALL TO service_role
+    USING (true)
+    WITH CHECK (true);
+
 -- RLS: PAYMENTS
 CREATE POLICY "payments_select_owner" ON public.payments
     FOR SELECT TO anon, authenticated
@@ -291,7 +346,7 @@ CREATE POLICY "pricing_public_select" ON public.pricing_tiers
     USING (active = true);
 
 -- ==============================================================================
--- 11. AUTOMATYCZNY WORKER CZYSZCZĄCY PRZETERMINOWANE ANALIZY (7 DNI)
+-- 13. AUTOMATYCZNY WORKER CZYSZCZĄCY PRZETERMINOWANE ANALIZY (7 DNI)
 -- ==============================================================================
 
 CREATE OR REPLACE FUNCTION public.purge_expired_analyses()
@@ -308,11 +363,17 @@ BEGIN
     )
     SELECT count(*) INTO deleted_count FROM to_delete;
 
-    -- Uwaga: powiązane klauzule i uwagi zostaną zarchiwizowane lub wyczyszczone
+    -- Usunięcie danych powiązanych (kaskadowo)
     DELETE FROM public.analysis_clauses
     WHERE analysis_id IN (SELECT id FROM public.analyses WHERE deleted_at IS NOT NULL);
 
     DELETE FROM public.analysis_findings
+    WHERE analysis_id IN (SELECT id FROM public.analyses WHERE deleted_at IS NOT NULL);
+
+    DELETE FROM public.analysis_finding_feedbacks
+    WHERE analysis_id IN (SELECT id FROM public.analyses WHERE deleted_at IS NOT NULL);
+
+    DELETE FROM public.analysis_jobs
     WHERE analysis_id IN (SELECT id FROM public.analyses WHERE deleted_at IS NOT NULL);
 
     RETURN deleted_count;

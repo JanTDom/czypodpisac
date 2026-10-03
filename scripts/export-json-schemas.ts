@@ -1,4 +1,4 @@
-import { zodToJsonSchema } from "zod-to-json-schema";
+import { z } from "zod";
 import * as fs from "node:fs";
 import * as path from "node:path";
 import {
@@ -8,16 +8,21 @@ import {
   ChecklistOutputSchema,
   RetrievalOutputSchema,
   EvaluationOutputSchema,
+  SingleClauseEvaluationSchema,
   ValidationOutputSchema,
+  GeminiVerifierOutputSchema,
   BenchmarkOutputSchema,
   AggregatedReportSchema,
   GenerationOutputSchema,
+  ClauseAmendmentProposalSchema,
+  NegotiationEmailDraftSchema,
 } from "../src/pipeline/schemas";
 
 const targetDir = path.resolve(process.cwd(), "docs/schemas");
 fs.mkdirSync(targetDir, { recursive: true });
 
 const schemas = [
+  // 10 etapów potoku
   { name: "stage01-ingest.json", title: "Stage 01: Ingest Output", schema: IngestOutputSchema },
   { name: "stage02-classification.json", title: "Stage 02: Classification Output", schema: ClassificationOutputSchema },
   { name: "stage03-segmentation.json", title: "Stage 03: Segmentation Output", schema: SegmentationOutputSchema },
@@ -28,13 +33,21 @@ const schemas = [
   { name: "stage08-benchmark.json", title: "Stage 08: Benchmark Output", schema: BenchmarkOutputSchema },
   { name: "stage09-aggregation.json", title: "Stage 09: Aggregation & Final Report", schema: AggregatedReportSchema },
   { name: "stage10-generation.json", title: "Stage 10: Generation Output", schema: GenerationOutputSchema },
+
+  // Dedykowane schematy Structured Output dla konkretnych wywołań Gemini (Vertex AI responseSchema)
+  { name: "gemini-call-01-classification.json", title: "Gemini Structured Output: Classification", schema: ClassificationOutputSchema },
+  { name: "gemini-call-02-segmentation.json", title: "Gemini Structured Output: Segmentation", schema: SegmentationOutputSchema },
+  { name: "gemini-call-03-evaluation.json", title: "Gemini Structured Output: Clause Evaluation", schema: SingleClauseEvaluationSchema },
+  { name: "gemini-call-04-verifier.json", title: "Gemini Structured Output: Independent Verifier", schema: GeminiVerifierOutputSchema },
+  { name: "gemini-call-05-amendments.json", title: "Gemini Structured Output: Amendments", schema: ClauseAmendmentProposalSchema },
+  { name: "gemini-call-06-negotiation-email.json", title: "Gemini Structured Output: Negotiation Email", schema: NegotiationEmailDraftSchema },
 ];
 
 for (const s of schemas) {
-  const jsonSchema = zodToJsonSchema(s.schema, s.title);
+  const jsonSchema = z.toJSONSchema(s.schema);
   const filePath = path.join(targetDir, s.name);
   fs.writeFileSync(filePath, JSON.stringify(jsonSchema, null, 2), "utf-8");
-  console.log(`Generated: ${filePath}`);
+  console.log(`Wygenerowano: ${filePath}`);
 }
 
-console.log("Wszystkie schematy JSON wygenerowane pomyślnie.");
+console.log(`Pomyślnie wyeksportowano ${schemas.length} schematów JSON.`);

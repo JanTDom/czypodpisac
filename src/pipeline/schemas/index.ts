@@ -1,5 +1,5 @@
 /**
- * Umowa.check — Centralny eksport schematów Zod i typów TypeScript
+ * czypodpisac.pl — Centralny eksport schematów Zod i typów TypeScript
  * dla wszystkich 10 etapów pipeline'u analizy umowy.
  */
 

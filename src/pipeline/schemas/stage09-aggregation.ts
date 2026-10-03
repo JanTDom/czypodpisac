@@ -57,7 +57,7 @@ export const AggregatedReportSchema = z.object({
   benchmarks: z.array(BenchmarkParamComparisonSchema).default([]),
   meta: z.object({
     aiGeneratedDisclaimer: z.literal(
-      "Niniejsza analiza została wygenerowana przy użyciu systemu sztucznej inteligencji Umowa.check i ma charakter informacyjny. Nie stanowi pomocy prawnej w rozumieniu ustawy o radcach prawnych."
+      "Niniejsza analiza została wygenerowana przy użyciu systemu sztucznej inteligencji czypodpisac.pl i ma charakter informacyjny. Nie stanowi pomocy prawnej w rozumieniu ustawy o radcach prawnych."
     ),
     analyzedAt: z.string().datetime(),
     legalKbVersion: z.string(),

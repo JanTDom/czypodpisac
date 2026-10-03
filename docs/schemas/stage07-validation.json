@@ -1,7 +1,217 @@
 {
-  "$ref": "#/definitions/Stage 07: Validation Output",
-  "definitions": {
-    "Stage 07: Validation Output": {}
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "verifiedFindings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+          },
+          "clauseId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "checklistItemId": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "verified",
+              "needs_verification",
+              "rejected"
+            ]
+          },
+          "ocena": {
+            "type": "string",
+            "enum": [
+              "czerwony",
+              "żółty",
+              "zielony"
+            ]
+          },
+          "tytulPoLudzku": {
+            "type": "string"
+          },
+          "doslownyCytatZUmowy": {
+            "type": "string"
+          },
+          "cytatZweryfikowany": {
+            "type": "boolean"
+          },
+          "uzasadnienie": {
+            "type": "string"
+          },
+          "zweryfikowaneZrodlaIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "odrzuconeZrodlaIds": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "pewnosc": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "geminiVerifierVerdict": {
+            "type": "string",
+            "enum": [
+              "popiera",
+              "nie_popiera",
+              "niepewne"
+            ]
+          },
+          "kwotaRyzyka": {
+            "type": "number",
+            "minimum": 0
+          },
+          "zalozeniaKwoty": {
+            "type": "string"
+          },
+          "powodOdrzuceniaLubNiepewnosci": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "clauseId",
+          "status",
+          "ocena",
+          "tytulPoLudzku",
+          "doslownyCytatZUmowy",
+          "cytatZweryfikowany",
+          "uzasadnienie",
+          "zweryfikowaneZrodlaIds",
+          "odrzuconeZrodlaIds",
+          "pewnosc"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "unverifiedFindings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+          },
+          "clauseId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "checklistItemId": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "verified",
+              "needs_verification",
+              "rejected"
+            ]
+          },
+          "ocena": {
+            "type": "string",
+            "enum": [
+              "czerwony",
+              "żółty",
+              "zielony"
+            ]
+          },
+          "tytulPoLudzku": {
+            "type": "string"
+          },
+          "doslownyCytatZUmowy": {
+            "type": "string"
+          },
+          "cytatZweryfikowany": {
+            "type": "boolean"
+          },
+          "uzasadnienie": {
+            "type": "string"
+          },
+          "zweryfikowaneZrodlaIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "odrzuconeZrodlaIds": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "pewnosc": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "geminiVerifierVerdict": {
+            "type": "string",
+            "enum": [
+              "popiera",
+              "nie_popiera",
+              "niepewne"
+            ]
+          },
+          "kwotaRyzyka": {
+            "type": "number",
+            "minimum": 0
+          },
+          "zalozeniaKwoty": {
+            "type": "string"
+          },
+          "powodOdrzuceniaLubNiepewnosci": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "clauseId",
+          "status",
+          "ocena",
+          "tytulPoLudzku",
+          "doslownyCytatZUmowy",
+          "cytatZweryfikowany",
+          "uzasadnienie",
+          "zweryfikowaneZrodlaIds",
+          "odrzuconeZrodlaIds",
+          "pewnosc"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "rejectedCount": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    },
+    "isGroundingClean": {
+      "type": "boolean"
+    }
   },
-  "$schema": "http://json-schema.org/draft-07/schema#"
+  "required": [
+    "verifiedFindings",
+    "unverifiedFindings",
+    "rejectedCount",
+    "isGroundingClean"
+  ],
+  "additionalProperties": false
 }

@@ -1,7 +1,128 @@
 {
-  "$ref": "#/definitions/Stage 10: Generation Output",
-  "definitions": {
-    "Stage 10: Generation Output": {}
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "analysisId": {
+      "type": "string",
+      "format": "uuid",
+      "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+    },
+    "amendments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "findingId": {
+            "type": "string",
+            "format": "uuid",
+            "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+          },
+          "clauseNumber": {
+            "type": "string"
+          },
+          "originalText": {
+            "type": "string"
+          },
+          "softReplacementText": {
+            "type": "string",
+            "minLength": 5
+          },
+          "firmReplacementText": {
+            "type": "string",
+            "minLength": 5
+          },
+          "legalRationale": {
+            "type": "string",
+            "minLength": 10
+          },
+          "isApprovedTemplate": {
+            "type": "boolean"
+          },
+          "needsLawyerVerification": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "findingId",
+          "clauseNumber",
+          "originalText",
+          "softReplacementText",
+          "firmReplacementText",
+          "legalRationale",
+          "isApprovedTemplate",
+          "needsLawyerVerification"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "negotiationEmail": {
+      "type": "object",
+      "properties": {
+        "recipientRole": {
+          "type": "string"
+        },
+        "subject": {
+          "type": "string",
+          "minLength": 5
+        },
+        "bodySoft": {
+          "type": "string",
+          "minLength": 20
+        },
+        "bodyFirm": {
+          "type": "string",
+          "minLength": 20
+        },
+        "bulletPointsList": {
+          "minItems": 1,
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "mailtoUrl": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "recipientRole",
+        "subject",
+        "bodySoft",
+        "bodyFirm",
+        "bulletPointsList"
+      ],
+      "additionalProperties": false
+    },
+    "exportCapabilities": {
+      "type": "object",
+      "properties": {
+        "supportsDocxTrackChanges": {
+          "default": true,
+          "type": "boolean"
+        },
+        "supportsNativePrintPdf": {
+          "default": true,
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "supportsDocxTrackChanges",
+        "supportsNativePrintPdf"
+      ],
+      "additionalProperties": false
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?(?:Z))$"
+    }
   },
-  "$schema": "http://json-schema.org/draft-07/schema#"
+  "required": [
+    "analysisId",
+    "amendments",
+    "negotiationEmail",
+    "exportCapabilities",
+    "generatedAt"
+  ],
+  "additionalProperties": false
 }
