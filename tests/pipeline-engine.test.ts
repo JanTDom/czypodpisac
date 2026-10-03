@@ -256,7 +256,7 @@ Piotrem Nowakiem, PESEL: 92020254321, zamieszkałym w Krakowie, zwanym dalej "Na
   });
 
   describe("Etap 8: Benchmark rynkowy (reguła N >= 50)", () => {
-    it("poprawnie klasyfikuje kaucję 15x jako skrajną przy dużej próbie N=1420", async () => {
+    it("bez udokumentowanego zbioru danych nie podaje żadnych etykiet ani median rynkowych", async () => {
       const classification = await executeClassification({ fullText: sampleLeaseContract });
       const ingest = await executeIngest({
         analysisId: "test-bm",
@@ -268,11 +268,8 @@ Piotrem Nowakiem, PESEL: 92020254321, zamieszkałym w Krakowie, zwanym dalej "Na
 
       const benchmark = await executeBenchmark(classification, seg);
 
-      const depositBm = benchmark.comparisons.find((c) => c.paramKey === "kaucja_wielokrotnosc_czynszu");
-      expect(depositBm).toBeDefined();
-      expect(depositBm?.sampleSize).toBe(1420);
-      expect(depositBm?.hasSufficientSample).toBe(true);
-      expect(depositBm?.classification).toBe("skrajny");
+      expect(benchmark.comparisons).toHaveLength(0);
+      expect(benchmark.benchmarkVersion).toBe("brak-zbioru-rynkowego");
     });
 
     it("ustawia 'brak_danych' i wyłącza etykietę rynkową gdy N < 50", async () => {

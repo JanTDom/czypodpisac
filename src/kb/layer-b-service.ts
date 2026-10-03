@@ -27,7 +27,7 @@ export class LayerBService {
   }
 
   /**
-   * Sprawdza, czy dany akt należy do 17 aktów Rdzenia (Warstwa A).
+   * Sprawdza, czy dany akt należy do aktów Rdzenia (Warstwa A).
    */
   public isCoreAct(eliId: string): boolean {
     const normalized = eliId.trim().toUpperCase();

@@ -1,5 +1,5 @@
 /**
- * Rejestr 17 aktów prawnych tworzących WARSTWĘ A (RDZEŃ) bazy legal-kb.
+ * Rejestr 18 aktów prawnych tworzących WARSTWĘ A (RDZEŃ) bazy legal-kb.
  * Zgodnie z regułą 02-prawo-zrodla-aktualnosc.md:
  * Akty te podlegają ciągłemu, automatycznemu monitorowaniu przez API Sejmu ELI.
  */

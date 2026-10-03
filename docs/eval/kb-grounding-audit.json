@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-03T17:12:11.997Z",
+  "checkedAt": "2026-10-03T17:42:14.575Z",
   "summary": {
     "potwierdzona": 84,
     "niepotwierdzona": 9
@@ -682,7 +682,7 @@
       "unitType": "court_ruling",
       "file": "legal-kb/orzecznictwo/sn-iii-czp-11-13.json",
       "status": "niepotwierdzona",
-      "reason": "HTTP 200, text/html, 1753 B — źródło nie zwraca dokumentu",
+      "reason": "HTTP 200, text/html, 1886 B — źródło nie zwraca dokumentu",
       "checkedUrl": "http://www.sn.pl/sites/orzecznictwo/orzeczenia3/iii%20czp%2011-13.pdf"
     },
     {
@@ -690,7 +690,7 @@
       "unitType": "court_ruling",
       "file": "legal-kb/orzecznictwo/sn-iii-czp-52-19.json",
       "status": "niepotwierdzona",
-      "reason": "HTTP 200, text/html, 1753 B — źródło nie zwraca dokumentu",
+      "reason": "HTTP 200, text/html, 1886 B — źródło nie zwraca dokumentu",
       "checkedUrl": "http://www.sn.pl/sites/orzecznictwo/orzeczenia3/iii%20czp%2052-19.pdf"
     },
     {
@@ -698,7 +698,7 @@
       "unitType": "court_ruling",
       "file": "legal-kb/orzecznictwo/sn-v-csk-31-08.json",
       "status": "niepotwierdzona",
-      "reason": "HTTP 200, text/html, 1753 B — źródło nie zwraca dokumentu",
+      "reason": "HTTP 200, text/html, 1887 B — źródło nie zwraca dokumentu",
       "checkedUrl": "http://www.sn.pl/sites/orzecznictwo/orzeczenia2/v%20csk%2031-08-1.pdf"
     },
     {
