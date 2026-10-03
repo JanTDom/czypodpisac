@@ -4,9 +4,10 @@
 -- ==============================================================================
 
 -- 1. WŁĄCZENIE ROZSZERZEŃ
-CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
-CREATE EXTENSION IF NOT EXISTS "pgcrypto";
-CREATE EXTENSION IF NOT EXISTS "vector";
+-- Na Supabase rozszerzenia trzymamy w schemacie extensions.
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp" WITH SCHEMA extensions;
+CREATE EXTENSION IF NOT EXISTS "pgcrypto" WITH SCHEMA extensions;
+CREATE EXTENSION IF NOT EXISTS "vector" WITH SCHEMA extensions;
 
 -- 2. TABELA ANALIZ (ANALYSES)
 -- Przechowuje sesje weryfikacji umów z izolacją sesyjną i retencją 7 dni.
@@ -70,7 +71,7 @@ CREATE TABLE IF NOT EXISTS public.legal_kb_units (
     content_hash TEXT NOT NULL, -- SHA-256
     status TEXT NOT NULL DEFAULT 'active', -- 'active' | 'repealed' | 'amended'
     contract_type_tags TEXT[] NOT NULL DEFAULT '{}',
-    embedding vector(768), -- dla wielojęzycznego modelu embeddingów Gemini (text-embedding-004)
+    embedding extensions.vector(768), -- dla wielojęzycznego modelu embeddingów Gemini (text-embedding-004)
     created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
     updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
@@ -259,13 +260,13 @@ BEGIN
         req_token := NULL;
     END;
 
-    IF req_token IS NOT NULL AND encode(digest(req_token, 'sha256'), 'hex') = target_hash THEN
+    IF req_token IS NOT NULL AND encode(extensions.digest(req_token, 'sha256'), 'hex') = target_hash THEN
         RETURN true;
     END IF;
 
     RETURN false;
 END;
-$$ LANGUAGE plpgsql SECURITY DEFINER STABLE;
+$$ LANGUAGE plpgsql SECURITY DEFINER STABLE SET search_path = public, extensions;
 
 -- RLS: ANALYSES
 -- Pozwalamy anonimowemu użytkownikowi wstawić nową analizę (INSERT)
@@ -378,4 +379,6 @@ BEGIN
 
     RETURN deleted_count;
 END;
-$$ LANGUAGE plpgsql SECURITY DEFINER;
+$$ LANGUAGE plpgsql SECURITY DEFINER SET search_path = public, extensions;
+
+REVOKE EXECUTE ON FUNCTION public.purge_expired_analyses() FROM PUBLIC, anon, authenticated;
