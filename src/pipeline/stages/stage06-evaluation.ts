@@ -4,6 +4,7 @@ import { RetrievalOutput } from "../schemas/stage05-retrieval";
 import { ClassificationOutput } from "../schemas/stage02-classification";
 import { EvaluationOutput, SingleClauseEvaluation } from "../schemas/stage06-evaluation";
 import { ChecklistRegistry } from "../../checklists/registry";
+import { evaluateDeveloperContract } from "../rules/umowa-deweloperska-rules";
 
 /**
  * Etap 6: Ocena ryzyka prawnego klauzul
@@ -194,6 +195,12 @@ export async function executeEvaluation(
       zrodlaIds: availableSourceIds.slice(0, 2),
       pewnosc: 0.9,
     });
+  }
+
+  // 5. REGUŁY UMOWY DEWELOPERSKIEJ — działają tylko, gdy checklista tego typu jest zarejestrowana.
+  // Domyślny rejestr jej nie zawiera, dopóki prawnik nie zatwierdzi punktów (typ nieaktywny w produkcji).
+  if (classification.contractType === "umowa_deweloperska" && registry.hasChecklist("umowa_deweloperska")) {
+    evaluations.push(...evaluateDeveloperContract(segmentation.clauses));
   }
 
   return {
