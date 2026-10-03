@@ -143,12 +143,14 @@ export async function executeEvaluation(
             tytulPoLudzku: "Niedozwolona kara umowna za rozwiązanie umowy",
             doslownyCytatZUmowy: penaltyMatch ? penaltyMatch[0] : clauseText.slice(0, 100),
             uzasadnienie:
-              "Zastrzeżenie kary umownej lub odstępnego za skorzystanie z przysługującego prawa do rozwiązania lub wypowiedzenia umowy jest sprzeczne z art. 385³ pkt 16 k.c. i stanowi klauzulę abuzywną.",
-            zrodlaIds: ["kc-art-385-3"],
-            pewnosc: 0.98,
+              "Art. 385³ k.c. wymienia zapisy, które w razie wątpliwości uważa się za niedozwolone wobec konsumenta. " +
+              "Są wśród nich zapisy, które nakładają tylko na konsumenta obowiązek zapłaty ustalonej sumy za rezygnację z wykonania umowy (pkt 16) " +
+              "albo rażąco wygórowaną karę umowną lub odstępne (pkt 17). Zapis niedozwolony nie wiąże konsumenta (art. 385¹ § 1).",
+            zrodlaIds: ["kc-art-385-3", "kc-art-385-1"],
+            pewnosc: 0.8,
             kwotaRyzyka: penaltyAmount,
             zalozeniaKwoty: penaltyAmount
-              ? `Wartość nienależnej kary umownej nałożonej na konsumenta: ${penaltyAmount} zł.`
+              ? `Kwota kary zapisana w umowie: ${penaltyAmount} zł. Tyle możesz zapłacić, jeśli zapis zostanie uznany za wiążący.`
               : undefined,
             propozycjaZmianyKierunek:
               "Wykreśl w całości zapis nakładający karę za wypowiedzenie umowy.",
@@ -174,9 +176,12 @@ export async function executeEvaluation(
           tytulPoLudzku: "Niedozwolona jednostronna zmiana warunków umowy",
           doslownyCytatZUmowy: clauseText.slice(0, 120),
           uzasadnienie:
-            "Zapis uprawniający kontrahenta do jednostronnej modyfikacji umowy bez ważnej przyczyny wskazanej w umowie narusza art. 385³ pkt 20 k.c.",
+            "Art. 385³ k.c. wymienia zapisy, które w razie wątpliwości uważa się za niedozwolone wobec konsumenta. " +
+            "Są wśród nich zapisy dające tylko drugiej stronie prawo do zmiany istotnych cech świadczenia bez ważnych przyczyn (pkt 19) " +
+            "oraz prawo do podwyższenia ceny po zawarciu umowy bez prawa odstąpienia dla konsumenta (pkt 20). " +
+            "Zapis niedozwolony nie wiąże konsumenta (art. 385¹ § 1).",
           zrodlaIds: ["kc-art-385-1", "kc-art-385-3"],
-          pewnosc: 0.95,
+          pewnosc: 0.8,
           propozycjaZmianyKierunek:
             "Zastąp klauzulą wymagającą obustronnego aneksu na piśmie pod rygorem nieważności.",
         });

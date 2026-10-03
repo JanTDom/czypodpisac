@@ -11,8 +11,8 @@ import {
  */
 interface AmendmentTemplate {
   patternKeyword: string;
-  generateSoft: (original: string, details?: any) => string;
-  generateFirm: (original: string, details?: any) => string;
+  generateSoft: (original: string) => string;
+  generateFirm: (original: string) => string;
   legalRationale: string;
 }
 
@@ -24,25 +24,25 @@ const AMENDMENT_TEMPLATES: Record<string, AmendmentTemplate> = {
     generateFirm: (_orig) =>
       "Kaucja zabezpieczająca wynosi równowartość jednomiesięcznego czynszu najmu i nie może przekraczać limitów określonych w art. 6 ust. 1 ustawy o ochronie praw lokatorów. Podlega zwrotowi w całości w terminie 14 dni od zwrotu lokalu.",
     legalRationale:
-      "Zgodnie z art. 6 ust. 1 ustawy o ochronie praw lokatorów kaucja nie może przekraczać 12-krotności czynszu, a standard rynkowy to 1-krotność.",
+      "Zgodnie z art. 6 ust. 1 ustawy o ochronie praw lokatorów kaucja nie może przekraczać 12-krotności miesięcznego czynszu.",
   },
   kara_wypowiedzenie: {
     patternKeyword: "kara",
     generateSoft: (_orig) =>
       "Każda ze stron ma prawo wypowiedzieć umowę z zachowaniem miesięcznego okresu wypowiedzenia z ważnych przyczyn określonych w umowie, bez obowiązku uiszczania kar umownych lub odstępnego.",
     generateFirm: (_orig) =>
-      "Strony wykreślają zapis o karze umownej za rozwiązanie umowy. Zastrzeżenie kary umownej za skorzystanie z prawa do wypowiedzenia umowy przez konsumenta jest bezwzględnie nieważne na mocy art. 385³ pkt 16 Kodeksu cywilnego.",
+      "Strony wykreślają zapis o karze umownej za rozwiązanie umowy. Wypowiedzenie umowy przez którąkolwiek ze stron na warunkach w niej określonych nie wiąże się z obowiązkiem zapłaty kary umownej ani odstępnego.",
     legalRationale:
-      "Klauzula nakładająca karę za skorzystanie z prawa do wypowiedzenia umowy narusza art. 385³ pkt 16 k.c. i wpisana jest do rejestru klauzul niedozwolonych UOKiK.",
+      "Art. 385³ pkt 16 i 17 k.c. wymienia, jako niedozwolone w razie wątpliwości, zapisy nakładające tylko na konsumenta zapłatę ustalonej sumy za rezygnację z umowy albo rażąco wygórowaną karę umowną lub odstępne. Taki zapis nie wiąże konsumenta (art. 385¹ § 1 k.c.).",
   },
   jednostronna_zmiana: {
     patternKeyword: "jednostronn",
     generateSoft: (_orig) =>
       "Wszelkie zmiany niniejszej umowy wymagają porozumienia obu stron i sporządzenia aneksu w formie pisemnej pod rygorem nieważności.",
     generateFirm: (_orig) =>
-      "Wykreśla się uprawnienie do jednostronnej modyfikacji umowy. Wszelkie zmiany umowy wymagają zgody obu stron wyrażonej w formie pisemnego aneksu (art. 385³ pkt 20 k.c.).",
+      "Wykreśla się uprawnienie do jednostronnej modyfikacji umowy. Wszelkie zmiany umowy wymagają zgody obu stron wyrażonej w formie pisemnego aneksu pod rygorem nieważności.",
     legalRationale:
-      "Zapis uprawniający jedną stronę do jednostronnej zmiany umowy lub regulaminu bez ważnej przyczyny wskazanej w umowie jest abuzywny (art. 385³ pkt 20 k.c.).",
+      "Art. 385³ pkt 19 i 20 k.c. wymienia, jako niedozwolone w razie wątpliwości, zapisy dające tylko drugiej stronie prawo do zmiany istotnych cech świadczenia bez ważnych przyczyn albo do podwyższenia ceny bez prawa odstąpienia dla konsumenta. Taki zapis nie wiąże konsumenta (art. 385¹ § 1 k.c.).",
   },
 };
 
@@ -130,7 +130,7 @@ Z poważaniem,`;
 W nawiązaniu do przesłanego projektu umowy, po analizie formalno-prawnej zwracam uwagę na konieczność modyfikacji następujących postanowień:
 ${bulletListText}
 
-Wskazane zapisy w obecnym brzmieniu naruszają bezwzględnie obowiązujące normy prawa (w tym przepisy Kodeksu cywilnego o klauzulach niedozwolonych) i nie mogą zostać zaakceptowane.
+W obecnym brzmieniu tych zapisów nie mogę zaakceptować. Część z nich może być niedozwolona w umowie z konsumentem (art. 385¹ i 385³ Kodeksu cywilnego), a pozostałe są dla mnie wyraźnie niekorzystne.
 
 W załączeniu przesyłam projekt z naniesionymi poprawkami prawnymi w trybie rejestracji zmian. Proszę o informację o akceptacji powyższych zmian.
 

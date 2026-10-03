@@ -372,7 +372,8 @@ Jan Kowalski, Wynajmujący i Piotr Nowak, Najemca.
       const email = gen.negotiationEmail;
       expect(email.subject).toContain("najem");
       expect(email.bodySoft).toContain("Dzień dobry");
-      expect(email.bodyFirm).toContain("naruszają bezwzględnie obowiązujące normy");
+      expect(email.bodyFirm).toContain("art. 385¹ i 385³ Kodeksu cywilnego");
+      expect(email.bodyFirm).not.toContain("bezwzględnie");
       expect(email.bulletPointsList.length).toBeGreaterThan(0);
       expect(email.mailtoUrl).toContain("mailto:?subject=");
 
