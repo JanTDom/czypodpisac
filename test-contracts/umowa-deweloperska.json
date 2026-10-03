@@ -1,0 +1,229 @@
+{
+  "contractType": "umowa_deweloperska",
+  "version": "2026.10.03-1",
+  "lawyerApproved": false,
+  "note": "Oczekiwane wyniki przygotował agent na podstawie ustawy deweloperskiej, tekst jednolity Dz.U. 2026 poz. 880 (art. 6, 8, 14, 32, 40, 41, 42, 43, 44). Kategorie to identyfikatory punktów checklisty umowy deweloperskiej. Przypadki 'zasiane-poza-regulami' (dw-19, dw-20) sprawdzają wady, których obecne reguły nie wykrywają; wliczają się do recall. Do zatwierdzenia przez prawnika (skill ewaluacja-jakosci-prawnej).",
+  "cases": [
+    {
+      "id": "dw-01-poprawna",
+      "kind": "poprawna",
+      "text": "UMOWA DEWELOPERSKA\nzawarta w formie aktu notarialnego przed notariuszem w Warszawie, Repertorium A nr 1000/2026.\n§ 1. Deweloper zobowiązuje się wybudować budynek, ustanowić odrębną własność lokalu mieszkalnego nr 12 i przenieść jego własność na Nabywcę.\n§ 2. Cena wynosi 600 000 zł. Cena jest iloczynem powierzchni użytkowej 50 m2 i ceny za 1 m2 w kwocie 12 000 zł.\n§ 3. Nabywca dokonuje wpłat na otwarty mieszkaniowy rachunek powierniczy wskazany w prospekcie informacyjnym, po zakończeniu kolejnych etapów z harmonogramu.\n§ 4. Koszty prowadzenia mieszkaniowego rachunku powierniczego ponosi Deweloper.\n§ 5. Przeniesienie własności lokalu na Nabywcę nastąpi do dnia 30 czerwca 2028 r.\n§ 6. Odbiór lokalu nastąpi w obecności Nabywcy. Deweloper poinformuje o uznaniu wad w terminie 14 dni i usunie uznane wady w terminie 30 dni od podpisania protokołu.\n§ 7. Nabywca może odstąpić od umowy w przypadkach określonych w ustawie deweloperskiej. W takim przypadku Nabywca nie ponosi żadnych kosztów.\n§ 8. Deweloper może odstąpić od umowy, jeżeli Nabywca nie zapłaci raty mimo pisemnego wezwania do zapłaty w terminie 30 dni od doręczenia wezwania.\n§ 9. Koszty notarialne i sądowe tej umowy ponoszą Deweloper i Nabywca w równych częściach.\n§ 10. Nabywca oświadcza, że otrzymał prospekt informacyjny wraz z załącznikami.\n§ 11. Strony nie zawierały umowy rezerwacyjnej.\n§ 12. Kara umowna dla Dewelopera za opóźnienie w przeniesieniu własności wynosi 0,02% ceny za każdy dzień. Odsetki należne Deweloperowi za opóźnienie Nabywcy w zapłacie wynoszą 0,02% ceny za każdy dzień.",
+      "expected": {
+        "verdict": "PODPISZ",
+        "red": []
+      }
+    },
+    {
+      "id": "dw-02-rachunek-biezacy",
+      "kind": "zasiane",
+      "text": "UMOWA DEWELOPERSKA\nzawarta w formie aktu notarialnego przed notariuszem w Warszawie, Repertorium A nr 1000/2026.\n§ 1. Deweloper zobowiązuje się wybudować budynek, ustanowić odrębną własność lokalu mieszkalnego nr 12 i przenieść jego własność na Nabywcę.\n§ 2. Cena wynosi 600 000 zł. Cena jest iloczynem powierzchni użytkowej 50 m2 i ceny za 1 m2 w kwocie 12 000 zł.\n§ 3. Nabywca wpłaci cenę na rachunek bieżący Dewelopera w czterech ratach.\n§ 4. Koszty prowadzenia mieszkaniowego rachunku powierniczego ponosi Deweloper.\n§ 5. Przeniesienie własności lokalu na Nabywcę nastąpi do dnia 30 czerwca 2028 r.\n§ 6. Odbiór lokalu nastąpi w obecności Nabywcy. Deweloper poinformuje o uznaniu wad w terminie 14 dni i usunie uznane wady w terminie 30 dni od podpisania protokołu.\n§ 7. Nabywca może odstąpić od umowy w przypadkach określonych w ustawie deweloperskiej. W takim przypadku Nabywca nie ponosi żadnych kosztów.\n§ 8. Deweloper może odstąpić od umowy, jeżeli Nabywca nie zapłaci raty mimo pisemnego wezwania do zapłaty w terminie 30 dni od doręczenia wezwania.\n§ 9. Koszty notarialne i sądowe tej umowy ponoszą Deweloper i Nabywca w równych częściach.\n§ 10. Nabywca oświadcza, że otrzymał prospekt informacyjny wraz z załącznikami.\n§ 11. Strony nie zawierały umowy rezerwacyjnej.\n§ 12. Kara umowna dla Dewelopera za opóźnienie w przeniesieniu własności wynosi 0,02% ceny za każdy dzień. Odsetki należne Deweloperowi za opóźnienie Nabywcy w zapłacie wynoszą 0,02% ceny za każdy dzień.",
+      "expected": {
+        "verdict": "PODPISZ PO ZMIANACH",
+        "red": [
+          "dew-rachunek-powierniczy"
+        ]
+      }
+    },
+    {
+      "id": "dw-03-gotowka",
+      "kind": "zasiane",
+      "text": "UMOWA DEWELOPERSKA\nzawarta w formie aktu notarialnego przed notariuszem w Warszawie, Repertorium A nr 1000/2026.\n§ 1. Deweloper zobowiązuje się wybudować budynek, ustanowić odrębną własność lokalu mieszkalnego nr 12 i przenieść jego własność na Nabywcę.\n§ 2. Cena wynosi 600 000 zł. Cena jest iloczynem powierzchni użytkowej 50 m2 i ceny za 1 m2 w kwocie 12 000 zł.\n§ 3. Nabywca zapłaci cenę gotówką w kasie Dewelopera.\n§ 4. Koszty prowadzenia mieszkaniowego rachunku powierniczego ponosi Deweloper.\n§ 5. Przeniesienie własności lokalu na Nabywcę nastąpi do dnia 30 czerwca 2028 r.\n§ 6. Odbiór lokalu nastąpi w obecności Nabywcy. Deweloper poinformuje o uznaniu wad w terminie 14 dni i usunie uznane wady w terminie 30 dni od podpisania protokołu.\n§ 7. Nabywca może odstąpić od umowy w przypadkach określonych w ustawie deweloperskiej. W takim przypadku Nabywca nie ponosi żadnych kosztów.\n§ 8. Deweloper może odstąpić od umowy, jeżeli Nabywca nie zapłaci raty mimo pisemnego wezwania do zapłaty w terminie 30 dni od doręczenia wezwania.\n§ 9. Koszty notarialne i sądowe tej umowy ponoszą Deweloper i Nabywca w równych częściach.\n§ 10. Nabywca oświadcza, że otrzymał prospekt informacyjny wraz z załącznikami.\n§ 11. Strony nie zawierały umowy rezerwacyjnej.\n§ 12. Kara umowna dla Dewelopera za opóźnienie w przeniesieniu własności wynosi 0,02% ceny za każdy dzień. Odsetki należne Deweloperowi za opóźnienie Nabywcy w zapłacie wynoszą 0,02% ceny za każdy dzień.",
+      "expected": {
+        "verdict": "PODPISZ PO ZMIANACH",
+        "red": [
+          "dew-rachunek-powierniczy"
+        ]
+      }
+    },
+    {
+      "id": "dw-04-oplata-rezerwacyjna-2proc",
+      "kind": "zasiane",
+      "text": "UMOWA DEWELOPERSKA\nzawarta w formie aktu notarialnego przed notariuszem w Warszawie, Repertorium A nr 1000/2026.\n§ 1. Deweloper zobowiązuje się wybudować budynek, ustanowić odrębną własność lokalu mieszkalnego nr 12 i przenieść jego własność na Nabywcę.\n§ 2. Cena wynosi 600 000 zł. Cena jest iloczynem powierzchni użytkowej 50 m2 i ceny za 1 m2 w kwocie 12 000 zł.\n§ 3. Nabywca dokonuje wpłat na otwarty mieszkaniowy rachunek powierniczy wskazany w prospekcie informacyjnym, po zakończeniu kolejnych etapów z harmonogramu.\n§ 4. Koszty prowadzenia mieszkaniowego rachunku powierniczego ponosi Deweloper.\n§ 5. Przeniesienie własności lokalu na Nabywcę nastąpi do dnia 30 czerwca 2028 r.\n§ 6. Odbiór lokalu nastąpi w obecności Nabywcy. Deweloper poinformuje o uznaniu wad w terminie 14 dni i usunie uznane wady w terminie 30 dni od podpisania protokołu.\n§ 7. Nabywca może odstąpić od umowy w przypadkach określonych w ustawie deweloperskiej. W takim przypadku Nabywca nie ponosi żadnych kosztów.\n§ 8. Deweloper może odstąpić od umowy, jeżeli Nabywca nie zapłaci raty mimo pisemnego wezwania do zapłaty w terminie 30 dni od doręczenia wezwania.\n§ 9. Koszty notarialne i sądowe tej umowy ponoszą Deweloper i Nabywca w równych częściach.\n§ 10. Nabywca oświadcza, że otrzymał prospekt informacyjny wraz z załącznikami.\n§ 11. Strony zawarły umowę rezerwacyjną. Opłata rezerwacyjna wyniosła 12 000 zł i zostaje zaliczona na poczet ceny.\n§ 12. Kara umowna dla Dewelopera za opóźnienie w przeniesieniu własności wynosi 0,02% ceny za każdy dzień. Odsetki należne Deweloperowi za opóźnienie Nabywcy w zapłacie wynoszą 0,02% ceny za każdy dzień.",
+      "expected": {
+        "verdict": "PODPISZ PO ZMIANACH",
+        "red": [
+          "dew-oplata-rezerwacyjna"
+        ],
+        "riskAmount": 6000
+      }
+    },
+    {
+      "id": "dw-05-oplata-rezerwacyjna-1proc-granica",
+      "kind": "granica",
+      "text": "UMOWA DEWELOPERSKA\nzawarta w formie aktu notarialnego przed notariuszem w Warszawie, Repertorium A nr 1000/2026.\n§ 1. Deweloper zobowiązuje się wybudować budynek, ustanowić odrębną własność lokalu mieszkalnego nr 12 i przenieść jego własność na Nabywcę.\n§ 2. Cena wynosi 600 000 zł. Cena jest iloczynem powierzchni użytkowej 50 m2 i ceny za 1 m2 w kwocie 12 000 zł.\n§ 3. Nabywca dokonuje wpłat na otwarty mieszkaniowy rachunek powierniczy wskazany w prospekcie informacyjnym, po zakończeniu kolejnych etapów z harmonogramu.\n§ 4. Koszty prowadzenia mieszkaniowego rachunku powierniczego ponosi Deweloper.\n§ 5. Przeniesienie własności lokalu na Nabywcę nastąpi do dnia 30 czerwca 2028 r.\n§ 6. Odbiór lokalu nastąpi w obecności Nabywcy. Deweloper poinformuje o uznaniu wad w terminie 14 dni i usunie uznane wady w terminie 30 dni od podpisania protokołu.\n§ 7. Nabywca może odstąpić od umowy w przypadkach określonych w ustawie deweloperskiej. W takim przypadku Nabywca nie ponosi żadnych kosztów.\n§ 8. Deweloper może odstąpić od umowy, jeżeli Nabywca nie zapłaci raty mimo pisemnego wezwania do zapłaty w terminie 30 dni od doręczenia wezwania.\n§ 9. Koszty notarialne i sądowe tej umowy ponoszą Deweloper i Nabywca w równych częściach.\n§ 10. Nabywca oświadcza, że otrzymał prospekt informacyjny wraz z załącznikami.\n§ 11. Strony zawarły umowę rezerwacyjną. Opłata rezerwacyjna wyniosła 6 000 zł i zostaje zaliczona na poczet ceny.\n§ 12. Kara umowna dla Dewelopera za opóźnienie w przeniesieniu własności wynosi 0,02% ceny za każdy dzień. Odsetki należne Deweloperowi za opóźnienie Nabywcy w zapłacie wynoszą 0,02% ceny za każdy dzień.",
+      "expected": {
+        "verdict": "PODPISZ",
+        "red": []
+      }
+    },
+    {
+      "id": "dw-06-usuniecie-wad-60-dni",
+      "kind": "zasiane",
+      "text": "UMOWA DEWELOPERSKA\nzawarta w formie aktu notarialnego przed notariuszem w Warszawie, Repertorium A nr 1000/2026.\n§ 1. Deweloper zobowiązuje się wybudować budynek, ustanowić odrębną własność lokalu mieszkalnego nr 12 i przenieść jego własność na Nabywcę.\n§ 2. Cena wynosi 600 000 zł. Cena jest iloczynem powierzchni użytkowej 50 m2 i ceny za 1 m2 w kwocie 12 000 zł.\n§ 3. Nabywca dokonuje wpłat na otwarty mieszkaniowy rachunek powierniczy wskazany w prospekcie informacyjnym, po zakończeniu kolejnych etapów z harmonogramu.\n§ 4. Koszty prowadzenia mieszkaniowego rachunku powierniczego ponosi Deweloper.\n§ 5. Przeniesienie własności lokalu na Nabywcę nastąpi do dnia 30 czerwca 2028 r.\n§ 6. Odbiór lokalu nastąpi w obecności Nabywcy. Deweloper usunie uznane wady w terminie 60 dni od podpisania protokołu.\n§ 7. Nabywca może odstąpić od umowy w przypadkach określonych w ustawie deweloperskiej. W takim przypadku Nabywca nie ponosi żadnych kosztów.\n§ 8. Deweloper może odstąpić od umowy, jeżeli Nabywca nie zapłaci raty mimo pisemnego wezwania do zapłaty w terminie 30 dni od doręczenia wezwania.\n§ 9. Koszty notarialne i sądowe tej umowy ponoszą Deweloper i Nabywca w równych częściach.\n§ 10. Nabywca oświadcza, że otrzymał prospekt informacyjny wraz z załącznikami.\n§ 11. Strony nie zawierały umowy rezerwacyjnej.\n§ 12. Kara umowna dla Dewelopera za opóźnienie w przeniesieniu własności wynosi 0,02% ceny za każdy dzień. Odsetki należne Deweloperowi za opóźnienie Nabywcy w zapłacie wynoszą 0,02% ceny za każdy dzień.",
+      "expected": {
+        "verdict": "PODPISZ PO ZMIANACH",
+        "red": [
+          "dew-odbior-i-usuwanie-wad"
+        ]
+      }
+    },
+    {
+      "id": "dw-07-odpowiedz-na-wady-21-dni",
+      "kind": "zasiane",
+      "text": "UMOWA DEWELOPERSKA\nzawarta w formie aktu notarialnego przed notariuszem w Warszawie, Repertorium A nr 1000/2026.\n§ 1. Deweloper zobowiązuje się wybudować budynek, ustanowić odrębną własność lokalu mieszkalnego nr 12 i przenieść jego własność na Nabywcę.\n§ 2. Cena wynosi 600 000 zł. Cena jest iloczynem powierzchni użytkowej 50 m2 i ceny za 1 m2 w kwocie 12 000 zł.\n§ 3. Nabywca dokonuje wpłat na otwarty mieszkaniowy rachunek powierniczy wskazany w prospekcie informacyjnym, po zakończeniu kolejnych etapów z harmonogramu.\n§ 4. Koszty prowadzenia mieszkaniowego rachunku powierniczego ponosi Deweloper.\n§ 5. Przeniesienie własności lokalu na Nabywcę nastąpi do dnia 30 czerwca 2028 r.\n§ 6. Odbiór lokalu nastąpi w obecności Nabywcy. Deweloper poinformuje o uznaniu wad w terminie 21 dni. Deweloper usunie uznane wady w terminie 30 dni.\n§ 7. Nabywca może odstąpić od umowy w przypadkach określonych w ustawie deweloperskiej. W takim przypadku Nabywca nie ponosi żadnych kosztów.\n§ 8. Deweloper może odstąpić od umowy, jeżeli Nabywca nie zapłaci raty mimo pisemnego wezwania do zapłaty w terminie 30 dni od doręczenia wezwania.\n§ 9. Koszty notarialne i sądowe tej umowy ponoszą Deweloper i Nabywca w równych częściach.\n§ 10. Nabywca oświadcza, że otrzymał prospekt informacyjny wraz z załącznikami.\n§ 11. Strony nie zawierały umowy rezerwacyjnej.\n§ 12. Kara umowna dla Dewelopera za opóźnienie w przeniesieniu własności wynosi 0,02% ceny za każdy dzień. Odsetki należne Deweloperowi za opóźnienie Nabywcy w zapłacie wynoszą 0,02% ceny za każdy dzień.",
+      "expected": {
+        "verdict": "PODPISZ PO ZMIANACH",
+        "red": [
+          "dew-odbior-i-usuwanie-wad"
+        ]
+      }
+    },
+    {
+      "id": "dw-08-wady-liczba-slownie-granica",
+      "kind": "odpornosc",
+      "text": "UMOWA DEWELOPERSKA\nzawarta w formie aktu notarialnego przed notariuszem w Warszawie, Repertorium A nr 1000/2026.\n§ 1. Deweloper zobowiązuje się wybudować budynek, ustanowić odrębną własność lokalu mieszkalnego nr 12 i przenieść jego własność na Nabywcę.\n§ 2. Cena wynosi 600 000 zł. Cena jest iloczynem powierzchni użytkowej 50 m2 i ceny za 1 m2 w kwocie 12 000 zł.\n§ 3. Nabywca dokonuje wpłat na otwarty mieszkaniowy rachunek powierniczy wskazany w prospekcie informacyjnym, po zakończeniu kolejnych etapów z harmonogramu.\n§ 4. Koszty prowadzenia mieszkaniowego rachunku powierniczego ponosi Deweloper.\n§ 5. Przeniesienie własności lokalu na Nabywcę nastąpi do dnia 30 czerwca 2028 r.\n§ 6. Odbiór lokalu nastąpi w obecności Nabywcy. Deweloper usunie uznane wady w terminie 30 (trzydziestu) dni od podpisania protokołu.\n§ 7. Nabywca może odstąpić od umowy w przypadkach określonych w ustawie deweloperskiej. W takim przypadku Nabywca nie ponosi żadnych kosztów.\n§ 8. Deweloper może odstąpić od umowy, jeżeli Nabywca nie zapłaci raty mimo pisemnego wezwania do zapłaty w terminie 30 dni od doręczenia wezwania.\n§ 9. Koszty notarialne i sądowe tej umowy ponoszą Deweloper i Nabywca w równych częściach.\n§ 10. Nabywca oświadcza, że otrzymał prospekt informacyjny wraz z załącznikami.\n§ 11. Strony nie zawierały umowy rezerwacyjnej.\n§ 12. Kara umowna dla Dewelopera za opóźnienie w przeniesieniu własności wynosi 0,02% ceny za każdy dzień. Odsetki należne Deweloperowi za opóźnienie Nabywcy w zapłacie wynoszą 0,02% ceny za każdy dzień.",
+      "expected": {
+        "verdict": "PODPISZ",
+        "red": []
+      }
+    },
+    {
+      "id": "dw-09-oplata-za-odstapienie-kwota",
+      "kind": "zasiane",
+      "text": "UMOWA DEWELOPERSKA\nzawarta w formie aktu notarialnego przed notariuszem w Warszawie, Repertorium A nr 1000/2026.\n§ 1. Deweloper zobowiązuje się wybudować budynek, ustanowić odrębną własność lokalu mieszkalnego nr 12 i przenieść jego własność na Nabywcę.\n§ 2. Cena wynosi 600 000 zł. Cena jest iloczynem powierzchni użytkowej 50 m2 i ceny za 1 m2 w kwocie 12 000 zł.\n§ 3. Nabywca dokonuje wpłat na otwarty mieszkaniowy rachunek powierniczy wskazany w prospekcie informacyjnym, po zakończeniu kolejnych etapów z harmonogramu.\n§ 4. Koszty prowadzenia mieszkaniowego rachunku powierniczego ponosi Deweloper.\n§ 5. Przeniesienie własności lokalu na Nabywcę nastąpi do dnia 30 czerwca 2028 r.\n§ 6. Odbiór lokalu nastąpi w obecności Nabywcy. Deweloper poinformuje o uznaniu wad w terminie 14 dni i usunie uznane wady w terminie 30 dni od podpisania protokołu.\n§ 7. W razie odstąpienia od umowy przez Nabywcę Nabywca zapłaci Deweloperowi 30 000 zł.\n§ 8. Deweloper może odstąpić od umowy, jeżeli Nabywca nie zapłaci raty mimo pisemnego wezwania do zapłaty w terminie 30 dni od doręczenia wezwania.\n§ 9. Koszty notarialne i sądowe tej umowy ponoszą Deweloper i Nabywca w równych częściach.\n§ 10. Nabywca oświadcza, że otrzymał prospekt informacyjny wraz z załącznikami.\n§ 11. Strony nie zawierały umowy rezerwacyjnej.\n§ 12. Kara umowna dla Dewelopera za opóźnienie w przeniesieniu własności wynosi 0,02% ceny za każdy dzień. Odsetki należne Deweloperowi za opóźnienie Nabywcy w zapłacie wynoszą 0,02% ceny za każdy dzień.",
+      "expected": {
+        "verdict": "PODPISZ PO ZMIANACH",
+        "red": [
+          "dew-odstapienie-nabywcy"
+        ],
+        "riskAmount": 30000
+      }
+    },
+    {
+      "id": "dw-10-potracenie-10proc-ceny",
+      "kind": "zasiane",
+      "text": "UMOWA DEWELOPERSKA\nzawarta w formie aktu notarialnego przed notariuszem w Warszawie, Repertorium A nr 1000/2026.\n§ 1. Deweloper zobowiązuje się wybudować budynek, ustanowić odrębną własność lokalu mieszkalnego nr 12 i przenieść jego własność na Nabywcę.\n§ 2. Cena wynosi 600 000 zł. Cena jest iloczynem powierzchni użytkowej 50 m2 i ceny za 1 m2 w kwocie 12 000 zł.\n§ 3. Nabywca dokonuje wpłat na otwarty mieszkaniowy rachunek powierniczy wskazany w prospekcie informacyjnym, po zakończeniu kolejnych etapów z harmonogramu.\n§ 4. Koszty prowadzenia mieszkaniowego rachunku powierniczego ponosi Deweloper.\n§ 5. Przeniesienie własności lokalu na Nabywcę nastąpi do dnia 30 czerwca 2028 r.\n§ 6. Odbiór lokalu nastąpi w obecności Nabywcy. Deweloper poinformuje o uznaniu wad w terminie 14 dni i usunie uznane wady w terminie 30 dni od podpisania protokołu.\n§ 7. W razie odstąpienia od umowy przez Nabywcę Deweloper potrąci 10% ceny z kwot do zwrotu.\n§ 8. Deweloper może odstąpić od umowy, jeżeli Nabywca nie zapłaci raty mimo pisemnego wezwania do zapłaty w terminie 30 dni od doręczenia wezwania.\n§ 9. Koszty notarialne i sądowe tej umowy ponoszą Deweloper i Nabywca w równych częściach.\n§ 10. Nabywca oświadcza, że otrzymał prospekt informacyjny wraz z załącznikami.\n§ 11. Strony nie zawierały umowy rezerwacyjnej.\n§ 12. Kara umowna dla Dewelopera za opóźnienie w przeniesieniu własności wynosi 0,02% ceny za każdy dzień. Odsetki należne Deweloperowi za opóźnienie Nabywcy w zapłacie wynoszą 0,02% ceny za każdy dzień.",
+      "expected": {
+        "verdict": "NIE PODPISUJ BEZ PRAWNIKA",
+        "red": [
+          "dew-odstapienie-nabywcy"
+        ],
+        "riskAmount": 60000
+      }
+    },
+    {
+      "id": "dw-11-wezwanie-7-dni",
+      "kind": "zasiane",
+      "text": "UMOWA DEWELOPERSKA\nzawarta w formie aktu notarialnego przed notariuszem w Warszawie, Repertorium A nr 1000/2026.\n§ 1. Deweloper zobowiązuje się wybudować budynek, ustanowić odrębną własność lokalu mieszkalnego nr 12 i przenieść jego własność na Nabywcę.\n§ 2. Cena wynosi 600 000 zł. Cena jest iloczynem powierzchni użytkowej 50 m2 i ceny za 1 m2 w kwocie 12 000 zł.\n§ 3. Nabywca dokonuje wpłat na otwarty mieszkaniowy rachunek powierniczy wskazany w prospekcie informacyjnym, po zakończeniu kolejnych etapów z harmonogramu.\n§ 4. Koszty prowadzenia mieszkaniowego rachunku powierniczego ponosi Deweloper.\n§ 5. Przeniesienie własności lokalu na Nabywcę nastąpi do dnia 30 czerwca 2028 r.\n§ 6. Odbiór lokalu nastąpi w obecności Nabywcy. Deweloper poinformuje o uznaniu wad w terminie 14 dni i usunie uznane wady w terminie 30 dni od podpisania protokołu.\n§ 7. Nabywca może odstąpić od umowy w przypadkach określonych w ustawie deweloperskiej. W takim przypadku Nabywca nie ponosi żadnych kosztów.\n§ 8. Deweloper może odstąpić od umowy, jeżeli Nabywca nie zapłaci raty mimo wezwania do zapłaty w terminie 7 dni.\n§ 9. Koszty notarialne i sądowe tej umowy ponoszą Deweloper i Nabywca w równych częściach.\n§ 10. Nabywca oświadcza, że otrzymał prospekt informacyjny wraz z załącznikami.\n§ 11. Strony nie zawierały umowy rezerwacyjnej.\n§ 12. Kara umowna dla Dewelopera za opóźnienie w przeniesieniu własności wynosi 0,02% ceny za każdy dzień. Odsetki należne Deweloperowi za opóźnienie Nabywcy w zapłacie wynoszą 0,02% ceny za każdy dzień.",
+      "expected": {
+        "verdict": "PODPISZ PO ZMIANACH",
+        "red": [
+          "dew-odstapienie-dewelopera"
+        ]
+      }
+    },
+    {
+      "id": "dw-12-termin-dodatkowy-180-dni",
+      "kind": "zasiane",
+      "text": "UMOWA DEWELOPERSKA\nzawarta w formie aktu notarialnego przed notariuszem w Warszawie, Repertorium A nr 1000/2026.\n§ 1. Deweloper zobowiązuje się wybudować budynek, ustanowić odrębną własność lokalu mieszkalnego nr 12 i przenieść jego własność na Nabywcę.\n§ 2. Cena wynosi 600 000 zł. Cena jest iloczynem powierzchni użytkowej 50 m2 i ceny za 1 m2 w kwocie 12 000 zł.\n§ 3. Nabywca dokonuje wpłat na otwarty mieszkaniowy rachunek powierniczy wskazany w prospekcie informacyjnym, po zakończeniu kolejnych etapów z harmonogramu.\n§ 4. Koszty prowadzenia mieszkaniowego rachunku powierniczego ponosi Deweloper.\n§ 5. Przeniesienie własności lokalu na Nabywcę nastąpi do dnia 30 czerwca 2028 r. W razie opóźnienia Nabywca wyznaczy Deweloperowi termin 180 dni na przeniesienie własności, a po jego upływie może odstąpić od umowy.\n§ 6. Odbiór lokalu nastąpi w obecności Nabywcy. Deweloper poinformuje o uznaniu wad w terminie 14 dni i usunie uznane wady w terminie 30 dni od podpisania protokołu.\n§ 7. Nabywca może odstąpić od umowy w przypadkach określonych w ustawie deweloperskiej. W takim przypadku Nabywca nie ponosi żadnych kosztów.\n§ 8. Deweloper może odstąpić od umowy, jeżeli Nabywca nie zapłaci raty mimo pisemnego wezwania do zapłaty w terminie 30 dni od doręczenia wezwania.\n§ 9. Koszty notarialne i sądowe tej umowy ponoszą Deweloper i Nabywca w równych częściach.\n§ 10. Nabywca oświadcza, że otrzymał prospekt informacyjny wraz z załącznikami.\n§ 11. Strony nie zawierały umowy rezerwacyjnej.\n§ 12. Kara umowna dla Dewelopera za opóźnienie w przeniesieniu własności wynosi 0,02% ceny za każdy dzień. Odsetki należne Deweloperowi za opóźnienie Nabywcy w zapłacie wynoszą 0,02% ceny za każdy dzień.",
+      "expected": {
+        "verdict": "PODPISZ PO ZMIANACH",
+        "red": [
+          "dew-termin-przeniesienia-wlasnosci"
+        ]
+      }
+    },
+    {
+      "id": "dw-13-koszty-notarialne-nabywca",
+      "kind": "zasiane",
+      "text": "UMOWA DEWELOPERSKA\nzawarta w formie aktu notarialnego przed notariuszem w Warszawie, Repertorium A nr 1000/2026.\n§ 1. Deweloper zobowiązuje się wybudować budynek, ustanowić odrębną własność lokalu mieszkalnego nr 12 i przenieść jego własność na Nabywcę.\n§ 2. Cena wynosi 600 000 zł. Cena jest iloczynem powierzchni użytkowej 50 m2 i ceny za 1 m2 w kwocie 12 000 zł.\n§ 3. Nabywca dokonuje wpłat na otwarty mieszkaniowy rachunek powierniczy wskazany w prospekcie informacyjnym, po zakończeniu kolejnych etapów z harmonogramu.\n§ 4. Koszty prowadzenia mieszkaniowego rachunku powierniczego ponosi Deweloper.\n§ 5. Przeniesienie własności lokalu na Nabywcę nastąpi do dnia 30 czerwca 2028 r.\n§ 6. Odbiór lokalu nastąpi w obecności Nabywcy. Deweloper poinformuje o uznaniu wad w terminie 14 dni i usunie uznane wady w terminie 30 dni od podpisania protokołu.\n§ 7. Nabywca może odstąpić od umowy w przypadkach określonych w ustawie deweloperskiej. W takim przypadku Nabywca nie ponosi żadnych kosztów.\n§ 8. Deweloper może odstąpić od umowy, jeżeli Nabywca nie zapłaci raty mimo pisemnego wezwania do zapłaty w terminie 30 dni od doręczenia wezwania.\n§ 9. Koszty notarialne i sądowe tej umowy w całości ponosi Nabywca.\n§ 10. Nabywca oświadcza, że otrzymał prospekt informacyjny wraz z załącznikami.\n§ 11. Strony nie zawierały umowy rezerwacyjnej.\n§ 12. Kara umowna dla Dewelopera za opóźnienie w przeniesieniu własności wynosi 0,02% ceny za każdy dzień. Odsetki należne Deweloperowi za opóźnienie Nabywcy w zapłacie wynoszą 0,02% ceny za każdy dzień.",
+      "expected": {
+        "verdict": "PODPISZ PO ZMIANACH",
+        "red": [
+          "dew-koszty-notarialne"
+        ]
+      }
+    },
+    {
+      "id": "dw-14-koszty-rachunku-nabywca",
+      "kind": "zasiane",
+      "text": "UMOWA DEWELOPERSKA\nzawarta w formie aktu notarialnego przed notariuszem w Warszawie, Repertorium A nr 1000/2026.\n§ 1. Deweloper zobowiązuje się wybudować budynek, ustanowić odrębną własność lokalu mieszkalnego nr 12 i przenieść jego własność na Nabywcę.\n§ 2. Cena wynosi 600 000 zł. Cena jest iloczynem powierzchni użytkowej 50 m2 i ceny za 1 m2 w kwocie 12 000 zł.\n§ 3. Nabywca dokonuje wpłat na otwarty mieszkaniowy rachunek powierniczy wskazany w prospekcie informacyjnym, po zakończeniu kolejnych etapów z harmonogramu.\n§ 4. Koszty prowadzenia mieszkaniowego rachunku powierniczego w kwocie 1 500 zł ponosi Nabywca.\n§ 5. Przeniesienie własności lokalu na Nabywcę nastąpi do dnia 30 czerwca 2028 r.\n§ 6. Odbiór lokalu nastąpi w obecności Nabywcy. Deweloper poinformuje o uznaniu wad w terminie 14 dni i usunie uznane wady w terminie 30 dni od podpisania protokołu.\n§ 7. Nabywca może odstąpić od umowy w przypadkach określonych w ustawie deweloperskiej. W takim przypadku Nabywca nie ponosi żadnych kosztów.\n§ 8. Deweloper może odstąpić od umowy, jeżeli Nabywca nie zapłaci raty mimo pisemnego wezwania do zapłaty w terminie 30 dni od doręczenia wezwania.\n§ 9. Koszty notarialne i sądowe tej umowy ponoszą Deweloper i Nabywca w równych częściach.\n§ 10. Nabywca oświadcza, że otrzymał prospekt informacyjny wraz z załącznikami.\n§ 11. Strony nie zawierały umowy rezerwacyjnej.\n§ 12. Kara umowna dla Dewelopera za opóźnienie w przeniesieniu własności wynosi 0,02% ceny za każdy dzień. Odsetki należne Deweloperowi za opóźnienie Nabywcy w zapłacie wynoszą 0,02% ceny za każdy dzień.",
+      "expected": {
+        "verdict": "PODPISZ PO ZMIANACH",
+        "red": [
+          "dew-koszty-rachunku-powierniczego"
+        ],
+        "riskAmount": 1500
+      }
+    },
+    {
+      "id": "dw-15-forma-pisemna",
+      "kind": "zasiane",
+      "text": "UMOWA DEWELOPERSKA\nzawarta w Warszawie w dniu 1 października 2026 r.\n§ 1. Deweloper zobowiązuje się wybudować budynek, ustanowić odrębną własność lokalu mieszkalnego nr 12 i przenieść jego własność na Nabywcę.\n§ 2. Cena wynosi 600 000 zł. Cena jest iloczynem powierzchni użytkowej 50 m2 i ceny za 1 m2 w kwocie 12 000 zł.\n§ 3. Nabywca dokonuje wpłat na otwarty mieszkaniowy rachunek powierniczy wskazany w prospekcie informacyjnym, po zakończeniu kolejnych etapów z harmonogramu.\n§ 4. Koszty prowadzenia mieszkaniowego rachunku powierniczego ponosi Deweloper.\n§ 5. Przeniesienie własności lokalu na Nabywcę nastąpi do dnia 30 czerwca 2028 r.\n§ 6. Odbiór lokalu nastąpi w obecności Nabywcy. Deweloper poinformuje o uznaniu wad w terminie 14 dni i usunie uznane wady w terminie 30 dni od podpisania protokołu.\n§ 7. Nabywca może odstąpić od umowy w przypadkach określonych w ustawie deweloperskiej. W takim przypadku Nabywca nie ponosi żadnych kosztów.\n§ 8. Deweloper może odstąpić od umowy, jeżeli Nabywca nie zapłaci raty mimo pisemnego wezwania do zapłaty w terminie 30 dni od doręczenia wezwania.\n§ 9. Koszty notarialne i sądowe tej umowy ponoszą Deweloper i Nabywca w równych częściach.\n§ 10. Nabywca oświadcza, że otrzymał prospekt informacyjny wraz z załącznikami.\n§ 11. Umowę sporządzono w dwóch jednobrzmiących egzemplarzach, po jednym dla każdej ze stron.\n§ 12. Kara umowna dla Dewelopera za opóźnienie w przeniesieniu własności wynosi 0,02% ceny za każdy dzień. Odsetki należne Deweloperowi za opóźnienie Nabywcy w zapłacie wynoszą 0,02% ceny za każdy dzień.",
+      "expected": {
+        "verdict": "PODPISZ PO ZMIANACH",
+        "red": [
+          "dew-forma-aktu-notarialnego"
+        ]
+      }
+    },
+    {
+      "id": "dw-16-cztery-wady",
+      "kind": "zasiane",
+      "text": "UMOWA DEWELOPERSKA\nzawarta w formie aktu notarialnego przed notariuszem w Warszawie, Repertorium A nr 1000/2026.\n§ 1. Deweloper zobowiązuje się wybudować budynek, ustanowić odrębną własność lokalu mieszkalnego nr 12 i przenieść jego własność na Nabywcę.\n§ 2. Cena wynosi 600 000 zł. Cena jest iloczynem powierzchni użytkowej 50 m2 i ceny za 1 m2 w kwocie 12 000 zł.\n§ 3. Nabywca wpłaci cenę na rachunek bieżący Dewelopera.\n§ 4. Koszty prowadzenia mieszkaniowego rachunku powierniczego ponosi Deweloper.\n§ 5. Przeniesienie własności lokalu na Nabywcę nastąpi do dnia 30 czerwca 2028 r.\n§ 6. Odbiór lokalu nastąpi w obecności Nabywcy. Deweloper usunie uznane wady w terminie 60 dni.\n§ 7. Nabywca może odstąpić od umowy w przypadkach określonych w ustawie deweloperskiej. W takim przypadku Nabywca nie ponosi żadnych kosztów.\n§ 8. Deweloper może odstąpić od umowy, jeżeli Nabywca nie zapłaci raty mimo wezwania do zapłaty w terminie 7 dni.\n§ 9. Koszty notarialne i sądowe tej umowy w całości ponosi Nabywca.\n§ 10. Nabywca oświadcza, że otrzymał prospekt informacyjny wraz z załącznikami.\n§ 11. Strony nie zawierały umowy rezerwacyjnej.\n§ 12. Kara umowna dla Dewelopera za opóźnienie w przeniesieniu własności wynosi 0,02% ceny za każdy dzień. Odsetki należne Deweloperowi za opóźnienie Nabywcy w zapłacie wynoszą 0,02% ceny za każdy dzień.",
+      "expected": {
+        "verdict": "NIE PODPISUJ BEZ PRAWNIKA",
+        "red": [
+          "dew-rachunek-powierniczy",
+          "dew-odbior-i-usuwanie-wad",
+          "dew-odstapienie-dewelopera",
+          "dew-koszty-notarialne"
+        ]
+      }
+    },
+    {
+      "id": "dw-17-dluga-poprawna",
+      "kind": "odpornosc",
+      "text": "UMOWA DEWELOPERSKA\nzawarta w formie aktu notarialnego przed notariuszem w Warszawie, Repertorium A nr 1000/2026.\n§ 1. Deweloper zobowiązuje się wybudować budynek, ustanowić odrębną własność lokalu mieszkalnego nr 12 i przenieść jego własność na Nabywcę.\n§ 2. Cena wynosi 600 000 zł. Cena jest iloczynem powierzchni użytkowej 50 m2 i ceny za 1 m2 w kwocie 12 000 zł.\n§ 3. Nabywca dokonuje wpłat na otwarty mieszkaniowy rachunek powierniczy wskazany w prospekcie informacyjnym, po zakończeniu kolejnych etapów z harmonogramu.\n§ 4. Koszty prowadzenia mieszkaniowego rachunku powierniczego ponosi Deweloper.\n§ 5. Przeniesienie własności lokalu na Nabywcę nastąpi do dnia 30 czerwca 2028 r.\n§ 6. Odbiór lokalu nastąpi w obecności Nabywcy. Deweloper poinformuje o uznaniu wad w terminie 14 dni i usunie uznane wady w terminie 30 dni od podpisania protokołu.\n§ 7. Nabywca może odstąpić od umowy w przypadkach określonych w ustawie deweloperskiej. W takim przypadku Nabywca nie ponosi żadnych kosztów.\n§ 8. Deweloper może odstąpić od umowy, jeżeli Nabywca nie zapłaci raty mimo pisemnego wezwania do zapłaty w terminie 30 dni od doręczenia wezwania.\n§ 9. Koszty notarialne i sądowe tej umowy ponoszą Deweloper i Nabywca w równych częściach.\n§ 10. Nabywca oświadcza, że otrzymał prospekt informacyjny wraz z załącznikami.\n§ 11. Strony nie zawierały umowy rezerwacyjnej.\n§ 12. Kara umowna dla Dewelopera za opóźnienie w przeniesieniu własności wynosi 0,02% ceny za każdy dzień. Odsetki należne Deweloperowi za opóźnienie Nabywcy w zapłacie wynoszą 0,02% ceny za każdy dzień.",
+      "repeatFiller": 40,
+      "expected": {
+        "verdict": "PODPISZ",
+        "red": []
+      }
+    },
+    {
+      "id": "dw-18-kwoty-z-kropkami",
+      "kind": "odpornosc",
+      "text": "UMOWA DEWELOPERSKA\nzawarta w formie aktu notarialnego przed notariuszem w Warszawie, Repertorium A nr 1000/2026.\n§ 1. Deweloper zobowiązuje się wybudować budynek, ustanowić odrębną własność lokalu mieszkalnego nr 12 i przenieść jego własność na Nabywcę.\n§ 2. Cena wynosi 600.000 zł.\n§ 3. Nabywca dokonuje wpłat na otwarty mieszkaniowy rachunek powierniczy wskazany w prospekcie informacyjnym, po zakończeniu kolejnych etapów z harmonogramu.\n§ 4. Koszty prowadzenia mieszkaniowego rachunku powierniczego ponosi Deweloper.\n§ 5. Przeniesienie własności lokalu na Nabywcę nastąpi do dnia 30 czerwca 2028 r.\n§ 6. Odbiór lokalu nastąpi w obecności Nabywcy. Deweloper poinformuje o uznaniu wad w terminie 14 dni i usunie uznane wady w terminie 30 dni od podpisania protokołu.\n§ 7. Nabywca może odstąpić od umowy w przypadkach określonych w ustawie deweloperskiej. W takim przypadku Nabywca nie ponosi żadnych kosztów.\n§ 8. Deweloper może odstąpić od umowy, jeżeli Nabywca nie zapłaci raty mimo pisemnego wezwania do zapłaty w terminie 30 dni od doręczenia wezwania.\n§ 9. Koszty notarialne i sądowe tej umowy ponoszą Deweloper i Nabywca w równych częściach.\n§ 10. Nabywca oświadcza, że otrzymał prospekt informacyjny wraz z załącznikami.\n§ 11. Strony zawarły umowę rezerwacyjną. Opłata rezerwacyjna wyniosła 12.000,00 zł.\n§ 12. Kara umowna dla Dewelopera za opóźnienie w przeniesieniu własności wynosi 0,02% ceny za każdy dzień. Odsetki należne Deweloperowi za opóźnienie Nabywcy w zapłacie wynoszą 0,02% ceny za każdy dzień.",
+      "expected": {
+        "verdict": "PODPISZ PO ZMIANACH",
+        "red": [
+          "dew-oplata-rezerwacyjna"
+        ],
+        "riskAmount": 6000
+      }
+    },
+    {
+      "id": "dw-19-odsetki-wyzsze-niz-kary",
+      "kind": "zasiane-poza-regulami",
+      "text": "UMOWA DEWELOPERSKA\nzawarta w formie aktu notarialnego przed notariuszem w Warszawie, Repertorium A nr 1000/2026.\n§ 1. Deweloper zobowiązuje się wybudować budynek, ustanowić odrębną własność lokalu mieszkalnego nr 12 i przenieść jego własność na Nabywcę.\n§ 2. Cena wynosi 600 000 zł. Cena jest iloczynem powierzchni użytkowej 50 m2 i ceny za 1 m2 w kwocie 12 000 zł.\n§ 3. Nabywca dokonuje wpłat na otwarty mieszkaniowy rachunek powierniczy wskazany w prospekcie informacyjnym, po zakończeniu kolejnych etapów z harmonogramu.\n§ 4. Koszty prowadzenia mieszkaniowego rachunku powierniczego ponosi Deweloper.\n§ 5. Przeniesienie własności lokalu na Nabywcę nastąpi do dnia 30 czerwca 2028 r.\n§ 6. Odbiór lokalu nastąpi w obecności Nabywcy. Deweloper poinformuje o uznaniu wad w terminie 14 dni i usunie uznane wady w terminie 30 dni od podpisania protokołu.\n§ 7. Nabywca może odstąpić od umowy w przypadkach określonych w ustawie deweloperskiej. W takim przypadku Nabywca nie ponosi żadnych kosztów.\n§ 8. Deweloper może odstąpić od umowy, jeżeli Nabywca nie zapłaci raty mimo pisemnego wezwania do zapłaty w terminie 30 dni od doręczenia wezwania.\n§ 9. Koszty notarialne i sądowe tej umowy ponoszą Deweloper i Nabywca w równych częściach.\n§ 10. Nabywca oświadcza, że otrzymał prospekt informacyjny wraz z załącznikami.\n§ 11. Strony nie zawierały umowy rezerwacyjnej.\n§ 12. Kara umowna dla Dewelopera za opóźnienie w przeniesieniu własności wynosi 0,01% ceny za każdy dzień. Odsetki należne Deweloperowi za opóźnienie Nabywcy w zapłacie wynoszą 0,05% ceny za każdy dzień.",
+      "expected": {
+        "verdict": "PODPISZ PO ZMIANACH",
+        "red": [
+          "dew-kary-i-odsetki"
+        ]
+      }
+    },
+    {
+      "id": "dw-20-wplata-bezposrednio-deweloperowi",
+      "kind": "zasiane-poza-regulami",
+      "text": "UMOWA DEWELOPERSKA\nzawarta w formie aktu notarialnego przed notariuszem w Warszawie, Repertorium A nr 1000/2026.\n§ 1. Deweloper zobowiązuje się wybudować budynek, ustanowić odrębną własność lokalu mieszkalnego nr 12 i przenieść jego własność na Nabywcę.\n§ 2. Cena wynosi 600 000 zł. Cena jest iloczynem powierzchni użytkowej 50 m2 i ceny za 1 m2 w kwocie 12 000 zł.\n§ 3. Pierwszą ratę Nabywca wpłaci na mieszkaniowy rachunek powierniczy, a pozostałą część ceny przekaże bezpośrednio Deweloperowi przelewem.\n§ 4. Koszty prowadzenia mieszkaniowego rachunku powierniczego ponosi Deweloper.\n§ 5. Przeniesienie własności lokalu na Nabywcę nastąpi do dnia 30 czerwca 2028 r.\n§ 6. Odbiór lokalu nastąpi w obecności Nabywcy. Deweloper poinformuje o uznaniu wad w terminie 14 dni i usunie uznane wady w terminie 30 dni od podpisania protokołu.\n§ 7. Nabywca może odstąpić od umowy w przypadkach określonych w ustawie deweloperskiej. W takim przypadku Nabywca nie ponosi żadnych kosztów.\n§ 8. Deweloper może odstąpić od umowy, jeżeli Nabywca nie zapłaci raty mimo pisemnego wezwania do zapłaty w terminie 30 dni od doręczenia wezwania.\n§ 9. Koszty notarialne i sądowe tej umowy ponoszą Deweloper i Nabywca w równych częściach.\n§ 10. Nabywca oświadcza, że otrzymał prospekt informacyjny wraz z załącznikami.\n§ 11. Strony nie zawierały umowy rezerwacyjnej.\n§ 12. Kara umowna dla Dewelopera za opóźnienie w przeniesieniu własności wynosi 0,02% ceny za każdy dzień. Odsetki należne Deweloperowi za opóźnienie Nabywcy w zapłacie wynoszą 0,02% ceny za każdy dzień.",
+      "expected": {
+        "verdict": "PODPISZ PO ZMIANACH",
+        "red": [
+          "dew-rachunek-powierniczy"
+        ]
+      }
+    }
+  ]
+}

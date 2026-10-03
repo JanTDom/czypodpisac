@@ -6,14 +6,16 @@ import { executeIngest } from "../src/pipeline/stages/stage01-ingest";
 import { executeSegmentation } from "../src/pipeline/stages/stage03-segmentation";
 import { ValidatedFinding } from "../src/pipeline/schemas/stage07-validation";
 import { geminiConfig } from "../src/config/models";
+import { ChecklistRegistry } from "../src/checklists/registry";
+import { checklistUmowaDeweloperska } from "../src/checklists/umowa-deweloperska";
+import { LegalKnowledgeBase } from "../src/kb";
 
 /**
  * Ewaluacja trafności prawnej (skill ewaluacja-jakosci-prawnej).
- * Uruchamia silnik na zbiorze test-contracts/, liczy metryki, zapisuje raport w docs/eval/
+ * Uruchamia silnik na zbiorach test-contracts/, liczy metryki, zapisuje raporty w docs/eval/
  * i sprawdza progi wydania. Czerwony wynik = nie wydawać.
  */
 
-type Category = "kaucja_limit" | "kara_wypowiedzenie" | "jednostronna_zmiana" | "inne";
 type Verdict = "PODPISZ" | "PODPISZ PO ZMIANACH" | "NIE PODPISUJ BEZ PRAWNIKA";
 
 interface EvalCase {
@@ -21,7 +23,7 @@ interface EvalCase {
   kind: string;
   text: string;
   repeatFiller?: number;
-  expected: { verdict: Verdict; red: Category[]; riskAmount?: number; missingAttachments?: string[] };
+  expected: { verdict: Verdict; red: string[]; riskAmount?: number; missingAttachments?: string[] };
 }
 
 interface EvalSet {
@@ -36,21 +38,62 @@ interface GroundingAudit {
   results: Array<{ id: string; status: string }>;
 }
 
-const SET_FILE = "test-contracts/najem-lokalu-mieszkalnego.json";
+interface EvalSetConfig {
+  name: string;
+  setFile: string;
+  reportFile: string;
+  baselineFile: string;
+  categorize: (finding: ValidatedFinding) => string;
+  createRegistry: () => ChecklistRegistry;
+  engineNote: string;
+}
+
 const GROUNDING_FILE = "docs/eval/kb-grounding-audit.json";
-const BASELINE_FILE = "docs/eval/baseline.json";
-const REPORT_JSON = "docs/eval/eval-najem-lokalu-mieszkalnego.json";
 const FILLER_CLAUSE = "Strony zobowiązują się współdziałać przy wykonywaniu umowy i informować się o zmianie adresu do doręczeń.";
 // Dokładność kwot: liczymy w złotych, tolerujemy zaokrąglenie do 1 grosza.
 const AMOUNT_TOLERANCE = 0.01;
+const BASE_ENGINE_NOTE = "Silnik w tej wersji nie wywołuje Gemini; ocena i weryfikator są regułowe (DeterministicGeminiVerifier).";
 
-function categorize(finding: ValidatedFinding): Category {
+function categorizeTenancy(finding: ValidatedFinding): string {
   const title = finding.tytulPoLudzku.toLowerCase();
   if (title.includes("kaucja przekracza")) return "kaucja_limit";
   if (title.includes("kara umowna za rozwiązanie")) return "kara_wypowiedzenie";
   if (title.includes("jednostronna zmiana")) return "jednostronna_zmiana";
   return "inne";
 }
+
+// Dla umowy deweloperskiej kategorią jest identyfikator punktu checklisty; inne uwagi oznaczamy tytułem.
+function categorizeDeveloper(finding: ValidatedFinding): string {
+  const itemId = finding.checklistItemId ?? "";
+  return itemId.startsWith("dew-") ? itemId : `inne: ${finding.tytulPoLudzku}`;
+}
+
+function draftDeveloperRegistry(): ChecklistRegistry {
+  const registry = new ChecklistRegistry();
+  registry.registerChecklist(checklistUmowaDeweloperska);
+  return registry;
+}
+
+const EVAL_SETS: readonly EvalSetConfig[] = [
+  {
+    name: "najem lokalu mieszkalnego",
+    setFile: "test-contracts/najem-lokalu-mieszkalnego.json",
+    reportFile: "docs/eval/eval-najem-lokalu-mieszkalnego.json",
+    baselineFile: "docs/eval/baseline.json",
+    categorize: categorizeTenancy,
+    createRegistry: () => ChecklistRegistry.getInstance(),
+    engineNote: BASE_ENGINE_NOTE,
+  },
+  {
+    name: "umowa deweloperska (szkic, checklista zarejestrowana tylko na potrzeby ewaluacji)",
+    setFile: "test-contracts/umowa-deweloperska.json",
+    reportFile: "docs/eval/eval-umowa-deweloperska.json",
+    baselineFile: "docs/eval/baseline-umowa-deweloperska.json",
+    categorize: categorizeDeveloper,
+    createRegistry: draftDeveloperRegistry,
+    engineNote: `${BASE_ENGINE_NOTE} Checklista umowy deweloperskiej ma status draft i nie jest aktywna w domyślnym rejestrze.`,
+  },
+];
 
 function verdictOf(sentence: string): Verdict {
   if (sentence.startsWith("NIE PODPISUJ BEZ PRAWNIKA")) return "NIE PODPISUJ BEZ PRAWNIKA";
@@ -72,133 +115,145 @@ function gitCommit(): string {
   }
 }
 
-describe("Ewaluacja prawna: najem lokalu mieszkalnego", () => {
-  it("spełnia progi wydania", async () => {
-    const evalSet = JSON.parse(fs.readFileSync(SET_FILE, "utf8")) as EvalSet;
-    const grounding = fs.existsSync(GROUNDING_FILE)
-      ? (JSON.parse(fs.readFileSync(GROUNDING_FILE, "utf8")) as GroundingAudit)
-      : null;
-    const confirmedSourceIds = new Set(
-      (grounding?.results ?? []).filter((r) => r.status === "potwierdzona").map((r) => r.id)
-    );
+function readGrounding(): GroundingAudit | null {
+  return fs.existsSync(GROUNDING_FILE) ? (JSON.parse(fs.readFileSync(GROUNDING_FILE, "utf8")) as GroundingAudit) : null;
+}
 
-    const orchestrator = new PipelineOrchestrator();
-    const perCase = [];
-    let expectedRed = 0;
-    let detectedRed = 0;
-    let falseRed = 0;
-    let amountChecks = 0;
-    let amountCorrect = 0;
-    let expectedMissing = 0;
-    let detectedMissing = 0;
-    const unconfirmedSources = new Set<string>();
+async function detectMissingAttachments(c: EvalCase, text: string): Promise<string[]> {
+  const ingest = await executeIngest({
+    analysisId: crypto.randomUUID(),
+    fileName: `${c.id}.txt`,
+    fileSizeBytes: Buffer.byteLength(text, "utf8"),
+    mimeType: "text/plain",
+    rawTextContent: text,
+  });
+  const segmentation = await executeSegmentation(ingest);
+  return segmentation.attachments.filter((a) => !a.presentInDocument).map((a) => a.name);
+}
 
-    for (const c of evalSet.cases) {
-      const text = buildText(c);
-      const result = await orchestrator.runFastVerdict({ contractText: text, analysisId: undefined });
-      const redFindings = result.report.findings.red;
-      const yellowFindings = result.report.findings.yellow;
-      const detectedCategories = redFindings.map(categorize);
+async function runEvalSet(config: EvalSetConfig) {
+  const evalSet = JSON.parse(fs.readFileSync(config.setFile, "utf8")) as EvalSet;
+  const grounding = readGrounding();
+  const confirmedSourceIds = new Set(
+    (grounding?.results ?? []).filter((r) => r.status === "potwierdzona").map((r) => r.id)
+  );
 
-      const hits = c.expected.red.filter((cat) => detectedCategories.includes(cat));
-      const extras = detectedCategories.filter((cat) => !c.expected.red.includes(cat));
-      expectedRed += c.expected.red.length;
-      detectedRed += hits.length;
-      falseRed += extras.length;
+  const orchestrator = new PipelineOrchestrator(LegalKnowledgeBase.getInstance(), config.createRegistry());
+  const perCase = [];
+  let expectedRed = 0;
+  let detectedRed = 0;
+  let falseRed = 0;
+  let amountChecks = 0;
+  let amountCorrect = 0;
+  let expectedMissing = 0;
+  let detectedMissing = 0;
+  const unconfirmedSources = new Set<string>();
 
-      for (const f of [...redFindings, ...yellowFindings]) {
-        for (const id of f.zweryfikowaneZrodlaIds) if (!confirmedSourceIds.has(id)) unconfirmedSources.add(id);
-      }
+  for (const c of evalSet.cases) {
+    const text = buildText(c);
+    const result = await orchestrator.runFastVerdict({ contractText: text, analysisId: undefined });
+    const redFindings = result.report.findings.red;
+    const yellowFindings = result.report.findings.yellow;
+    const detectedCategories = redFindings.map(config.categorize);
 
-      let amountOk: boolean | null = null;
-      if (c.expected.riskAmount !== undefined) {
-        amountChecks += 1;
-        const actual = result.report.totalRiskAmount ?? 0;
-        amountOk = Math.abs(actual - c.expected.riskAmount) <= AMOUNT_TOLERANCE;
-        if (amountOk) amountCorrect += 1;
-      }
+    const hits = c.expected.red.filter((cat) => detectedCategories.includes(cat));
+    const extras = detectedCategories.filter((cat) => !c.expected.red.includes(cat));
+    expectedRed += c.expected.red.length;
+    detectedRed += hits.length;
+    falseRed += extras.length;
 
-      let missingAttachmentsDetected: string[] = [];
-      if (c.expected.missingAttachments) {
-        const ingest = await executeIngest({
-          analysisId: crypto.randomUUID(),
-          fileName: `${c.id}.txt`,
-          fileSizeBytes: Buffer.byteLength(text, "utf8"),
-          mimeType: "text/plain",
-          rawTextContent: text,
-        });
-        const segmentation = await executeSegmentation(ingest);
-        missingAttachmentsDetected = segmentation.attachments.filter((a) => !a.presentInDocument).map((a) => a.name);
-        expectedMissing += c.expected.missingAttachments.length;
-        detectedMissing += c.expected.missingAttachments.filter((m) => missingAttachmentsDetected.includes(m)).length;
-      }
-
-      const actualVerdict = verdictOf(result.report.verdictOneSentence);
-      perCase.push({
-        id: c.id,
-        kind: c.kind,
-        expectedVerdict: c.expected.verdict,
-        actualVerdict,
-        verdictOk: actualVerdict === c.expected.verdict,
-        expectedRed: c.expected.red,
-        detectedRed: detectedCategories,
-        missedRed: c.expected.red.filter((cat) => !detectedCategories.includes(cat)),
-        falseRed: extras,
-        expectedRiskAmount: c.expected.riskAmount ?? null,
-        actualRiskAmount: result.report.totalRiskAmount ?? null,
-        amountOk,
-        missingAttachmentsExpected: c.expected.missingAttachments ?? [],
-        missingAttachmentsDetected,
-      });
+    for (const f of [...redFindings, ...yellowFindings]) {
+      for (const id of f.zweryfikowaneZrodlaIds) if (!confirmedSourceIds.has(id)) unconfirmedSources.add(id);
     }
 
-    const correctContracts = perCase.filter((r) => r.expectedVerdict === "PODPISZ");
-    const metrics = {
-      cases: perCase.length,
-      redRecall: expectedRed === 0 ? 1 : detectedRed / expectedRed,
-      falseRedFindings: falseRed,
-      verdictAccuracy: perCase.filter((r) => r.verdictOk).length / perCase.length,
-      verdictAccuracyOnCorrectContracts:
-        correctContracts.length === 0 ? 1 : correctContracts.filter((r) => r.verdictOk).length / correctContracts.length,
-      amountAccuracy: amountChecks === 0 ? 1 : amountCorrect / amountChecks,
-      missingAttachmentRecall: expectedMissing === 0 ? 1 : detectedMissing / expectedMissing,
-      unconfirmedSourcesInFindings: [...unconfirmedSources],
-    };
+    let amountOk: boolean | null = null;
+    if (c.expected.riskAmount !== undefined) {
+      amountChecks += 1;
+      const actual = result.report.totalRiskAmount ?? 0;
+      amountOk = Math.abs(actual - c.expected.riskAmount) <= AMOUNT_TOLERANCE;
+      if (amountOk) amountCorrect += 1;
+    }
 
-    const baseline = fs.existsSync(BASELINE_FILE)
-      ? (JSON.parse(fs.readFileSync(BASELINE_FILE, "utf8")) as { redRecall: number })
-      : null;
+    let missingAttachmentsDetected: string[] = [];
+    if (c.expected.missingAttachments) {
+      missingAttachmentsDetected = await detectMissingAttachments(c, text);
+      expectedMissing += c.expected.missingAttachments.length;
+      detectedMissing += c.expected.missingAttachments.filter((m) => missingAttachmentsDetected.includes(m)).length;
+    }
 
-    const gates = {
-      groundingAuditPresent: grounding !== null,
-      zeroUnconfirmedSources: grounding !== null && unconfirmedSources.size === 0,
-      noRedRecallDrop: baseline === null ? null : metrics.redRecall >= baseline.redRecall,
-      correctVerdictOnCorrectContracts: metrics.verdictAccuracyOnCorrectContracts === 1,
-      expectationsApprovedByLawyer: evalSet.lawyerApproved,
-    };
+    const actualVerdict = verdictOf(result.report.verdictOneSentence);
+    perCase.push({
+      id: c.id,
+      kind: c.kind,
+      expectedVerdict: c.expected.verdict,
+      actualVerdict,
+      verdictOk: actualVerdict === c.expected.verdict,
+      expectedRed: c.expected.red,
+      detectedRed: detectedCategories,
+      missedRed: c.expected.red.filter((cat) => !detectedCategories.includes(cat)),
+      falseRed: extras,
+      expectedRiskAmount: c.expected.riskAmount ?? null,
+      actualRiskAmount: result.report.totalRiskAmount ?? null,
+      amountOk,
+      missingAttachmentsExpected: c.expected.missingAttachments ?? [],
+      missingAttachmentsDetected,
+    });
+  }
 
-    const report = {
-      generatedAt: new Date().toISOString(),
-      versions: {
-        gitCommit: gitCommit(),
-        evalSet: evalSet.version,
-        groundingAuditAt: grounding?.checkedAt ?? null,
-        models: {
-          fast: geminiConfig.fastModel,
-          flagship: geminiConfig.flagshipModel,
-          verifier: geminiConfig.verifierModel,
-        },
-        engineNote: "Silnik w tej wersji nie wywołuje Gemini; ocena i weryfikator są regułowe (DeterministicGeminiVerifier).",
+  const correctContracts = perCase.filter((r) => r.expectedVerdict === "PODPISZ");
+  const metrics = {
+    cases: perCase.length,
+    redRecall: expectedRed === 0 ? 1 : detectedRed / expectedRed,
+    falseRedFindings: falseRed,
+    verdictAccuracy: perCase.filter((r) => r.verdictOk).length / perCase.length,
+    verdictAccuracyOnCorrectContracts:
+      correctContracts.length === 0 ? 1 : correctContracts.filter((r) => r.verdictOk).length / correctContracts.length,
+    amountAccuracy: amountChecks === 0 ? 1 : amountCorrect / amountChecks,
+    missingAttachmentRecall: expectedMissing === 0 ? 1 : detectedMissing / expectedMissing,
+    unconfirmedSourcesInFindings: [...unconfirmedSources],
+  };
+
+  const baseline = fs.existsSync(config.baselineFile)
+    ? (JSON.parse(fs.readFileSync(config.baselineFile, "utf8")) as { redRecall: number })
+    : null;
+
+  const gates = {
+    groundingAuditPresent: grounding !== null,
+    zeroUnconfirmedSources: grounding !== null && unconfirmedSources.size === 0,
+    noRedRecallDrop: baseline === null ? null : metrics.redRecall >= baseline.redRecall,
+    correctVerdictOnCorrectContracts: metrics.verdictAccuracyOnCorrectContracts === 1,
+    expectationsApprovedByLawyer: evalSet.lawyerApproved,
+  };
+
+  const report = {
+    generatedAt: new Date().toISOString(),
+    versions: {
+      gitCommit: gitCommit(),
+      evalSet: evalSet.version,
+      groundingAuditAt: grounding?.checkedAt ?? null,
+      models: {
+        fast: geminiConfig.fastModel,
+        flagship: geminiConfig.flagshipModel,
+        verifier: geminiConfig.verifierModel,
       },
-      metrics,
-      gates,
-      perCase,
-    };
-    fs.writeFileSync(REPORT_JSON, JSON.stringify(report, null, 2));
+      engineNote: config.engineNote,
+    },
+    metrics,
+    gates,
+    perCase,
+  };
+  fs.writeFileSync(config.reportFile, JSON.stringify(report, null, 2));
+  return { metrics, gates, baseline };
+}
 
-    expect(gates.groundingAuditPresent).toBe(true);
-    expect(metrics.unconfirmedSourcesInFindings).toEqual([]);
-    expect(metrics.verdictAccuracyOnCorrectContracts).toBe(1);
-    if (baseline) expect(metrics.redRecall).toBeGreaterThanOrEqual(baseline.redRecall);
+for (const config of EVAL_SETS) {
+  describe(`Ewaluacja prawna: ${config.name}`, () => {
+    it("spełnia progi wydania", async () => {
+      const { metrics, gates, baseline } = await runEvalSet(config);
+      expect(gates.groundingAuditPresent).toBe(true);
+      expect(metrics.unconfirmedSourcesInFindings).toEqual([]);
+      expect(metrics.verdictAccuracyOnCorrectContracts).toBe(1);
+      if (baseline) expect(metrics.redRecall).toBeGreaterThanOrEqual(baseline.redRecall);
+    });
   });
-});
+}

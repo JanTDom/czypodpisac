@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-03T16:44:21.945Z",
+  "generatedAt": "2026-10-03T17:12:13.209Z",
   "versions": {
-    "gitCommit": "5981f47",
+    "gitCommit": "216ea0a",
     "evalSet": "2026.10.03-1",
-    "groundingAuditAt": "2026-10-03T16:39:42.478Z",
+    "groundingAuditAt": "2026-10-03T17:12:11.997Z",
     "models": {
       "fast": "gemini-2.0-flash",
       "flagship": "gemini-1.5-pro-002",

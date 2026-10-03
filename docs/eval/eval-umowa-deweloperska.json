@@ -1,0 +1,423 @@
+{
+  "generatedAt": "2026-10-03T17:12:13.524Z",
+  "versions": {
+    "gitCommit": "216ea0a",
+    "evalSet": "2026.10.03-1",
+    "groundingAuditAt": "2026-10-03T17:12:11.997Z",
+    "models": {
+      "fast": "gemini-2.0-flash",
+      "flagship": "gemini-1.5-pro-002",
+      "verifier": "gemini-1.5-pro-002"
+    },
+    "engineNote": "Silnik w tej wersji nie wywołuje Gemini; ocena i weryfikator są regułowe (DeterministicGeminiVerifier). Checklista umowy deweloperskiej ma status draft i nie jest aktywna w domyślnym rejestrze."
+  },
+  "metrics": {
+    "cases": 20,
+    "redRecall": 0.8947368421052632,
+    "falseRedFindings": 0,
+    "verdictAccuracy": 0.9,
+    "verdictAccuracyOnCorrectContracts": 1,
+    "amountAccuracy": 1,
+    "missingAttachmentRecall": 1,
+    "unconfirmedSourcesInFindings": []
+  },
+  "gates": {
+    "groundingAuditPresent": true,
+    "zeroUnconfirmedSources": true,
+    "noRedRecallDrop": null,
+    "correctVerdictOnCorrectContracts": true,
+    "expectationsApprovedByLawyer": false
+  },
+  "perCase": [
+    {
+      "id": "dw-01-poprawna",
+      "kind": "poprawna",
+      "expectedVerdict": "PODPISZ",
+      "actualVerdict": "PODPISZ",
+      "verdictOk": true,
+      "expectedRed": [],
+      "detectedRed": [],
+      "missedRed": [],
+      "falseRed": [],
+      "expectedRiskAmount": null,
+      "actualRiskAmount": null,
+      "amountOk": null,
+      "missingAttachmentsExpected": [],
+      "missingAttachmentsDetected": []
+    },
+    {
+      "id": "dw-02-rachunek-biezacy",
+      "kind": "zasiane",
+      "expectedVerdict": "PODPISZ PO ZMIANACH",
+      "actualVerdict": "PODPISZ PO ZMIANACH",
+      "verdictOk": true,
+      "expectedRed": [
+        "dew-rachunek-powierniczy"
+      ],
+      "detectedRed": [
+        "dew-rachunek-powierniczy"
+      ],
+      "missedRed": [],
+      "falseRed": [],
+      "expectedRiskAmount": null,
+      "actualRiskAmount": null,
+      "amountOk": null,
+      "missingAttachmentsExpected": [],
+      "missingAttachmentsDetected": []
+    },
+    {
+      "id": "dw-03-gotowka",
+      "kind": "zasiane",
+      "expectedVerdict": "PODPISZ PO ZMIANACH",
+      "actualVerdict": "PODPISZ PO ZMIANACH",
+      "verdictOk": true,
+      "expectedRed": [
+        "dew-rachunek-powierniczy"
+      ],
+      "detectedRed": [
+        "dew-rachunek-powierniczy"
+      ],
+      "missedRed": [],
+      "falseRed": [],
+      "expectedRiskAmount": null,
+      "actualRiskAmount": null,
+      "amountOk": null,
+      "missingAttachmentsExpected": [],
+      "missingAttachmentsDetected": []
+    },
+    {
+      "id": "dw-04-oplata-rezerwacyjna-2proc",
+      "kind": "zasiane",
+      "expectedVerdict": "PODPISZ PO ZMIANACH",
+      "actualVerdict": "PODPISZ PO ZMIANACH",
+      "verdictOk": true,
+      "expectedRed": [
+        "dew-oplata-rezerwacyjna"
+      ],
+      "detectedRed": [
+        "dew-oplata-rezerwacyjna"
+      ],
+      "missedRed": [],
+      "falseRed": [],
+      "expectedRiskAmount": 6000,
+      "actualRiskAmount": 6000,
+      "amountOk": true,
+      "missingAttachmentsExpected": [],
+      "missingAttachmentsDetected": []
+    },
+    {
+      "id": "dw-05-oplata-rezerwacyjna-1proc-granica",
+      "kind": "granica",
+      "expectedVerdict": "PODPISZ",
+      "actualVerdict": "PODPISZ",
+      "verdictOk": true,
+      "expectedRed": [],
+      "detectedRed": [],
+      "missedRed": [],
+      "falseRed": [],
+      "expectedRiskAmount": null,
+      "actualRiskAmount": null,
+      "amountOk": null,
+      "missingAttachmentsExpected": [],
+      "missingAttachmentsDetected": []
+    },
+    {
+      "id": "dw-06-usuniecie-wad-60-dni",
+      "kind": "zasiane",
+      "expectedVerdict": "PODPISZ PO ZMIANACH",
+      "actualVerdict": "PODPISZ PO ZMIANACH",
+      "verdictOk": true,
+      "expectedRed": [
+        "dew-odbior-i-usuwanie-wad"
+      ],
+      "detectedRed": [
+        "dew-odbior-i-usuwanie-wad"
+      ],
+      "missedRed": [],
+      "falseRed": [],
+      "expectedRiskAmount": null,
+      "actualRiskAmount": null,
+      "amountOk": null,
+      "missingAttachmentsExpected": [],
+      "missingAttachmentsDetected": []
+    },
+    {
+      "id": "dw-07-odpowiedz-na-wady-21-dni",
+      "kind": "zasiane",
+      "expectedVerdict": "PODPISZ PO ZMIANACH",
+      "actualVerdict": "PODPISZ PO ZMIANACH",
+      "verdictOk": true,
+      "expectedRed": [
+        "dew-odbior-i-usuwanie-wad"
+      ],
+      "detectedRed": [
+        "dew-odbior-i-usuwanie-wad"
+      ],
+      "missedRed": [],
+      "falseRed": [],
+      "expectedRiskAmount": null,
+      "actualRiskAmount": null,
+      "amountOk": null,
+      "missingAttachmentsExpected": [],
+      "missingAttachmentsDetected": []
+    },
+    {
+      "id": "dw-08-wady-liczba-slownie-granica",
+      "kind": "odpornosc",
+      "expectedVerdict": "PODPISZ",
+      "actualVerdict": "PODPISZ",
+      "verdictOk": true,
+      "expectedRed": [],
+      "detectedRed": [],
+      "missedRed": [],
+      "falseRed": [],
+      "expectedRiskAmount": null,
+      "actualRiskAmount": null,
+      "amountOk": null,
+      "missingAttachmentsExpected": [],
+      "missingAttachmentsDetected": []
+    },
+    {
+      "id": "dw-09-oplata-za-odstapienie-kwota",
+      "kind": "zasiane",
+      "expectedVerdict": "PODPISZ PO ZMIANACH",
+      "actualVerdict": "PODPISZ PO ZMIANACH",
+      "verdictOk": true,
+      "expectedRed": [
+        "dew-odstapienie-nabywcy"
+      ],
+      "detectedRed": [
+        "dew-odstapienie-nabywcy"
+      ],
+      "missedRed": [],
+      "falseRed": [],
+      "expectedRiskAmount": 30000,
+      "actualRiskAmount": 30000,
+      "amountOk": true,
+      "missingAttachmentsExpected": [],
+      "missingAttachmentsDetected": []
+    },
+    {
+      "id": "dw-10-potracenie-10proc-ceny",
+      "kind": "zasiane",
+      "expectedVerdict": "NIE PODPISUJ BEZ PRAWNIKA",
+      "actualVerdict": "NIE PODPISUJ BEZ PRAWNIKA",
+      "verdictOk": true,
+      "expectedRed": [
+        "dew-odstapienie-nabywcy"
+      ],
+      "detectedRed": [
+        "dew-odstapienie-nabywcy"
+      ],
+      "missedRed": [],
+      "falseRed": [],
+      "expectedRiskAmount": 60000,
+      "actualRiskAmount": 60000,
+      "amountOk": true,
+      "missingAttachmentsExpected": [],
+      "missingAttachmentsDetected": []
+    },
+    {
+      "id": "dw-11-wezwanie-7-dni",
+      "kind": "zasiane",
+      "expectedVerdict": "PODPISZ PO ZMIANACH",
+      "actualVerdict": "PODPISZ PO ZMIANACH",
+      "verdictOk": true,
+      "expectedRed": [
+        "dew-odstapienie-dewelopera"
+      ],
+      "detectedRed": [
+        "dew-odstapienie-dewelopera"
+      ],
+      "missedRed": [],
+      "falseRed": [],
+      "expectedRiskAmount": null,
+      "actualRiskAmount": null,
+      "amountOk": null,
+      "missingAttachmentsExpected": [],
+      "missingAttachmentsDetected": []
+    },
+    {
+      "id": "dw-12-termin-dodatkowy-180-dni",
+      "kind": "zasiane",
+      "expectedVerdict": "PODPISZ PO ZMIANACH",
+      "actualVerdict": "PODPISZ PO ZMIANACH",
+      "verdictOk": true,
+      "expectedRed": [
+        "dew-termin-przeniesienia-wlasnosci"
+      ],
+      "detectedRed": [
+        "dew-termin-przeniesienia-wlasnosci"
+      ],
+      "missedRed": [],
+      "falseRed": [],
+      "expectedRiskAmount": null,
+      "actualRiskAmount": null,
+      "amountOk": null,
+      "missingAttachmentsExpected": [],
+      "missingAttachmentsDetected": []
+    },
+    {
+      "id": "dw-13-koszty-notarialne-nabywca",
+      "kind": "zasiane",
+      "expectedVerdict": "PODPISZ PO ZMIANACH",
+      "actualVerdict": "PODPISZ PO ZMIANACH",
+      "verdictOk": true,
+      "expectedRed": [
+        "dew-koszty-notarialne"
+      ],
+      "detectedRed": [
+        "dew-koszty-notarialne"
+      ],
+      "missedRed": [],
+      "falseRed": [],
+      "expectedRiskAmount": null,
+      "actualRiskAmount": null,
+      "amountOk": null,
+      "missingAttachmentsExpected": [],
+      "missingAttachmentsDetected": []
+    },
+    {
+      "id": "dw-14-koszty-rachunku-nabywca",
+      "kind": "zasiane",
+      "expectedVerdict": "PODPISZ PO ZMIANACH",
+      "actualVerdict": "PODPISZ PO ZMIANACH",
+      "verdictOk": true,
+      "expectedRed": [
+        "dew-koszty-rachunku-powierniczego"
+      ],
+      "detectedRed": [
+        "dew-koszty-rachunku-powierniczego"
+      ],
+      "missedRed": [],
+      "falseRed": [],
+      "expectedRiskAmount": 1500,
+      "actualRiskAmount": 1500,
+      "amountOk": true,
+      "missingAttachmentsExpected": [],
+      "missingAttachmentsDetected": []
+    },
+    {
+      "id": "dw-15-forma-pisemna",
+      "kind": "zasiane",
+      "expectedVerdict": "PODPISZ PO ZMIANACH",
+      "actualVerdict": "PODPISZ PO ZMIANACH",
+      "verdictOk": true,
+      "expectedRed": [
+        "dew-forma-aktu-notarialnego"
+      ],
+      "detectedRed": [
+        "dew-forma-aktu-notarialnego"
+      ],
+      "missedRed": [],
+      "falseRed": [],
+      "expectedRiskAmount": null,
+      "actualRiskAmount": null,
+      "amountOk": null,
+      "missingAttachmentsExpected": [],
+      "missingAttachmentsDetected": []
+    },
+    {
+      "id": "dw-16-cztery-wady",
+      "kind": "zasiane",
+      "expectedVerdict": "NIE PODPISUJ BEZ PRAWNIKA",
+      "actualVerdict": "NIE PODPISUJ BEZ PRAWNIKA",
+      "verdictOk": true,
+      "expectedRed": [
+        "dew-rachunek-powierniczy",
+        "dew-odbior-i-usuwanie-wad",
+        "dew-odstapienie-dewelopera",
+        "dew-koszty-notarialne"
+      ],
+      "detectedRed": [
+        "dew-rachunek-powierniczy",
+        "dew-odbior-i-usuwanie-wad",
+        "dew-odstapienie-dewelopera",
+        "dew-koszty-notarialne"
+      ],
+      "missedRed": [],
+      "falseRed": [],
+      "expectedRiskAmount": null,
+      "actualRiskAmount": null,
+      "amountOk": null,
+      "missingAttachmentsExpected": [],
+      "missingAttachmentsDetected": []
+    },
+    {
+      "id": "dw-17-dluga-poprawna",
+      "kind": "odpornosc",
+      "expectedVerdict": "PODPISZ",
+      "actualVerdict": "PODPISZ",
+      "verdictOk": true,
+      "expectedRed": [],
+      "detectedRed": [],
+      "missedRed": [],
+      "falseRed": [],
+      "expectedRiskAmount": null,
+      "actualRiskAmount": null,
+      "amountOk": null,
+      "missingAttachmentsExpected": [],
+      "missingAttachmentsDetected": []
+    },
+    {
+      "id": "dw-18-kwoty-z-kropkami",
+      "kind": "odpornosc",
+      "expectedVerdict": "PODPISZ PO ZMIANACH",
+      "actualVerdict": "PODPISZ PO ZMIANACH",
+      "verdictOk": true,
+      "expectedRed": [
+        "dew-oplata-rezerwacyjna"
+      ],
+      "detectedRed": [
+        "dew-oplata-rezerwacyjna"
+      ],
+      "missedRed": [],
+      "falseRed": [],
+      "expectedRiskAmount": 6000,
+      "actualRiskAmount": 6000,
+      "amountOk": true,
+      "missingAttachmentsExpected": [],
+      "missingAttachmentsDetected": []
+    },
+    {
+      "id": "dw-19-odsetki-wyzsze-niz-kary",
+      "kind": "zasiane-poza-regulami",
+      "expectedVerdict": "PODPISZ PO ZMIANACH",
+      "actualVerdict": "PODPISZ",
+      "verdictOk": false,
+      "expectedRed": [
+        "dew-kary-i-odsetki"
+      ],
+      "detectedRed": [],
+      "missedRed": [
+        "dew-kary-i-odsetki"
+      ],
+      "falseRed": [],
+      "expectedRiskAmount": null,
+      "actualRiskAmount": null,
+      "amountOk": null,
+      "missingAttachmentsExpected": [],
+      "missingAttachmentsDetected": []
+    },
+    {
+      "id": "dw-20-wplata-bezposrednio-deweloperowi",
+      "kind": "zasiane-poza-regulami",
+      "expectedVerdict": "PODPISZ PO ZMIANACH",
+      "actualVerdict": "PODPISZ",
+      "verdictOk": false,
+      "expectedRed": [
+        "dew-rachunek-powierniczy"
+      ],
+      "detectedRed": [],
+      "missedRed": [
+        "dew-rachunek-powierniczy"
+      ],
+      "falseRed": [],
+      "expectedRiskAmount": null,
+      "actualRiskAmount": null,
+      "amountOk": null,
+      "missingAttachmentsExpected": [],
+      "missingAttachmentsDetected": []
+    }
+  ]
+}

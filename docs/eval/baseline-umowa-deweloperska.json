@@ -1,0 +1,5 @@
+{
+  "note": "Punkt odniesienia dla bramki 'brak spadku wykrycia uwag czerwonych' w zbiorze umowy deweloperskiej. Ustalony przy pierwszej ewaluacji 2026-10-03 (etap 6, /nowy-typ-umowy). Zbiór i reguły przygotował ten sam agent, więc wynik jest zawyżony wobec prawdziwych umów. Podnosić tylko po poprawie silnika.",
+  "evalSet": "2026.10.03-1",
+  "redRecall": 0.8947368421052632
+}
