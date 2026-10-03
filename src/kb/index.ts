@@ -5,6 +5,8 @@ import { LegalKbUnit, LegalKbUnitSchema, LegalKbIndex, LegalKbIndexSchema } from
 export * from "./types";
 export * from "./eli-client";
 export * from "./freshness-guard";
+export * from "./hybrid-search";
+export * from "./layer-b-service";
 
 export class LegalKnowledgeBase {
   private static instance: LegalKnowledgeBase | null = null;
@@ -128,6 +130,75 @@ export class LegalKnowledgeBase {
     return allMatches.filter((u) => u.status === "active");
   }
 
+  /**
+   * Zwraca wersję przepisu obowiązującą na konkretny dzień (np. dzień podpisania umowy).
+   * Sprawdza datę wejścia w życie (legalStateDate) oraz stan obowiązywania.
+   */
+  public getUnitAtDate(
+    id: string,
+    targetDate: string
+  ): {
+    unit: LegalKbUnit | undefined;
+    isInForceAtDate: boolean;
+    statusAtDate: "in_force" | "not_yet_in_force" | "amended_later" | "unknown";
+    warningMessage?: string;
+  } {
+    const unit = this.unitsMap.get(id);
+    if (!unit) {
+      return {
+        unit: undefined,
+        isInForceAtDate: false,
+        statusAtDate: "unknown",
+        warningMessage: `Przepis o ID ${id} nie istnieje w bazie wiedzy prawnej.`,
+      };
+    }
+
+    // Porównanie daty stanu prawnego
+    if (unit.legalStateDate > targetDate) {
+      return {
+        unit,
+        isInForceAtDate: false,
+        statusAtDate: "not_yet_in_force",
+        warningMessage: `Przepis ${unit.editorialUnit} wszedł w życie ${unit.legalStateDate}, po dacie umowy (${targetDate}).`,
+      };
+    }
+
+    // Jeśli od daty umowy przepis uległ nowelizacji (status = amended lub needs_review)
+    if (unit.status === "needs_review" || unit.status === "amended") {
+      return {
+        unit,
+        isInForceAtDate: true,
+        statusAtDate: "amended_later",
+        warningMessage: `Uwaga: przepis ${unit.editorialUnit} uległ zmianie po dacie zawarcia umowy (${targetDate}).`,
+      };
+    }
+
+    return {
+      unit,
+      isInForceAtDate: true,
+      statusAtDate: "in_force",
+    };
+  }
+
+  /**
+   * Wyszukuje przepisy obowiązujące na konkretny dzień (np. dzień zawarcia umowy).
+   */
+  public searchAtDate(
+    query: string,
+    contractDate: string,
+    contractType?: string
+  ): Array<LegalKbUnit & { wasInForce: boolean; warning?: string }> {
+    const matches = this.searchByKeywords(query, contractType);
+    return matches.map((u) => {
+      const audit = this.getUnitAtDate(u.id, contractDate);
+      return {
+        ...u,
+        wasInForce: audit.isInForceAtDate,
+        warning: audit.warningMessage,
+      };
+    });
+  }
+
   public getAllUnits(): LegalKbUnit[] {
     return Array.from(this.unitsMap.values());
   }
@@ -139,3 +210,5 @@ export class LegalKnowledgeBase {
     return this.indexData;
   }
 }
+
+export * from "./core-acts-registry";
