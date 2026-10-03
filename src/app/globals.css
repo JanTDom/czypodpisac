@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    min-height: 100vh;
+  }
+
+  /* Wyraźny wskaźnik focusu klawiatury dla WCAG 2.2 AA */
+  :focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+  }
+}
+
+/* Płynne podświetlanie klauzul w tekście umowy */
+.clause-highlight-red {
+  background-color: rgba(254, 226, 226, 0.85);
+  border-bottom: 2px solid #ef4444;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+}
+.clause-highlight-red:hover,
+.clause-highlight-red.active {
+  background-color: rgba(254, 202, 202, 1);
+}
+
+.clause-highlight-yellow {
+  background-color: rgba(254, 243, 199, 0.85);
+  border-bottom: 2px solid #f59e0b;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+}
+.clause-highlight-yellow:hover,
+.clause-highlight-yellow.active {
+  background-color: rgba(253, 230, 138, 1);
+}
+
+.clause-highlight-green {
+  background-color: rgba(209, 250, 229, 0.6);
+  border-bottom: 1px solid #10b981;
+}
+
+/* Style do druku / generowania PDF */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  header, footer, .no-print {
+    display: none !important;
+  }
+  .print-break-inside-avoid {
+    break-inside: avoid;
+  }
+}
