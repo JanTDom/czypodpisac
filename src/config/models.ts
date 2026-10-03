@@ -42,26 +42,35 @@ export const DEFAULT_CONTEXT_CACHING = {
   minTokenThreshold: 32768,
 };
 
+/*
+ * Domyślne nazwy modeli pochodzą z listy modeli w dokumentacji Gemini
+ * (ai.google.dev/gemini-api/docs/models, sprawdzone 2026-10-03):
+ * gemini-3.6-flash to stabilny model podany tam jako przykład do produkcji,
+ * gemini-2.5-pro to stabilny model klasy Pro (gemini-3.1-pro jest tylko w wersji preview),
+ * gemini-embedding-001 to stabilny model embeddingów.
+ * Dostępności w regionie UE Vertex AI nie dało się potwierdzić wywołaniem,
+ * dlatego każdą wartość można nadpisać zmienną środowiskową.
+ */
 export const GeminiModelConfigSchema = z.object({
-  /** Identyfikator projektu Google Cloud */
-  projectId: z.string().default(process.env.GCP_PROJECT_ID || "czypodpisac-prod"),
+  /** Identyfikator projektu Google Cloud. Brak = wywołania modelu wyłączone. */
+  projectId: z.string().min(1).optional(),
 
   /** Region Vertex AI w UE */
-  region: z.string().default(process.env.GCP_REGION || "europe-west1"),
+  region: z.string().default("europe-west1"),
 
   /** Szybki model: klasyfikacja, segmentacja, pytania kontekstowe, multimodalny ingest */
-  fastModel: z.string().default(process.env.GEMINI_FAST_MODEL || "gemini-2.0-flash"),
+  fastModel: z.string().default("gemini-3.6-flash"),
 
   /** Najmocniejszy model: ocena klauzul i generowanie poprawek */
-  flagshipModel: z.string().default(process.env.GEMINI_PRO_MODEL || "gemini-1.5-pro-002"),
+  flagshipModel: z.string().default("gemini-2.5-pro"),
 
   /** Weryfikator: osobne wywołanie najmocniejszego modelu z odizolowanym promptem */
-  verifierModel: z.string().default(process.env.GEMINI_VERIFIER_MODEL || "gemini-1.5-pro-002"),
+  verifierModel: z.string().default("gemini-2.5-pro"),
 
   /** Wielojęzyczny model embeddingów */
-  embeddingModel: z.string().default(process.env.GEMINI_EMBEDDING_MODEL || "text-embedding-004"),
+  embeddingModel: z.string().default("gemini-embedding-001"),
 
-  /** Wymiary wektora embeddingów (768 dla text-embedding-004) */
+  /** Wymiar wektora embeddingów (gemini-embedding-001 przyjmuje outputDimensionality 768) */
   embeddingDimensions: z.number().int().default(768),
 
   /** Parametry próbkowania dla poszczególnych ról */
@@ -110,11 +119,16 @@ export type GeminiModelConfig = z.infer<typeof GeminiModelConfigSchema>;
 /**
  * Singleton konfiguracji modeli dla całej aplikacji.
  */
+const envOrUndefined = (name: string): string | undefined => {
+  const value = process.env[name];
+  return value && value.trim().length > 0 ? value.trim() : undefined;
+};
+
 export const geminiConfig: GeminiModelConfig = GeminiModelConfigSchema.parse({
-  projectId: process.env.GCP_PROJECT_ID,
-  region: process.env.GCP_REGION,
-  fastModel: process.env.GEMINI_FAST_MODEL,
-  flagshipModel: process.env.GEMINI_PRO_MODEL,
-  verifierModel: process.env.GEMINI_VERIFIER_MODEL,
-  embeddingModel: process.env.GEMINI_EMBEDDING_MODEL,
+  projectId: envOrUndefined("GCP_PROJECT_ID"),
+  region: envOrUndefined("GCP_REGION"),
+  fastModel: envOrUndefined("GEMINI_FAST_MODEL"),
+  flagshipModel: envOrUndefined("GEMINI_PRO_MODEL"),
+  verifierModel: envOrUndefined("GEMINI_VERIFIER_MODEL"),
+  embeddingModel: envOrUndefined("GEMINI_EMBEDDING_MODEL"),
 });
