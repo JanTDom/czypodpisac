@@ -1,0 +1,5 @@
+{
+  "note": "Punkt odniesienia dla bramki 'brak spadku wykrycia uwag czerwonych'. Ustalony przy pierwszej ewaluacji 2026-10-03 na commicie 5981f47. Podnosić tylko po poprawie silnika.",
+  "evalSet": "2026.10.03-1",
+  "redRecall": 0.7857142857142857
+}

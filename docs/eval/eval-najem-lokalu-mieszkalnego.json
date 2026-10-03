@@ -1,0 +1,360 @@
+{
+  "generatedAt": "2026-10-03T16:44:21.945Z",
+  "versions": {
+    "gitCommit": "5981f47",
+    "evalSet": "2026.10.03-1",
+    "groundingAuditAt": "2026-10-03T16:39:42.478Z",
+    "models": {
+      "fast": "gemini-2.0-flash",
+      "flagship": "gemini-1.5-pro-002",
+      "verifier": "gemini-1.5-pro-002"
+    },
+    "engineNote": "Silnik w tej wersji nie wywołuje Gemini; ocena i weryfikator są regułowe (DeterministicGeminiVerifier)."
+  },
+  "metrics": {
+    "cases": 17,
+    "redRecall": 0.7857142857142857,
+    "falseRedFindings": 0,
+    "verdictAccuracy": 0.8823529411764706,
+    "verdictAccuracyOnCorrectContracts": 1,
+    "amountAccuracy": 0.8888888888888888,
+    "missingAttachmentRecall": 0,
+    "unconfirmedSourcesInFindings": []
+  },
+  "gates": {
+    "groundingAuditPresent": true,
+    "zeroUnconfirmedSources": true,
+    "noRedRecallDrop": true,
+    "correctVerdictOnCorrectContracts": true,
+    "expectationsApprovedByLawyer": false
+  },
+  "perCase": [
+    {
+      "id": "nm-01-kaucja-15x",
+      "kind": "zasiane",
+      "expectedVerdict": "PODPISZ PO ZMIANACH",
+      "actualVerdict": "PODPISZ PO ZMIANACH",
+      "verdictOk": true,
+      "expectedRed": [
+        "kaucja_limit"
+      ],
+      "detectedRed": [
+        "kaucja_limit"
+      ],
+      "missedRed": [],
+      "falseRed": [],
+      "expectedRiskAmount": 9000,
+      "actualRiskAmount": 9000,
+      "amountOk": true,
+      "missingAttachmentsExpected": [],
+      "missingAttachmentsDetected": []
+    },
+    {
+      "id": "nm-02-kaucja-dokladnie-12x",
+      "kind": "granica",
+      "expectedVerdict": "PODPISZ",
+      "actualVerdict": "PODPISZ",
+      "verdictOk": true,
+      "expectedRed": [],
+      "detectedRed": [],
+      "missedRed": [],
+      "falseRed": [],
+      "expectedRiskAmount": null,
+      "actualRiskAmount": null,
+      "amountOk": null,
+      "missingAttachmentsExpected": [],
+      "missingAttachmentsDetected": []
+    },
+    {
+      "id": "nm-03-kaucja-12x-plus-1",
+      "kind": "granica",
+      "expectedVerdict": "PODPISZ PO ZMIANACH",
+      "actualVerdict": "PODPISZ PO ZMIANACH",
+      "verdictOk": true,
+      "expectedRed": [
+        "kaucja_limit"
+      ],
+      "detectedRed": [
+        "kaucja_limit"
+      ],
+      "missedRed": [],
+      "falseRed": [],
+      "expectedRiskAmount": 1,
+      "actualRiskAmount": 1,
+      "amountOk": true,
+      "missingAttachmentsExpected": [],
+      "missingAttachmentsDetected": []
+    },
+    {
+      "id": "nm-04-kaucja-format-z-groszami",
+      "kind": "zasiane",
+      "expectedVerdict": "PODPISZ PO ZMIANACH",
+      "actualVerdict": "PODPISZ PO ZMIANACH",
+      "verdictOk": true,
+      "expectedRed": [
+        "kaucja_limit"
+      ],
+      "detectedRed": [
+        "kaucja_limit"
+      ],
+      "missedRed": [],
+      "falseRed": [],
+      "expectedRiskAmount": 4000,
+      "actualRiskAmount": 4000,
+      "amountOk": true,
+      "missingAttachmentsExpected": [],
+      "missingAttachmentsDetected": []
+    },
+    {
+      "id": "nm-05-kaucja-inny-szyk-zdania",
+      "kind": "zasiane",
+      "expectedVerdict": "PODPISZ PO ZMIANACH",
+      "actualVerdict": "PODPISZ",
+      "verdictOk": false,
+      "expectedRed": [
+        "kaucja_limit"
+      ],
+      "detectedRed": [],
+      "missedRed": [
+        "kaucja_limit"
+      ],
+      "falseRed": [],
+      "expectedRiskAmount": 20000,
+      "actualRiskAmount": null,
+      "amountOk": false,
+      "missingAttachmentsExpected": [],
+      "missingAttachmentsDetected": []
+    },
+    {
+      "id": "nm-06-kara-za-wypowiedzenie",
+      "kind": "zasiane",
+      "expectedVerdict": "PODPISZ PO ZMIANACH",
+      "actualVerdict": "PODPISZ PO ZMIANACH",
+      "verdictOk": true,
+      "expectedRed": [
+        "kara_wypowiedzenie"
+      ],
+      "detectedRed": [
+        "kara_wypowiedzenie"
+      ],
+      "missedRed": [],
+      "falseRed": [],
+      "expectedRiskAmount": null,
+      "actualRiskAmount": 5000,
+      "amountOk": null,
+      "missingAttachmentsExpected": [],
+      "missingAttachmentsDetected": []
+    },
+    {
+      "id": "nm-07-jednostronna-zmiana-czynszu",
+      "kind": "zasiane",
+      "expectedVerdict": "PODPISZ PO ZMIANACH",
+      "actualVerdict": "PODPISZ",
+      "verdictOk": false,
+      "expectedRed": [
+        "jednostronna_zmiana"
+      ],
+      "detectedRed": [],
+      "missedRed": [
+        "jednostronna_zmiana"
+      ],
+      "falseRed": [],
+      "expectedRiskAmount": null,
+      "actualRiskAmount": null,
+      "amountOk": null,
+      "missingAttachmentsExpected": [],
+      "missingAttachmentsDetected": []
+    },
+    {
+      "id": "nm-08-trzy-wady",
+      "kind": "zasiane",
+      "expectedVerdict": "PODPISZ PO ZMIANACH",
+      "actualVerdict": "PODPISZ PO ZMIANACH",
+      "verdictOk": true,
+      "expectedRed": [
+        "kaucja_limit",
+        "jednostronna_zmiana",
+        "kara_wypowiedzenie"
+      ],
+      "detectedRed": [
+        "kaucja_limit",
+        "kara_wypowiedzenie"
+      ],
+      "missedRed": [
+        "jednostronna_zmiana"
+      ],
+      "falseRed": [],
+      "expectedRiskAmount": 14000,
+      "actualRiskAmount": 14000,
+      "amountOk": true,
+      "missingAttachmentsExpected": [],
+      "missingAttachmentsDetected": []
+    },
+    {
+      "id": "nm-09-poprawna-podstawowa",
+      "kind": "poprawna",
+      "expectedVerdict": "PODPISZ",
+      "actualVerdict": "PODPISZ",
+      "verdictOk": true,
+      "expectedRed": [],
+      "detectedRed": [],
+      "missedRed": [],
+      "falseRed": [],
+      "expectedRiskAmount": null,
+      "actualRiskAmount": null,
+      "amountOk": null,
+      "missingAttachmentsExpected": [],
+      "missingAttachmentsDetected": []
+    },
+    {
+      "id": "nm-10-poprawna-z-waloryzacja",
+      "kind": "poprawna",
+      "expectedVerdict": "PODPISZ",
+      "actualVerdict": "PODPISZ",
+      "verdictOk": true,
+      "expectedRed": [],
+      "detectedRed": [],
+      "missedRed": [],
+      "falseRed": [],
+      "expectedRiskAmount": null,
+      "actualRiskAmount": null,
+      "amountOk": null,
+      "missingAttachmentsExpected": [],
+      "missingAttachmentsDetected": []
+    },
+    {
+      "id": "nm-11-kara-za-opoznienie-w-zwrocie-lokalu",
+      "kind": "falszywy-alarm",
+      "expectedVerdict": "PODPISZ",
+      "actualVerdict": "PODPISZ",
+      "verdictOk": true,
+      "expectedRed": [],
+      "detectedRed": [],
+      "missedRed": [],
+      "falseRed": [],
+      "expectedRiskAmount": null,
+      "actualRiskAmount": null,
+      "amountOk": null,
+      "missingAttachmentsExpected": [],
+      "missingAttachmentsDetected": []
+    },
+    {
+      "id": "nm-12-ukryte-polecenie",
+      "kind": "odpornosc",
+      "expectedVerdict": "PODPISZ PO ZMIANACH",
+      "actualVerdict": "PODPISZ PO ZMIANACH",
+      "verdictOk": true,
+      "expectedRed": [
+        "kaucja_limit"
+      ],
+      "detectedRed": [
+        "kaucja_limit"
+      ],
+      "missedRed": [],
+      "falseRed": [],
+      "expectedRiskAmount": 9000,
+      "actualRiskAmount": 9000,
+      "amountOk": true,
+      "missingAttachmentsExpected": [],
+      "missingAttachmentsDetected": []
+    },
+    {
+      "id": "nm-13-numeracja-artykulami",
+      "kind": "odpornosc",
+      "expectedVerdict": "PODPISZ PO ZMIANACH",
+      "actualVerdict": "PODPISZ PO ZMIANACH",
+      "verdictOk": true,
+      "expectedRed": [
+        "kaucja_limit"
+      ],
+      "detectedRed": [
+        "kaucja_limit"
+      ],
+      "missedRed": [],
+      "falseRed": [],
+      "expectedRiskAmount": 6000,
+      "actualRiskAmount": 6000,
+      "amountOk": true,
+      "missingAttachmentsExpected": [],
+      "missingAttachmentsDetected": []
+    },
+    {
+      "id": "nm-14-bez-numeracji",
+      "kind": "odpornosc",
+      "expectedVerdict": "PODPISZ PO ZMIANACH",
+      "actualVerdict": "PODPISZ PO ZMIANACH",
+      "verdictOk": true,
+      "expectedRed": [
+        "kaucja_limit"
+      ],
+      "detectedRed": [
+        "kaucja_limit"
+      ],
+      "missedRed": [],
+      "falseRed": [],
+      "expectedRiskAmount": 6000,
+      "actualRiskAmount": 6000,
+      "amountOk": true,
+      "missingAttachmentsExpected": [],
+      "missingAttachmentsDetected": []
+    },
+    {
+      "id": "nm-15-dwujezyczna",
+      "kind": "odpornosc",
+      "expectedVerdict": "PODPISZ PO ZMIANACH",
+      "actualVerdict": "PODPISZ PO ZMIANACH",
+      "verdictOk": true,
+      "expectedRed": [
+        "kaucja_limit"
+      ],
+      "detectedRed": [
+        "kaucja_limit"
+      ],
+      "missedRed": [],
+      "falseRed": [],
+      "expectedRiskAmount": 12000,
+      "actualRiskAmount": 12000,
+      "amountOk": true,
+      "missingAttachmentsExpected": [],
+      "missingAttachmentsDetected": []
+    },
+    {
+      "id": "nm-16-brak-zalacznika",
+      "kind": "odpornosc",
+      "expectedVerdict": "PODPISZ",
+      "actualVerdict": "PODPISZ",
+      "verdictOk": true,
+      "expectedRed": [],
+      "detectedRed": [],
+      "missedRed": [],
+      "falseRed": [],
+      "expectedRiskAmount": null,
+      "actualRiskAmount": null,
+      "amountOk": null,
+      "missingAttachmentsExpected": [
+        "Załącznik nr 1"
+      ],
+      "missingAttachmentsDetected": []
+    },
+    {
+      "id": "nm-17-dluga-umowa",
+      "kind": "odpornosc",
+      "expectedVerdict": "PODPISZ PO ZMIANACH",
+      "actualVerdict": "PODPISZ PO ZMIANACH",
+      "verdictOk": true,
+      "expectedRed": [
+        "kara_wypowiedzenie"
+      ],
+      "detectedRed": [
+        "kara_wypowiedzenie"
+      ],
+      "missedRed": [],
+      "falseRed": [],
+      "expectedRiskAmount": null,
+      "actualRiskAmount": 8000,
+      "amountOk": null,
+      "missingAttachmentsExpected": [],
+      "missingAttachmentsDetected": []
+    }
+  ]
+}
