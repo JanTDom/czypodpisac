@@ -1,0 +1,23 @@
+{
+  "id": "kc-art-385-2",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+  "publicationAddress": "Dz.U. 2024 poz. 1061",
+  "editorialUnit": "art. 385²",
+  "content": "Art. 385 2 . Oceny zgodności postanowienia umowy z dobrymi obyczajami dokonuje się według stanu z chwili zawarcia umowy, biorąc pod uwagę jej treść, okoliczności zawarcia oraz uwzględniając umowy pozostające w związku z umową obejmującą postanowienie będące przedmiotem oceny.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20240001061",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2024-06-19",
+  "contentHashSha256": "b1641e8b53ab55835a2fedc714273da5cfd9646849fcb1adc134267d119aeab9",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego",
+    "najem_okazjonalny",
+    "konsument"
+  ],
+  "keywords": [
+    "ocena abuzywności",
+    "stan z chwili zawarcia umowy"
+  ],
+  "officialCitation": "Dz.U. 2024 poz. 1061, art. 385²"
+}

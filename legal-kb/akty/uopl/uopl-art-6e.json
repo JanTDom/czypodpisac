@@ -1,0 +1,23 @@
+{
+  "id": "uopl-art-6e",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+  "publicationAddress": "Dz.U. 2023 poz. 725",
+  "editorialUnit": "art. 6e",
+  "content": "Art. 6e. 1. Po zakończeniu najmu i opróżnieniu lokalu najemca jest obowiązany odnowić lokal i dokonać w nim obciążających go napraw, a także zwrócić wynajmującemu równowartość zużytych elementów wyposażenia technicznego, wymienionych w art. 6b ust. 2 pkt 4, które znajdowały się w lokalu w chwili wydania go najemcy. Jeżeli najemca w okresie najmu dokonał wymiany niektórych elementów tego wyposażenia, przysługuje mu zwrot kwoty odpowiadającej różnicy ich wartości między stanem istniejącym w dniu objęcia lokalu oraz w dniu jego opróżnienia. Należne kwoty oblicza się według cen obowiązujących w dniu rozliczenia. 2. Wynajmujący może żądać usunięcia ulepszeń wprowadzonych przez najemcę z naruszeniem art. 6d i przywrócenia stanu poprzedniego, jeżeli nie naruszy to substancji lokalu, albo ulepszenia zatrzymać za zwrotem ich wartości uwzględniającej stopień zużycia według stanu na dzień opróżnienia lokalu.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20230000725",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2023-03-09",
+  "contentHashSha256": "b59c047fb1663dedcd832693fc5f22337caa45279739794d3a894cc2d629597e",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego",
+    "najem_okazjonalny"
+  ],
+  "keywords": [
+    "zwrot lokalu",
+    "odnowienie lokalu",
+    "zużycie"
+  ],
+  "officialCitation": "Dz.U. 2023 poz. 725, art. 6e"
+}

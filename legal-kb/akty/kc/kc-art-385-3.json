@@ -1,0 +1,25 @@
+{
+  "id": "kc-art-385-3",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+  "publicationAddress": "Dz.U. 2024 poz. 1061",
+  "editorialUnit": "art. 385³",
+  "content": "Art. 385 3 . W razie wątpliwości uważa się, że niedozwolonymi postanowieniami umownymi są te, które w szczególności: 1) wyłączają lub ograniczają odpowiedzialność względem konsumenta za szkody na osobie; 2) wyłączają lub istotnie ograniczają odpowiedzialność względem konsumenta za niewykonanie lub nienależyte wykonanie zobowiązania; 3) wyłączają lub istotnie ograniczają potrącenie wierzytelności konsumenta z wierzytelnością drugiej strony; 4) przewidują postanowienia, z którymi konsument nie miał możliwości zapoznać się przed zawarciem umowy; 5) zezwalają kontrahentowi konsumenta na przeniesienie praw i przekazanie obowiązków wynikających z umowy bez zgody konsumenta; 6) uzależniają zawarcie umowy od przyrzeczenia przez konsumenta zawierania w przyszłości dalszych umów podobnego rodzaju; 7) uzależniają zawarcie, treść lub wykonanie umowy od zawarcia innej umowy, niemającej bezpośredniego związku z umową zawierającą oceniane postanowienie; 8) uzależniają spełnienie świadczenia od okoliczności zależnych tylko od woli kontrahenta konsumenta; 9) przyznają kontrahentowi konsumenta uprawnienia do dokonywania wiążącej interpretacji umowy; 10) uprawniają kontrahenta konsumenta do jednostronnej zmiany umowy bez ważnej przyczyny wskazanej w tej umowie; 11) przyznają tylko kontrahentowi konsumenta uprawnienie do stwierdzania zgodności świadczenia z umową; 12) wyłączają obowiązek zwrotu konsumentowi uiszczonej zapłaty za świadczenie niespełnione w całości lub części, jeżeli konsument zrezygnuje z zawarcia umowy lub jej wykonania; 13) przewidują utratę prawa żądania zwrotu świadczenia konsumenta spełnionego wcześniej niż świadczenie kontrahenta, gdy strony wypowiadają, rozwiązują lub odstępują od umowy; 14) pozbawiają wyłącznie konsumenta uprawnienia do rozwiązania umowy, odstąpienia od niej lub jej wypowiedzenia; 15) zastrzegają dla kontrahenta konsumenta uprawnienie wypowiedzenia umowy zawartej na czas nieoznaczony, bez wskazania ważnych przyczyn i stosownego terminu wypowiedzenia; 16) nakładają wyłącznie na konsumenta obowiązek zapłaty ustalonej sumy na wypadek rezygnacji z zawarcia lub wykonania umowy; 17) nakładają na konsumenta, który nie wykonał zobowiązania lub odstąpił od umowy, obowiązek zapłaty rażąco wygórowanej kary umownej lub odstępnego; 18) stanowią, że umowa zawarta na czas oznaczony ulega przedłużeniu, o ile konsument, dla którego zastrzeżono rażąco krótki termin, nie złoży przeciwnego oświadczenia; 19) przewidują wyłącznie dla kontrahenta konsumenta jednostronne uprawnienie do zmiany, bez ważnych przyczyn, istotnych cech świadczenia; 20) przewidują uprawnienie kontrahenta konsumenta do określenia lub podwyższenia ceny lub wynagrodzenia po zawarciu umowy bez przyznania konsumentowi prawa odstąpienia od umowy; 21) uzależniają odpowiedzialność kontrahenta konsumenta od wykonania zobowiązań przez osoby, za pośrednictwem których kontrahent konsumenta zawiera umowę lub przy których pomocy wykonuje swoje zobowiązanie, albo uzależniają tę odpowiedzialność od spełnienia przez konsumenta nadmiernie uciążliwych formalności; 22) przewidują obowiązek wykonania zobowiązania przez konsumenta mimo niewykonania lub nienależytego wykonania zobowiązania przez jego kontrahenta; 23) wyłączają jurysdykcję sądów polskich lub poddają sprawę pod rozstrzygnięcie sądu polubownego polskiego lub zagranicznego albo innego organu, a także narzucają rozpoznanie sprawy przez sąd, który wedle ustawy nie jest miejscowo właściwy.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20240001061",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2024-06-19",
+  "contentHashSha256": "13d40a8e2e6629be13e1b81ec5188ff705ffc8829df8c0b67e75b9cf357b836e",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego",
+    "najem_okazjonalny",
+    "konsument"
+  ],
+  "keywords": [
+    "katalog klauzul abuzywnych",
+    "kara umowna",
+    "jednostronna zmiana",
+    "wyłączenie sądu"
+  ],
+  "officialCitation": "Dz.U. 2024 poz. 1061, art. 385³"
+}

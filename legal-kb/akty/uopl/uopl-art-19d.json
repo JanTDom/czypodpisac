@@ -1,0 +1,22 @@
+{
+  "id": "uopl-art-19d",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+  "publicationAddress": "Dz.U. 2023 poz. 725",
+  "editorialUnit": "art. 19d",
+  "content": "Art. 19d. 1. Umowa najmu okazjonalnego lokalu wygasa po upływie czasu, na jaki była zawarta, lub ulega rozwiązaniu po upływie okresu wypowiedzenia tej umowy. 2. Po wygaśnięciu lub rozwiązaniu umowy najmu okazjonalnego lokalu, jeżeli najemca dobrowolnie nie opróżnił lokalu, właściciel doręcza najemcy żądanie opróżnienia lokalu, sporządzone na piśmie opatrzonym urzędowo poświadczonym podpisem właściciela. 3. Żądanie opróżnienia lokalu zawiera w szczególności: 1) oznaczenie właściciela oraz najemcy, którego żądanie dotyczy; 2) wskazanie umowy najmu okazjonalnego lokalu i przyczynę ustania stosunku z niej wynikającego; 3) termin, nie krótszy niż 7 dni od dnia doręczenia żądania najemcy, w którym najemca i osoby z nim zamieszkujące mają opróżnić lokal. 4. W przypadku bezskutecznego upływu terminu, o którym mowa w ust. 3 pkt 3, właściciel składa do sądu wniosek o nadanie klauzuli wykonalności aktowi notarialnemu, o którym mowa w art. 19a ust. 2 pkt 1. Do wniosku załącza się: 1) żądanie opróżnienia lokalu wraz z dowodem jego doręczenia najemcy albo dowodem wysłania go przesyłką poleconą; 2) dokument potwierdzający przysługujący właścicielowi tytuł prawny do lokalu, którego opróżnienia dotyczy żądanie właściciela; 3) potwierdzenie zgłoszenia, o którym mowa w art. 19b ust. 1. 5. W przypadku niedopełnienia obowiązku, o którym mowa w art. 19a ust. 3, właściciel lokalu może wypowiedzieć na piśmie umowę najmu okazjonalnego lokalu, z zachowaniem co najmniej siedmiodniowego okresu wypowiedzenia.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20230000725",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2023-03-09",
+  "contentHashSha256": "924986b8e9b547430a678769e96d8010c37079f8034c21e9dbc61792009d80d5",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_okazjonalny"
+  ],
+  "keywords": [
+    "wygaśnięcie umowy",
+    "żądanie opróżnienia lokalu",
+    "egzekucja"
+  ],
+  "officialCitation": "Dz.U. 2023 poz. 725, art. 19d"
+}

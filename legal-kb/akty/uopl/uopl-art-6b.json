@@ -1,0 +1,24 @@
+{
+  "id": "uopl-art-6b",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+  "publicationAddress": "Dz.U. 2023 poz. 725",
+  "editorialUnit": "art. 6b",
+  "content": "Art. 6b. 1. Najemca jest obowiązany utrzymywać lokal oraz pomieszczenia, do używania których jest uprawniony, we właściwym stanie technicznym i higieniczno-sanitarnym określonym odrębnymi przepisami oraz przestrzegać porządku domowego. Najemca jest także obowiązany dbać i chronić przed uszkodzeniem lub dewastacją części budynku przeznaczone do wspólnego użytku, jak dźwigi osobowe, klatki schodowe, korytarze, pomieszczenia zsypów, inne pomieszczenia gospodarcze oraz otoczenie budynku. 2. Najemcę obciąża naprawa i konserwacja: 1) podłóg, posadzek, wykładzin podłogowych oraz ściennych okładzin ceramicznych, szklanych i innych; 2) okien i drzwi; 3) wbudowanych mebli, łącznie z ich wymianą; 4) trzonów kuchennych, kuchni i grzejników wody przepływowej (gazowych, elektrycznych i węglowych), podgrzewaczy wody, wanien, brodzików, mis klozetowych, zlewozmywaków i umywalek wraz z syfonami, baterii i zaworów czerpalnych oraz innych urządzeń sanitarnych, w które lokal jest wyposażony, łącznie z ich wymianą; 5) osprzętu i zabezpieczeń instalacji elektrycznej, z wyłączeniem wymiany przewodów oraz osprzętu anteny zbiorczej; 6) pieców węglowych i akumulacyjnych, łącznie z wymianą zużytych elementów; 7) etażowego centralnego ogrzewania, a w przypadku gdy nie zostało ono zainstalowane na koszt wynajmującego, także jego wymiana; 8) przewodów odpływowych urządzeń sanitarnych aż do pionów zbiorczych, w tym niezwłoczne usuwanie ich niedrożności; 9) innych elementów wyposażenia lokalu i pomieszczeń przynależnych przez: a) malowanie lub tapetowanie oraz naprawę uszkodzeń tynków ścian i sufitów, b) malowanie drzwi i okien, wbudowanych mebli, urządzeń kuchennych, sanitarnych i grzewczych.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20230000725",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2023-03-09",
+  "contentHashSha256": "0f47065a063a0dd3e72f57ba037baf1bdc91a22955df34af1ae028d164acd03b",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego",
+    "najem_okazjonalny"
+  ],
+  "keywords": [
+    "obowiązki najemcy",
+    "drobne naprawy",
+    "malowanie",
+    "konserwacja podłóg"
+  ],
+  "officialCitation": "Dz.U. 2023 poz. 725, art. 6b"
+}

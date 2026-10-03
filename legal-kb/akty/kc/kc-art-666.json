@@ -1,0 +1,23 @@
+{
+  "id": "kc-art-666",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+  "publicationAddress": "Dz.U. 2024 poz. 1061",
+  "editorialUnit": "art. 666",
+  "content": "Art. 666. § 1. Najemca powinien przez czas trwania najmu używać rzeczy najętej w sposób w umowie określony, a gdy umowa nie określa sposobu używania - w sposób odpowiadający właściwościom i przeznaczeniu rzeczy. § 2. Jeżeli w czasie trwania najmu okaże się potrzeba napraw, które obciążają wynajmującego, najemca powinien zawiadomić go o tym niezwłocznie.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20240001061",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2024-06-19",
+  "contentHashSha256": "f6aaaad96c55cd285fc4af3739bf08be7e8f1e95d8bc65dc6afc549bc16c9793",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego",
+    "najem_okazjonalny"
+  ],
+  "keywords": [
+    "sposób używania rzeczy",
+    "przeznaczenie",
+    "piecza"
+  ],
+  "officialCitation": "Dz.U. 2024 poz. 1061, art. 666"
+}

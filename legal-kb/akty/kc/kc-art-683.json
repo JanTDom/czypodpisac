@@ -1,0 +1,21 @@
+{
+  "id": "kc-art-683",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+  "publicationAddress": "Dz.U. 2024 poz. 1061",
+  "editorialUnit": "art. 683",
+  "content": "Art. 683. Najemca lokalu powinien stosować się do porządku domowego, o ile ten nie jest sprzeczny z uprawnieniami wynikającymi z umowy; powinien również liczyć się z potrzebami innych mieszkańców i sąsiadów.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20240001061",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2024-06-19",
+  "contentHashSha256": "db74388ab3a3d0ec5676a4beeaf8dd214b59bfd56fe097e98e3781d372e5ff35",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego",
+    "najem_okazjonalny"
+  ],
+  "keywords": [
+    "terminy płatności czynszu lokalu"
+  ],
+  "officialCitation": "Dz.U. 2024 poz. 1061, art. 683"
+}

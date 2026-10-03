@@ -1,0 +1,23 @@
+{
+  "id": "kc-art-688-1",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+  "publicationAddress": "Dz.U. 2024 poz. 1061",
+  "editorialUnit": "art. 688¹",
+  "content": "Art. 688 1 . § 1. Za zapłatę czynszu i innych należnych opłat odpowiadają solidarnie z najemcą stale zamieszkujące z nim osoby pełnoletnie, z wyjątkiem pełnoletnich zstępnych pozostających na jego utrzymaniu, którzy nie są w stanie utrzymać się samodzielnie. § 2. Odpowiedzialność osób, o których mowa w § 1, ogranicza się do wysokości czynszu i innych opłat należnych za okres ich stałego zamieszkiwania.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20240001061",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2024-06-19",
+  "contentHashSha256": "1930dbcc8b291a5f1d22ce86dd7182e3d78f4524be63b15b900936d36201dd1d",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego",
+    "najem_okazjonalny"
+  ],
+  "keywords": [
+    "odpowiedzialność solidarna",
+    "współmieszkańcy",
+    "zapłata czynszu"
+  ],
+  "officialCitation": "Dz.U. 2024 poz. 1061, art. 688¹"
+}

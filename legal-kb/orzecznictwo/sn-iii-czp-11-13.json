@@ -1,0 +1,23 @@
+{
+  "id": "sn-iii-czp-11-13",
+  "unitType": "court_ruling",
+  "actTitle": "Uchwała Sądu Najwyższego z dnia 5 kwietnia 2013 r., sygn. III CZP 11/13",
+  "publicationAddress": "Uchwała Sądu Najwyższego z dnia 5 kwietnia 2013 r., sygn. III CZP 11/13",
+  "editorialUnit": "Uchwała SN III CZP 11/13 (teza)",
+  "content": "Przepisy art. 11 ust. 1 i 2 ustawy z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego mają charakter bezwzględnie obowiązujący (ius cogens). Postanowienia umowy najmu lokalu mieszkalnego przewidujące możliwość wypowiedzenia umowy przez wynajmującego z przyczyn innych niż określone w ustawie lub z zachowaniem krótszych terminów są nieważne jako sprzeczne z ustawą (art. 58 § 1 k.c.).",
+  "sourceUrl": "http://www.sn.pl/sites/orzecznictwo/orzeczenia3/iii%20czp%2011-13.pdf",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2013-04-05",
+  "contentHashSha256": "0cf4c6c4243f4248a1e8ef669836b80f4a20405efdcfc315502480e2d9721492",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego"
+  ],
+  "keywords": [
+    "ius cogens",
+    "bezwzględnie obowiązujące",
+    "art 11 uopl",
+    "nieważność postanowień sprzecznych"
+  ],
+  "officialCitation": "Uchwała SN III CZP 11/13 (teza)"
+}

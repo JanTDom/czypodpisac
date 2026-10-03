@@ -1,0 +1,23 @@
+{
+  "id": "kc-art-667",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+  "publicationAddress": "Dz.U. 2024 poz. 1061",
+  "editorialUnit": "art. 667",
+  "content": "Art. 667. § 1. Bez zgody wynajmującego najemca nie może czynić w rzeczy najętej zmian sprzecznych z umową lub z przeznaczeniem rzeczy. § 2. Jeżeli najemca używa rzeczy w sposób sprzeczny z umową lub z przeznaczeniem rzeczy i mimo upomnienia nie przestaje jej używać w taki sposób albo gdy rzecz zaniedbuje do tego stopnia, że zostaje ona narażona na utratę lub uszkodzenie, wynajmujący może wypowiedzieć najem bez zachowania terminów wypowiedzenia.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20240001061",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2024-06-19",
+  "contentHashSha256": "7f183154b68be943e983a797497aa8418115326cc73a55580d1135549e0c0f02",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego",
+    "najem_okazjonalny"
+  ],
+  "keywords": [
+    "zmiany w rzeczy",
+    "zakaz zmian bez zgody",
+    "upomnienie"
+  ],
+  "officialCitation": "Dz.U. 2024 poz. 1061, art. 667"
+}

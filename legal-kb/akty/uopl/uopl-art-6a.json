@@ -1,0 +1,24 @@
+{
+  "id": "uopl-art-6a",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+  "publicationAddress": "Dz.U. 2023 poz. 725",
+  "editorialUnit": "art. 6a",
+  "content": "Art. 6a. 1. Wynajmujący jest obowiązany do zapewnienia sprawnego działania istniejących instalacji i urządzeń związanych z budynkiem umożliwiających najemcy korzystanie z wody, paliw gazowych i ciekłych, ciepła, energii elektrycznej, dźwigów osobowych oraz innych instalacji i urządzeń stanowiących wyposażenie lokalu i budynku określone odrębnymi przepisami. 2. W razie oddania w najem lokalu opróżnionego przez dotychczasowego najemcę, wynajmujący jest obowiązany wymienić zużyte elementy wyposażenia lokalu. 3. Do obowiązków wynajmującego należy w szczególności: 1) utrzymanie w należytym stanie, porządku i czystości pomieszczeń i urządzeń budynku, służących do wspólnego użytku mieszkańców, oraz jego otoczenia; 2) dokonywanie napraw budynku, jego pomieszczeń i urządzeń, o których mowa w pkt 1, oraz przywrócenie poprzedniego stanu budynku uszkodzonego, niezależnie od przyczyn, z tym że najemcę obciąża obowiązek pokrycia strat powstałych z jego winy; 3) dokonywanie napraw lokalu, napraw lub wymiany instalacji i elementów wyposażenia technicznego w zakresie nieobciążającym najemcy, a zwłaszcza: a) napraw i wymiany wewnętrznych instalacji: wodociągowej, gazowej i ciepłej wody - bez armatury i wyposażenia, a także napraw i wymiany wewnętrznej instalacji kanalizacyjnej, centralnego ogrzewania wraz z grzejnikami, instalacji elektrycznej, anteny zbiorczej - z wyjątkiem osprzętu, b) wymiany pieców grzewczych, stolarki okiennej i drzwiowej oraz podłóg, posadzek i wykładzin podłogowych, a także tynków.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20230000725",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2023-03-09",
+  "contentHashSha256": "90685aea3d83da764ae79fa67d86ba272dda0131f4b3de6a1698444d3ac98863",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego",
+    "najem_okazjonalny"
+  ],
+  "keywords": [
+    "obowiązki wynajmującego",
+    "instalacje",
+    "naprawy główne",
+    "wymiana pieców"
+  ],
+  "officialCitation": "Dz.U. 2023 poz. 725, art. 6a"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "uopl-art-19a",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+  "publicationAddress": "Dz.U. 2023 poz. 725",
+  "editorialUnit": "art. 19a",
+  "content": "Art. 19a. 1. Umową najmu okazjonalnego lokalu jest umowa najmu lokalu mieszkalnego, którego właściciel, będący osobą fizyczną, nie prowadzi działalności gospodarczej w zakresie wynajmowania lokali, zawarta na czas oznaczony, nie dłuższy niż 10 lat. 1a. (uchylony) 2. Do umowy najmu okazjonalnego lokalu załącza się w szczególności: 1) oświadczenie najemcy w formie aktu notarialnego, w którym najemca poddał się egzekucji i zobowiązał się do opróżnienia i wydania lokalu używanego na podstawie umowy najmu okazjonalnego lokalu w terminie wskazanym w żądaniu, o którym mowa w art. 19d ust. 2; 2) wskazanie przez najemcę innego lokalu, w którym będzie mógł zamieszkać w przypadku wykonania egzekucji obowiązku opróżnienia lokalu; 3) oświadczenie właściciela lokalu lub osoby posiadającej tytuł prawny do lokalu, o którym mowa w pkt 2 lub ust. 3, o wyrażeniu zgody na zamieszkanie najemcy i osób z nim zamieszkujących w lokalu wskazanym w oświadczeniu; na żądanie wynajmującego załącza się oświadczenie z podpisem notarialnie poświadczonym. 3. W razie utraty możliwości zamieszkania w lokalu, o którym mowa w ust. 2 pkt 2, najemca jest obowiązany w terminie 21 dni od dnia powzięcia wiadomości o tym zdarzeniu wskazać inny lokal, w którym mógłby zamieszkać w przypadku wykonania egzekucji obowiązku opróżnienia lokalu, oraz przedstawić oświadczenie, o którym mowa w ust. 2 pkt 3, pod rygorem wypowiedzenia umowy, o którym mowa w art. 19d ust. 5. 4. Zawarcie umowy najmu okazjonalnego lokalu może być uzależnione od wpłacenia przez najemcę kaucji zabezpieczającej pokrycie należności z tytułu najmu okazjonalnego lokalu przysługujących właścicielowi w dniu opróżnienia lokalu oraz ewentualnych kosztów egzekucji obowiązku opróżnienia lokalu. Kaucja nie może przekraczać sześciokrotności miesięcznego czynszu za dany lokal, obliczonego według stawki czynszu obowiązującej w dniu zawarcia umowy najmu okazjonalnego lokalu. 5. Kaucja podlega zwrotowi w ciągu miesiąca od dnia opróżnienia lokalu, po potrąceniu należności właściciela, o których mowa w ust. 4. 6. Umowa najmu okazjonalnego lokalu oraz zmiany tej umowy wymagają formy pisemnej pod rygorem nieważności. 7. Wynagrodzenie notariusza za sporządzenie oświadczenia, o którym mowa w ust. 2 pkt 1, wynosi nie więcej niż 1/10 minimalnego wynagrodzenia za pracę, o którym mowa w ustawie z dnia 10 października 2002 r. o minimalnym wynagrodzeniu za pracę ( Dz. U. z 2020 r. poz. 2207 ) .",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20230000725",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2023-03-09",
+  "contentHashSha256": "cbf40504d3cc77752f459109b09d9672a63247c05b3cac015a79d52cbb81e346",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_okazjonalny"
+  ],
+  "keywords": [
+    "najem okazjonalny",
+    "oświadczenie notarialne",
+    "art 777",
+    "inny lokal",
+    "10 lat"
+  ],
+  "officialCitation": "Dz.U. 2023 poz. 725, art. 19a"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "kc-art-660",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+  "publicationAddress": "Dz.U. 2024 poz. 1061",
+  "editorialUnit": "art. 660",
+  "content": "Art. 660. Umowa najmu nieruchomości lub pomieszczenia na czas dłuższy niż rok powinna być zawarta na piśmie. W razie niezachowania tej formy poczytuje się umowę za zawartą na czas nieoznaczony.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20240001061",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2024-06-19",
+  "contentHashSha256": "ec669e0ad35d05830d28389e2746c60043f90778756201d5b07cf924bb1bec3c",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego",
+    "najem_okazjonalny"
+  ],
+  "keywords": [
+    "forma pisemna",
+    "najem na czas dłuższy niż rok",
+    "czas nieoznaczony"
+  ],
+  "officialCitation": "Dz.U. 2024 poz. 1061, art. 660"
+}

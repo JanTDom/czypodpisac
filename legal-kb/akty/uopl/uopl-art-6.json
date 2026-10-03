@@ -1,0 +1,25 @@
+{
+  "id": "uopl-art-6",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+  "publicationAddress": "Dz.U. 2023 poz. 725",
+  "editorialUnit": "art. 6",
+  "content": "Art. 6. 1. Zawarcie umowy najmu może być uzależnione od wpłacenia przez najemcę kaucji zabezpieczającej pokrycie należności z tytułu najmu lokalu, przysługujących wynajmującemu w dniu opróżnienia lokalu. Kaucja nie może przekraczać dwunastokrotności miesięcznego czynszu za dany lokal, obliczonego według stawki czynszu obowiązującej w dniu zawarcia umowy najmu. 2. Kaucji nie pobiera się, jeżeli umowa: 1) dotyczy najmu lokalu zamiennego lub najmu socjalnego lokalu; 2) jest zawierana w związku z zamianą lokalu, a najemca uzyskał zwrot kaucji bez dokonania jej waloryzacji. 3. Zwrot zwaloryzowanej kaucji następuje w kwocie równej iloczynowi kwoty miesięcznego czynszu obowiązującego w dniu zwrotu kaucji i krotności czynszu przyjętej przy pobieraniu kaucji, jednak w kwocie nie niższej niż kaucja pobrana. 4. Kaucja podlega zwrotowi w ciągu miesiąca od dnia opróżnienia lokalu lub nabycia jego własności przez najemcę, po potrąceniu należności wynajmującego z tytułu najmu lokalu.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20230000725",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2023-03-09",
+  "contentHashSha256": "c65ad32dafd3401a5e7cd4418e1aefe7bf828e3c4787f59b6556489114103413",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego"
+  ],
+  "keywords": [
+    "kaucja",
+    "limit kaucji",
+    "12-krotność",
+    "zwrot kaucji",
+    "waloryzacja",
+    "miesiąc"
+  ],
+  "officialCitation": "Dz.U. 2023 poz. 725, art. 6"
+}

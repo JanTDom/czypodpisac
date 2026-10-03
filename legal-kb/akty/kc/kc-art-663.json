@@ -1,0 +1,23 @@
+{
+  "id": "kc-art-663",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+  "publicationAddress": "Dz.U. 2024 poz. 1061",
+  "editorialUnit": "art. 663",
+  "content": "Art. 663. Jeżeli w czasie trwania najmu rzecz wymaga napraw, które obciążają wynajmującego, a bez których rzecz nie jest przydatna do umówionego użytku, najemca może wyznaczyć wynajmującemu odpowiedni termin do wykonania napraw. Po bezskutecznym upływie wyznaczonego terminu najemca może dokonać koniecznych napraw na koszt wynajmującego.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20240001061",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2024-06-19",
+  "contentHashSha256": "7753662e5021c9ead7d4ffc5d827763d756c2ccfb5eb1a86d6bc261b4f6e321d",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego",
+    "najem_okazjonalny"
+  ],
+  "keywords": [
+    "naprawy obciążające wynajmującego",
+    "wykonanie zastępcze",
+    "termin na naprawę"
+  ],
+  "officialCitation": "Dz.U. 2024 poz. 1061, art. 663"
+}

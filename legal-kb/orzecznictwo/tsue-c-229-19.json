@@ -1,0 +1,25 @@
+{
+  "id": "tsue-c-229-19",
+  "unitType": "court_ruling",
+  "actTitle": "Wyrok Trybunału Sprawiedliwości Unii Europejskiej z dnia 27 stycznia 2021 r., sprawa C-229/19 (Dexia)",
+  "publicationAddress": "Wyrok Trybunału Sprawiedliwości Unii Europejskiej z dnia 27 stycznia 2021 r., sprawa C-229/19 (Dexia)",
+  "editorialUnit": "Wyrok TSUE C-229/19 (pkt 64-67)",
+  "content": "Artykuł 6 ust. 1 dyrektywy Rady 93/13/EWG z dnia 5 kwietnia 1993 r. w sprawie nieuczciwych warunków w umowach konsumenckich należy interpretować w ten sposób, że sprzeciwia się on temu, aby sąd krajowy, który stwierdza nieuczciwy charakter warunku umowy zawartej między przedsiębiorcą a konsumentem, zastępował ten warunek przepisem prawa krajowego o charakterze dyspozytywnym, o ile konsument nie wyraził na to wyraźnej zgody po poinformowaniu go o konsekwencjach. Warunek nieuczciwy musi zostać uznany za niewiążący konsumenta od początku (ex tunc).",
+  "sourceUrl": "https://curia.europa.eu/juris/document/document.jsf?text=&docid=237060&pageIndex=0&doclang=PL",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2021-01-27",
+  "contentHashSha256": "e5ea5075a2e5af7bc40f7ac2186ff6dd8716e813c8742ba29a16439eda6563b4",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego",
+    "najem_okazjonalny",
+    "konsument"
+  ],
+  "keywords": [
+    "dyrektywa 93/13/EWG",
+    "klauzule abuzywne",
+    "ex tunc",
+    "zakaz redukcji utrzymującej skuteczność"
+  ],
+  "officialCitation": "Wyrok TSUE C-229/19 (pkt 64-67)"
+}

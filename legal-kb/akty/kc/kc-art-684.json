@@ -1,0 +1,25 @@
+{
+  "id": "kc-art-684",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+  "publicationAddress": "Dz.U. 2024 poz. 1061",
+  "editorialUnit": "art. 684",
+  "content": "Art. 684. Najemca może założyć w najętym lokalu oświetlenie elektryczne, gaz, telefon, radio i inne podobne urządzenia, chyba że sposób ich założenia sprzeciwia się obowiązującym przepisom albo zagraża bezpieczeństwu nieruchomości. Jeżeli do założenia urządzeń potrzebne jest współdziałanie wynajmującego, najemca może domagać się tego współdziałania za zwrotem wynikłych stąd kosztów.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20240001061",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2024-06-19",
+  "contentHashSha256": "d88c93b8fca40de14ef8dfff8f69d65424a3f69d358a4834c41d56ec1a94a13c",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego",
+    "najem_okazjonalny"
+  ],
+  "keywords": [
+    "instalacja oświetlenia",
+    "gaz",
+    "woda",
+    "telefon",
+    "przywrócenie stanu"
+  ],
+  "officialCitation": "Dz.U. 2024 poz. 1061, art. 684"
+}

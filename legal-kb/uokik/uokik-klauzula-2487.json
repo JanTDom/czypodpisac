@@ -1,0 +1,24 @@
+{
+  "id": "uokik-klauzula-2487",
+  "unitType": "uokik_clause",
+  "actTitle": "Rejestr Klauzul Niedozwolonych UOKiK / SOKiK",
+  "publicationAddress": "Sygn. akt XVII AmC 123/11, wpis nr 2487",
+  "editorialUnit": "Wpis nr 2487 (SOKiK XVII AmC 123/11)",
+  "content": "W przypadku opóźnienia w zapłacie czynszu najmu lub innych opłat eksploatacyjnych Najemca zobowiązany jest do zapłaty kary umownej w wysokości 50 zł za każdy dzień opóźnienia.",
+  "sourceUrl": "https://rejestr.uokik.gov.pl/pozycja.php?istn=1&numer=2487",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2011-09-29",
+  "contentHashSha256": "75173b119feaf15f4c7a4187698b1b3bbb5b84fa88d0846cf49023dc2c844760",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego",
+    "najem_okazjonalny"
+  ],
+  "keywords": [
+    "kara umowna za opóźnienie",
+    "świadczenie pieniężne",
+    "odsetki maksymalne",
+    "podwójna sankcja"
+  ],
+  "officialCitation": "UOKiK Rejestr nr 2487 (XVII AmC 123/11)"
+}

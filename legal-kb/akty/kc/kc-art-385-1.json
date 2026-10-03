@@ -1,0 +1,26 @@
+{
+  "id": "kc-art-385-1",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+  "publicationAddress": "Dz.U. 2024 poz. 1061",
+  "editorialUnit": "art. 385¹",
+  "content": "Art. 385 1 . § 1. Postanowienia umowy zawieranej z konsumentem nieuzgodnione indywidualnie nie wiążą go, jeżeli kształtują jego prawa i obowiązki w sposób sprzeczny z dobrymi obyczajami, rażąco naruszając jego interesy (niedozwolone postanowienia umowne). Nie dotyczy to postanowień określających główne świadczenia stron, w tym cenę lub wynagrodzenie, jeżeli zostały sformułowane w sposób jednoznaczny. § 2. Jeżeli postanowienie umowy zgodnie z § 1 nie wiąże konsumenta, strony są związane umową w pozostałym zakresie. § 3. Nieuzgodnione indywidualnie są te postanowienia umowy, na których treść konsument nie miał rzeczywistego wpływu. W szczególności odnosi się to do postanowień umowy przejętych z wzorca umowy zaproponowanego konsumentowi przez kontrahenta. § 4. Ciężar dowodu, że postanowienie zostało uzgodnione indywidualnie, spoczywa na tym, kto się na to powołuje.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20240001061",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2024-06-19",
+  "contentHashSha256": "a91ab77ca674fba1b1d9c44bffbe085fcdb9860ccec2a7d0fc9a8432182f316b",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego",
+    "najem_okazjonalny",
+    "konsument"
+  ],
+  "keywords": [
+    "klauzula niedozwolona",
+    "klauzula abuzywna",
+    "dobre obyczaje",
+    "rażące naruszenie",
+    "brak związania"
+  ],
+  "officialCitation": "Dz.U. 2024 poz. 1061, art. 385¹"
+}

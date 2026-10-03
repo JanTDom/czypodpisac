@@ -1,0 +1,24 @@
+{
+  "id": "sn-v-csk-31-08",
+  "unitType": "court_ruling",
+  "actTitle": "Wyrok Sądu Najwyższego z dnia 19 czerwca 2008 r., sygn. V CSK 31/08",
+  "publicationAddress": "Wyrok Sądu Najwyższego z dnia 19 czerwca 2008 r., sygn. V CSK 31/08",
+  "editorialUnit": "Wyrok SN V CSK 31/08 (teza)",
+  "content": "Zastrzeżenie w umowie najmu zawartej na czas oznaczony możliwości jej wypowiedzenia bez określenia przyczyn tego wypowiedzenia, bądź z posłużeniem się ogólną klauzulą 'z ważnych przyczyn' bez ich skonkretyzowania w treści umowy, jest nieważne w świetle art. 673 § 3 k.c. Strony umowy na czas oznaczony muszą w samej umowie precyzyjnie określić sytuacje uprawniające do wypowiedzenia.",
+  "sourceUrl": "http://www.sn.pl/sites/orzecznictwo/orzeczenia2/v%20csk%2031-08-1.pdf",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2008-06-19",
+  "contentHashSha256": "b8d4d9bd48a760ff9be92178ada09009822e716ec4f9182e6e7f8ede3fd2f65e",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego",
+    "najem_okazjonalny"
+  ],
+  "keywords": [
+    "najem na czas oznaczony",
+    "art 673 par 3 kc",
+    "ważne przyczyny",
+    "skonkretyzowanie przyczyn"
+  ],
+  "officialCitation": "Wyrok SN V CSK 31/08 (teza)"
+}

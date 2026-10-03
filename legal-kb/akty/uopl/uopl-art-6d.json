@@ -1,0 +1,23 @@
+{
+  "id": "uopl-art-6d",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+  "publicationAddress": "Dz.U. 2023 poz. 725",
+  "editorialUnit": "art. 6d",
+  "content": "Art. 6d. Najemca może wprowadzić w lokalu ulepszenia tylko za zgodą wynajmującego i na podstawie pisemnej umowy określającej sposób rozliczeń z tego tytułu.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20230000725",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2023-03-09",
+  "contentHashSha256": "f0e405da0e9aabed0b9325cc16513ebc8fd6e6632bc70ea6fa13d72af6ef5147",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego",
+    "najem_okazjonalny"
+  ],
+  "keywords": [
+    "ulepszenia",
+    "zgoda właściciela",
+    "nakłady"
+  ],
+  "officialCitation": "Dz.U. 2023 poz. 725, art. 6d"
+}

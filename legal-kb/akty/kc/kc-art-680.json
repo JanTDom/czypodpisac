@@ -1,0 +1,22 @@
+{
+  "id": "kc-art-680",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+  "publicationAddress": "Dz.U. 2024 poz. 1061",
+  "editorialUnit": "art. 680",
+  "content": "Art. 680. Do najmu lokalu stosuje się przepisy rozdziału poprzedzającego, z zachowaniem przepisów poniższych.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20240001061",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2024-06-19",
+  "contentHashSha256": "a1581b5ad4866eaf8d494db514b43bc1a027b3e07f2544e85f08da7fc445b4d1",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego",
+    "najem_okazjonalny"
+  ],
+  "keywords": [
+    "najem lokalu",
+    "przepisy ogólne"
+  ],
+  "officialCitation": "Dz.U. 2024 poz. 1061, art. 680"
+}

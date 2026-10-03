@@ -1,0 +1,22 @@
+{
+  "id": "uopl-art-19c",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+  "publicationAddress": "Dz.U. 2023 poz. 725",
+  "editorialUnit": "art. 19c",
+  "content": "Art. 19c. 1. Z tytułu najmu okazjonalnego lokalu, oprócz czynszu, właściciel pobiera jedynie opłaty niezależne od właściciela, chyba że umowa stanowi inaczej. 2. Właściciel może podwyższyć czynsz wyłącznie zgodnie z warunkami określonymi w umowie.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20230000725",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2023-03-09",
+  "contentHashSha256": "d379d032244baa1c845d2cda6fa43d4c4f39ff2e792f7e7d835a1364410c9f97",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_okazjonalny"
+  ],
+  "keywords": [
+    "kaucja najem okazjonalny",
+    "limit 6-krotność",
+    "zwrot kaucji"
+  ],
+  "officialCitation": "Dz.U. 2023 poz. 725, art. 19c"
+}

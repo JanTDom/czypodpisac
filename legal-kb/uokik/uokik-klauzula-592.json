@@ -1,0 +1,22 @@
+{
+  "id": "uokik-klauzula-592",
+  "unitType": "uokik_clause",
+  "actTitle": "Rejestr Klauzul Niedozwolonych UOKiK / SOKiK",
+  "publicationAddress": "Sygn. akt XVII AmC 192/05, wpis nr 592",
+  "editorialUnit": "Wpis nr 592 (SOKiK XVII AmC 192/05)",
+  "content": "Wynajmujący może rozwiązać umowę ze skutkiem natychmiastowym w przypadku zalegania przez Najemcę z zapłatą czynszu za okres 14 dni, bez konieczności wyznaczania dodatkowego terminu.",
+  "sourceUrl": "https://rejestr.uokik.gov.pl/pozycja.php?istn=1&numer=592",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2006-04-12",
+  "contentHashSha256": "54a936e088a757fb7a8fa305c02ea0fce21b105b2845c2da412a4b6afe564ab4",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego"
+  ],
+  "keywords": [
+    "natychmiastowe rozwiązanie umowy",
+    "ominięcie art 11 uopl",
+    "brak uprzedzenia"
+  ],
+  "officialCitation": "UOKiK Rejestr nr 592 (XVII AmC 192/05)"
+}

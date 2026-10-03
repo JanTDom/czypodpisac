@@ -1,0 +1,22 @@
+{
+  "id": "kc-art-688",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+  "publicationAddress": "Dz.U. 2024 poz. 1061",
+  "editorialUnit": "art. 688",
+  "content": "Art. 688. Jeżeli czas trwania najmu lokalu nie jest oznaczony, a czynsz jest płatny miesięcznie, najem można wypowiedzieć najpóźniej na trzy miesiące naprzód na koniec miesiąca kalendarzowego.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20240001061",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2024-06-19",
+  "contentHashSha256": "91e42601940db104b68fdcf6fbfd2e1816bc72471175932e57239e0f3eee5b7a",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego"
+  ],
+  "keywords": [
+    "ustawowe terminy wypowiedzenia",
+    "3 miesiące",
+    "koniec miesiąca kalendarzowego"
+  ],
+  "officialCitation": "Dz.U. 2024 poz. 1061, art. 688"
+}

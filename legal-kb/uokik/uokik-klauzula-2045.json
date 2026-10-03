@@ -1,0 +1,23 @@
+{
+  "id": "uokik-klauzula-2045",
+  "unitType": "uokik_clause",
+  "actTitle": "Rejestr Klauzul Niedozwolonych UOKiK / SOKiK",
+  "publicationAddress": "Sygn. akt XVII AmC 98/10, wpis nr 2045",
+  "editorialUnit": "Wpis nr 2045 (SOKiK XVII AmC 98/10)",
+  "content": "W przypadku wcześniejszego rozwiązania umowy przez Najemcę lub rozwiązania umowy z winy Najemcy, wpłacona kaucja nie podlega zwrotowi i przepada na rzecz Wynajmującego jako zryczałtowane odszkodowanie.",
+  "sourceUrl": "https://rejestr.uokik.gov.pl/pozycja.php?istn=1&numer=2045",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2010-11-15",
+  "contentHashSha256": "364d0e009111feb87be8f774a9019feaaf4cfdba421e9e5373c69d5bebea91c6",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego",
+    "najem_okazjonalny"
+  ],
+  "keywords": [
+    "przepadek kaucji",
+    "odszkodowanie zryczałtowane",
+    "kara umowna ukryta w kaucji"
+  ],
+  "officialCitation": "UOKiK Rejestr nr 2045 (XVII AmC 98/10)"
+}

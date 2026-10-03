@@ -1,0 +1,21 @@
+{
+  "id": "kc-art-685-1",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+  "publicationAddress": "Dz.U. 2024 poz. 1061",
+  "editorialUnit": "art. 685¹",
+  "content": "Art. 685 1 . Wynajmujący lokal może podwyższyć czynsz, wypowiadając dotychczasową wysokość czynszu najpóźniej na miesiąc naprzód, na koniec miesiąca kalendarzowego.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20240001061",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2024-06-19",
+  "contentHashSha256": "94f941386a9cd784e1cc504cd3c46541d75db737c7e06f4ad3b07f57f37594ca",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego"
+  ],
+  "keywords": [
+    "wypowiedzenie wysokości czynszu",
+    "podwyżka czynszu"
+  ],
+  "officialCitation": "Dz.U. 2024 poz. 1061, art. 685¹"
+}

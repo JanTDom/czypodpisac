@@ -1,0 +1,25 @@
+{
+  "id": "kc-art-681",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+  "publicationAddress": "Dz.U. 2024 poz. 1061",
+  "editorialUnit": "art. 681",
+  "content": "Art. 681. Do drobnych nakładów, które obciążają najemcę lokalu, należą w szczególności: drobne naprawy podłóg, drzwi i okien, malowanie ścian, podłóg oraz wewnętrznej strony drzwi wejściowych, jak również drobne naprawy instalacji i urządzeń technicznych, zapewniających korzystanie ze światła, ogrzewania lokalu, dopływu i odpływu wody.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20240001061",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2024-06-19",
+  "contentHashSha256": "0f89d69071ad79c14152172011fd7d0a29285150e1e9a13283a5fb88d43da620",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego",
+    "najem_okazjonalny"
+  ],
+  "keywords": [
+    "drobne nakłady",
+    "naprawa podłóg",
+    "okna",
+    "drzwi",
+    "malowanie"
+  ],
+  "officialCitation": "Dz.U. 2024 poz. 1061, art. 681"
+}

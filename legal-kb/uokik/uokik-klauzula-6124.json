@@ -1,0 +1,24 @@
+{
+  "id": "uokik-klauzula-6124",
+  "unitType": "uokik_clause",
+  "actTitle": "Rejestr Klauzul Niedozwolonych UOKiK / SOKiK",
+  "publicationAddress": "Sygn. akt XVII AmC 1205/13, wpis nr 6124",
+  "editorialUnit": "Wpis nr 6124 (SOKiK XVII AmC 1205/13)",
+  "content": "Najemca oświadcza, że zapoznał się ze stanem technicznym lokalu i zrzeka się wszelkich roszczeń z tytułu wad lokalu, w tym prawa do żądania obniżenia czynszu lub rozwiązania umowy.",
+  "sourceUrl": "https://rejestr.uokik.gov.pl/pozycja.php?istn=1&numer=6124",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2015-08-04",
+  "contentHashSha256": "4005eda2cf00ba4aed7972195f07867c1ee12fa58f5cd4aa07a3748847cb6a5a",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego",
+    "najem_okazjonalny"
+  ],
+  "keywords": [
+    "wyłączenie rękojmi",
+    "zrzeczenie się roszczeń",
+    "wady lokalu",
+    "obniżenie czynszu"
+  ],
+  "officialCitation": "UOKiK Rejestr nr 6124 (XVII AmC 1205/13)"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "kc-art-385-5",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+  "publicationAddress": "Dz.U. 2024 poz. 1061",
+  "editorialUnit": "art. 385⁵",
+  "content": "Art. 385 5 . § 1. Przepisy dotyczące konsumenta, zawarte w art. 385 1 -385 3 , stosuje się do osoby fizycznej zawierającej umowę bezpośrednio związaną z jej działalnością gospodarczą, gdy z treści tej umowy wynika, że nie posiada ona dla niej charakteru zawodowego, wynikającego w szczególności z przedmiotu wykonywanej przez nią działalności gospodarczej, udostępnionego na podstawie przepisów o Centralnej Ewidencji i Informacji o Działalności Gospodarczej. § 2. (uchylony) 5) Przez art. 1 pkt 1 ustawy z dnia 20 marca 2024 r. o zmianie ustawy - Kodeks cywilny, ustawy o kredycie konsumenckim oraz ustawy o konsumenckiej pożyczce lombardowej (Dz. U. poz. 653), która weszła w życie z dniem 29 kwietnia 2024 r.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20240001061",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2024-06-19",
+  "contentHashSha256": "89d4922b44ac24ce45dce4df237da36d011f6a5a9cc2135aed19fb1d1230c43b",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego",
+    "najem_okazjonalny",
+    "b2b_uslugi_freelancer"
+  ],
+  "keywords": [
+    "przedsiębiorca na prawach konsumenta",
+    "jednoosobowa działalność gospodarcza",
+    "charakter zawodowy"
+  ],
+  "officialCitation": "Dz.U. 2024 poz. 1061, art. 385⁵"
+}

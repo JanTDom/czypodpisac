@@ -1,0 +1,23 @@
+{
+  "id": "kc-art-685",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+  "publicationAddress": "Dz.U. 2024 poz. 1061",
+  "editorialUnit": "art. 685",
+  "content": "Art. 685. Jeżeli najemca lokalu wykracza w sposób rażący lub uporczywy przeciwko obowiązującemu porządkowi domowemu albo przez swoje niewłaściwe zachowanie czyni korzystanie z innych lokali w budynku uciążliwym, wynajmujący może wypowiedzieć najem bez zachowania terminów wypowiedzenia.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20240001061",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2024-06-19",
+  "contentHashSha256": "09806a5d81651c6157d63049fd044a1e7e16cb4601686438ec3339da8f0533dd",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego",
+    "najem_okazjonalny"
+  ],
+  "keywords": [
+    "porządek domowy",
+    "rażące wykraczanie",
+    "wypowiedzenie bez zachowania terminów"
+  ],
+  "officialCitation": "Dz.U. 2024 poz. 1061, art. 685"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "sn-iii-czp-52-19",
+  "unitType": "court_ruling",
+  "actTitle": "Uchwała Sądu Najwyższego z dnia 12 grudnia 2019 r., sygn. III CZP 52/19",
+  "publicationAddress": "Uchwała Sądu Najwyższego z dnia 12 grudnia 2019 r., sygn. III CZP 52/19",
+  "editorialUnit": "Uchwała SN III CZP 52/19 (teza)",
+  "content": "Kaucja zabezpieczająca, o której mowa w art. 6 ustawy o ochronie praw lokatorów, służy wyłącznie zaspokojeniu roszczeń przysługujących wynajmującemu z tytułu najmu lokalu w dniu jego opróżnienia. Wynajmujący nie może zatrzymać kaucji na poczet rzekomych szkód lub kar umownych, których istnienia i wysokości nie udowodnił w protokole zdawczo-odbiorczym lub rachunkach.",
+  "sourceUrl": "http://www.sn.pl/sites/orzecznictwo/orzeczenia3/iii%20czp%2052-19.pdf",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2019-12-12",
+  "contentHashSha256": "45db899463a24da78c8d709b5f22cc6213503efadf47fcc40f8353852d84e8ed",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego",
+    "najem_okazjonalny"
+  ],
+  "keywords": [
+    "rozliczenie kaucji",
+    "potrącenia z kaucji",
+    "protokół zdawczo-odbiorczy",
+    "art 6 uopl"
+  ],
+  "officialCitation": "Uchwała SN III CZP 52/19 (teza)"
+}

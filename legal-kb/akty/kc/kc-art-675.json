@@ -1,0 +1,24 @@
+{
+  "id": "kc-art-675",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+  "publicationAddress": "Dz.U. 2024 poz. 1061",
+  "editorialUnit": "art. 675",
+  "content": "Art. 675. § 1. Po zakończeniu najmu najemca obowiązany jest zwrócić rzecz w stanie niepogorszonym; jednakże nie ponosi odpowiedzialności za zużycie rzeczy będące następstwem prawidłowego używania. § 2. Jeżeli najemca oddał innej osobie rzecz do bezpłatnego używania lub w podnajem, obowiązek powyższy ciąży także na tej osobie. § 3. Domniemywa się, że rzecz była wydana najemcy w stanie dobrym i przydatnym do umówionego użytku.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20240001061",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2024-06-19",
+  "contentHashSha256": "53ff36e51e8dcdfea1c3a1a83b4074f5c80ea3485d4705e00e2ce29b85488f19",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego",
+    "najem_okazjonalny"
+  ],
+  "keywords": [
+    "zwrot rzeczy",
+    "stan niepogorszony",
+    "prawidłowe używanie",
+    "zużycie"
+  ],
+  "officialCitation": "Dz.U. 2024 poz. 1061, art. 675"
+}

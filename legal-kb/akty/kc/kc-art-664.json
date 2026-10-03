@@ -1,0 +1,24 @@
+{
+  "id": "kc-art-664",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+  "publicationAddress": "Dz.U. 2024 poz. 1061",
+  "editorialUnit": "art. 664",
+  "content": "Art. 664. § 1. Jeżeli rzecz najęta ma wady, które ograniczają jej przydatność do umówionego użytku, najemca może żądać odpowiedniego obniżenia czynszu za czas trwania wad. § 2. Jeżeli w chwili wydania najemcy rzecz miała wady, które uniemożliwiają przewidziane w umowie używanie rzeczy, albo jeżeli wady takie powstały później, a wynajmujący mimo otrzymanego zawiadomienia nie usunął ich w czasie odpowiednim, albo jeżeli wady usunąć się nie dadzą, najemca może wypowiedzieć najem bez zachowania terminów wypowiedzenia. § 3. Roszczenie o obniżenie czynszu z powodu wad rzeczy najętej, jak również uprawnienie do niezwłocznego wypowiedzenia najmu nie przysługuje najemcy, jeżeli w chwili zawarcia umowy wiedział o wadach.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20240001061",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2024-06-19",
+  "contentHashSha256": "b1f35bd5fe4692aaeddbee76ca2c22a5f55774dba97f16227b89dc7574e983bd",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego",
+    "najem_okazjonalny"
+  ],
+  "keywords": [
+    "rękojmia za wady",
+    "obniżenie czynszu",
+    "wypowiedzenie bez zachowania terminów",
+    "wady lokalu"
+  ],
+  "officialCitation": "Dz.U. 2024 poz. 1061, art. 664"
+}

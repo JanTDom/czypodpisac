@@ -1,0 +1,24 @@
+{
+  "id": "kc-art-691",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+  "publicationAddress": "Dz.U. 2024 poz. 1061",
+  "editorialUnit": "art. 691",
+  "content": "Art. 691. § 1. W razie śmierci najemcy lokalu mieszkalnego w stosunek najmu lokalu wstępują: małżonek niebędący współnajemcą lokalu, dzieci najemcy i jego współmałżonka, inne osoby, wobec których najemca był obowiązany do świadczeń alimentacyjnych, oraz osoba, która pozostawała faktycznie we wspólnym pożyciu z najemcą. § 2. Osoby wymienione w § 1 wstępują w stosunek najmu lokalu mieszkalnego, jeżeli stale zamieszkiwały z najemcą w tym lokalu do chwili jego śmierci. § 3. W razie braku osób wymienionych w § 1 stosunek najmu lokalu mieszkalnego wygasa. § 4. Osoby, które wstąpiły w stosunek najmu lokalu mieszkalnego na podstawie § 1, mogą go wypowiedzieć z zachowaniem terminów ustawowych, chociażby umowa najmu była zawarta na czas oznaczony. W razie wypowiedzenia stosunku najmu przez niektóre z tych osób stosunek ten wygasa względem osób, które go wypowiedziały. § 5. Przepisów § 1-4 nie stosuje się w razie śmierci jednego ze współnajemców lokalu mieszkalnego.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20240001061",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2024-06-19",
+  "contentHashSha256": "a8eeeba8e0858f8f2a45e7e3a1cbbaa70c4dfa9cbc4d8c585a7568e8bc3ce91d",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego"
+  ],
+  "keywords": [
+    "śmierć najemcy",
+    "wstąpienie w stosunek najmu",
+    "małżonek",
+    "dzieci",
+    "wspólne pożycie"
+  ],
+  "officialCitation": "Dz.U. 2024 poz. 1061, art. 691"
+}

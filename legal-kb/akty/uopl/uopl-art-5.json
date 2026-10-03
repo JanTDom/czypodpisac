@@ -1,0 +1,23 @@
+{
+  "id": "uopl-art-5",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+  "publicationAddress": "Dz.U. 2023 poz. 725",
+  "editorialUnit": "art. 5",
+  "content": "Art. 5. 1. Umowa o odpłatne używanie lokalu może być zawarta na czas oznaczony lub nieoznaczony. 2. Umowa o odpłatne używanie lokalu wchodzącego w skład mieszkaniowego zasobu gminy lub innych jednostek samorządu terytorialnego, z wyjątkiem lokalu związanego ze stosunkiem pracy lub najmu socjalnego lokalu, może być zawarta wyłącznie na czas nieoznaczony, chyba że zawarcia umowy na czas oznaczony żąda lokator. 3. Właściciel nie może uzależnić zawarcia umowy od złożenia przez lokatora żądania, o którym mowa w ust. 2.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20230000725",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2023-03-09",
+  "contentHashSha256": "ca035b17535e250b8edc49c27f8e61f03c2a63c4d3e58c8734ed5bce07d5f054",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego",
+    "najem_okazjonalny"
+  ],
+  "keywords": [
+    "stan lokalu",
+    "przydatność do umówionego użytku",
+    "utrzymanie lokalu"
+  ],
+  "officialCitation": "Dz.U. 2023 poz. 725, art. 5"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "uopl-art-19b",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+  "publicationAddress": "Dz.U. 2023 poz. 725",
+  "editorialUnit": "art. 19b",
+  "content": "Art. 19b. 1. Właściciel zgłasza zawarcie umowy najmu okazjonalnego lokalu naczelnikowi urzędu skarbowego właściwemu ze względu na miejsce zamieszkania właściciela w terminie 14 dni od dnia rozpoczęcia najmu. 2. Na żądanie najemcy właściciel ma obowiązek przedstawić potwierdzenie zgłoszenia, o którym mowa w ust. 1. 3. W przypadku niedopełnienia obowiązku, o którym mowa w ust. 1, nie stosuje się przepisów art. 19c i art. 19d.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20230000725",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2023-03-09",
+  "contentHashSha256": "2ea9dc3bad6a9b3b54077806163e8edc634b1576eb7256a1e21a4b5c79b403f7",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_okazjonalny"
+  ],
+  "keywords": [
+    "zgłoszenie do urzędu skarbowego",
+    "14 dni",
+    "naczelnik US"
+  ],
+  "officialCitation": "Dz.U. 2023 poz. 725, art. 19b"
+}

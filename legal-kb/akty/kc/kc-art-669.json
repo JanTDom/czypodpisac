@@ -1,0 +1,23 @@
+{
+  "id": "kc-art-669",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+  "publicationAddress": "Dz.U. 2024 poz. 1061",
+  "editorialUnit": "art. 669",
+  "content": "Art. 669. § 1. Najemca obowiązany jest uiszczać czynsz w terminie umówionym. § 2. Jeżeli termin płatności czynszu nie jest w umowie określony, czynsz powinien być płacony z góry, a mianowicie: gdy najem ma trwać nie dłużej niż miesiąc - za cały czas najmu, a gdy najem ma trwać dłużej niż miesiąc albo gdy umowa była zawarta na czas nieoznaczony - miesięcznie, do dziesiątego dnia miesiąca.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20240001061",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2024-06-19",
+  "contentHashSha256": "7ae99fc8ac33edda37d525de06f50aa7acf227ad372a99d062a24dbf146b6812",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego",
+    "najem_okazjonalny"
+  ],
+  "keywords": [
+    "płatność czynszu",
+    "terminy płatności",
+    "do 10 dnia miesiąca"
+  ],
+  "officialCitation": "Dz.U. 2024 poz. 1061, art. 669"
+}

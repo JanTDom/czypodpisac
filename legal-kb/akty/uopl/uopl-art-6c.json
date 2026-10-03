@@ -1,0 +1,23 @@
+{
+  "id": "uopl-art-6c",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+  "publicationAddress": "Dz.U. 2023 poz. 725",
+  "editorialUnit": "art. 6c",
+  "content": "Art. 6c. Przed wydaniem lokalu najemcy strony sporządzają protokół, w którym określają stan techniczny i stopień zużycia znajdujących się w nim instalacji i urządzeń. Protokół stanowi podstawę rozliczeń przy zwrocie lokalu.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20230000725",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2023-03-09",
+  "contentHashSha256": "a2abca8e686118f272eb1db0ac9c2a6f6e87343c7a8073e22ecd738a944beab3",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego",
+    "najem_okazjonalny"
+  ],
+  "keywords": [
+    "protokół zdawczo-odbiorczy",
+    "stan lokalu",
+    "przekazanie"
+  ],
+  "officialCitation": "Dz.U. 2023 poz. 725, art. 6c"
+}

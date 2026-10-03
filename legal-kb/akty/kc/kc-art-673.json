@@ -1,0 +1,24 @@
+{
+  "id": "kc-art-673",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+  "publicationAddress": "Dz.U. 2024 poz. 1061",
+  "editorialUnit": "art. 673",
+  "content": "Art. 673. § 1. Jeżeli czas trwania najmu nie jest oznaczony, zarówno wynajmujący, jak i najemca mogą wypowiedzieć najem z zachowaniem terminów umownych, a w ich braku z zachowaniem terminów ustawowych. § 2. Ustawowe terminy wypowiedzenia najmu są następujące: gdy czynsz jest płatny w odstępach czasu dłuższych niż miesiąc, najem można wypowiedzieć najpóźniej na trzy miesiące naprzód na koniec kwartału kalendarzowego; gdy czynsz jest płatny miesięcznie - na miesiąc naprzód na koniec miesiąca kalendarzowego; gdy czynsz jest płatny w krótszych odstępach czasu - na trzy dni naprzód; gdy najem jest dzienny - na jeden dzień naprzód. § 3. Jeżeli czas trwania najmu jest oznaczony, zarówno wynajmujący, jak i najemca mogą wypowiedzieć najem w wypadkach określonych w umowie.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20240001061",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2024-06-19",
+  "contentHashSha256": "a94973f672622a65bdbe6e0879f701a704808aae0090e658b34c74d8dea0dd7f",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego",
+    "najem_okazjonalny"
+  ],
+  "keywords": [
+    "terminy wypowiedzenia",
+    "czas nieoznaczony",
+    "czas oznaczony",
+    "ważne przyczyny w umowie"
+  ],
+  "officialCitation": "Dz.U. 2024 poz. 1061, art. 673"
+}

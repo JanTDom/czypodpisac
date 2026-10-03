@@ -1,0 +1,22 @@
+{
+  "id": "kc-art-672",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+  "publicationAddress": "Dz.U. 2024 poz. 1061",
+  "editorialUnit": "art. 672",
+  "content": "Art. 672. Jeżeli najemca dopuszcza się zwłoki z zapłatą czynszu co najmniej za dwa pełne okresy płatności, wynajmujący może najem wypowiedzieć bez zachowania terminów wypowiedzenia.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20240001061",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2024-06-19",
+  "contentHashSha256": "27dd0036ca658b79de48bd77f0f8e012462e3120109ece04d225c457c1e96b14",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego",
+    "najem_okazjonalny"
+  ],
+  "keywords": [
+    "zwłoka z zapłatą czynszu",
+    "wypowiedzenie bez zachowania terminów"
+  ],
+  "officialCitation": "Dz.U. 2024 poz. 1061, art. 672"
+}

@@ -1,0 +1,673 @@
+{
+  "version": "2026.10-najem",
+  "generatedAt": "2026-10-03T14:18:55.807Z",
+  "totalUnits": 51,
+  "unitsByAct": {
+    "Ustawa o ochronie praw lokatorów": 16,
+    "Kodeks cywilny": 26,
+    "Rejestr Klauzul UOKiK": 5,
+    "Orzecznictwo SN i TSUE": 4
+  },
+  "unitsByType": {
+    "statute": 42,
+    "uokik_clause": 5,
+    "court_ruling": 4
+  },
+  "units": [
+    {
+      "id": "uopl-art-2",
+      "unitType": "statute",
+      "editorialUnit": "art. 2",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "filePath": "akty/uopl/uopl-art-2.json",
+      "legalStateDate": "2023-03-09",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego",
+        "najem_okazjonalny",
+        "najem_instytucjonalny"
+      ]
+    },
+    {
+      "id": "uopl-art-5",
+      "unitType": "statute",
+      "editorialUnit": "art. 5",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "filePath": "akty/uopl/uopl-art-5.json",
+      "legalStateDate": "2023-03-09",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego",
+        "najem_okazjonalny"
+      ]
+    },
+    {
+      "id": "uopl-art-6",
+      "unitType": "statute",
+      "editorialUnit": "art. 6",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "filePath": "akty/uopl/uopl-art-6.json",
+      "legalStateDate": "2023-03-09",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego"
+      ]
+    },
+    {
+      "id": "uopl-art-6a",
+      "unitType": "statute",
+      "editorialUnit": "art. 6a",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "filePath": "akty/uopl/uopl-art-6a.json",
+      "legalStateDate": "2023-03-09",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego",
+        "najem_okazjonalny"
+      ]
+    },
+    {
+      "id": "uopl-art-6b",
+      "unitType": "statute",
+      "editorialUnit": "art. 6b",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "filePath": "akty/uopl/uopl-art-6b.json",
+      "legalStateDate": "2023-03-09",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego",
+        "najem_okazjonalny"
+      ]
+    },
+    {
+      "id": "uopl-art-6c",
+      "unitType": "statute",
+      "editorialUnit": "art. 6c",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "filePath": "akty/uopl/uopl-art-6c.json",
+      "legalStateDate": "2023-03-09",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego",
+        "najem_okazjonalny"
+      ]
+    },
+    {
+      "id": "uopl-art-6d",
+      "unitType": "statute",
+      "editorialUnit": "art. 6d",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "filePath": "akty/uopl/uopl-art-6d.json",
+      "legalStateDate": "2023-03-09",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego",
+        "najem_okazjonalny"
+      ]
+    },
+    {
+      "id": "uopl-art-6e",
+      "unitType": "statute",
+      "editorialUnit": "art. 6e",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "filePath": "akty/uopl/uopl-art-6e.json",
+      "legalStateDate": "2023-03-09",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego",
+        "najem_okazjonalny"
+      ]
+    },
+    {
+      "id": "uopl-art-8a",
+      "unitType": "statute",
+      "editorialUnit": "art. 8a",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "filePath": "akty/uopl/uopl-art-8a.json",
+      "legalStateDate": "2023-03-09",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego"
+      ]
+    },
+    {
+      "id": "uopl-art-9",
+      "unitType": "statute",
+      "editorialUnit": "art. 9",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "filePath": "akty/uopl/uopl-art-9.json",
+      "legalStateDate": "2023-03-09",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego"
+      ]
+    },
+    {
+      "id": "uopl-art-11",
+      "unitType": "statute",
+      "editorialUnit": "art. 11",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "filePath": "akty/uopl/uopl-art-11.json",
+      "legalStateDate": "2023-03-09",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego"
+      ]
+    },
+    {
+      "id": "uopl-art-19a",
+      "unitType": "statute",
+      "editorialUnit": "art. 19a",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "filePath": "akty/uopl/uopl-art-19a.json",
+      "legalStateDate": "2023-03-09",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_okazjonalny"
+      ]
+    },
+    {
+      "id": "uopl-art-19b",
+      "unitType": "statute",
+      "editorialUnit": "art. 19b",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "filePath": "akty/uopl/uopl-art-19b.json",
+      "legalStateDate": "2023-03-09",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_okazjonalny"
+      ]
+    },
+    {
+      "id": "uopl-art-19c",
+      "unitType": "statute",
+      "editorialUnit": "art. 19c",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "filePath": "akty/uopl/uopl-art-19c.json",
+      "legalStateDate": "2023-03-09",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_okazjonalny"
+      ]
+    },
+    {
+      "id": "uopl-art-19d",
+      "unitType": "statute",
+      "editorialUnit": "art. 19d",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "filePath": "akty/uopl/uopl-art-19d.json",
+      "legalStateDate": "2023-03-09",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_okazjonalny"
+      ]
+    },
+    {
+      "id": "uopl-art-19e",
+      "unitType": "statute",
+      "editorialUnit": "art. 19e",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "filePath": "akty/uopl/uopl-art-19e.json",
+      "legalStateDate": "2023-03-09",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_okazjonalny"
+      ]
+    },
+    {
+      "id": "kc-art-385-1",
+      "unitType": "statute",
+      "editorialUnit": "art. 385¹",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "filePath": "akty/kc/kc-art-385-1.json",
+      "legalStateDate": "2024-06-19",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego",
+        "najem_okazjonalny",
+        "konsument"
+      ]
+    },
+    {
+      "id": "kc-art-385-2",
+      "unitType": "statute",
+      "editorialUnit": "art. 385²",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "filePath": "akty/kc/kc-art-385-2.json",
+      "legalStateDate": "2024-06-19",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego",
+        "najem_okazjonalny",
+        "konsument"
+      ]
+    },
+    {
+      "id": "kc-art-385-3",
+      "unitType": "statute",
+      "editorialUnit": "art. 385³",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "filePath": "akty/kc/kc-art-385-3.json",
+      "legalStateDate": "2024-06-19",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego",
+        "najem_okazjonalny",
+        "konsument"
+      ]
+    },
+    {
+      "id": "kc-art-385-5",
+      "unitType": "statute",
+      "editorialUnit": "art. 385⁵",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "filePath": "akty/kc/kc-art-385-5.json",
+      "legalStateDate": "2024-06-19",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego",
+        "najem_okazjonalny",
+        "b2b_uslugi_freelancer"
+      ]
+    },
+    {
+      "id": "kc-art-659",
+      "unitType": "statute",
+      "editorialUnit": "art. 659",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "filePath": "akty/kc/kc-art-659.json",
+      "legalStateDate": "2024-06-19",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego",
+        "najem_okazjonalny"
+      ]
+    },
+    {
+      "id": "kc-art-660",
+      "unitType": "statute",
+      "editorialUnit": "art. 660",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "filePath": "akty/kc/kc-art-660.json",
+      "legalStateDate": "2024-06-19",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego",
+        "najem_okazjonalny"
+      ]
+    },
+    {
+      "id": "kc-art-662",
+      "unitType": "statute",
+      "editorialUnit": "art. 662",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "filePath": "akty/kc/kc-art-662.json",
+      "legalStateDate": "2024-06-19",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego",
+        "najem_okazjonalny"
+      ]
+    },
+    {
+      "id": "kc-art-663",
+      "unitType": "statute",
+      "editorialUnit": "art. 663",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "filePath": "akty/kc/kc-art-663.json",
+      "legalStateDate": "2024-06-19",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego",
+        "najem_okazjonalny"
+      ]
+    },
+    {
+      "id": "kc-art-664",
+      "unitType": "statute",
+      "editorialUnit": "art. 664",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "filePath": "akty/kc/kc-art-664.json",
+      "legalStateDate": "2024-06-19",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego",
+        "najem_okazjonalny"
+      ]
+    },
+    {
+      "id": "kc-art-666",
+      "unitType": "statute",
+      "editorialUnit": "art. 666",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "filePath": "akty/kc/kc-art-666.json",
+      "legalStateDate": "2024-06-19",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego",
+        "najem_okazjonalny"
+      ]
+    },
+    {
+      "id": "kc-art-667",
+      "unitType": "statute",
+      "editorialUnit": "art. 667",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "filePath": "akty/kc/kc-art-667.json",
+      "legalStateDate": "2024-06-19",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego",
+        "najem_okazjonalny"
+      ]
+    },
+    {
+      "id": "kc-art-668",
+      "unitType": "statute",
+      "editorialUnit": "art. 668",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "filePath": "akty/kc/kc-art-668.json",
+      "legalStateDate": "2024-06-19",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego",
+        "najem_okazjonalny"
+      ]
+    },
+    {
+      "id": "kc-art-669",
+      "unitType": "statute",
+      "editorialUnit": "art. 669",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "filePath": "akty/kc/kc-art-669.json",
+      "legalStateDate": "2024-06-19",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego",
+        "najem_okazjonalny"
+      ]
+    },
+    {
+      "id": "kc-art-672",
+      "unitType": "statute",
+      "editorialUnit": "art. 672",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "filePath": "akty/kc/kc-art-672.json",
+      "legalStateDate": "2024-06-19",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego",
+        "najem_okazjonalny"
+      ]
+    },
+    {
+      "id": "kc-art-673",
+      "unitType": "statute",
+      "editorialUnit": "art. 673",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "filePath": "akty/kc/kc-art-673.json",
+      "legalStateDate": "2024-06-19",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego",
+        "najem_okazjonalny"
+      ]
+    },
+    {
+      "id": "kc-art-675",
+      "unitType": "statute",
+      "editorialUnit": "art. 675",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "filePath": "akty/kc/kc-art-675.json",
+      "legalStateDate": "2024-06-19",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego",
+        "najem_okazjonalny"
+      ]
+    },
+    {
+      "id": "kc-art-677",
+      "unitType": "statute",
+      "editorialUnit": "art. 677",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "filePath": "akty/kc/kc-art-677.json",
+      "legalStateDate": "2024-06-19",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego",
+        "najem_okazjonalny"
+      ]
+    },
+    {
+      "id": "kc-art-680",
+      "unitType": "statute",
+      "editorialUnit": "art. 680",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "filePath": "akty/kc/kc-art-680.json",
+      "legalStateDate": "2024-06-19",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego",
+        "najem_okazjonalny"
+      ]
+    },
+    {
+      "id": "kc-art-681",
+      "unitType": "statute",
+      "editorialUnit": "art. 681",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "filePath": "akty/kc/kc-art-681.json",
+      "legalStateDate": "2024-06-19",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego",
+        "najem_okazjonalny"
+      ]
+    },
+    {
+      "id": "kc-art-683",
+      "unitType": "statute",
+      "editorialUnit": "art. 683",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "filePath": "akty/kc/kc-art-683.json",
+      "legalStateDate": "2024-06-19",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego",
+        "najem_okazjonalny"
+      ]
+    },
+    {
+      "id": "kc-art-684",
+      "unitType": "statute",
+      "editorialUnit": "art. 684",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "filePath": "akty/kc/kc-art-684.json",
+      "legalStateDate": "2024-06-19",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego",
+        "najem_okazjonalny"
+      ]
+    },
+    {
+      "id": "kc-art-685",
+      "unitType": "statute",
+      "editorialUnit": "art. 685",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "filePath": "akty/kc/kc-art-685.json",
+      "legalStateDate": "2024-06-19",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego",
+        "najem_okazjonalny"
+      ]
+    },
+    {
+      "id": "kc-art-685-1",
+      "unitType": "statute",
+      "editorialUnit": "art. 685¹",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "filePath": "akty/kc/kc-art-685-1.json",
+      "legalStateDate": "2024-06-19",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego"
+      ]
+    },
+    {
+      "id": "kc-art-688",
+      "unitType": "statute",
+      "editorialUnit": "art. 688",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "filePath": "akty/kc/kc-art-688.json",
+      "legalStateDate": "2024-06-19",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego"
+      ]
+    },
+    {
+      "id": "kc-art-688-1",
+      "unitType": "statute",
+      "editorialUnit": "art. 688¹",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "filePath": "akty/kc/kc-art-688-1.json",
+      "legalStateDate": "2024-06-19",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego",
+        "najem_okazjonalny"
+      ]
+    },
+    {
+      "id": "kc-art-691",
+      "unitType": "statute",
+      "editorialUnit": "art. 691",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "filePath": "akty/kc/kc-art-691.json",
+      "legalStateDate": "2024-06-19",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego"
+      ]
+    },
+    {
+      "id": "uokik-klauzula-4991",
+      "unitType": "uokik_clause",
+      "editorialUnit": "Wpis nr 4991 (SOKiK XVII AmC 511/12)",
+      "actTitle": "Rejestr Klauzul Niedozwolonych UOKiK / SOKiK",
+      "filePath": "uokik/uokik-klauzula-4991.json",
+      "legalStateDate": "2013-06-18",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego",
+        "najem_okazjonalny"
+      ]
+    },
+    {
+      "id": "uokik-klauzula-2487",
+      "unitType": "uokik_clause",
+      "editorialUnit": "Wpis nr 2487 (SOKiK XVII AmC 123/11)",
+      "actTitle": "Rejestr Klauzul Niedozwolonych UOKiK / SOKiK",
+      "filePath": "uokik/uokik-klauzula-2487.json",
+      "legalStateDate": "2011-09-29",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego",
+        "najem_okazjonalny"
+      ]
+    },
+    {
+      "id": "uokik-klauzula-2045",
+      "unitType": "uokik_clause",
+      "editorialUnit": "Wpis nr 2045 (SOKiK XVII AmC 98/10)",
+      "actTitle": "Rejestr Klauzul Niedozwolonych UOKiK / SOKiK",
+      "filePath": "uokik/uokik-klauzula-2045.json",
+      "legalStateDate": "2010-11-15",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego",
+        "najem_okazjonalny"
+      ]
+    },
+    {
+      "id": "uokik-klauzula-592",
+      "unitType": "uokik_clause",
+      "editorialUnit": "Wpis nr 592 (SOKiK XVII AmC 192/05)",
+      "actTitle": "Rejestr Klauzul Niedozwolonych UOKiK / SOKiK",
+      "filePath": "uokik/uokik-klauzula-592.json",
+      "legalStateDate": "2006-04-12",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego"
+      ]
+    },
+    {
+      "id": "uokik-klauzula-6124",
+      "unitType": "uokik_clause",
+      "editorialUnit": "Wpis nr 6124 (SOKiK XVII AmC 1205/13)",
+      "actTitle": "Rejestr Klauzul Niedozwolonych UOKiK / SOKiK",
+      "filePath": "uokik/uokik-klauzula-6124.json",
+      "legalStateDate": "2015-08-04",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego",
+        "najem_okazjonalny"
+      ]
+    },
+    {
+      "id": "sn-iii-czp-11-13",
+      "unitType": "court_ruling",
+      "editorialUnit": "Uchwała SN III CZP 11/13 (teza)",
+      "actTitle": "Uchwała Sądu Najwyższego z dnia 5 kwietnia 2013 r., sygn. III CZP 11/13",
+      "filePath": "orzecznictwo/sn-iii-czp-11-13.json",
+      "legalStateDate": "2013-04-05",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego"
+      ]
+    },
+    {
+      "id": "sn-v-csk-31-08",
+      "unitType": "court_ruling",
+      "editorialUnit": "Wyrok SN V CSK 31/08 (teza)",
+      "actTitle": "Wyrok Sądu Najwyższego z dnia 19 czerwca 2008 r., sygn. V CSK 31/08",
+      "filePath": "orzecznictwo/sn-v-csk-31-08.json",
+      "legalStateDate": "2008-06-19",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego",
+        "najem_okazjonalny"
+      ]
+    },
+    {
+      "id": "sn-iii-czp-52-19",
+      "unitType": "court_ruling",
+      "editorialUnit": "Uchwała SN III CZP 52/19 (teza)",
+      "actTitle": "Uchwała Sądu Najwyższego z dnia 12 grudnia 2019 r., sygn. III CZP 52/19",
+      "filePath": "orzecznictwo/sn-iii-czp-52-19.json",
+      "legalStateDate": "2019-12-12",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego",
+        "najem_okazjonalny"
+      ]
+    },
+    {
+      "id": "tsue-c-229-19",
+      "unitType": "court_ruling",
+      "editorialUnit": "Wyrok TSUE C-229/19 (pkt 64-67)",
+      "actTitle": "Wyrok Trybunału Sprawiedliwości Unii Europejskiej z dnia 27 stycznia 2021 r., sprawa C-229/19 (Dexia)",
+      "filePath": "orzecznictwo/tsue-c-229-19.json",
+      "legalStateDate": "2021-01-27",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_mieszkalnego",
+        "najem_okazjonalny",
+        "konsument"
+      ]
+    }
+  ]
+}

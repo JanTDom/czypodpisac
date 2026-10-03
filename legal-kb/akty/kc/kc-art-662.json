@@ -1,0 +1,23 @@
+{
+  "id": "kc-art-662",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+  "publicationAddress": "Dz.U. 2024 poz. 1061",
+  "editorialUnit": "art. 662",
+  "content": "Art. 662. § 1. Wynajmujący powinien wydać najemcy rzecz w stanie przydatnym do umówionego użytku i utrzymywać ją w takim stanie przez czas trwania najmu. § 2. Drobne nakłady połączone ze zwykłym używaniem rzeczy obciążają najemcę. § 3. Jeżeli rzecz najęta uległa zniszczeniu z powodu okoliczności, za które wynajmujący odpowiedzialności nie ponosi, wynajmujący nie ma obowiązku przywrócenia stanu poprzedniego.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20240001061",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2024-06-19",
+  "contentHashSha256": "4367320c6a722df7475d075bc954b61da6ead523fb3ee9867065ae00a622f641",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego",
+    "najem_okazjonalny"
+  ],
+  "keywords": [
+    "stan przydatny do użytku",
+    "drobne nakłady",
+    "utrzymanie rzeczy"
+  ],
+  "officialCitation": "Dz.U. 2024 poz. 1061, art. 662"
+}

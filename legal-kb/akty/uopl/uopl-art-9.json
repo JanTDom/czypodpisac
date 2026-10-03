@@ -1,0 +1,22 @@
+{
+  "id": "uopl-art-9",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+  "publicationAddress": "Dz.U. 2023 poz. 725",
+  "editorialUnit": "art. 9",
+  "content": "Art. 9. 1. (utracił moc) 5) Z dniem 31 grudnia 2006 r. na podstawie wyroku Trybunału Konstytucyjnego z dnia 17 maja 2006 r. sygn. akt K 33/05 (Dz. U. poz. 602). 1a. (utracił moc) 6) Z dniem 26 kwietnia 2005 r. na podstawie wyroku Trybunału Konstytucyjnego z dnia 19 kwietnia 2005 r. sygn. akt K 4/05 (Dz. U. poz. 626). 1b. Podwyższanie czynszu albo innych opłat za używanie lokalu, z wyjątkiem opłat niezależnych od właściciela, nie może być dokonywane częściej niż co 6 miesięcy. Termin ten biegnie od dnia, w którym podwyżka zaczęła obowiązywać. 2. W razie podwyższania opłat niezależnych od właściciela jest on obowiązany do przedstawienia lokatorowi na piśmie zestawienia opłat wraz z przyczyną ich podwyższenia. Lokator obowiązany jest opłacać podwyższone opłaty tylko w takiej wysokości, jaka jest niezbędna do pokrycia przez właściciela kosztów dostarczenia do lokalu używanego przez lokatora dostaw, o których mowa w art. 2 ust. 1 pkt 8. 3. (utracił moc) 7) Z dniem 10 października 2002 r. na podstawie wyroku Trybunału Konstytucyjnego z dnia 2 października 2002 r. sygn. akt K. 48/01 (Dz. U. poz. 1383). 4. (uchylony) 5. W stosunkach najmu oprócz czynszu wynajmujący może pobierać jedynie opłaty niezależne od właściciela, a w wypadku innych tytułów prawnych uprawniających do używania lokalu, oprócz opłat za używanie lokalu, właściciel może pobierać jedynie opłaty niezależne od właściciela, z zastrzeżeniem ust. 6. 6. Opłaty niezależne od właściciela mogą być pobierane przez właściciela tylko w wypadkach, gdy korzystający z lokalu nie ma zawartej umowy bezpośrednio z dostawcą mediów lub dostawcą usług. 7. (uchylony) 8. Wartość odtworzeniową lokalu stanowi iloczyn jego powierzchni użytkowej i wskaźnika przeliczeniowego kosztu odtworzenia 1 m 2 powierzchni użytkowej budynku mieszkalnego. 9. (uchylony)",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20230000725",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2023-03-09",
+  "contentHashSha256": "6882e90a10db2c54224ab70fc3eca55c8560d32f9b3b1c39714e55830ad5d4f3",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego"
+  ],
+  "keywords": [
+    "opłaty niezależne",
+    "media",
+    "rozliczenie opłat"
+  ],
+  "officialCitation": "Dz.U. 2023 poz. 725, art. 9"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "kc-art-668",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+  "publicationAddress": "Dz.U. 2024 poz. 1061",
+  "editorialUnit": "art. 668",
+  "content": "Art. 668. § 1. Najemca może rzecz najętą oddać w całości lub części osobie trzeciej do bezpłatnego używania albo w podnajem, jeżeli umowa mu tego nie zabrania. W razie oddania rzeczy osobie trzeciej zarówno najemca, jak i osoba trzecia są odpowiedzialni względem wynajmującego za to, że rzecz najęta będzie używana zgodnie z obowiązkami wynikającymi z umowy najmu. § 2. Stosunek wynikający z zawartej przez najemcę umowy o bezpłatne używanie lub podnajem rozwiązuje się najpóźniej z chwilą zakończenia stosunku najmu.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20240001061",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2024-06-19",
+  "contentHashSha256": "d086df8bbf8902d751f545278843a42e95e86f10bd5c48ba23187f3bb5796d63",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego",
+    "najem_okazjonalny"
+  ],
+  "keywords": [
+    "podnajem",
+    "bezpłatne używanie",
+    "zgoda wynajmującego"
+  ],
+  "officialCitation": "Dz.U. 2024 poz. 1061, art. 668"
+}

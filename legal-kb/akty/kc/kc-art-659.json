@@ -1,0 +1,24 @@
+{
+  "id": "kc-art-659",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+  "publicationAddress": "Dz.U. 2024 poz. 1061",
+  "editorialUnit": "art. 659",
+  "content": "Art. 659. § 1. Przez umowę najmu wynajmujący zobowiązuje się oddać najemcy rzecz do używania przez czas oznaczony lub nieoznaczony, a najemca zobowiązuje się płacić wynajmującemu umówiony czynsz. § 2. Czynsz może być oznaczony w pieniądzach lub w świadczeniach innego rodzaju.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20240001061",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2024-06-19",
+  "contentHashSha256": "7b79c29060cc2276c04788addc53495f34be3ef234fd9823c9d10549e8bba63a",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego",
+    "najem_okazjonalny"
+  ],
+  "keywords": [
+    "umowa najmu",
+    "istota najmu",
+    "czynsz",
+    "używanie rzeczy"
+  ],
+  "officialCitation": "Dz.U. 2024 poz. 1061, art. 659"
+}

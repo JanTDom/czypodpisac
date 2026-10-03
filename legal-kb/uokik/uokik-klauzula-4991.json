@@ -1,0 +1,24 @@
+{
+  "id": "uokik-klauzula-4991",
+  "unitType": "uokik_clause",
+  "actTitle": "Rejestr Klauzul Niedozwolonych UOKiK / SOKiK",
+  "publicationAddress": "Sygn. akt XVII AmC 511/12, wpis nr 4991",
+  "editorialUnit": "Wpis nr 4991 (SOKiK XVII AmC 511/12)",
+  "content": "Wynajmujący ma prawo wstępu do wynajmowanego Lokalu pod nieobecność Najemcy w każdym czasie, celem dokonania inspekcji stanu technicznego lub sanitarno-porządkowego Lokalu.",
+  "sourceUrl": "https://rejestr.uokik.gov.pl/pozycja.php?istn=1&numer=4991",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2013-06-18",
+  "contentHashSha256": "ca80a561dbfe6b79ead0059e053fc073945c9776fe08e1f9e7e8e7f70c1cf7a8",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego",
+    "najem_okazjonalny"
+  ],
+  "keywords": [
+    "inspekcja lokalu",
+    "wstęp pod nieobecność",
+    "prawo do prywatności",
+    "klauzula abuzywna"
+  ],
+  "officialCitation": "UOKiK Rejestr nr 4991 (XVII AmC 511/12)"
+}

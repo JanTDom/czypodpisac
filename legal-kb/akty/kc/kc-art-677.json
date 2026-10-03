@@ -1,0 +1,23 @@
+{
+  "id": "kc-art-677",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+  "publicationAddress": "Dz.U. 2024 poz. 1061",
+  "editorialUnit": "art. 677",
+  "content": "Art. 677. Roszczenia wynajmującego przeciwko najemcy o naprawienie szkody z powodu uszkodzenia lub pogorszenia rzeczy, jak również roszczenia najemcy przeciwko wynajmującemu o zwrot nakładów na rzecz albo o zwrot nadpłaconego czynszu przedawniają się z upływem roku od dnia zwrotu rzeczy.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20240001061",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2024-06-19",
+  "contentHashSha256": "c2ab6cfd899c6a267ebb498767987285d97d58cccd1484200692497e76010929",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_mieszkalnego",
+    "najem_okazjonalny"
+  ],
+  "keywords": [
+    "przedawnienie roszczeń",
+    "rok od zwrotu rzeczy",
+    "nakłady"
+  ],
+  "officialCitation": "Dz.U. 2024 poz. 1061, art. 677"
+}
