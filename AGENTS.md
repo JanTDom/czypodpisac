@@ -1,34 +1,25 @@
-# Umowa.check — weryfikator umów dla konsumentów i małych firm w Polsce
+# czypodpisac.pl
 
-## Misja
-Użytkownik wrzuca umowę (PDF, DOCX, zdjęcie). W ciągu 60 sekund dostaje:
-1. Werdykt w jednym zdaniu („Można podpisać po zmianie §7 i §12”).
-2. Raport świetlny: czerwone, żółte i zielone punkty z odnośnikiem do paragrafu.
-3. Kwotowe oszacowanie ryzyka tam, gdzie da się je policzyć.
-4. Listę braków: czego w umowie nie ma, a powinno być.
-5. Gotowe poprawki klauzul i mail do drugiej strony.
-6. Przycisk eskalacji do radcy prawnego/adwokata przy wyniku czerwonym.
+## Obietnica dla użytkownika
+„Wrzuć umowę. W minutę wiesz, czy podpisać, co zmienić i jak o to poprosić.”
 
-## Przewaga nad ChatGPT (nie wolno jej rozmyć)
-- Zero promptowania: system sam rozpoznaje typ umowy i zadaje maks. 3 pytania.
-- Stała checklista dla każdego typu umowy, sprawdzana w całości za każdym razem.
-- Każda uwaga ma źródło: przepis (z ISAP/ELI), wpis z rejestru klauzul niedozwolonych UOKiK albo orzeczenie. Bez źródła uwaga nie trafia do raportu.
-- Benchmark rynkowy: czy zapis jest typowy, odbiega od normy, czy jest skrajny.
-- Wynik do działania (poprawki, mail, eksport), nie esej.
-- Prywatność: przetwarzanie w UE, brak trenowania na dokumentach, automatyczne usuwanie.
+## Co użytkownik dostaje
+1. Werdykt w jednym zdaniu: PODPISZ / PODPISZ PO ZMIANACH / NIE PODPISUJ BEZ PRAWNIKA.
+2. Najważniejsze ryzyka po ludzku, z cytatem z umowy i kwotą, ile mogą kosztować.
+3. Braki: czego w umowie nie ma, a powinno być.
+4. Gotowe nowe brzmienie złych zapisów.
+5. Gotowy mail do drugiej strony (wersja uprzejma i stanowcza).
+6. Eksport: DOCX ze śledzeniem zmian, PDF raportu.
+7. Przy wyniku czerwonym: konsultacja z prawnikiem jednym kliknięciem.
 
-## Zasady nadrzędne
-1. ZAKAZ ZMYŚLANIA. Nie wolno wymyślać przepisów, numerów artykułów, sygnatur wyroków, wpisów rejestru UOKiK ani danych rynkowych. Gdy brak źródła: oznacz „wymaga weryfikacji” i nie publikuj jako faktu. Dotyczy kodu agenta i treści dla użytkownika.
-2. Każda wiedza prawna pochodzi z legal-kb/ (zasilanej z oficjalnych źródeł), nie z pamięci modelu.
-3. Produkt dostarcza analizę i projekt pisma, nie występuje jako „robot prawnik”.
-4. Język: polski, prosty (ISO 24495-1), zdania krótkie, żargon zawsze objaśniony.
-5. Dostępność WCAG 2.2 AA jest wymogiem wejściowym.
-
-## Kolejność prac
-1. MVP: najem lokalu mieszkalnego (zwykły i okazjonalny).
-2. Potem: umowa deweloperska; umowa B2B/zlecenie/o dzieło dla freelancera.
-3. Dalej: kredyt konsumencki, leasing, OWU ubezpieczeń, umowy z operatorami.
-Nowy typ umowy dodawaj wyłącznie workflowem /nowy-typ-umowy.
+## Zasady nadrzędne (nie podlegają negocjacji)
+1. ZAKAZ ZMYŚLANIA. Żadnych wymyślonych przepisów, numerów artykułów, sygnatur, wpisów UOKiK, danych rynkowych ani kwot. Brak źródła = brak twierdzenia albo jawne oznaczenie „do weryfikacji”.
+2. Prawo tylko z oficjalnych źródeł zapisanych w legal-kb/, z datą stanu prawnego. Model AI nigdy nie jest źródłem prawa.
+3. Każda uwaga w raporcie przechodzi niezależną weryfikację (osobne wywołanie modelu + walidatory w kodzie).
+4. Prostota ponad wszystko: jeden ekran startowy, jeden przycisk, zero rejestracji do darmowego wyniku.
+5. Prosty polski (ISO 24495-1), WCAG 2.2 AA, działanie na telefonie 360 px.
+6. Prywatność: przetwarzanie w UE, brak trenowania na dokumentach, automatyczne usuwanie.
+7. Produkt dostarcza analizę i projekt zmian; nie podaje się za prawnika.
 
 ## Definicja „gotowe”
-Funkcja jest gotowa, gdy przechodzi testy i ewaluację prawną, spełnia WCAG 2.2 AA, działa na telefonie 360 px, a każdy tekst dla użytkownika przeszedł przez reguły 04-ux-dostepnosc-jezyk.
+Kod przechodzi testy, ewaluację prawną (progi w skillu ewaluacja), audyt dostępności, wydajności i bezpieczeństwa (/audyt-przed-wydaniem), a każdy tekst dla użytkownika spełnia regułę 04.
