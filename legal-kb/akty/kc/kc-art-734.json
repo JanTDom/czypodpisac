@@ -1,0 +1,22 @@
+{
+  "id": "kc-art-734",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+  "publicationAddress": "Dz.U. 2024 poz. 1061",
+  "editorialUnit": "art. 734",
+  "content": "Art. 734. § 1. Przez umowę zlecenia przyjmujący zlecenie zobowiązuje się do dokonania określonej czynności prawnej dla dającego zlecenie. § 2. W braku odmiennej umowy zlecenie obejmuje umocowanie do wykonania czynności w imieniu dającego zlecenie. Przepis ten nie uchybia przepisom o formie pełnomocnictwa.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20240001061",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2024-06-19",
+  "contentHashSha256": "8f7e6febb1e6175ee8792b42226a612daeaa273a8e3447bb3882aa529f2c9bb6",
+  "status": "active",
+  "contractTypeTags": [
+    "zlecenie",
+    "b2b_uslugi_freelancer"
+  ],
+  "keywords": [
+    "umowa zlecenia",
+    "dokonanie czynności prawnej"
+  ],
+  "officialCitation": "Dz.U. 2024 poz. 1061, art. 734"
+}

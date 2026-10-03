@@ -1,0 +1,24 @@
+{
+  "id": "kc-art-746",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+  "publicationAddress": "Dz.U. 2024 poz. 1061",
+  "editorialUnit": "art. 746",
+  "content": "Art. 746. § 1. Dający zlecenie może je wypowiedzieć w każdym czasie. Powinien jednak zwrócić przyjmującemu zlecenie wydatki, które ten poczynił w celu należytego wykonania zlecenia; w razie odpłatnego zlecenia obowiązany jest uiścić przyjmującemu zlecenie część wynagrodzenia odpowiadającą jego dotychczasowym czynnościom, a jeżeli wypowiedzenie nastąpiło bez ważnego powodu, powinien także naprawić szkodę. § 2. Przyjmujący zlecenie może je wypowiedzieć w każdym czasie. Jednakże gdy zlecenie jest odpłatne, a wypowiedzenie nastąpiło bez ważnego powodu, przyjmujący zlecenie jest odpowiedzialny za szkodę. § 3. Nie można zrzec się z góry uprawnienia do wypowiedzenia zlecenia z ważnych powodów.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20240001061",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2024-06-19",
+  "contentHashSha256": "f742f64a26e023281a55669ae5c5d5a7ef5d4afb0c39b3d13b0adac9ebe55ee5",
+  "status": "active",
+  "contractTypeTags": [
+    "zlecenie",
+    "b2b_uslugi_freelancer"
+  ],
+  "keywords": [
+    "wypowiedzenie zlecenia",
+    "wypowiedzenie w każdym czasie",
+    "ważny powód",
+    "naprawienie szkody"
+  ],
+  "officialCitation": "Dz.U. 2024 poz. 1061, art. 746"
+}

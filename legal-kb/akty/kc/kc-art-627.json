@@ -1,0 +1,22 @@
+{
+  "id": "kc-art-627",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+  "publicationAddress": "Dz.U. 2024 poz. 1061",
+  "editorialUnit": "art. 627",
+  "content": "Art. 627. Przez umowę o dzieło przyjmujący zamówienie zobowiązuje się do wykonania oznaczonego dzieła, a zamawiający do zapłaty wynagrodzenia.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20240001061",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2024-06-19",
+  "contentHashSha256": "b1f13c384b352e422c874ac3f4615bcbe4f6f36c325bb1b31fe941fc9942271a",
+  "status": "active",
+  "contractTypeTags": [
+    "dzielo"
+  ],
+  "keywords": [
+    "umowa o dzieło",
+    "wykonanie oznaczonego dzieła",
+    "wynagrodzenie"
+  ],
+  "officialCitation": "Dz.U. 2024 poz. 1061, art. 627"
+}

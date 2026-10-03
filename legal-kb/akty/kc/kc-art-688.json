@@ -11,7 +11,8 @@
   "contentHashSha256": "91e42601940db104b68fdcf6fbfd2e1816bc72471175932e57239e0f3eee5b7a",
   "status": "active",
   "contractTypeTags": [
-    "najem_lokalu_mieszkalnego"
+    "najem_lokalu_mieszkalnego",
+    "najem_lokalu_uzytkowego"
   ],
   "keywords": [
     "ustawowe terminy wypowiedzenia",

@@ -1,0 +1,23 @@
+{
+  "id": "kp-art-29",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 26 czerwca 1974 r. - Kodeks pracy",
+  "publicationAddress": "Dz.U. 2023 poz. 1465",
+  "editorialUnit": "art. 29",
+  "content": "Art. 29. Do pracowników, o których mowa w art. 27 i art. 28, stosuje się art. 182 1a § 4 i 5 oraz odpowiednio art. 182 1c albo art. 183 § 4 6 ustawy zmienianej w art. 1 w brzmieniu nadanym niniejszą ustawą.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20230001465",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2023-04-26",
+  "contentHashSha256": "7d7eb112cfda43d6334de0a39c7ad55049b58af48e0217e4de65d26c681edd72",
+  "status": "active",
+  "contractTypeTags": [
+    "umowa_o_prace"
+  ],
+  "keywords": [
+    "treść umowy o pracę",
+    "warunki zatrudnienia",
+    "wynagrodzenie",
+    "wymiar etatu"
+  ],
+  "officialCitation": "Dz.U. 2023 poz. 1465, art. 29"
+}

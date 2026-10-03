@@ -1,0 +1,22 @@
+{
+  "id": "uopl-art-19i",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+  "publicationAddress": "Dz.U. 2023 poz. 725",
+  "editorialUnit": "art. 19i",
+  "content": "Art. 19i. 1. Umowa najmu instytucjonalnego lokalu wygasa po upływie czasu, na jaki była zawarta, lub ulega rozwiązaniu po upływie okresu wypowiedzenia tej umowy. 2. Po wygaśnięciu lub rozwiązaniu umowy najmu instytucjonalnego lokalu, jeżeli najemca dobrowolnie nie opróżnił lokalu, właściciel doręcza najemcy żądanie opróżnienia lokalu sporządzone na piśmie opatrzonym urzędowo poświadczonym podpisem właściciela. 3. Żądanie opróżnienia lokalu zawiera w szczególności: 1) oznaczenie właściciela oraz najemcy, którego żądanie dotyczy; 2) wskazanie umowy najmu instytucjonalnego lokalu i przyczynę ustania stosunku z niej wynikającego; 3) termin, nie krótszy niż 14 dni od dnia doręczenia żądania najemcy, w którym najemca i osoby z nim zamieszkujące mają opróżnić lokal. 4. Wynajmujący może powoływać się tylko na przyczyny ustania stosunku najmu wskazane w piśmie, o którym mowa w ust. 3. 5. W przypadku bezskutecznego upływu terminu, o którym mowa w ust. 3 pkt 3, właściciel składa do sądu wniosek o nadanie klauzuli wykonalności aktowi notarialnemu, o którym mowa w art. 19f ust. 3. 6. Do wniosku, o którym mowa w ust. 5, załącza się: 1) żądanie opróżnienia lokalu wraz z dowodem jego doręczenia najemcy albo dowodem wysłania go przesyłką poleconą; 2) dokument potwierdzający przysługujący właścicielowi tytuł prawny do lokalu, którego opróżnienia dotyczy żądanie właściciela.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20230000725",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2023-03-09",
+  "contentHashSha256": "80b5496484dd2b1fe369273555295284f33734c2b8a064d7246c3025804d4560",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_instytucjonalny"
+  ],
+  "keywords": [
+    "wygaśnięcie umowy",
+    "rozwiązanie",
+    "opróżnienie lokalu"
+  ],
+  "officialCitation": "Dz.U. 2023 poz. 725, art. 19i"
+}

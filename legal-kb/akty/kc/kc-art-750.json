@@ -1,0 +1,23 @@
+{
+  "id": "kc-art-750",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+  "publicationAddress": "Dz.U. 2024 poz. 1061",
+  "editorialUnit": "art. 750",
+  "content": "Art. 750. Do umów o świadczenie usług, które nie są uregulowane innymi przepisami, stosuje się odpowiednio przepisy o zleceniu.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20240001061",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2024-06-19",
+  "contentHashSha256": "b678585fd364046fd5b9017f0b526fe05a23a0b88cef9ceddf57251464689a62",
+  "status": "active",
+  "contractTypeTags": [
+    "b2b_uslugi_freelancer",
+    "zlecenie"
+  ],
+  "keywords": [
+    "świadczenie usług",
+    "kontrakt b2b",
+    "odpowiednie stosowanie przepisów o zleceniu"
+  ],
+  "officialCitation": "Dz.U. 2024 poz. 1061, art. 750"
+}

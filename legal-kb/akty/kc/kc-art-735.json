@@ -1,0 +1,23 @@
+{
+  "id": "kc-art-735",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+  "publicationAddress": "Dz.U. 2024 poz. 1061",
+  "editorialUnit": "art. 735",
+  "content": "Art. 735. § 1. Jeżeli ani z umowy, ani z okoliczności nie wynika, że przyjmujący zlecenie zobowiązał się wykonać je bez wynagrodzenia, za wykonanie zlecenia należy się wynagrodzenie. § 2. Jeżeli nie ma obowiązującej taryfy, a nie umówiono się o wysokość wynagrodzenia, należy się wynagrodzenie odpowiadające wykonanej pracy.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20240001061",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2024-06-19",
+  "contentHashSha256": "e2f04764f1368eb34bcf85ccee5cafc41bcba5b113e3e6c04615775976dac8a1",
+  "status": "active",
+  "contractTypeTags": [
+    "zlecenie",
+    "b2b_uslugi_freelancer"
+  ],
+  "keywords": [
+    "odpłatność zlecenia",
+    "wynagrodzenie",
+    "taryfa"
+  ],
+  "officialCitation": "Dz.U. 2024 poz. 1061, art. 735"
+}

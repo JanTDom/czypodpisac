@@ -1,0 +1,22 @@
+{
+  "id": "kc-art-644",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+  "publicationAddress": "Dz.U. 2024 poz. 1061",
+  "editorialUnit": "art. 644",
+  "content": "Art. 644. Dopóki dzieło nie zostało ukończone, zamawiający może w każdej chwili od umowy odstąpić płacąc umówione wynagrodzenie. Jednakże w wypadku takim zamawiający może odliczyć to, co przyjmujący zamówienie oszczędził z powodu niewykonania dzieła.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20240001061",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2024-06-19",
+  "contentHashSha256": "61544999e2920d3cda56bde7d7f9d7b16e822c0d7c27a1c69367590ae79187b8",
+  "status": "active",
+  "contractTypeTags": [
+    "dzielo"
+  ],
+  "keywords": [
+    "odstąpienie od umowy o dzieło",
+    "zapłata umówionego wynagrodzenia",
+    "odliczenie oszczędności"
+  ],
+  "officialCitation": "Dz.U. 2024 poz. 1061, art. 644"
+}

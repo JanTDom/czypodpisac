@@ -1,0 +1,22 @@
+{
+  "id": "kp-art-30",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 26 czerwca 1974 r. - Kodeks pracy",
+  "publicationAddress": "Dz.U. 2023 poz. 1465",
+  "editorialUnit": "art. 30",
+  "content": "Art. 30. 1. Do pracownika, który przed dniem wejścia w życie niniejszej ustawy złożył wniosek o udzielenie urlopu rodzicielskiego albo jego części zgodnie z art. 179 1 lub art. 182 4 ustawy zmienianej w art. 1 w brzmieniu dotychczasowym, ale nie rozpoczął korzystania z tego urlopu w dniu wejścia w życie niniejszej ustawy, stosuje się przepisy ustawy zmienianej w art. 1 dotyczące urlopu rodzicielskiego w brzmieniu nadanym niniejszą ustawą. Pracodawca niezwłocznie zwraca pracownikowi wniosek w celu jego zmiany i ponownego złożenia pracodawcy w terminie 7 dni; termin złożenia wniosku zostaje zachowany. 2. Jeżeli pracownik nie złoży ponownie wniosku, o którym mowa w ust. 1, korzysta z urlopu zgodnie z wnioskiem złożonym przed dniem wejścia w życie niniejszej ustawy.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20230001465",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2023-04-26",
+  "contentHashSha256": "d7b8e58d03255363f82d8294df794d35ed2d12099c616988934f4710515d38fe",
+  "status": "active",
+  "contractTypeTags": [
+    "umowa_o_prace"
+  ],
+  "keywords": [
+    "rozwiązanie umowy o pracę",
+    "okres wypowiedzenia",
+    "forma pisemna"
+  ],
+  "officialCitation": "Dz.U. 2023 poz. 1465, art. 30"
+}

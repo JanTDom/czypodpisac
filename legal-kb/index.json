@@ -1,15 +1,16 @@
 {
-  "version": "2026.10-najem",
-  "generatedAt": "2026-10-03T14:18:55.807Z",
-  "totalUnits": 51,
+  "version": "2026.10-all-contracts",
+  "generatedAt": "2026-10-03T14:26:42.248Z",
+  "totalUnits": 70,
   "unitsByAct": {
-    "Ustawa o ochronie praw lokatorów": 16,
-    "Kodeks cywilny": 26,
+    "Ustawa o ochronie praw lokatorów": 22,
+    "Kodeks cywilny": 33,
+    "Kodeks pracy": 6,
     "Rejestr Klauzul UOKiK": 5,
     "Orzecznictwo SN i TSUE": 4
   },
   "unitsByType": {
-    "statute": 42,
+    "statute": 61,
     "uokik_clause": 5,
     "court_ruling": 4
   },
@@ -38,7 +39,8 @@
       "status": "active",
       "contractTypeTags": [
         "najem_lokalu_mieszkalnego",
-        "najem_okazjonalny"
+        "najem_okazjonalny",
+        "najem_instytucjonalny"
       ]
     },
     {
@@ -63,7 +65,8 @@
       "status": "active",
       "contractTypeTags": [
         "najem_lokalu_mieszkalnego",
-        "najem_okazjonalny"
+        "najem_okazjonalny",
+        "najem_instytucjonalny"
       ]
     },
     {
@@ -76,7 +79,8 @@
       "status": "active",
       "contractTypeTags": [
         "najem_lokalu_mieszkalnego",
-        "najem_okazjonalny"
+        "najem_okazjonalny",
+        "najem_instytucjonalny"
       ]
     },
     {
@@ -89,7 +93,8 @@
       "status": "active",
       "contractTypeTags": [
         "najem_lokalu_mieszkalnego",
-        "najem_okazjonalny"
+        "najem_okazjonalny",
+        "najem_instytucjonalny"
       ]
     },
     {
@@ -102,7 +107,8 @@
       "status": "active",
       "contractTypeTags": [
         "najem_lokalu_mieszkalnego",
-        "najem_okazjonalny"
+        "najem_okazjonalny",
+        "najem_instytucjonalny"
       ]
     },
     {
@@ -115,7 +121,8 @@
       "status": "active",
       "contractTypeTags": [
         "najem_lokalu_mieszkalnego",
-        "najem_okazjonalny"
+        "najem_okazjonalny",
+        "najem_instytucjonalny"
       ]
     },
     {
@@ -215,6 +222,78 @@
       ]
     },
     {
+      "id": "uopl-art-19f",
+      "unitType": "statute",
+      "editorialUnit": "art. 19f",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "filePath": "akty/uopl/uopl-art-19f.json",
+      "legalStateDate": "2023-03-09",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_instytucjonalny"
+      ]
+    },
+    {
+      "id": "uopl-art-19g",
+      "unitType": "statute",
+      "editorialUnit": "art. 19g",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "filePath": "akty/uopl/uopl-art-19g.json",
+      "legalStateDate": "2023-03-09",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_instytucjonalny"
+      ]
+    },
+    {
+      "id": "uopl-art-19h",
+      "unitType": "statute",
+      "editorialUnit": "art. 19h",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "filePath": "akty/uopl/uopl-art-19h.json",
+      "legalStateDate": "2023-03-09",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_instytucjonalny"
+      ]
+    },
+    {
+      "id": "uopl-art-19i",
+      "unitType": "statute",
+      "editorialUnit": "art. 19i",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "filePath": "akty/uopl/uopl-art-19i.json",
+      "legalStateDate": "2023-03-09",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_instytucjonalny"
+      ]
+    },
+    {
+      "id": "uopl-art-19j",
+      "unitType": "statute",
+      "editorialUnit": "art. 19j",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "filePath": "akty/uopl/uopl-art-19j.json",
+      "legalStateDate": "2023-03-09",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_instytucjonalny"
+      ]
+    },
+    {
+      "id": "uopl-art-19k",
+      "unitType": "statute",
+      "editorialUnit": "art. 19k",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "filePath": "akty/uopl/uopl-art-19k.json",
+      "legalStateDate": "2023-03-09",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_instytucjonalny"
+      ]
+    },
+    {
       "id": "kc-art-385-1",
       "unitType": "statute",
       "editorialUnit": "art. 385¹",
@@ -280,7 +359,9 @@
       "status": "active",
       "contractTypeTags": [
         "najem_lokalu_mieszkalnego",
-        "najem_okazjonalny"
+        "najem_okazjonalny",
+        "najem_instytucjonalny",
+        "najem_lokalu_uzytkowego"
       ]
     },
     {
@@ -293,7 +374,9 @@
       "status": "active",
       "contractTypeTags": [
         "najem_lokalu_mieszkalnego",
-        "najem_okazjonalny"
+        "najem_okazjonalny",
+        "najem_instytucjonalny",
+        "najem_lokalu_uzytkowego"
       ]
     },
     {
@@ -306,7 +389,9 @@
       "status": "active",
       "contractTypeTags": [
         "najem_lokalu_mieszkalnego",
-        "najem_okazjonalny"
+        "najem_okazjonalny",
+        "najem_instytucjonalny",
+        "najem_lokalu_uzytkowego"
       ]
     },
     {
@@ -319,7 +404,9 @@
       "status": "active",
       "contractTypeTags": [
         "najem_lokalu_mieszkalnego",
-        "najem_okazjonalny"
+        "najem_okazjonalny",
+        "najem_instytucjonalny",
+        "najem_lokalu_uzytkowego"
       ]
     },
     {
@@ -332,7 +419,9 @@
       "status": "active",
       "contractTypeTags": [
         "najem_lokalu_mieszkalnego",
-        "najem_okazjonalny"
+        "najem_okazjonalny",
+        "najem_instytucjonalny",
+        "najem_lokalu_uzytkowego"
       ]
     },
     {
@@ -345,7 +434,9 @@
       "status": "active",
       "contractTypeTags": [
         "najem_lokalu_mieszkalnego",
-        "najem_okazjonalny"
+        "najem_okazjonalny",
+        "najem_instytucjonalny",
+        "najem_lokalu_uzytkowego"
       ]
     },
     {
@@ -358,7 +449,9 @@
       "status": "active",
       "contractTypeTags": [
         "najem_lokalu_mieszkalnego",
-        "najem_okazjonalny"
+        "najem_okazjonalny",
+        "najem_instytucjonalny",
+        "najem_lokalu_uzytkowego"
       ]
     },
     {
@@ -371,7 +464,9 @@
       "status": "active",
       "contractTypeTags": [
         "najem_lokalu_mieszkalnego",
-        "najem_okazjonalny"
+        "najem_okazjonalny",
+        "najem_instytucjonalny",
+        "najem_lokalu_uzytkowego"
       ]
     },
     {
@@ -384,7 +479,9 @@
       "status": "active",
       "contractTypeTags": [
         "najem_lokalu_mieszkalnego",
-        "najem_okazjonalny"
+        "najem_okazjonalny",
+        "najem_instytucjonalny",
+        "najem_lokalu_uzytkowego"
       ]
     },
     {
@@ -397,7 +494,8 @@
       "status": "active",
       "contractTypeTags": [
         "najem_lokalu_mieszkalnego",
-        "najem_okazjonalny"
+        "najem_okazjonalny",
+        "najem_instytucjonalny"
       ]
     },
     {
@@ -410,7 +508,9 @@
       "status": "active",
       "contractTypeTags": [
         "najem_lokalu_mieszkalnego",
-        "najem_okazjonalny"
+        "najem_okazjonalny",
+        "najem_instytucjonalny",
+        "najem_lokalu_uzytkowego"
       ]
     },
     {
@@ -423,7 +523,9 @@
       "status": "active",
       "contractTypeTags": [
         "najem_lokalu_mieszkalnego",
-        "najem_okazjonalny"
+        "najem_okazjonalny",
+        "najem_instytucjonalny",
+        "najem_lokalu_uzytkowego"
       ]
     },
     {
@@ -436,7 +538,9 @@
       "status": "active",
       "contractTypeTags": [
         "najem_lokalu_mieszkalnego",
-        "najem_okazjonalny"
+        "najem_okazjonalny",
+        "najem_instytucjonalny",
+        "najem_lokalu_uzytkowego"
       ]
     },
     {
@@ -449,7 +553,9 @@
       "status": "active",
       "contractTypeTags": [
         "najem_lokalu_mieszkalnego",
-        "najem_okazjonalny"
+        "najem_okazjonalny",
+        "najem_instytucjonalny",
+        "najem_lokalu_uzytkowego"
       ]
     },
     {
@@ -462,7 +568,9 @@
       "status": "active",
       "contractTypeTags": [
         "najem_lokalu_mieszkalnego",
-        "najem_okazjonalny"
+        "najem_okazjonalny",
+        "najem_instytucjonalny",
+        "najem_lokalu_uzytkowego"
       ]
     },
     {
@@ -475,7 +583,9 @@
       "status": "active",
       "contractTypeTags": [
         "najem_lokalu_mieszkalnego",
-        "najem_okazjonalny"
+        "najem_okazjonalny",
+        "najem_instytucjonalny",
+        "najem_lokalu_uzytkowego"
       ]
     },
     {
@@ -488,7 +598,9 @@
       "status": "active",
       "contractTypeTags": [
         "najem_lokalu_mieszkalnego",
-        "najem_okazjonalny"
+        "najem_okazjonalny",
+        "najem_instytucjonalny",
+        "najem_lokalu_uzytkowego"
       ]
     },
     {
@@ -501,7 +613,8 @@
       "status": "active",
       "contractTypeTags": [
         "najem_lokalu_mieszkalnego",
-        "najem_okazjonalny"
+        "najem_okazjonalny",
+        "najem_instytucjonalny"
       ]
     },
     {
@@ -517,6 +630,18 @@
       ]
     },
     {
+      "id": "kc-art-687",
+      "unitType": "statute",
+      "editorialUnit": "art. 687",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "filePath": "akty/kc/kc-art-687.json",
+      "legalStateDate": "2024-06-19",
+      "status": "active",
+      "contractTypeTags": [
+        "najem_lokalu_uzytkowego"
+      ]
+    },
+    {
       "id": "kc-art-688",
       "unitType": "statute",
       "editorialUnit": "art. 688",
@@ -525,7 +650,8 @@
       "legalStateDate": "2024-06-19",
       "status": "active",
       "contractTypeTags": [
-        "najem_lokalu_mieszkalnego"
+        "najem_lokalu_mieszkalnego",
+        "najem_lokalu_uzytkowego"
       ]
     },
     {
@@ -551,6 +677,158 @@
       "status": "active",
       "contractTypeTags": [
         "najem_lokalu_mieszkalnego"
+      ]
+    },
+    {
+      "id": "kc-art-627",
+      "unitType": "statute",
+      "editorialUnit": "art. 627",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "filePath": "akty/kc/kc-art-627.json",
+      "legalStateDate": "2024-06-19",
+      "status": "active",
+      "contractTypeTags": [
+        "dzielo"
+      ]
+    },
+    {
+      "id": "kc-art-644",
+      "unitType": "statute",
+      "editorialUnit": "art. 644",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "filePath": "akty/kc/kc-art-644.json",
+      "legalStateDate": "2024-06-19",
+      "status": "active",
+      "contractTypeTags": [
+        "dzielo"
+      ]
+    },
+    {
+      "id": "kc-art-734",
+      "unitType": "statute",
+      "editorialUnit": "art. 734",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "filePath": "akty/kc/kc-art-734.json",
+      "legalStateDate": "2024-06-19",
+      "status": "active",
+      "contractTypeTags": [
+        "zlecenie",
+        "b2b_uslugi_freelancer"
+      ]
+    },
+    {
+      "id": "kc-art-735",
+      "unitType": "statute",
+      "editorialUnit": "art. 735",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "filePath": "akty/kc/kc-art-735.json",
+      "legalStateDate": "2024-06-19",
+      "status": "active",
+      "contractTypeTags": [
+        "zlecenie",
+        "b2b_uslugi_freelancer"
+      ]
+    },
+    {
+      "id": "kc-art-746",
+      "unitType": "statute",
+      "editorialUnit": "art. 746",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "filePath": "akty/kc/kc-art-746.json",
+      "legalStateDate": "2024-06-19",
+      "status": "active",
+      "contractTypeTags": [
+        "zlecenie",
+        "b2b_uslugi_freelancer"
+      ]
+    },
+    {
+      "id": "kc-art-750",
+      "unitType": "statute",
+      "editorialUnit": "art. 750",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "filePath": "akty/kc/kc-art-750.json",
+      "legalStateDate": "2024-06-19",
+      "status": "active",
+      "contractTypeTags": [
+        "b2b_uslugi_freelancer",
+        "zlecenie"
+      ]
+    },
+    {
+      "id": "kp-art-22",
+      "unitType": "statute",
+      "editorialUnit": "art. 22",
+      "actTitle": "Ustawa z dnia 26 czerwca 1974 r. - Kodeks pracy",
+      "filePath": "akty/kp/kp-art-22.json",
+      "legalStateDate": "2023-04-26",
+      "status": "active",
+      "contractTypeTags": [
+        "umowa_o_prace",
+        "zlecenie",
+        "b2b_uslugi_freelancer"
+      ]
+    },
+    {
+      "id": "kp-art-25",
+      "unitType": "statute",
+      "editorialUnit": "art. 25",
+      "actTitle": "Ustawa z dnia 26 czerwca 1974 r. - Kodeks pracy",
+      "filePath": "akty/kp/kp-art-25.json",
+      "legalStateDate": "2023-04-26",
+      "status": "active",
+      "contractTypeTags": [
+        "umowa_o_prace"
+      ]
+    },
+    {
+      "id": "kp-art-29",
+      "unitType": "statute",
+      "editorialUnit": "art. 29",
+      "actTitle": "Ustawa z dnia 26 czerwca 1974 r. - Kodeks pracy",
+      "filePath": "akty/kp/kp-art-29.json",
+      "legalStateDate": "2023-04-26",
+      "status": "active",
+      "contractTypeTags": [
+        "umowa_o_prace"
+      ]
+    },
+    {
+      "id": "kp-art-30",
+      "unitType": "statute",
+      "editorialUnit": "art. 30",
+      "actTitle": "Ustawa z dnia 26 czerwca 1974 r. - Kodeks pracy",
+      "filePath": "akty/kp/kp-art-30.json",
+      "legalStateDate": "2023-04-26",
+      "status": "active",
+      "contractTypeTags": [
+        "umowa_o_prace"
+      ]
+    },
+    {
+      "id": "kp-art-101-1",
+      "unitType": "statute",
+      "editorialUnit": "art. 101¹",
+      "actTitle": "Ustawa z dnia 26 czerwca 1974 r. - Kodeks pracy",
+      "filePath": "akty/kp/kp-art-101-1.json",
+      "legalStateDate": "2023-04-26",
+      "status": "active",
+      "contractTypeTags": [
+        "umowa_o_prace",
+        "b2b_uslugi_freelancer"
+      ]
+    },
+    {
+      "id": "kp-art-101-2",
+      "unitType": "statute",
+      "editorialUnit": "art. 101²",
+      "actTitle": "Ustawa z dnia 26 czerwca 1974 r. - Kodeks pracy",
+      "filePath": "akty/kp/kp-art-101-2.json",
+      "legalStateDate": "2023-04-26",
+      "status": "active",
+      "contractTypeTags": [
+        "umowa_o_prace",
+        "b2b_uslugi_freelancer"
       ]
     },
     {
@@ -639,7 +917,9 @@
       "status": "active",
       "contractTypeTags": [
         "najem_lokalu_mieszkalnego",
-        "najem_okazjonalny"
+        "najem_okazjonalny",
+        "najem_instytucjonalny",
+        "najem_lokalu_uzytkowego"
       ]
     },
     {
@@ -652,7 +932,8 @@
       "status": "active",
       "contractTypeTags": [
         "najem_lokalu_mieszkalnego",
-        "najem_okazjonalny"
+        "najem_okazjonalny",
+        "najem_instytucjonalny"
       ]
     },
     {

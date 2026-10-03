@@ -1,0 +1,23 @@
+{
+  "id": "uopl-art-19g",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+  "publicationAddress": "Dz.U. 2023 poz. 725",
+  "editorialUnit": "art. 19g",
+  "content": "Art. 19g. 1. Umowa najmu instytucjonalnego lokalu oraz zmiany tej umowy wymagają formy pisemnej pod rygorem nieważności. 2. Wynagrodzenie notariusza za sporządzenie oświadczenia, o którym mowa w art. 19f ust. 3, wynosi nie więcej niż 1/10 minimalnego wynagrodzenia za pracę, o którym mowa w ustawie z dnia 10 października 2002 r. o minimalnym wynagrodzeniu za pracę .",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20230000725",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2023-03-09",
+  "contentHashSha256": "0743d284615a83171af15716282f51cf30b208d06564acdab1f6965e79838038",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_instytucjonalny"
+  ],
+  "keywords": [
+    "oświadczenie notarialne",
+    "art 777 kpc",
+    "egzekucja",
+    "brak lokalu zastępczego"
+  ],
+  "officialCitation": "Dz.U. 2023 poz. 725, art. 19g"
+}

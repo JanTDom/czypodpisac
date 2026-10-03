@@ -4,17 +4,19 @@ import { z } from "zod";
  * Obsługiwane typy umów w systemie.
  */
 export const ContractTypeSchema = z.enum([
-  "najem_lokalu_mieszkalnego",
-  "najem_okazjonalny",
-  "najem_instytucjonalny",
-  "umowa_deweloperska",
-  "b2b_uslugi_freelancer",
-  "zlecenie",
-  "dzielo",
-  "kredyt_konsumencki",
-  "leasing_konsumencki",
-  "owu_ubezpieczenie",
-  "telekomunikacyjna",
+  "najem_lokalu_mieszkalnego", // najem zwykły lokalu mieszkalnego
+  "najem_okazjonalny", // najem okazjonalny lokalu (art. 19a-19e UoPL)
+  "najem_instytucjonalny", // najem instytucjonalny lokalu (art. 19f-19k UoPL)
+  "najem_lokalu_uzytkowego", // najem komercyjny / lokalu użytkowego (KC)
+  "umowa_o_prace", // umowa o pracę (Kodeks pracy)
+  "b2b_uslugi_freelancer", // kontrakt B2B / świadczenie usług (art. 750 KC)
+  "zlecenie", // umowa zlecenia (art. 734-751 KC)
+  "dzielo", // umowa o dzieło (art. 627-646 KC)
+  "umowa_deweloperska", // umowa deweloperska (ustawa deweloperska i DFG)
+  "kredyt_konsumencki", // kredyt / pożyczka konsumencka
+  "leasing_konsumencki", // leasing konsumencki
+  "owu_ubezpieczenie", // ogólne warunki ubezpieczenia
+  "telekomunikacyjna", // umowa o świadczenie usług telekomunikacyjnych
   "inna_nieznana",
 ]);
 
@@ -28,6 +30,8 @@ export const UserRoleSchema = z.enum([
   "wynajmujacy", // wynajmujący
   "zamawiajacy", // zlecający / zamawiający
   "wykonawca", // wykonawca / zleceniobiorca
+  "pracownik", // pracownik w stosunku pracy
+  "pracodawca", // pracodawca
   "nabywca", // kupujący / nabywca lokalu
   "deweloper",
   "klient", // konsument / klient

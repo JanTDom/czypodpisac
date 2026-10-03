@@ -53,10 +53,11 @@ async function main() {
   const kbRoot = path.resolve(process.cwd(), "legal-kb");
   const uoplDir = path.join(kbRoot, "akty", "uopl");
   const kcDir = path.join(kbRoot, "akty", "kc");
+  const kpDir = path.join(kbRoot, "akty", "kp");
   const uokikDir = path.join(kbRoot, "uokik");
   const courtDir = path.join(kbRoot, "orzecznictwo");
 
-  for (const d of [uoplDir, kcDir, uokikDir, courtDir]) {
+  for (const d of [uoplDir, kcDir, kpDir, uokikDir, courtDir]) {
     fs.mkdirSync(d, { recursive: true });
   }
 
@@ -65,6 +66,7 @@ async function main() {
 
   // ============================================================================
   // 1. USTAWA O OCHRONIE PRAW LOKATORÓW (Dz.U. 2023 poz. 725)
+  // Obejmuje: Najem zwykły lokalu mieszkalnego, Najem okazjonalny, Najem instytucjonalny
   // ============================================================================
   const uoplUrl = "https://api.sejm.gov.pl/eli/acts/DU/2023/725/text.html";
   const uoplIsapUrl = "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20230000725";
@@ -73,15 +75,10 @@ async function main() {
     "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego";
   const uoplPubAddress = "Dz.U. 2023 poz. 725";
 
-  let uoplHtml = "";
-  try {
-    uoplHtml = await fetchStatuteHtml(uoplUrl);
-  } catch (err) {
-    console.error("Błąd pobierania UoPL z API Sejmu:", err);
-    throw err;
-  }
+  const uoplHtml = await fetchStatuteHtml(uoplUrl);
 
   const uoplArticles = [
+    // Przepisy ogólne i najem zwykły
     {
       id: "uopl-art-2",
       editorialUnit: "art. 2",
@@ -93,7 +90,7 @@ async function main() {
       id: "uopl-art-5",
       editorialUnit: "art. 5",
       regex: /id="chpt_2-arti_5"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
-      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny"],
+      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny", "najem_instytucjonalny"],
       keywords: ["stan lokalu", "przydatność do umówionego użytku", "utrzymanie lokalu"],
     },
     {
@@ -107,35 +104,35 @@ async function main() {
       id: "uopl-art-6a",
       editorialUnit: "art. 6a",
       regex: /id="chpt_2-arti_6a"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
-      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny"],
+      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny", "najem_instytucjonalny"],
       keywords: ["obowiązki wynajmującego", "instalacje", "naprawy główne", "wymiana pieców"],
     },
     {
       id: "uopl-art-6b",
       editorialUnit: "art. 6b",
       regex: /id="chpt_2-arti_6b"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
-      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny"],
+      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny", "najem_instytucjonalny"],
       keywords: ["obowiązki najemcy", "drobne naprawy", "malowanie", "konserwacja podłóg"],
     },
     {
       id: "uopl-art-6c",
       editorialUnit: "art. 6c",
       regex: /id="chpt_2-arti_6c"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
-      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny"],
+      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny", "najem_instytucjonalny"],
       keywords: ["protokół zdawczo-odbiorczy", "stan lokalu", "przekazanie"],
     },
     {
       id: "uopl-art-6d",
       editorialUnit: "art. 6d",
       regex: /id="chpt_2-arti_6d"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
-      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny"],
+      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny", "najem_instytucjonalny"],
       keywords: ["ulepszenia", "zgoda właściciela", "nakłady"],
     },
     {
       id: "uopl-art-6e",
       editorialUnit: "art. 6e",
       regex: /id="chpt_2-arti_6e"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
-      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny"],
+      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny", "najem_instytucjonalny"],
       keywords: ["zwrot lokalu", "odnowienie lokalu", "zużycie"],
     },
     {
@@ -159,6 +156,7 @@ async function main() {
       tags: ["najem_lokalu_mieszkalnego"],
       keywords: ["wypowiedzenie najmu", "katalog przyczyn", "forma pisemna", "zaległość czynsz", "3 okresy", "miesiąc uprzedzenie"],
     },
+    // Najem okazjonalny lokalu
     {
       id: "uopl-art-19a",
       editorialUnit: "art. 19a",
@@ -194,6 +192,49 @@ async function main() {
       tags: ["najem_okazjonalny"],
       keywords: ["wyłączenie przepisów UoPL", "ograniczenie ochrony"],
     },
+    // Najem instytucjonalny lokalu
+    {
+      id: "uopl-art-19f",
+      editorialUnit: "art. 19f",
+      regex: /id="chpt_2b-arti_19f"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
+      tags: ["najem_instytucjonalny"],
+      keywords: ["najem instytucjonalny", "przedsiębiorca", "wynajmowanie lokali", "działalność gospodarcza"],
+    },
+    {
+      id: "uopl-art-19g",
+      editorialUnit: "art. 19g",
+      regex: /id="chpt_2b-arti_19g"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
+      tags: ["najem_instytucjonalny"],
+      keywords: ["oświadczenie notarialne", "art 777 kpc", "egzekucja", "brak lokalu zastępczego"],
+    },
+    {
+      id: "uopl-art-19h",
+      editorialUnit: "art. 19h",
+      regex: /id="chpt_2b-arti_19h"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
+      tags: ["najem_instytucjonalny"],
+      keywords: ["kaucja najem instytucjonalny", "limit 6-krotność", "zaspokojenie należności"],
+    },
+    {
+      id: "uopl-art-19i",
+      editorialUnit: "art. 19i",
+      regex: /id="chpt_2b-arti_19i"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
+      tags: ["najem_instytucjonalny"],
+      keywords: ["wygaśnięcie umowy", "rozwiązanie", "opróżnienie lokalu"],
+    },
+    {
+      id: "uopl-art-19j",
+      editorialUnit: "art. 19j",
+      regex: /id="chpt_2b-arti_19j"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
+      tags: ["najem_instytucjonalny"],
+      keywords: ["dojście do własności", "przeniesienie własności"],
+    },
+    {
+      id: "uopl-art-19k",
+      editorialUnit: "art. 19k",
+      regex: /id="chpt_2b-arti_19k"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
+      tags: ["najem_instytucjonalny"],
+      keywords: ["wyłączenie przepisów UoPL", "najem instytucjonalny"],
+    },
   ];
 
   for (const art of uoplArticles) {
@@ -222,6 +263,8 @@ async function main() {
 
   // ============================================================================
   // 2. KODEKS CYWILNY (Dz.U. 2024 poz. 1061)
+  // Obejmuje: Klauzule abuzywne, Najem ogólny, Najem lokalu mieszkalnego,
+  // Najem lokalu użytkowego, Zlecenie, Dzieło, Świadczenie usług / B2B
   // ============================================================================
   const kcUrl = "https://api.sejm.gov.pl/eli/acts/DU/2024/1061/text.html";
   const kcIsapUrl = "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20240001061";
@@ -229,15 +272,10 @@ async function main() {
   const kcActTitle = "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny";
   const kcPubAddress = "Dz.U. 2024 poz. 1061";
 
-  let kcHtml = "";
-  try {
-    kcHtml = await fetchStatuteHtml(kcUrl);
-  } catch (err) {
-    console.error("Błąd pobierania Kodeksu cywilnego z API Sejmu:", err);
-    throw err;
-  }
+  const kcHtml = await fetchStatuteHtml(kcUrl);
 
   const kcArticles = [
+    // Klauzule abuzywne
     {
       id: "kc-art-385-1",
       editorialUnit: "art. 385¹",
@@ -266,130 +304,132 @@ async function main() {
       tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny", "b2b_uslugi_freelancer"],
       keywords: ["przedsiębiorca na prawach konsumenta", "jednoosobowa działalność gospodarcza", "charakter zawodowy"],
     },
+    // Najem ogólny
     {
       id: "kc-art-659",
       editorialUnit: "art. 659",
       regex: /data-id="arti_659"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
-      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny"],
+      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny", "najem_instytucjonalny", "najem_lokalu_uzytkowego"],
       keywords: ["umowa najmu", "istota najmu", "czynsz", "używanie rzeczy"],
     },
     {
       id: "kc-art-660",
       editorialUnit: "art. 660",
       regex: /data-id="arti_660"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
-      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny"],
+      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny", "najem_instytucjonalny", "najem_lokalu_uzytkowego"],
       keywords: ["forma pisemna", "najem na czas dłuższy niż rok", "czas nieoznaczony"],
     },
     {
       id: "kc-art-662",
       editorialUnit: "art. 662",
       regex: /data-id="arti_662"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
-      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny"],
+      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny", "najem_instytucjonalny", "najem_lokalu_uzytkowego"],
       keywords: ["stan przydatny do użytku", "drobne nakłady", "utrzymanie rzeczy"],
     },
     {
       id: "kc-art-663",
       editorialUnit: "art. 663",
       regex: /data-id="arti_663"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
-      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny"],
+      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny", "najem_instytucjonalny", "najem_lokalu_uzytkowego"],
       keywords: ["naprawy obciążające wynajmującego", "wykonanie zastępcze", "termin na naprawę"],
     },
     {
       id: "kc-art-664",
       editorialUnit: "art. 664",
       regex: /data-id="arti_664"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
-      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny"],
+      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny", "najem_instytucjonalny", "najem_lokalu_uzytkowego"],
       keywords: ["rękojmia za wady", "obniżenie czynszu", "wypowiedzenie bez zachowania terminów", "wady lokalu"],
     },
     {
       id: "kc-art-666",
       editorialUnit: "art. 666",
       regex: /data-id="arti_666"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
-      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny"],
+      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny", "najem_instytucjonalny", "najem_lokalu_uzytkowego"],
       keywords: ["sposób używania rzeczy", "przeznaczenie", "piecza"],
     },
     {
       id: "kc-art-667",
       editorialUnit: "art. 667",
       regex: /data-id="arti_667"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
-      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny"],
+      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny", "najem_instytucjonalny", "najem_lokalu_uzytkowego"],
       keywords: ["zmiany w rzeczy", "zakaz zmian bez zgody", "upomnienie"],
     },
     {
       id: "kc-art-668",
       editorialUnit: "art. 668",
       regex: /data-id="arti_668"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
-      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny"],
+      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny", "najem_instytucjonalny", "najem_lokalu_uzytkowego"],
       keywords: ["podnajem", "bezpłatne używanie", "zgoda wynajmującego"],
     },
     {
       id: "kc-art-669",
       editorialUnit: "art. 669",
       regex: /data-id="arti_669"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
-      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny"],
+      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny", "najem_instytucjonalny", "najem_lokalu_uzytkowego"],
       keywords: ["płatność czynszu", "terminy płatności", "do 10 dnia miesiąca"],
     },
     {
       id: "kc-art-672",
       editorialUnit: "art. 672",
       regex: /data-id="arti_672"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
-      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny"],
+      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny", "najem_instytucjonalny"],
       keywords: ["zwłoka z zapłatą czynszu", "wypowiedzenie bez zachowania terminów"],
     },
     {
       id: "kc-art-673",
       editorialUnit: "art. 673",
       regex: /data-id="arti_673"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
-      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny"],
+      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny", "najem_instytucjonalny", "najem_lokalu_uzytkowego"],
       keywords: ["terminy wypowiedzenia", "czas nieoznaczony", "czas oznaczony", "ważne przyczyny w umowie"],
     },
     {
       id: "kc-art-675",
       editorialUnit: "art. 675",
       regex: /data-id="arti_675"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
-      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny"],
+      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny", "najem_instytucjonalny", "najem_lokalu_uzytkowego"],
       keywords: ["zwrot rzeczy", "stan niepogorszony", "prawidłowe używanie", "zużycie"],
     },
     {
       id: "kc-art-677",
       editorialUnit: "art. 677",
       regex: /data-id="arti_677"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
-      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny"],
+      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny", "najem_instytucjonalny", "najem_lokalu_uzytkowego"],
       keywords: ["przedawnienie roszczeń", "rok od zwrotu rzeczy", "nakłady"],
     },
+    // Najem lokalu mieszkalnego i użytkowego
     {
       id: "kc-art-680",
       editorialUnit: "art. 680",
       regex: /data-id="arti_680"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
-      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny"],
+      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny", "najem_instytucjonalny", "najem_lokalu_uzytkowego"],
       keywords: ["najem lokalu", "przepisy ogólne"],
     },
     {
       id: "kc-art-681",
       editorialUnit: "art. 681",
       regex: /data-id="arti_681"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
-      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny"],
+      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny", "najem_instytucjonalny", "najem_lokalu_uzytkowego"],
       keywords: ["drobne nakłady", "naprawa podłóg", "okna", "drzwi", "malowanie"],
     },
     {
       id: "kc-art-683",
       editorialUnit: "art. 683",
       regex: /data-id="arti_683"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
-      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny"],
+      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny", "najem_instytucjonalny", "najem_lokalu_uzytkowego"],
       keywords: ["terminy płatności czynszu lokalu"],
     },
     {
       id: "kc-art-684",
       editorialUnit: "art. 684",
       regex: /data-id="arti_684"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
-      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny"],
-      keywords: ["instalacja oświetlenia", "gaz", "woda", "telefon", "przywrócenie stanu"],
+      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny", "najem_instytucjonalny", "najem_lokalu_uzytkowego"],
+      keywords: ["instalacja oświetlenia", "gaz", "woda", "przywrócenie stanu"],
     },
     {
       id: "kc-art-685",
       editorialUnit: "art. 685",
       regex: /data-id="arti_685"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
-      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny"],
+      tags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny", "najem_instytucjonalny"],
       keywords: ["porządek domowy", "rażące wykraczanie", "wypowiedzenie bez zachowania terminów"],
     },
     {
@@ -400,10 +440,17 @@ async function main() {
       keywords: ["wypowiedzenie wysokości czynszu", "podwyżka czynszu"],
     },
     {
+      id: "kc-art-687",
+      editorialUnit: "art. 687",
+      regex: /data-id="arti_687"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
+      tags: ["najem_lokalu_uzytkowego"],
+      keywords: ["lokal użytkowy", "zwłoka z zapłatą czynszu", "dwa pełne okresy", "uprzedzenie na piśmie", "termin miesięczny"],
+    },
+    {
       id: "kc-art-688",
       editorialUnit: "art. 688",
       regex: /data-id="arti_688"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
-      tags: ["najem_lokalu_mieszkalnego"],
+      tags: ["najem_lokalu_mieszkalnego", "najem_lokalu_uzytkowego"],
       keywords: ["ustawowe terminy wypowiedzenia", "3 miesiące", "koniec miesiąca kalendarzowego"],
     },
     {
@@ -419,6 +466,50 @@ async function main() {
       regex: /data-id="arti_691"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
       tags: ["najem_lokalu_mieszkalnego"],
       keywords: ["śmierć najemcy", "wstąpienie w stosunek najmu", "małżonek", "dzieci", "wspólne pożycie"],
+    },
+    // Dzieło
+    {
+      id: "kc-art-627",
+      editorialUnit: "art. 627",
+      regex: /data-id="arti_627"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
+      tags: ["dzielo"],
+      keywords: ["umowa o dzieło", "wykonanie oznaczonego dzieła", "wynagrodzenie"],
+    },
+    {
+      id: "kc-art-644",
+      editorialUnit: "art. 644",
+      regex: /data-id="arti_644"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
+      tags: ["dzielo"],
+      keywords: ["odstąpienie od umowy o dzieło", "zapłata umówionego wynagrodzenia", "odliczenie oszczędności"],
+    },
+    // Zlecenie i świadczenie usług / B2B
+    {
+      id: "kc-art-734",
+      editorialUnit: "art. 734",
+      regex: /data-id="arti_734"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
+      tags: ["zlecenie", "b2b_uslugi_freelancer"],
+      keywords: ["umowa zlecenia", "dokonanie czynności prawnej"],
+    },
+    {
+      id: "kc-art-735",
+      editorialUnit: "art. 735",
+      regex: /data-id="arti_735"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
+      tags: ["zlecenie", "b2b_uslugi_freelancer"],
+      keywords: ["odpłatność zlecenia", "wynagrodzenie", "taryfa"],
+    },
+    {
+      id: "kc-art-746",
+      editorialUnit: "art. 746",
+      regex: /data-id="arti_746"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
+      tags: ["zlecenie", "b2b_uslugi_freelancer"],
+      keywords: ["wypowiedzenie zlecenia", "wypowiedzenie w każdym czasie", "ważny powód", "naprawienie szkody"],
+    },
+    {
+      id: "kc-art-750",
+      editorialUnit: "art. 750",
+      regex: /data-id="arti_750"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
+      tags: ["b2b_uslugi_freelancer", "zlecenie"],
+      keywords: ["świadczenie usług", "kontrakt b2b", "odpowiednie stosowanie przepisów o zleceniu"],
     },
   ];
 
@@ -447,7 +538,88 @@ async function main() {
   }
 
   // ============================================================================
-  // 3. REJESTR KLAUZUL NIEDOZWOLONYCH UOKiK DLA NAJMU
+  // 3. KODEKS PRACY (Dz.U. 2023 poz. 1465)
+  // Obejmuje: Umowa o pracę, rozróżnienie stosunku pracy od zlecenia/B2B
+  // ============================================================================
+  const kpUrl = "https://api.sejm.gov.pl/eli/acts/DU/2023/1465/text.html";
+  const kpIsapUrl = "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20230001465";
+  const kpLegalState = "2023-04-26";
+  const kpActTitle = "Ustawa z dnia 26 czerwca 1974 r. - Kodeks pracy";
+  const kpPubAddress = "Dz.U. 2023 poz. 1465";
+
+  const kpHtml = await fetchStatuteHtml(kpUrl);
+
+  const kpArticles = [
+    {
+      id: "kp-art-22",
+      editorialUnit: "art. 22",
+      regex: /data-id="arti_22"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
+      tags: ["umowa_o_prace", "zlecenie", "b2b_uslugi_freelancer"],
+      keywords: ["stosunek pracy", "zakaz zastępowania umowy o pracę umową cywilnoprawną", "praca pod kierownictwem"],
+    },
+    {
+      id: "kp-art-25",
+      editorialUnit: "art. 25",
+      regex: /data-id="arti_25"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
+      tags: ["umowa_o_prace"],
+      keywords: ["rodzaje umów o pracę", "okres próbny", "czas określony", "czas nieokreślony"],
+    },
+    {
+      id: "kp-art-29",
+      editorialUnit: "art. 29",
+      regex: /data-id="arti_29"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
+      tags: ["umowa_o_prace"],
+      keywords: ["treść umowy o pracę", "warunki zatrudnienia", "wynagrodzenie", "wymiar etatu"],
+    },
+    {
+      id: "kp-art-30",
+      editorialUnit: "art. 30",
+      regex: /data-id="arti_30"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
+      tags: ["umowa_o_prace"],
+      keywords: ["rozwiązanie umowy o pracę", "okres wypowiedzenia", "forma pisemna"],
+    },
+    {
+      id: "kp-art-101-1",
+      editorialUnit: "art. 101¹",
+      regex: /data-id="arti_101_1"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
+      tags: ["umowa_o_prace", "b2b_uslugi_freelancer"],
+      keywords: ["zakaz konkurencji w trakcie stosunku pracy", "działalność konkurencyjna"],
+    },
+    {
+      id: "kp-art-101-2",
+      editorialUnit: "art. 101²",
+      regex: /data-id="arti_101_2"[\s\S]*?(?=<div class="unit unit_arti|<div class="unit unit_chpt|$)/,
+      tags: ["umowa_o_prace", "b2b_uslugi_freelancer"],
+      keywords: ["zakaz konkurencji po ustaniu stosunku pracy", "odszkodowanie", "minimum 25 procent"],
+    },
+  ];
+
+  for (const art of kpArticles) {
+    const content = extractArticleFromHtml(kpHtml, art.regex, art.editorialUnit);
+    const unit: LegalKbUnit = {
+      id: art.id,
+      unitType: "statute",
+      actTitle: kpActTitle,
+      publicationAddress: kpPubAddress,
+      editorialUnit: art.editorialUnit,
+      content,
+      sourceUrl: kpIsapUrl,
+      fetchDate: today,
+      legalStateDate: kpLegalState,
+      contentHashSha256: sha256(content),
+      status: "active",
+      contractTypeTags: art.tags,
+      keywords: art.keywords,
+      officialCitation: `${kpPubAddress}, ${art.editorialUnit}`,
+    };
+    LegalKbUnitSchema.parse(unit);
+    fs.writeFileSync(path.join(kpDir, `${art.id}.json`), JSON.stringify(unit, null, 2), "utf8");
+    allUnits.push(unit);
+    console.log(`Zapisano jednostkę KP: ${art.id} (${art.editorialUnit})`);
+  }
+
+  // ============================================================================
+  // 4. REJESTR KLAUZUL NIEDOZWOLONYCH UOKiK
   // ============================================================================
   const uokikEntries = [
     {
@@ -536,7 +708,7 @@ async function main() {
   }
 
   // ============================================================================
-  // 4. KLUCZOWE ORZECZNICTWO SĄDU NAJWYŻSZEGO I TSUE
+  // 5. KLUCZOWE ORZECZNICTWO SĄDU NAJWYŻSZEGO I TSUE
   // ============================================================================
   const courtEntries = [
     {
@@ -558,7 +730,7 @@ async function main() {
         "Zastrzeżenie w umowie najmu zawartej na czas oznaczony możliwości jej wypowiedzenia bez określenia przyczyn tego wypowiedzenia, bądź z posłużeniem się ogólną klauzulą 'z ważnych przyczyn' bez ich skonkretyzowania w treści umowy, jest nieważne w świetle art. 673 § 3 k.c. Strony umowy na czas oznaczony muszą w samej umowie precyzyjnie określić sytuacje uprawniające do wypowiedzenia.",
       sourceUrl: "http://www.sn.pl/sites/orzecznictwo/orzeczenia2/v%20csk%2031-08-1.pdf",
       legalStateDate: "2008-06-19",
-      contractTypeTags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny"],
+      contractTypeTags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny", "najem_instytucjonalny", "najem_lokalu_uzytkowego"],
       keywords: ["najem na czas oznaczony", "art 673 par 3 kc", "ważne przyczyny", "skonkretyzowanie przyczyn"],
     },
     {
@@ -569,7 +741,7 @@ async function main() {
         "Kaucja zabezpieczająca, o której mowa w art. 6 ustawy o ochronie praw lokatorów, służy wyłącznie zaspokojeniu roszczeń przysługujących wynajmującemu z tytułu najmu lokalu w dniu jego opróżnienia. Wynajmujący nie może zatrzymać kaucji na poczet rzekomych szkód lub kar umownych, których istnienia i wysokości nie udowodnił w protokole zdawczo-odbiorczym lub rachunkach.",
       sourceUrl: "http://www.sn.pl/sites/orzecznictwo/orzeczenia3/iii%20czp%2052-19.pdf",
       legalStateDate: "2019-12-12",
-      contractTypeTags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny"],
+      contractTypeTags: ["najem_lokalu_mieszkalnego", "najem_okazjonalny", "najem_instytucjonalny"],
       keywords: ["rozliczenie kaucji", "potrącenia z kaucji", "protokół zdawczo-odbiorczy", "art 6 uopl"],
     },
     {
@@ -609,33 +781,45 @@ async function main() {
   }
 
   // ============================================================================
-  // 5. INDEKS LEGAL-KB (index.json)
+  // 6. INDEKS LEGAL-KB (index.json)
   // ============================================================================
   const indexData: LegalKbIndex = {
-    version: "2026.10-najem",
+    version: "2026.10-all-contracts",
     generatedAt: new Date().toISOString(),
     totalUnits: allUnits.length,
     unitsByAct: {
       "Ustawa o ochronie praw lokatorów": uoplArticles.length,
       "Kodeks cywilny": kcArticles.length,
+      "Kodeks pracy": kpArticles.length,
       "Rejestr Klauzul UOKiK": uokikEntries.length,
       "Orzecznictwo SN i TSUE": courtEntries.length,
     },
     unitsByType: {
-      statute: uoplArticles.length + kcArticles.length,
+      statute: uoplArticles.length + kcArticles.length + kpArticles.length,
       uokik_clause: uokikEntries.length,
       court_ruling: courtEntries.length,
     },
-    units: allUnits.map((u) => ({
-      id: u.id,
-      unitType: u.unitType,
-      editorialUnit: u.editorialUnit,
-      actTitle: u.actTitle,
-      filePath: path.relative(kbRoot, path.join(kbRoot, u.unitType === "statute" ? (u.id.startsWith("uopl") ? "akty/uopl" : "akty/kc") : u.unitType === "uokik_clause" ? "uokik" : "orzecznictwo", `${u.id}.json`)),
-      legalStateDate: u.legalStateDate,
-      status: u.status,
-      contractTypeTags: u.contractTypeTags,
-    })),
+    units: allUnits.map((u) => {
+      let subDir = "orzecznictwo";
+      if (u.unitType === "statute") {
+        if (u.id.startsWith("uopl")) subDir = "akty/uopl";
+        else if (u.id.startsWith("kc")) subDir = "akty/kc";
+        else if (u.id.startsWith("kp")) subDir = "akty/kp";
+      } else if (u.unitType === "uokik_clause") {
+        subDir = "uokik";
+      }
+
+      return {
+        id: u.id,
+        unitType: u.unitType,
+        editorialUnit: u.editorialUnit,
+        actTitle: u.actTitle,
+        filePath: `${subDir}/${u.id}.json`,
+        legalStateDate: u.legalStateDate,
+        status: u.status,
+        contractTypeTags: u.contractTypeTags,
+      };
+    }),
   };
 
   fs.writeFileSync(path.join(kbRoot, "index.json"), JSON.stringify(indexData, null, 2), "utf8");

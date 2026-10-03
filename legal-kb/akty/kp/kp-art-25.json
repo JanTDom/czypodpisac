@@ -1,0 +1,23 @@
+{
+  "id": "kp-art-25",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 26 czerwca 1974 r. - Kodeks pracy",
+  "publicationAddress": "Dz.U. 2023 poz. 1465",
+  "editorialUnit": "art. 25",
+  "content": "Art. 25. Do postępowań dotyczących odwołania od wypowiedzenia umowy o pracę na czas określony stosuje się przepisy dotychczasowe, jeżeli umowy te zostały wypowiedziane przed dniem wejścia w życie niniejszej ustawy.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20230001465",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2023-04-26",
+  "contentHashSha256": "aa1824f8019e36634e779c6b1ef6b954af48ba0c432b3e7a56f3e717896d7644",
+  "status": "active",
+  "contractTypeTags": [
+    "umowa_o_prace"
+  ],
+  "keywords": [
+    "rodzaje umów o pracę",
+    "okres próbny",
+    "czas określony",
+    "czas nieokreślony"
+  ],
+  "officialCitation": "Dz.U. 2023 poz. 1465, art. 25"
+}

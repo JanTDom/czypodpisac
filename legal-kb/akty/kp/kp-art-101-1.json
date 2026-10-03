@@ -1,0 +1,22 @@
+{
+  "id": "kp-art-101-1",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 26 czerwca 1974 r. - Kodeks pracy",
+  "publicationAddress": "Dz.U. 2023 poz. 1465",
+  "editorialUnit": "art. 101¹",
+  "content": "Art. 101 1 . § 1. W zakresie określonym w odrębnej umowie, pracownik nie może prowadzić działalności konkurencyjnej wobec pracodawcy ani też świadczyć pracy w ramach stosunku pracy lub na innej podstawie na rzecz podmiotu prowadzącego taką działalność (zakaz konkurencji). § 2. Pracodawca, który poniósł szkodę wskutek naruszenia przez pracownika zakazu konkurencji przewidzianego w umowie, może dochodzić od pracownika wyrównania tej szkody na zasadach określonych w przepisach rozdziału I w dziale piątym.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20230001465",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2023-04-26",
+  "contentHashSha256": "94bee9bd4a75463ebc25aee2c873c5f5b5f00ca230d2dc37b33b0ace177c33bb",
+  "status": "active",
+  "contractTypeTags": [
+    "umowa_o_prace",
+    "b2b_uslugi_freelancer"
+  ],
+  "keywords": [
+    "zakaz konkurencji w trakcie stosunku pracy",
+    "działalność konkurencyjna"
+  ],
+  "officialCitation": "Dz.U. 2023 poz. 1465, art. 101¹"
+}

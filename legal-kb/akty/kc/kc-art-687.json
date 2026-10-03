@@ -1,0 +1,24 @@
+{
+  "id": "kc-art-687",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+  "publicationAddress": "Dz.U. 2024 poz. 1061",
+  "editorialUnit": "art. 687",
+  "content": "Art. 687. Jeżeli najemca lokalu dopuszcza się zwłoki z zapłatą czynszu co najmniej za dwa pełne okresy płatności, a wynajmujący zamierza najem wypowiedzieć bez zachowania terminów wypowiedzenia, powinien on uprzedzić najemcę na piśmie, udzielając mu dodatkowego terminu miesięcznego do zapłaty zaległego czynszu.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20240001061",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2024-06-19",
+  "contentHashSha256": "47cd3f50d0831189093b88287f2d56024eb8a01ef73fd6f6ad6f36eac85f888e",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_lokalu_uzytkowego"
+  ],
+  "keywords": [
+    "lokal użytkowy",
+    "zwłoka z zapłatą czynszu",
+    "dwa pełne okresy",
+    "uprzedzenie na piśmie",
+    "termin miesięczny"
+  ],
+  "officialCitation": "Dz.U. 2024 poz. 1061, art. 687"
+}

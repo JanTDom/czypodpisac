@@ -1,0 +1,23 @@
+{
+  "id": "kp-art-101-2",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 26 czerwca 1974 r. - Kodeks pracy",
+  "publicationAddress": "Dz.U. 2023 poz. 1465",
+  "editorialUnit": "art. 101²",
+  "content": "Art. 101 2 . § 1. Przepis art. 101 1 §1 stosuje się odpowiednio, gdy pracodawca i pracownik mający dostęp do szczególnie ważnych informacji, których ujawnienie mogłoby narazić pracodawcę na szkodę, zawierają umowę o zakazie konkurencji po ustaniu stosunku pracy. W umowie określa się także okres obowiązywania zakazu konkurencji oraz wysokość odszkodowania należnego pracownikowi od pracodawcy, z zastrzeżeniem przepisów § 2 i 3. § 2. Zakaz konkurencji, o którym mowa w § 1, przestaje obowiązywać przed upływem terminu, na jaki została zawarta umowa przewidziana w tym przepisie, w razie ustania przyczyn uzasadniających taki zakaz lub niewywiązywania się pracodawcy z obowiązku wypłaty odszkodowania. § 3. Odszkodowanie, o którym mowa w § 1, nie może być niższe od 25% wynagrodzenia otrzymanego przez pracownika przed ustaniem stosunku pracy przez okres odpowiadający okresowi obowiązywania zakazu konkurencji; odszkodowanie może być wypłacane w miesięcznych ratach. W razie sporu o odszkodowaniu orzeka sąd pracy.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20230001465",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2023-04-26",
+  "contentHashSha256": "00855e2558a38635ddecbe2e2e99e23cb28f0a46b90781f97f9559af8f51409e",
+  "status": "active",
+  "contractTypeTags": [
+    "umowa_o_prace",
+    "b2b_uslugi_freelancer"
+  ],
+  "keywords": [
+    "zakaz konkurencji po ustaniu stosunku pracy",
+    "odszkodowanie",
+    "minimum 25 procent"
+  ],
+  "officialCitation": "Dz.U. 2023 poz. 1465, art. 101²"
+}

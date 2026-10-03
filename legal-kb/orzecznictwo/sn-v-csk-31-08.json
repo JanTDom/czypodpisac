@@ -12,7 +12,9 @@
   "status": "active",
   "contractTypeTags": [
     "najem_lokalu_mieszkalnego",
-    "najem_okazjonalny"
+    "najem_okazjonalny",
+    "najem_instytucjonalny",
+    "najem_lokalu_uzytkowego"
   ],
   "keywords": [
     "najem na czas oznaczony",

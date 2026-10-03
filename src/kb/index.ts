@@ -3,6 +3,8 @@ import * as path from "node:path";
 import { LegalKbUnit, LegalKbUnitSchema, LegalKbIndex, LegalKbIndexSchema } from "./types";
 
 export * from "./types";
+export * from "./eli-client";
+export * from "./freshness-guard";
 
 export class LegalKnowledgeBase {
   private static instance: LegalKnowledgeBase | null = null;
@@ -88,6 +90,42 @@ export class LegalKnowledgeBase {
         const scoreB = stems.filter((stem) => textB.includes(stem)).length;
         return scoreB - scoreA;
       });
+  }
+
+  public isFresh(id: string): boolean {
+    const unit = this.unitsMap.get(id);
+    return !!unit && unit.status === "active";
+  }
+
+  public setUnitStatus(
+    id: string,
+    status: "active" | "repealed" | "amended" | "needs_review",
+    notes?: string
+  ): void {
+    const unit = this.unitsMap.get(id);
+    if (!unit) {
+      throw new Error(`Nie odnaleziono jednostki w legal-kb o id: ${id}`);
+    }
+    unit.status = status;
+    if (notes) {
+      unit.freshnessNotes = notes;
+    }
+    unit.lastVerifiedAt = new Date().toISOString();
+  }
+
+  /**
+   * Zwraca wyłącznie aktualnie obowiązujące przepisy (stan prawny active).
+   * Odrzuca jednostki uchylone, zmienione lub wymagające przeglądu.
+   */
+  public findCurrentLaw(
+    query: string,
+    options: { contractType?: string; onlyActive?: boolean } = { onlyActive: true }
+  ): LegalKbUnit[] {
+    const allMatches = this.searchByKeywords(query, options.contractType);
+    if (options.onlyActive === false) {
+      return allMatches;
+    }
+    return allMatches.filter((u) => u.status === "active");
   }
 
   public getAllUnits(): LegalKbUnit[] {

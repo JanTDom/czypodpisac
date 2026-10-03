@@ -1,0 +1,21 @@
+{
+  "id": "uopl-art-19j",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+  "publicationAddress": "Dz.U. 2023 poz. 725",
+  "editorialUnit": "art. 19j",
+  "content": "Art. 19j. Do najmu instytucjonalnego lokalu stosuje się przepisy art. 2, art. 6 ust. 3, art. 10 ust. 1-3, art. 11 ust. 2 pkt 1-3, art. 13, art. 18 ust. 1 i 2 oraz art. 25d pkt 4.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20230000725",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2023-03-09",
+  "contentHashSha256": "692a466801056ead2203e39055ff0f883fe864ab91405428509f58e5c46aa2b3",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_instytucjonalny"
+  ],
+  "keywords": [
+    "dojście do własności",
+    "przeniesienie własności"
+  ],
+  "officialCitation": "Dz.U. 2023 poz. 725, art. 19j"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "uopl-art-19h",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+  "publicationAddress": "Dz.U. 2023 poz. 725",
+  "editorialUnit": "art. 19h",
+  "content": "Art. 19h. 1. Z tytułu najmu instytucjonalnego lokalu, oprócz czynszu, właściciel pobiera jedynie opłaty niezależne od właściciela, chyba że umowa stanowi inaczej. 2. Właściciel może podwyższyć czynsz wyłącznie zgodnie z warunkami określonymi w umowie.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20230000725",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2023-03-09",
+  "contentHashSha256": "02f221382f51f124dbdfff1b15e569a3ea654c66943a6648af39161ffaab488f",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_instytucjonalny"
+  ],
+  "keywords": [
+    "kaucja najem instytucjonalny",
+    "limit 6-krotność",
+    "zaspokojenie należności"
+  ],
+  "officialCitation": "Dz.U. 2023 poz. 725, art. 19h"
+}

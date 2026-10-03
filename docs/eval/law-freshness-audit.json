@@ -1,0 +1,1039 @@
+{
+  "timestamp": "2026-10-03T14:33:51.631Z",
+  "totalAudited": 70,
+  "upToDateCount": 31,
+  "outdatedOrAmendedCount": 39,
+  "needsReviewCount": 39,
+  "repealedCount": 0,
+  "auditResults": [
+    {
+      "unitId": "uopl-art-2",
+      "editorialUnit": "art. 2",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "currentStatus": "active",
+      "isUpToDate": true,
+      "legalStateDate": "2023-03-09",
+      "reasons": [
+        "Stan prawny w pełni aktualny i zweryfikowany z API Sejmu"
+      ],
+      "recommendedAction": "none",
+      "affectedChecklistItems": [
+        "najem_lokalu_mieszkalnego::najem-zakazy-niedozwolone"
+      ]
+    },
+    {
+      "unitId": "uopl-art-5",
+      "editorialUnit": "art. 5",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "currentStatus": "active",
+      "isUpToDate": true,
+      "legalStateDate": "2023-03-09",
+      "reasons": [
+        "Stan prawny w pełni aktualny i zweryfikowany z API Sejmu"
+      ],
+      "recommendedAction": "none",
+      "affectedChecklistItems": []
+    },
+    {
+      "unitId": "uopl-art-6",
+      "editorialUnit": "art. 6",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "currentStatus": "active",
+      "isUpToDate": true,
+      "legalStateDate": "2023-03-09",
+      "reasons": [
+        "Stan prawny w pełni aktualny i zweryfikowany z API Sejmu"
+      ],
+      "recommendedAction": "none",
+      "affectedChecklistItems": [
+        "najem_lokalu_mieszkalnego::najem-kaucja-limit",
+        "najem_lokalu_mieszkalnego::najem-kaucja-termin-zwrotu",
+        "najem_lokalu_mieszkalnego::najem-kaucja-przepadek",
+        "najem_lokalu_mieszkalnego::najem-kaucja-waloryzacja"
+      ]
+    },
+    {
+      "unitId": "uopl-art-6a",
+      "editorialUnit": "art. 6a",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "currentStatus": "active",
+      "isUpToDate": true,
+      "legalStateDate": "2023-03-09",
+      "reasons": [
+        "Stan prawny w pełni aktualny i zweryfikowany z API Sejmu"
+      ],
+      "recommendedAction": "none",
+      "affectedChecklistItems": [
+        "najem_lokalu_mieszkalnego::najem-naprawy-podzial-obowiazkow"
+      ]
+    },
+    {
+      "unitId": "uopl-art-6b",
+      "editorialUnit": "art. 6b",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "currentStatus": "active",
+      "isUpToDate": true,
+      "legalStateDate": "2023-03-09",
+      "reasons": [
+        "Stan prawny w pełni aktualny i zweryfikowany z API Sejmu"
+      ],
+      "recommendedAction": "none",
+      "affectedChecklistItems": [
+        "najem_lokalu_mieszkalnego::najem-naprawy-podzial-obowiazkow"
+      ]
+    },
+    {
+      "unitId": "uopl-art-6c",
+      "editorialUnit": "art. 6c",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "currentStatus": "active",
+      "isUpToDate": true,
+      "legalStateDate": "2023-03-09",
+      "reasons": [
+        "Stan prawny w pełni aktualny i zweryfikowany z API Sejmu"
+      ],
+      "recommendedAction": "none",
+      "affectedChecklistItems": [
+        "najem_lokalu_mieszkalnego::najem-protokol-zdawczo-odbiorczy"
+      ]
+    },
+    {
+      "unitId": "uopl-art-6d",
+      "editorialUnit": "art. 6d",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "currentStatus": "active",
+      "isUpToDate": true,
+      "legalStateDate": "2023-03-09",
+      "reasons": [
+        "Stan prawny w pełni aktualny i zweryfikowany z API Sejmu"
+      ],
+      "recommendedAction": "none",
+      "affectedChecklistItems": []
+    },
+    {
+      "unitId": "uopl-art-6e",
+      "editorialUnit": "art. 6e",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "currentStatus": "active",
+      "isUpToDate": true,
+      "legalStateDate": "2023-03-09",
+      "reasons": [
+        "Stan prawny w pełni aktualny i zweryfikowany z API Sejmu"
+      ],
+      "recommendedAction": "none",
+      "affectedChecklistItems": []
+    },
+    {
+      "unitId": "uopl-art-8a",
+      "editorialUnit": "art. 8a",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "currentStatus": "active",
+      "isUpToDate": true,
+      "legalStateDate": "2023-03-09",
+      "reasons": [
+        "Stan prawny w pełni aktualny i zweryfikowany z API Sejmu"
+      ],
+      "recommendedAction": "none",
+      "affectedChecklistItems": [
+        "najem_lokalu_mieszkalnego::najem-podwyzka-czynszu-procedura"
+      ]
+    },
+    {
+      "unitId": "uopl-art-9",
+      "editorialUnit": "art. 9",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "currentStatus": "active",
+      "isUpToDate": true,
+      "legalStateDate": "2023-03-09",
+      "reasons": [
+        "Stan prawny w pełni aktualny i zweryfikowany z API Sejmu"
+      ],
+      "recommendedAction": "none",
+      "affectedChecklistItems": [
+        "najem_lokalu_mieszkalnego::najem-oplaty-niezalezne-rozliczenie"
+      ]
+    },
+    {
+      "unitId": "uopl-art-11",
+      "editorialUnit": "art. 11",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "currentStatus": "active",
+      "isUpToDate": true,
+      "legalStateDate": "2023-03-09",
+      "reasons": [
+        "Stan prawny w pełni aktualny i zweryfikowany z API Sejmu"
+      ],
+      "recommendedAction": "none",
+      "affectedChecklistItems": [
+        "najem_lokalu_mieszkalnego::najem-wypowiedzenie-katalog-przyczyn",
+        "najem_lokalu_mieszkalnego::najem-wypowiedzenie-zaleglosc-czynszowa"
+      ]
+    },
+    {
+      "unitId": "uopl-art-19a",
+      "editorialUnit": "art. 19a",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "currentStatus": "active",
+      "isUpToDate": true,
+      "legalStateDate": "2023-03-09",
+      "reasons": [
+        "Stan prawny w pełni aktualny i zweryfikowany z API Sejmu"
+      ],
+      "recommendedAction": "none",
+      "affectedChecklistItems": [
+        "najem_okazjonalny::okazjonalny-status-wynajmujacego",
+        "najem_okazjonalny::okazjonalny-oswiadczenie-notarialne-777",
+        "najem_okazjonalny::okazjonalny-wskazanie-lokalu-zastepczego",
+        "najem_okazjonalny::okazjonalny-zgoda-wlasciciela-lokalu",
+        "najem_okazjonalny::okazjonalny-czas-oznaczony-limit-10-lat"
+      ]
+    },
+    {
+      "unitId": "uopl-art-19b",
+      "editorialUnit": "art. 19b",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "currentStatus": "active",
+      "isUpToDate": true,
+      "legalStateDate": "2023-03-09",
+      "reasons": [
+        "Stan prawny w pełni aktualny i zweryfikowany z API Sejmu"
+      ],
+      "recommendedAction": "none",
+      "affectedChecklistItems": [
+        "najem_okazjonalny::okazjonalny-obowiazek-zgloszenia-us"
+      ]
+    },
+    {
+      "unitId": "uopl-art-19c",
+      "editorialUnit": "art. 19c",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "currentStatus": "active",
+      "isUpToDate": true,
+      "legalStateDate": "2023-03-09",
+      "reasons": [
+        "Stan prawny w pełni aktualny i zweryfikowany z API Sejmu"
+      ],
+      "recommendedAction": "none",
+      "affectedChecklistItems": [
+        "najem_okazjonalny::okazjonalny-kaucja-limit-6x"
+      ]
+    },
+    {
+      "unitId": "uopl-art-19d",
+      "editorialUnit": "art. 19d",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "currentStatus": "active",
+      "isUpToDate": true,
+      "legalStateDate": "2023-03-09",
+      "reasons": [
+        "Stan prawny w pełni aktualny i zweryfikowany z API Sejmu"
+      ],
+      "recommendedAction": "none",
+      "affectedChecklistItems": []
+    },
+    {
+      "unitId": "uopl-art-19e",
+      "editorialUnit": "art. 19e",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "currentStatus": "active",
+      "isUpToDate": true,
+      "legalStateDate": "2023-03-09",
+      "reasons": [
+        "Stan prawny w pełni aktualny i zweryfikowany z API Sejmu"
+      ],
+      "recommendedAction": "none",
+      "affectedChecklistItems": [
+        "najem_okazjonalny::okazjonalny-wylaczenie-przepisow-ochronnych"
+      ]
+    },
+    {
+      "unitId": "uopl-art-19f",
+      "editorialUnit": "art. 19f",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "currentStatus": "active",
+      "isUpToDate": true,
+      "legalStateDate": "2023-03-09",
+      "reasons": [
+        "Stan prawny w pełni aktualny i zweryfikowany z API Sejmu"
+      ],
+      "recommendedAction": "none",
+      "affectedChecklistItems": [
+        "najem_instytucjonalny::instytucjonalny-status-wynajmujacego"
+      ]
+    },
+    {
+      "unitId": "uopl-art-19g",
+      "editorialUnit": "art. 19g",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "currentStatus": "active",
+      "isUpToDate": true,
+      "legalStateDate": "2023-03-09",
+      "reasons": [
+        "Stan prawny w pełni aktualny i zweryfikowany z API Sejmu"
+      ],
+      "recommendedAction": "none",
+      "affectedChecklistItems": [
+        "najem_instytucjonalny::instytucjonalny-oswiadczenie-notarialne"
+      ]
+    },
+    {
+      "unitId": "uopl-art-19h",
+      "editorialUnit": "art. 19h",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "currentStatus": "active",
+      "isUpToDate": true,
+      "legalStateDate": "2023-03-09",
+      "reasons": [
+        "Stan prawny w pełni aktualny i zweryfikowany z API Sejmu"
+      ],
+      "recommendedAction": "none",
+      "affectedChecklistItems": [
+        "najem_instytucjonalny::instytucjonalny-kaucja-limit-6x",
+        "najem_instytucjonalny::instytucjonalny-kaucja-zaspokojenie-biezace"
+      ]
+    },
+    {
+      "unitId": "uopl-art-19i",
+      "editorialUnit": "art. 19i",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "currentStatus": "active",
+      "isUpToDate": true,
+      "legalStateDate": "2023-03-09",
+      "reasons": [
+        "Stan prawny w pełni aktualny i zweryfikowany z API Sejmu"
+      ],
+      "recommendedAction": "none",
+      "affectedChecklistItems": [
+        "najem_instytucjonalny::instytucjonalny-wypowiedzenie-opróżnienie-termin"
+      ]
+    },
+    {
+      "unitId": "uopl-art-19j",
+      "editorialUnit": "art. 19j",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "currentStatus": "active",
+      "isUpToDate": true,
+      "legalStateDate": "2023-03-09",
+      "reasons": [
+        "Stan prawny w pełni aktualny i zweryfikowany z API Sejmu"
+      ],
+      "recommendedAction": "none",
+      "affectedChecklistItems": []
+    },
+    {
+      "unitId": "uopl-art-19k",
+      "editorialUnit": "art. 19k",
+      "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+      "currentStatus": "active",
+      "isUpToDate": true,
+      "legalStateDate": "2023-03-09",
+      "reasons": [
+        "Stan prawny w pełni aktualny i zweryfikowany z API Sejmu"
+      ],
+      "recommendedAction": "none",
+      "affectedChecklistItems": []
+    },
+    {
+      "unitId": "kc-art-385-1",
+      "editorialUnit": "art. 385¹",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "currentStatus": "needs_review",
+      "isUpToDate": false,
+      "legalStateDate": "2024-06-19",
+      "reasons": [
+        "Wykryto 6 aktów zmieniających ogłoszonych po stanie prawnym jednostki (2024-06-19): DU/2026/507 (2028-11-01), DU/2026/184 (2026-05-19), DU/2025/769 (2025-07-13), DU/2025/1508 (2025-12-04), DU/2025/1172 (2025-11-27), DU/2024/1237 (2024-08-29)",
+        "Dostępny jest nowszy tekst jednolity w Sejmie: DU/2026/795 (zarejestrowany w bazie: DU/2023/1610)"
+      ],
+      "recommendedAction": "flag_for_lawyer_review",
+      "affectedChecklistItems": [
+        "najem_lokalu_mieszkalnego::najem-kaucja-przepadek",
+        "najem_lokalu_mieszkalnego::najem-wylaczenie-rekojmi",
+        "najem_lokalu_mieszkalnego::najem-wizyty-wlasciciela-inspekcja",
+        "najem_lokalu_mieszkalnego::najem-zakazy-niedozwolone",
+        "najem_instytucjonalny::instytucjonalny-klauzule-abuzywne-b2c"
+      ]
+    },
+    {
+      "unitId": "kc-art-385-2",
+      "editorialUnit": "art. 385²",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "currentStatus": "needs_review",
+      "isUpToDate": false,
+      "legalStateDate": "2024-06-19",
+      "reasons": [
+        "Wykryto 6 aktów zmieniających ogłoszonych po stanie prawnym jednostki (2024-06-19): DU/2026/507 (2028-11-01), DU/2026/184 (2026-05-19), DU/2025/769 (2025-07-13), DU/2025/1508 (2025-12-04), DU/2025/1172 (2025-11-27), DU/2024/1237 (2024-08-29)",
+        "Dostępny jest nowszy tekst jednolity w Sejmie: DU/2026/795 (zarejestrowany w bazie: DU/2023/1610)"
+      ],
+      "recommendedAction": "flag_for_lawyer_review",
+      "affectedChecklistItems": []
+    },
+    {
+      "unitId": "kc-art-385-3",
+      "editorialUnit": "art. 385³",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "currentStatus": "needs_review",
+      "isUpToDate": false,
+      "legalStateDate": "2024-06-19",
+      "reasons": [
+        "Wykryto 6 aktów zmieniających ogłoszonych po stanie prawnym jednostki (2024-06-19): DU/2026/507 (2028-11-01), DU/2026/184 (2026-05-19), DU/2025/769 (2025-07-13), DU/2025/1508 (2025-12-04), DU/2025/1172 (2025-11-27), DU/2024/1237 (2024-08-29)",
+        "Dostępny jest nowszy tekst jednolity w Sejmie: DU/2026/795 (zarejestrowany w bazie: DU/2023/1610)"
+      ],
+      "recommendedAction": "flag_for_lawyer_review",
+      "affectedChecklistItems": [
+        "najem_lokalu_mieszkalnego::najem-kara-umowna-opoznienie",
+        "najem_instytucjonalny::instytucjonalny-klauzule-abuzywne-b2c"
+      ]
+    },
+    {
+      "unitId": "kc-art-385-5",
+      "editorialUnit": "art. 385⁵",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "currentStatus": "needs_review",
+      "isUpToDate": false,
+      "legalStateDate": "2024-06-19",
+      "reasons": [
+        "Wykryto 6 aktów zmieniających ogłoszonych po stanie prawnym jednostki (2024-06-19): DU/2026/507 (2028-11-01), DU/2026/184 (2026-05-19), DU/2025/769 (2025-07-13), DU/2025/1508 (2025-12-04), DU/2025/1172 (2025-11-27), DU/2024/1237 (2024-08-29)",
+        "Dostępny jest nowszy tekst jednolity w Sejmie: DU/2026/795 (zarejestrowany w bazie: DU/2023/1610)"
+      ],
+      "recommendedAction": "flag_for_lawyer_review",
+      "affectedChecklistItems": []
+    },
+    {
+      "unitId": "kc-art-659",
+      "editorialUnit": "art. 659",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "currentStatus": "needs_review",
+      "isUpToDate": false,
+      "legalStateDate": "2024-06-19",
+      "reasons": [
+        "Wykryto 6 aktów zmieniających ogłoszonych po stanie prawnym jednostki (2024-06-19): DU/2026/507 (2028-11-01), DU/2026/184 (2026-05-19), DU/2025/769 (2025-07-13), DU/2025/1508 (2025-12-04), DU/2025/1172 (2025-11-27), DU/2024/1237 (2024-08-29)",
+        "Dostępny jest nowszy tekst jednolity w Sejmie: DU/2026/795 (zarejestrowany w bazie: DU/2023/1610)"
+      ],
+      "recommendedAction": "flag_for_lawyer_review",
+      "affectedChecklistItems": [
+        "najem_lokalu_uzytkowego::uzytkowy-przeznaczenie-lokalu",
+        "najem_lokalu_uzytkowego::uzytkowy-kaucja-gwarancja-bankowa"
+      ]
+    },
+    {
+      "unitId": "kc-art-660",
+      "editorialUnit": "art. 660",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "currentStatus": "needs_review",
+      "isUpToDate": false,
+      "legalStateDate": "2024-06-19",
+      "reasons": [
+        "Wykryto 6 aktów zmieniających ogłoszonych po stanie prawnym jednostki (2024-06-19): DU/2026/507 (2028-11-01), DU/2026/184 (2026-05-19), DU/2025/769 (2025-07-13), DU/2025/1508 (2025-12-04), DU/2025/1172 (2025-11-27), DU/2024/1237 (2024-08-29)",
+        "Dostępny jest nowszy tekst jednolity w Sejmie: DU/2026/795 (zarejestrowany w bazie: DU/2023/1610)"
+      ],
+      "recommendedAction": "flag_for_lawyer_review",
+      "affectedChecklistItems": []
+    },
+    {
+      "unitId": "kc-art-662",
+      "editorialUnit": "art. 662",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "currentStatus": "needs_review",
+      "isUpToDate": false,
+      "legalStateDate": "2024-06-19",
+      "reasons": [
+        "Wykryto 6 aktów zmieniających ogłoszonych po stanie prawnym jednostki (2024-06-19): DU/2026/507 (2028-11-01), DU/2026/184 (2026-05-19), DU/2025/769 (2025-07-13), DU/2025/1508 (2025-12-04), DU/2025/1172 (2025-11-27), DU/2024/1237 (2024-08-29)",
+        "Dostępny jest nowszy tekst jednolity w Sejmie: DU/2026/795 (zarejestrowany w bazie: DU/2023/1610)"
+      ],
+      "recommendedAction": "flag_for_lawyer_review",
+      "affectedChecklistItems": [
+        "najem_lokalu_mieszkalnego::najem-naprawy-podzial-obowiazkow"
+      ]
+    },
+    {
+      "unitId": "kc-art-663",
+      "editorialUnit": "art. 663",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "currentStatus": "needs_review",
+      "isUpToDate": false,
+      "legalStateDate": "2024-06-19",
+      "reasons": [
+        "Wykryto 6 aktów zmieniających ogłoszonych po stanie prawnym jednostki (2024-06-19): DU/2026/507 (2028-11-01), DU/2026/184 (2026-05-19), DU/2025/769 (2025-07-13), DU/2025/1508 (2025-12-04), DU/2025/1172 (2025-11-27), DU/2024/1237 (2024-08-29)",
+        "Dostępny jest nowszy tekst jednolity w Sejmie: DU/2026/795 (zarejestrowany w bazie: DU/2023/1610)"
+      ],
+      "recommendedAction": "flag_for_lawyer_review",
+      "affectedChecklistItems": [
+        "najem_lokalu_mieszkalnego::najem-naprawy-podzial-obowiazkow"
+      ]
+    },
+    {
+      "unitId": "kc-art-664",
+      "editorialUnit": "art. 664",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "currentStatus": "needs_review",
+      "isUpToDate": false,
+      "legalStateDate": "2024-06-19",
+      "reasons": [
+        "Wykryto 6 aktów zmieniających ogłoszonych po stanie prawnym jednostki (2024-06-19): DU/2026/507 (2028-11-01), DU/2026/184 (2026-05-19), DU/2025/769 (2025-07-13), DU/2025/1508 (2025-12-04), DU/2025/1172 (2025-11-27), DU/2024/1237 (2024-08-29)",
+        "Dostępny jest nowszy tekst jednolity w Sejmie: DU/2026/795 (zarejestrowany w bazie: DU/2023/1610)"
+      ],
+      "recommendedAction": "flag_for_lawyer_review",
+      "affectedChecklistItems": [
+        "najem_lokalu_mieszkalnego::najem-wylaczenie-rekojmi"
+      ]
+    },
+    {
+      "unitId": "kc-art-666",
+      "editorialUnit": "art. 666",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "currentStatus": "needs_review",
+      "isUpToDate": false,
+      "legalStateDate": "2024-06-19",
+      "reasons": [
+        "Wykryto 6 aktów zmieniających ogłoszonych po stanie prawnym jednostki (2024-06-19): DU/2026/507 (2028-11-01), DU/2026/184 (2026-05-19), DU/2025/769 (2025-07-13), DU/2025/1508 (2025-12-04), DU/2025/1172 (2025-11-27), DU/2024/1237 (2024-08-29)",
+        "Dostępny jest nowszy tekst jednolity w Sejmie: DU/2026/795 (zarejestrowany w bazie: DU/2023/1610)"
+      ],
+      "recommendedAction": "flag_for_lawyer_review",
+      "affectedChecklistItems": [
+        "najem_lokalu_uzytkowego::uzytkowy-przeznaczenie-lokalu"
+      ]
+    },
+    {
+      "unitId": "kc-art-667",
+      "editorialUnit": "art. 667",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "currentStatus": "needs_review",
+      "isUpToDate": false,
+      "legalStateDate": "2024-06-19",
+      "reasons": [
+        "Wykryto 6 aktów zmieniających ogłoszonych po stanie prawnym jednostki (2024-06-19): DU/2026/507 (2028-11-01), DU/2026/184 (2026-05-19), DU/2025/769 (2025-07-13), DU/2025/1508 (2025-12-04), DU/2025/1172 (2025-11-27), DU/2024/1237 (2024-08-29)",
+        "Dostępny jest nowszy tekst jednolity w Sejmie: DU/2026/795 (zarejestrowany w bazie: DU/2023/1610)"
+      ],
+      "recommendedAction": "flag_for_lawyer_review",
+      "affectedChecklistItems": []
+    },
+    {
+      "unitId": "kc-art-668",
+      "editorialUnit": "art. 668",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "currentStatus": "needs_review",
+      "isUpToDate": false,
+      "legalStateDate": "2024-06-19",
+      "reasons": [
+        "Wykryto 6 aktów zmieniających ogłoszonych po stanie prawnym jednostki (2024-06-19): DU/2026/507 (2028-11-01), DU/2026/184 (2026-05-19), DU/2025/769 (2025-07-13), DU/2025/1508 (2025-12-04), DU/2025/1172 (2025-11-27), DU/2024/1237 (2024-08-29)",
+        "Dostępny jest nowszy tekst jednolity w Sejmie: DU/2026/795 (zarejestrowany w bazie: DU/2023/1610)"
+      ],
+      "recommendedAction": "flag_for_lawyer_review",
+      "affectedChecklistItems": []
+    },
+    {
+      "unitId": "kc-art-669",
+      "editorialUnit": "art. 669",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "currentStatus": "needs_review",
+      "isUpToDate": false,
+      "legalStateDate": "2024-06-19",
+      "reasons": [
+        "Wykryto 6 aktów zmieniających ogłoszonych po stanie prawnym jednostki (2024-06-19): DU/2026/507 (2028-11-01), DU/2026/184 (2026-05-19), DU/2025/769 (2025-07-13), DU/2025/1508 (2025-12-04), DU/2025/1172 (2025-11-27), DU/2024/1237 (2024-08-29)",
+        "Dostępny jest nowszy tekst jednolity w Sejmie: DU/2026/795 (zarejestrowany w bazie: DU/2023/1610)"
+      ],
+      "recommendedAction": "flag_for_lawyer_review",
+      "affectedChecklistItems": []
+    },
+    {
+      "unitId": "kc-art-672",
+      "editorialUnit": "art. 672",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "currentStatus": "needs_review",
+      "isUpToDate": false,
+      "legalStateDate": "2024-06-19",
+      "reasons": [
+        "Wykryto 6 aktów zmieniających ogłoszonych po stanie prawnym jednostki (2024-06-19): DU/2026/507 (2028-11-01), DU/2026/184 (2026-05-19), DU/2025/769 (2025-07-13), DU/2025/1508 (2025-12-04), DU/2025/1172 (2025-11-27), DU/2024/1237 (2024-08-29)",
+        "Dostępny jest nowszy tekst jednolity w Sejmie: DU/2026/795 (zarejestrowany w bazie: DU/2023/1610)"
+      ],
+      "recommendedAction": "flag_for_lawyer_review",
+      "affectedChecklistItems": []
+    },
+    {
+      "unitId": "kc-art-673",
+      "editorialUnit": "art. 673",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "currentStatus": "needs_review",
+      "isUpToDate": false,
+      "legalStateDate": "2024-06-19",
+      "reasons": [
+        "Wykryto 6 aktów zmieniających ogłoszonych po stanie prawnym jednostki (2024-06-19): DU/2026/507 (2028-11-01), DU/2026/184 (2026-05-19), DU/2025/769 (2025-07-13), DU/2025/1508 (2025-12-04), DU/2025/1172 (2025-11-27), DU/2024/1237 (2024-08-29)",
+        "Dostępny jest nowszy tekst jednolity w Sejmie: DU/2026/795 (zarejestrowany w bazie: DU/2023/1610)"
+      ],
+      "recommendedAction": "flag_for_lawyer_review",
+      "affectedChecklistItems": [
+        "najem_lokalu_mieszkalnego::najem-czas-oznaczony-wazne-przyczyny",
+        "najem_lokalu_uzytkowego::uzytkowy-czas-oznaczony-przyczyny-wypowiedzenia"
+      ]
+    },
+    {
+      "unitId": "kc-art-675",
+      "editorialUnit": "art. 675",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "currentStatus": "needs_review",
+      "isUpToDate": false,
+      "legalStateDate": "2024-06-19",
+      "reasons": [
+        "Wykryto 6 aktów zmieniających ogłoszonych po stanie prawnym jednostki (2024-06-19): DU/2026/507 (2028-11-01), DU/2026/184 (2026-05-19), DU/2025/769 (2025-07-13), DU/2025/1508 (2025-12-04), DU/2025/1172 (2025-11-27), DU/2024/1237 (2024-08-29)",
+        "Dostępny jest nowszy tekst jednolity w Sejmie: DU/2026/795 (zarejestrowany w bazie: DU/2023/1610)"
+      ],
+      "recommendedAction": "flag_for_lawyer_review",
+      "affectedChecklistItems": [
+        "najem_lokalu_mieszkalnego::najem-protokol-zdawczo-odbiorczy",
+        "najem_lokalu_uzytkowego::uzytkowy-naklady-adaptacja-zwrot"
+      ]
+    },
+    {
+      "unitId": "kc-art-677",
+      "editorialUnit": "art. 677",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "currentStatus": "needs_review",
+      "isUpToDate": false,
+      "legalStateDate": "2024-06-19",
+      "reasons": [
+        "Wykryto 6 aktów zmieniających ogłoszonych po stanie prawnym jednostki (2024-06-19): DU/2026/507 (2028-11-01), DU/2026/184 (2026-05-19), DU/2025/769 (2025-07-13), DU/2025/1508 (2025-12-04), DU/2025/1172 (2025-11-27), DU/2024/1237 (2024-08-29)",
+        "Dostępny jest nowszy tekst jednolity w Sejmie: DU/2026/795 (zarejestrowany w bazie: DU/2023/1610)"
+      ],
+      "recommendedAction": "flag_for_lawyer_review",
+      "affectedChecklistItems": [
+        "najem_lokalu_uzytkowego::uzytkowy-naklady-adaptacja-zwrot"
+      ]
+    },
+    {
+      "unitId": "kc-art-680",
+      "editorialUnit": "art. 680",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "currentStatus": "needs_review",
+      "isUpToDate": false,
+      "legalStateDate": "2024-06-19",
+      "reasons": [
+        "Wykryto 6 aktów zmieniających ogłoszonych po stanie prawnym jednostki (2024-06-19): DU/2026/507 (2028-11-01), DU/2026/184 (2026-05-19), DU/2025/769 (2025-07-13), DU/2025/1508 (2025-12-04), DU/2025/1172 (2025-11-27), DU/2024/1237 (2024-08-29)",
+        "Dostępny jest nowszy tekst jednolity w Sejmie: DU/2026/795 (zarejestrowany w bazie: DU/2023/1610)"
+      ],
+      "recommendedAction": "flag_for_lawyer_review",
+      "affectedChecklistItems": []
+    },
+    {
+      "unitId": "kc-art-681",
+      "editorialUnit": "art. 681",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "currentStatus": "needs_review",
+      "isUpToDate": false,
+      "legalStateDate": "2024-06-19",
+      "reasons": [
+        "Wykryto 6 aktów zmieniających ogłoszonych po stanie prawnym jednostki (2024-06-19): DU/2026/507 (2028-11-01), DU/2026/184 (2026-05-19), DU/2025/769 (2025-07-13), DU/2025/1508 (2025-12-04), DU/2025/1172 (2025-11-27), DU/2024/1237 (2024-08-29)",
+        "Dostępny jest nowszy tekst jednolity w Sejmie: DU/2026/795 (zarejestrowany w bazie: DU/2023/1610)"
+      ],
+      "recommendedAction": "flag_for_lawyer_review",
+      "affectedChecklistItems": [
+        "najem_lokalu_mieszkalnego::najem-naprawy-podzial-obowiazkow"
+      ]
+    },
+    {
+      "unitId": "kc-art-683",
+      "editorialUnit": "art. 683",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "currentStatus": "needs_review",
+      "isUpToDate": false,
+      "legalStateDate": "2024-06-19",
+      "reasons": [
+        "Wykryto 6 aktów zmieniających ogłoszonych po stanie prawnym jednostki (2024-06-19): DU/2026/507 (2028-11-01), DU/2026/184 (2026-05-19), DU/2025/769 (2025-07-13), DU/2025/1508 (2025-12-04), DU/2025/1172 (2025-11-27), DU/2024/1237 (2024-08-29)",
+        "Dostępny jest nowszy tekst jednolity w Sejmie: DU/2026/795 (zarejestrowany w bazie: DU/2023/1610)"
+      ],
+      "recommendedAction": "flag_for_lawyer_review",
+      "affectedChecklistItems": []
+    },
+    {
+      "unitId": "kc-art-684",
+      "editorialUnit": "art. 684",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "currentStatus": "needs_review",
+      "isUpToDate": false,
+      "legalStateDate": "2024-06-19",
+      "reasons": [
+        "Wykryto 6 aktów zmieniających ogłoszonych po stanie prawnym jednostki (2024-06-19): DU/2026/507 (2028-11-01), DU/2026/184 (2026-05-19), DU/2025/769 (2025-07-13), DU/2025/1508 (2025-12-04), DU/2025/1172 (2025-11-27), DU/2024/1237 (2024-08-29)",
+        "Dostępny jest nowszy tekst jednolity w Sejmie: DU/2026/795 (zarejestrowany w bazie: DU/2023/1610)"
+      ],
+      "recommendedAction": "flag_for_lawyer_review",
+      "affectedChecklistItems": [
+        "najem_lokalu_uzytkowego::uzytkowy-naklady-adaptacja-zwrot"
+      ]
+    },
+    {
+      "unitId": "kc-art-685",
+      "editorialUnit": "art. 685",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "currentStatus": "needs_review",
+      "isUpToDate": false,
+      "legalStateDate": "2024-06-19",
+      "reasons": [
+        "Wykryto 6 aktów zmieniających ogłoszonych po stanie prawnym jednostki (2024-06-19): DU/2026/507 (2028-11-01), DU/2026/184 (2026-05-19), DU/2025/769 (2025-07-13), DU/2025/1508 (2025-12-04), DU/2025/1172 (2025-11-27), DU/2024/1237 (2024-08-29)",
+        "Dostępny jest nowszy tekst jednolity w Sejmie: DU/2026/795 (zarejestrowany w bazie: DU/2023/1610)"
+      ],
+      "recommendedAction": "flag_for_lawyer_review",
+      "affectedChecklistItems": []
+    },
+    {
+      "unitId": "kc-art-685-1",
+      "editorialUnit": "art. 685¹",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "currentStatus": "needs_review",
+      "isUpToDate": false,
+      "legalStateDate": "2024-06-19",
+      "reasons": [
+        "Wykryto 6 aktów zmieniających ogłoszonych po stanie prawnym jednostki (2024-06-19): DU/2026/507 (2028-11-01), DU/2026/184 (2026-05-19), DU/2025/769 (2025-07-13), DU/2025/1508 (2025-12-04), DU/2025/1172 (2025-11-27), DU/2024/1237 (2024-08-29)",
+        "Dostępny jest nowszy tekst jednolity w Sejmie: DU/2026/795 (zarejestrowany w bazie: DU/2023/1610)"
+      ],
+      "recommendedAction": "flag_for_lawyer_review",
+      "affectedChecklistItems": [
+        "najem_lokalu_mieszkalnego::najem-podwyzka-czynszu-procedura"
+      ]
+    },
+    {
+      "unitId": "kc-art-687",
+      "editorialUnit": "art. 687",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "currentStatus": "needs_review",
+      "isUpToDate": false,
+      "legalStateDate": "2024-06-19",
+      "reasons": [
+        "Wykryto 6 aktów zmieniających ogłoszonych po stanie prawnym jednostki (2024-06-19): DU/2026/507 (2028-11-01), DU/2026/184 (2026-05-19), DU/2025/769 (2025-07-13), DU/2025/1508 (2025-12-04), DU/2025/1172 (2025-11-27), DU/2024/1237 (2024-08-29)",
+        "Dostępny jest nowszy tekst jednolity w Sejmie: DU/2026/795 (zarejestrowany w bazie: DU/2023/1610)"
+      ],
+      "recommendedAction": "flag_for_lawyer_review",
+      "affectedChecklistItems": [
+        "najem_lokalu_uzytkowego::uzytkowy-wypowiedzenie-zaleglosc-art-687"
+      ]
+    },
+    {
+      "unitId": "kc-art-688",
+      "editorialUnit": "art. 688",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "currentStatus": "needs_review",
+      "isUpToDate": false,
+      "legalStateDate": "2024-06-19",
+      "reasons": [
+        "Wykryto 6 aktów zmieniających ogłoszonych po stanie prawnym jednostki (2024-06-19): DU/2026/507 (2028-11-01), DU/2026/184 (2026-05-19), DU/2025/769 (2025-07-13), DU/2025/1508 (2025-12-04), DU/2025/1172 (2025-11-27), DU/2024/1237 (2024-08-29)",
+        "Dostępny jest nowszy tekst jednolity w Sejmie: DU/2026/795 (zarejestrowany w bazie: DU/2023/1610)"
+      ],
+      "recommendedAction": "flag_for_lawyer_review",
+      "affectedChecklistItems": [
+        "najem_lokalu_mieszkalnego::najem-termin-wypowiedzenia-lokalu"
+      ]
+    },
+    {
+      "unitId": "kc-art-688-1",
+      "editorialUnit": "art. 688¹",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "currentStatus": "needs_review",
+      "isUpToDate": false,
+      "legalStateDate": "2024-06-19",
+      "reasons": [
+        "Wykryto 6 aktów zmieniających ogłoszonych po stanie prawnym jednostki (2024-06-19): DU/2026/507 (2028-11-01), DU/2026/184 (2026-05-19), DU/2025/769 (2025-07-13), DU/2025/1508 (2025-12-04), DU/2025/1172 (2025-11-27), DU/2024/1237 (2024-08-29)",
+        "Dostępny jest nowszy tekst jednolity w Sejmie: DU/2026/795 (zarejestrowany w bazie: DU/2023/1610)"
+      ],
+      "recommendedAction": "flag_for_lawyer_review",
+      "affectedChecklistItems": []
+    },
+    {
+      "unitId": "kc-art-691",
+      "editorialUnit": "art. 691",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "currentStatus": "needs_review",
+      "isUpToDate": false,
+      "legalStateDate": "2024-06-19",
+      "reasons": [
+        "Wykryto 6 aktów zmieniających ogłoszonych po stanie prawnym jednostki (2024-06-19): DU/2026/507 (2028-11-01), DU/2026/184 (2026-05-19), DU/2025/769 (2025-07-13), DU/2025/1508 (2025-12-04), DU/2025/1172 (2025-11-27), DU/2024/1237 (2024-08-29)",
+        "Dostępny jest nowszy tekst jednolity w Sejmie: DU/2026/795 (zarejestrowany w bazie: DU/2023/1610)"
+      ],
+      "recommendedAction": "flag_for_lawyer_review",
+      "affectedChecklistItems": []
+    },
+    {
+      "unitId": "kc-art-627",
+      "editorialUnit": "art. 627",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "currentStatus": "needs_review",
+      "isUpToDate": false,
+      "legalStateDate": "2024-06-19",
+      "reasons": [
+        "Wykryto 6 aktów zmieniających ogłoszonych po stanie prawnym jednostki (2024-06-19): DU/2026/507 (2028-11-01), DU/2026/184 (2026-05-19), DU/2025/769 (2025-07-13), DU/2025/1508 (2025-12-04), DU/2025/1172 (2025-11-27), DU/2024/1237 (2024-08-29)",
+        "Dostępny jest nowszy tekst jednolity w Sejmie: DU/2026/795 (zarejestrowany w bazie: DU/2023/1610)"
+      ],
+      "recommendedAction": "flag_for_lawyer_review",
+      "affectedChecklistItems": []
+    },
+    {
+      "unitId": "kc-art-644",
+      "editorialUnit": "art. 644",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "currentStatus": "needs_review",
+      "isUpToDate": false,
+      "legalStateDate": "2024-06-19",
+      "reasons": [
+        "Wykryto 6 aktów zmieniających ogłoszonych po stanie prawnym jednostki (2024-06-19): DU/2026/507 (2028-11-01), DU/2026/184 (2026-05-19), DU/2025/769 (2025-07-13), DU/2025/1508 (2025-12-04), DU/2025/1172 (2025-11-27), DU/2024/1237 (2024-08-29)",
+        "Dostępny jest nowszy tekst jednolity w Sejmie: DU/2026/795 (zarejestrowany w bazie: DU/2023/1610)"
+      ],
+      "recommendedAction": "flag_for_lawyer_review",
+      "affectedChecklistItems": []
+    },
+    {
+      "unitId": "kc-art-734",
+      "editorialUnit": "art. 734",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "currentStatus": "needs_review",
+      "isUpToDate": false,
+      "legalStateDate": "2024-06-19",
+      "reasons": [
+        "Wykryto 6 aktów zmieniających ogłoszonych po stanie prawnym jednostki (2024-06-19): DU/2026/507 (2028-11-01), DU/2026/184 (2026-05-19), DU/2025/769 (2025-07-13), DU/2025/1508 (2025-12-04), DU/2025/1172 (2025-11-27), DU/2024/1237 (2024-08-29)",
+        "Dostępny jest nowszy tekst jednolity w Sejmie: DU/2026/795 (zarejestrowany w bazie: DU/2023/1610)"
+      ],
+      "recommendedAction": "flag_for_lawyer_review",
+      "affectedChecklistItems": []
+    },
+    {
+      "unitId": "kc-art-735",
+      "editorialUnit": "art. 735",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "currentStatus": "needs_review",
+      "isUpToDate": false,
+      "legalStateDate": "2024-06-19",
+      "reasons": [
+        "Wykryto 6 aktów zmieniających ogłoszonych po stanie prawnym jednostki (2024-06-19): DU/2026/507 (2028-11-01), DU/2026/184 (2026-05-19), DU/2025/769 (2025-07-13), DU/2025/1508 (2025-12-04), DU/2025/1172 (2025-11-27), DU/2024/1237 (2024-08-29)",
+        "Dostępny jest nowszy tekst jednolity w Sejmie: DU/2026/795 (zarejestrowany w bazie: DU/2023/1610)"
+      ],
+      "recommendedAction": "flag_for_lawyer_review",
+      "affectedChecklistItems": []
+    },
+    {
+      "unitId": "kc-art-746",
+      "editorialUnit": "art. 746",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "currentStatus": "needs_review",
+      "isUpToDate": false,
+      "legalStateDate": "2024-06-19",
+      "reasons": [
+        "Wykryto 6 aktów zmieniających ogłoszonych po stanie prawnym jednostki (2024-06-19): DU/2026/507 (2028-11-01), DU/2026/184 (2026-05-19), DU/2025/769 (2025-07-13), DU/2025/1508 (2025-12-04), DU/2025/1172 (2025-11-27), DU/2024/1237 (2024-08-29)",
+        "Dostępny jest nowszy tekst jednolity w Sejmie: DU/2026/795 (zarejestrowany w bazie: DU/2023/1610)"
+      ],
+      "recommendedAction": "flag_for_lawyer_review",
+      "affectedChecklistItems": []
+    },
+    {
+      "unitId": "kc-art-750",
+      "editorialUnit": "art. 750",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. - Kodeks cywilny",
+      "currentStatus": "needs_review",
+      "isUpToDate": false,
+      "legalStateDate": "2024-06-19",
+      "reasons": [
+        "Wykryto 6 aktów zmieniających ogłoszonych po stanie prawnym jednostki (2024-06-19): DU/2026/507 (2028-11-01), DU/2026/184 (2026-05-19), DU/2025/769 (2025-07-13), DU/2025/1508 (2025-12-04), DU/2025/1172 (2025-11-27), DU/2024/1237 (2024-08-29)",
+        "Dostępny jest nowszy tekst jednolity w Sejmie: DU/2026/795 (zarejestrowany w bazie: DU/2023/1610)"
+      ],
+      "recommendedAction": "flag_for_lawyer_review",
+      "affectedChecklistItems": []
+    },
+    {
+      "unitId": "kp-art-22",
+      "editorialUnit": "art. 22",
+      "actTitle": "Ustawa z dnia 26 czerwca 1974 r. - Kodeks pracy",
+      "currentStatus": "needs_review",
+      "isUpToDate": false,
+      "legalStateDate": "2023-04-26",
+      "reasons": [
+        "Wykryto 10 aktów zmieniających ogłoszonych po stanie prawnym jednostki (2023-04-26): DU/2026/473 (2026-07-08), DU/2026/25 (2026-01-27), DU/2026/1046 (2026-11-05), DU/2025/807 (2025-12-24), DU/2025/1661 (2025-12-13), DU/2025/1423 (2026-01-01), DU/2024/878 (2024-06-29), DU/2024/1965 (2025-02-01), DU/2024/1871 (2025-03-19), DU/2024/1222 (2024-11-10)",
+        "Dostępny jest nowszy tekst jednolity w Sejmie: DU/2026/1245 (zarejestrowany w bazie: DU/2023/1465)"
+      ],
+      "recommendedAction": "flag_for_lawyer_review",
+      "affectedChecklistItems": []
+    },
+    {
+      "unitId": "kp-art-25",
+      "editorialUnit": "art. 25",
+      "actTitle": "Ustawa z dnia 26 czerwca 1974 r. - Kodeks pracy",
+      "currentStatus": "needs_review",
+      "isUpToDate": false,
+      "legalStateDate": "2023-04-26",
+      "reasons": [
+        "Wykryto 10 aktów zmieniających ogłoszonych po stanie prawnym jednostki (2023-04-26): DU/2026/473 (2026-07-08), DU/2026/25 (2026-01-27), DU/2026/1046 (2026-11-05), DU/2025/807 (2025-12-24), DU/2025/1661 (2025-12-13), DU/2025/1423 (2026-01-01), DU/2024/878 (2024-06-29), DU/2024/1965 (2025-02-01), DU/2024/1871 (2025-03-19), DU/2024/1222 (2024-11-10)",
+        "Dostępny jest nowszy tekst jednolity w Sejmie: DU/2026/1245 (zarejestrowany w bazie: DU/2023/1465)"
+      ],
+      "recommendedAction": "flag_for_lawyer_review",
+      "affectedChecklistItems": []
+    },
+    {
+      "unitId": "kp-art-29",
+      "editorialUnit": "art. 29",
+      "actTitle": "Ustawa z dnia 26 czerwca 1974 r. - Kodeks pracy",
+      "currentStatus": "needs_review",
+      "isUpToDate": false,
+      "legalStateDate": "2023-04-26",
+      "reasons": [
+        "Wykryto 10 aktów zmieniających ogłoszonych po stanie prawnym jednostki (2023-04-26): DU/2026/473 (2026-07-08), DU/2026/25 (2026-01-27), DU/2026/1046 (2026-11-05), DU/2025/807 (2025-12-24), DU/2025/1661 (2025-12-13), DU/2025/1423 (2026-01-01), DU/2024/878 (2024-06-29), DU/2024/1965 (2025-02-01), DU/2024/1871 (2025-03-19), DU/2024/1222 (2024-11-10)",
+        "Dostępny jest nowszy tekst jednolity w Sejmie: DU/2026/1245 (zarejestrowany w bazie: DU/2023/1465)"
+      ],
+      "recommendedAction": "flag_for_lawyer_review",
+      "affectedChecklistItems": []
+    },
+    {
+      "unitId": "kp-art-30",
+      "editorialUnit": "art. 30",
+      "actTitle": "Ustawa z dnia 26 czerwca 1974 r. - Kodeks pracy",
+      "currentStatus": "needs_review",
+      "isUpToDate": false,
+      "legalStateDate": "2023-04-26",
+      "reasons": [
+        "Wykryto 10 aktów zmieniających ogłoszonych po stanie prawnym jednostki (2023-04-26): DU/2026/473 (2026-07-08), DU/2026/25 (2026-01-27), DU/2026/1046 (2026-11-05), DU/2025/807 (2025-12-24), DU/2025/1661 (2025-12-13), DU/2025/1423 (2026-01-01), DU/2024/878 (2024-06-29), DU/2024/1965 (2025-02-01), DU/2024/1871 (2025-03-19), DU/2024/1222 (2024-11-10)",
+        "Dostępny jest nowszy tekst jednolity w Sejmie: DU/2026/1245 (zarejestrowany w bazie: DU/2023/1465)"
+      ],
+      "recommendedAction": "flag_for_lawyer_review",
+      "affectedChecklistItems": []
+    },
+    {
+      "unitId": "kp-art-101-1",
+      "editorialUnit": "art. 101¹",
+      "actTitle": "Ustawa z dnia 26 czerwca 1974 r. - Kodeks pracy",
+      "currentStatus": "needs_review",
+      "isUpToDate": false,
+      "legalStateDate": "2023-04-26",
+      "reasons": [
+        "Wykryto 10 aktów zmieniających ogłoszonych po stanie prawnym jednostki (2023-04-26): DU/2026/473 (2026-07-08), DU/2026/25 (2026-01-27), DU/2026/1046 (2026-11-05), DU/2025/807 (2025-12-24), DU/2025/1661 (2025-12-13), DU/2025/1423 (2026-01-01), DU/2024/878 (2024-06-29), DU/2024/1965 (2025-02-01), DU/2024/1871 (2025-03-19), DU/2024/1222 (2024-11-10)",
+        "Dostępny jest nowszy tekst jednolity w Sejmie: DU/2026/1245 (zarejestrowany w bazie: DU/2023/1465)"
+      ],
+      "recommendedAction": "flag_for_lawyer_review",
+      "affectedChecklistItems": []
+    },
+    {
+      "unitId": "kp-art-101-2",
+      "editorialUnit": "art. 101²",
+      "actTitle": "Ustawa z dnia 26 czerwca 1974 r. - Kodeks pracy",
+      "currentStatus": "needs_review",
+      "isUpToDate": false,
+      "legalStateDate": "2023-04-26",
+      "reasons": [
+        "Wykryto 10 aktów zmieniających ogłoszonych po stanie prawnym jednostki (2023-04-26): DU/2026/473 (2026-07-08), DU/2026/25 (2026-01-27), DU/2026/1046 (2026-11-05), DU/2025/807 (2025-12-24), DU/2025/1661 (2025-12-13), DU/2025/1423 (2026-01-01), DU/2024/878 (2024-06-29), DU/2024/1965 (2025-02-01), DU/2024/1871 (2025-03-19), DU/2024/1222 (2024-11-10)",
+        "Dostępny jest nowszy tekst jednolity w Sejmie: DU/2026/1245 (zarejestrowany w bazie: DU/2023/1465)"
+      ],
+      "recommendedAction": "flag_for_lawyer_review",
+      "affectedChecklistItems": []
+    },
+    {
+      "unitId": "uokik-klauzula-4991",
+      "editorialUnit": "Wpis nr 4991 (SOKiK XVII AmC 511/12)",
+      "actTitle": "Rejestr Klauzul Niedozwolonych UOKiK / SOKiK",
+      "currentStatus": "active",
+      "isUpToDate": true,
+      "legalStateDate": "2013-06-18",
+      "reasons": [
+        "Wpis aktywny w rejestrze/orzecznictwie"
+      ],
+      "recommendedAction": "none",
+      "affectedChecklistItems": []
+    },
+    {
+      "unitId": "uokik-klauzula-2487",
+      "editorialUnit": "Wpis nr 2487 (SOKiK XVII AmC 123/11)",
+      "actTitle": "Rejestr Klauzul Niedozwolonych UOKiK / SOKiK",
+      "currentStatus": "active",
+      "isUpToDate": true,
+      "legalStateDate": "2011-09-29",
+      "reasons": [
+        "Wpis aktywny w rejestrze/orzecznictwie"
+      ],
+      "recommendedAction": "none",
+      "affectedChecklistItems": []
+    },
+    {
+      "unitId": "uokik-klauzula-2045",
+      "editorialUnit": "Wpis nr 2045 (SOKiK XVII AmC 98/10)",
+      "actTitle": "Rejestr Klauzul Niedozwolonych UOKiK / SOKiK",
+      "currentStatus": "active",
+      "isUpToDate": true,
+      "legalStateDate": "2010-11-15",
+      "reasons": [
+        "Wpis aktywny w rejestrze/orzecznictwie"
+      ],
+      "recommendedAction": "none",
+      "affectedChecklistItems": []
+    },
+    {
+      "unitId": "uokik-klauzula-592",
+      "editorialUnit": "Wpis nr 592 (SOKiK XVII AmC 192/05)",
+      "actTitle": "Rejestr Klauzul Niedozwolonych UOKiK / SOKiK",
+      "currentStatus": "active",
+      "isUpToDate": true,
+      "legalStateDate": "2006-04-12",
+      "reasons": [
+        "Wpis aktywny w rejestrze/orzecznictwie"
+      ],
+      "recommendedAction": "none",
+      "affectedChecklistItems": []
+    },
+    {
+      "unitId": "uokik-klauzula-6124",
+      "editorialUnit": "Wpis nr 6124 (SOKiK XVII AmC 1205/13)",
+      "actTitle": "Rejestr Klauzul Niedozwolonych UOKiK / SOKiK",
+      "currentStatus": "active",
+      "isUpToDate": true,
+      "legalStateDate": "2015-08-04",
+      "reasons": [
+        "Wpis aktywny w rejestrze/orzecznictwie"
+      ],
+      "recommendedAction": "none",
+      "affectedChecklistItems": []
+    },
+    {
+      "unitId": "sn-iii-czp-11-13",
+      "editorialUnit": "Uchwała SN III CZP 11/13 (teza)",
+      "actTitle": "Uchwała Sądu Najwyższego z dnia 5 kwietnia 2013 r., sygn. III CZP 11/13",
+      "currentStatus": "active",
+      "isUpToDate": true,
+      "legalStateDate": "2013-04-05",
+      "reasons": [
+        "Wpis aktywny w rejestrze/orzecznictwie"
+      ],
+      "recommendedAction": "none",
+      "affectedChecklistItems": []
+    },
+    {
+      "unitId": "sn-v-csk-31-08",
+      "editorialUnit": "Wyrok SN V CSK 31/08 (teza)",
+      "actTitle": "Wyrok Sądu Najwyższego z dnia 19 czerwca 2008 r., sygn. V CSK 31/08",
+      "currentStatus": "active",
+      "isUpToDate": true,
+      "legalStateDate": "2008-06-19",
+      "reasons": [
+        "Wpis aktywny w rejestrze/orzecznictwie"
+      ],
+      "recommendedAction": "none",
+      "affectedChecklistItems": []
+    },
+    {
+      "unitId": "sn-iii-czp-52-19",
+      "editorialUnit": "Uchwała SN III CZP 52/19 (teza)",
+      "actTitle": "Uchwała Sądu Najwyższego z dnia 12 grudnia 2019 r., sygn. III CZP 52/19",
+      "currentStatus": "active",
+      "isUpToDate": true,
+      "legalStateDate": "2019-12-12",
+      "reasons": [
+        "Wpis aktywny w rejestrze/orzecznictwie"
+      ],
+      "recommendedAction": "none",
+      "affectedChecklistItems": []
+    },
+    {
+      "unitId": "tsue-c-229-19",
+      "editorialUnit": "Wyrok TSUE C-229/19 (pkt 64-67)",
+      "actTitle": "Wyrok Trybunału Sprawiedliwości Unii Europejskiej z dnia 27 stycznia 2021 r., sprawa C-229/19 (Dexia)",
+      "currentStatus": "active",
+      "isUpToDate": true,
+      "legalStateDate": "2021-01-27",
+      "reasons": [
+        "Wpis aktywny w rejestrze/orzecznictwie"
+      ],
+      "recommendedAction": "none",
+      "affectedChecklistItems": []
+    }
+  ],
+  "affectedChecklistCount": 16
+}

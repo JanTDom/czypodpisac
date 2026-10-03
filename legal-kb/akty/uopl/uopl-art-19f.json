@@ -1,0 +1,23 @@
+{
+  "id": "uopl-art-19f",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 21 czerwca 2001 r. o ochronie praw lokatorów, mieszkaniowym zasobie gminy i o zmianie Kodeksu cywilnego",
+  "publicationAddress": "Dz.U. 2023 poz. 725",
+  "editorialUnit": "art. 19f",
+  "content": "Art. 19f. 1. Umową najmu instytucjonalnego lokalu jest umowa najmu lokalu mieszkalnego zawierana przez osobę fizyczną, osobę prawną lub jednostkę organizacyjną niebędącą osobą prawną, prowadzącą działalność gospodarczą w zakresie wynajmowania lokali. 2. Umowa najmu instytucjonalnego lokalu zawierana jest na czas oznaczony. Przepisu art. 661 § 1 ustawy z dnia 23 kwietnia 1964 r. - Kodeks cywilny nie stosuje się. 3 11) Ze zmianą wprowadzoną przez art. 2 ustawy z dnia 29 września 2022 r. o zmianie niektórych ustaw wspierających poprawę warunków mieszkaniowych (Dz. U. poz. 2456), która weszła w życie z dniem 1 grudnia 2022 r. . Do umowy najmu instytucjonalnego lokalu załącza się oświadczenie najemcy w formie aktu notarialnego, w którym najemca poddał się egzekucji i zobowiązał się do opróżnienia i wydania lokalu używanego na podstawie umowy najmu instytucjonalnego lokalu w terminie wskazanym w żądaniu, o którym mowa w art. 19i ust. 2, oraz przyjął do wiadomości, że w razie konieczności wykonania powyższego zobowiązania prawo do najmu socjalnego lokalu ani pomieszczenia tymczasowego nie przysługuje. 4. Zawarcie umowy najmu instytucjonalnego lokalu może być uzależnione od wpłacenia przez najemcę kaucji zabezpieczającej pokrycie należności z tytułu najmu instytucjonalnego lokalu przysługujących właścicielowi oraz ewentualnych kosztów egzekucji obowiązku opróżnienia lokalu. 5. Kaucja nie może przekraczać sześciokrotności miesięcznego czynszu za dany lokal, obliczonego według stawki czynszu obowiązującej w dniu zawarcia umowy najmu instytucjonalnego lokalu. 6. Kaucja podlega zwrotowi w ciągu miesiąca od dnia opróżnienia lokalu, po potrąceniu należności właściciela, o których mowa w ust. 4. 7. Jeżeli w okresie trwania umowy najmu instytucjonalnego najemca nie dokona w terminie należnej płatności z tytułu najmu lub jej części, właściciel może zaspokoić należną wierzytelność z kaucji. 8. W przypadku zaspokojenia należnej wierzytelności przez właściciela z całości lub części kwoty kaucji najemca zobowiązany jest do uzupełnienia kaucji do pełnej wysokości określonej w umowie najmu instytucjonalnego w terminie wskazanym w umowie najmu instytucjonalnego lub jeżeli w umowie termin taki nie został określony, w terminie wskazanym na piśmie i przesłanym najemcy przez właściciela.",
+  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20230000725",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2023-03-09",
+  "contentHashSha256": "a52b5d88ef35db5287e761e4d9a59bd980bfa39df47906df450be61405050aef",
+  "status": "active",
+  "contractTypeTags": [
+    "najem_instytucjonalny"
+  ],
+  "keywords": [
+    "najem instytucjonalny",
+    "przedsiębiorca",
+    "wynajmowanie lokali",
+    "działalność gospodarcza"
+  ],
+  "officialCitation": "Dz.U. 2023 poz. 725, art. 19f"
+}

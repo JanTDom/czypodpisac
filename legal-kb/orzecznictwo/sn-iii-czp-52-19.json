@@ -12,7 +12,8 @@
   "status": "active",
   "contractTypeTags": [
     "najem_lokalu_mieszkalnego",
-    "najem_okazjonalny"
+    "najem_okazjonalny",
+    "najem_instytucjonalny"
   ],
   "keywords": [
     "rozliczenie kaucji",
