@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { rateLimit } from "../../../lib/request-guards";
 
 // W pamięci podręcznej zbieramy sygnały jakości i opinie użytkowników do panelu admina
 export const feedbackStore: Array<{
@@ -11,11 +12,13 @@ export const feedbackStore: Array<{
 }> = [];
 
 export async function POST(req: NextRequest) {
+  const limited = rateLimit(req, "feedback", 10);
+  if (limited) return limited;
   try {
     const body = await req.json();
     const { findingId, reason, contractType } = body;
 
-    if (!findingId || !reason) {
+    if (!findingId || !reason || typeof findingId !== "string" || typeof reason !== "string") {
       return NextResponse.json(
         { error: "Wymagany findingId oraz uzasadnienie." },
         { status: 400 }
@@ -24,9 +27,9 @@ export async function POST(req: NextRequest) {
 
     const item = {
       id: `fb-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`,
-      findingId,
-      reason,
-      contractType,
+      findingId: findingId.slice(0, 200),
+      reason: reason.slice(0, 2000),
+      contractType: typeof contractType === "string" ? contractType.slice(0, 100) : undefined,
       createdAt: new Date().toISOString(),
       status: "new" as const,
     };

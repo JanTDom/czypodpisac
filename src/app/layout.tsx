@@ -50,12 +50,6 @@ export default function RootLayout({
               >
                 Przykładowy raport
               </Link>
-              <Link
-                href="/admin"
-                className="text-slate-500 hover:text-slate-900 focus-visible:rounded px-2 py-1 text-xs border border-slate-200 rounded-md bg-slate-50 hover:bg-slate-100"
-              >
-                Panel administratora
-              </Link>
             </nav>
           </div>
         </header>

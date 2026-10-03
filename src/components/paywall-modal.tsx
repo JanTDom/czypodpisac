@@ -39,14 +39,26 @@ export function PaywallModal({
     setError(null);
     setStep("confirming");
 
-    // Symulacja autoryzacji w aplikacji bankowej (ok. 2.5 sekundy)
-    setTimeout(() => {
-      setStep("success");
-      setTimeout(() => {
-        onSuccess();
-        onClose();
-      }, 1000);
-    }, 2500);
+    fetch("/api/paywall/blik", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ blikCode: cleanCode, email }),
+    })
+      .then(async (res) => {
+        const data = await res.json().catch(() => ({}));
+        if (res.ok && data.success === true) {
+          setStep("success");
+          onSuccess();
+          onClose();
+          return;
+        }
+        setError(data.error || "Płatność się nie powiodła. Nie pobraliśmy pieniędzy.");
+        setStep("code");
+      })
+      .catch(() => {
+        setError("Brak połączenia. Nie pobraliśmy pieniędzy.");
+        setStep("code");
+      });
   };
 
   return (

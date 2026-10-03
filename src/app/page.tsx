@@ -31,11 +31,15 @@ export default function HomePage() {
     let textToAnalyze = submission.text || "";
 
     if (submission.file && !submission.text) {
-      try {
-        textToAnalyze = await submission.file.text();
-      } catch (err) {
-        textToAnalyze = `[Dokument binarny: ${submission.file.name}]`;
+      const isPlainText =
+        submission.file.type === "text/plain" || submission.file.name.toLowerCase().endsWith(".txt");
+      if (!isPlainText) {
+        setErrorMessage(
+          "Na razie czytamy tylko tekst. Otwórz umowę, skopiuj jej treść i wklej ją w pole tekstowe."
+        );
+        return;
       }
+      textToAnalyze = await submission.file.text();
     }
 
     setContractText(textToAnalyze);
@@ -91,7 +95,6 @@ export default function HomePage() {
             userRole: answers["q-user-role"],
             partyStatus: answers["q-party-status"],
           },
-          isPaid,
         }),
       });
 
@@ -107,25 +110,9 @@ export default function HomePage() {
 
   // 3. Odblokowanie płatnej wersji pełnej (BLIK)
   const handleUnlockPaid = async () => {
-    setIsPaid(true);
-
-    try {
-      const res = await fetch("/api/analyze", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          contractText,
-          fileName: currentSubmission?.fileName || "umowa.txt",
-          isPaid: true,
-        }),
-      });
-
-      const data = await res.json();
-      setReport(data.report);
-      setGeneration(data.generation);
-    } catch (err) {
-      console.error("Błąd pobierania pełnego raportu:", err);
-    }
+    // B7: płatny raport wydaje tylko serwer po potwierdzonej płatności.
+    // Bramka płatności nie jest jeszcze podłączona, więc nic tu nie odblokowujemy.
+    setErrorMessage("Płatny raport nie jest jeszcze dostępny.");
   };
 
   const handleDisputeFinding = async (findingId: string, reason: string) => {

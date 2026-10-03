@@ -50,3 +50,16 @@ npm run audit:kb   # ugruntowanie legal-kb w źródłach (kod 1 = są niepotwier
 npm run eval       # ewaluacja prawna i bramki wydania
 npm test           # testy jednostkowe
 ```
+
+## Stan blokerów po poprawkach (2026-10-03, wieczór)
+
+| Nr | Stan | Co zrobiono |
+|---|---|---|
+| B1 | obejście | Interfejs przyjmuje tylko wklejony tekst i pliki .txt; przycisk aparatu ukryty. Serwer odrzuca (422) tekst z podpisami stron i pliki binarne. Odczyt PDF, DOCX i zdjęć nadal do zrobienia. |
+| B2 | częściowo | Klient Gemini Vertex UE istnieje (`src/llm/gemini-client.ts`), ale silnik go jeszcze nie wywołuje. |
+| B4 | zamknięty | Benchmark bez median; panel admina tylko z danymi z konfiguracji i plików audytu. Test `no-fabricated-data`. |
+| B6 | zamknięty | Commit ea62604. |
+| B7 | zamknięty | API ignoruje `isPaid` (402). `/api/paywall/blik` nie potwierdza płatności (503), bo bramka nie jest podłączona. |
+| B8 | zamknięty | `/admin` i odczyt `/api/feedback` za HTTP Basic (`ADMIN_PASSWORD`); bez zmiennej 404. Link usunięty z nagłówka. |
+| B9 | zamknięty z zastrzeżeniem | CSP, HSTS, X-Frame-Options, Referrer-Policy, Permissions-Policy. Limit 200 000 znaków i 10 analiz na minutę na IP. Limit liczy się w pamięci jednej instancji. |
+| B3, B5, B10–B13 | otwarte | Bez zmian. |

@@ -102,7 +102,7 @@ export function StartHero({ onSubmit, isLoading }: StartHeroProps) {
                   <input
                     ref={fileInputRef}
                     type="file"
-                    accept=".pdf,.docx,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,image/*"
+                    accept=".txt,text/plain"
                     onChange={handleFileChange}
                     className="hidden"
                     id="contract-file-upload"
@@ -113,10 +113,10 @@ export function StartHero({ onSubmit, isLoading }: StartHeroProps) {
                   </div>
 
                   <p className="text-base font-semibold text-slate-900 sm:text-lg">
-                    Wrzuć umowę albo zrób zdjęcie
+                    Wklej treść umowy
                   </p>
                   <p className="mt-1 text-xs text-slate-500 max-w-md">
-                    Formaty: PDF, DOCX, zdjęcia z telefonu. Możesz też wkleić tekst.
+                    Na razie czytamy tylko tekst: wklejony albo z pliku .txt. Zdjęcia, PDF i DOCX wkrótce.
                   </p>
 
                   <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
@@ -127,17 +127,7 @@ export function StartHero({ onSubmit, isLoading }: StartHeroProps) {
                       className="inline-flex items-center gap-2 rounded-xl bg-blue-700 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-800 focus-visible:rounded-xl"
                     >
                       <UploadCloud className="h-4 w-4" />
-                      Wybierz plik z dysku
-                    </button>
-
-                    <button
-                      type="button"
-                      disabled={isLoading}
-                      onClick={() => setIsCameraActive(true)}
-                      className="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 shadow-sm hover:bg-slate-50 focus-visible:rounded-xl"
-                    >
-                      <Camera className="h-4 w-4 text-blue-700" />
-                      Zrób zdjęcie telefonem
+                      Wybierz plik .txt
                     </button>
                   </div>
 

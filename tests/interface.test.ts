@@ -3,6 +3,9 @@ import { POST as analyzeHandler } from "../src/app/api/analyze/route";
 import { POST as blikHandler } from "../src/app/api/paywall/blik/route";
 import { POST as feedbackPostHandler, GET as feedbackGetHandler } from "../src/app/api/feedback/route";
 import { NextRequest } from "next/server";
+import { PipelineOrchestrator } from "../src/pipeline/orchestrator";
+import { LegalKnowledgeBase } from "../src/kb";
+import { ChecklistRegistry } from "../src/checklists/registry";
 
 describe("Interfejs i API czypodpisac.pl (Etap 4)", () => {
   const sampleContract = `
@@ -51,20 +54,9 @@ Jan Kowalski, Wynajmujący i Piotr Nowak, Najemca.
       expect(json.report.counts.red).toBeGreaterThanOrEqual(1);
     });
 
-    it("zwraca pełny raport z generowaniem poprawek i maila dla zapytania płatnego (isPaid=true)", async () => {
-      const req = new NextRequest("http://localhost:3000/api/analyze", {
-        method: "POST",
-        body: JSON.stringify({
-          contractText: sampleContract,
-          fileName: "umowa_najmu.txt",
-          isPaid: true,
-        }),
-      });
-
-      const res = await analyzeHandler(req);
-      expect(res.status).toBe(200);
-
-      const json = await res.json();
+    it("silnik generuje poprawki i mail dla pełnego raportu (API wydaje go dopiero po płatności, B7)", async () => {
+      const orchestrator = new PipelineOrchestrator(LegalKnowledgeBase.getInstance(), ChecklistRegistry.getInstance());
+      const json = await orchestrator.runFullPipeline({ contractText: sampleContract, fileName: "umowa_najmu.txt" });
       expect(json.generation).toBeDefined();
       expect(json.generation.amendments.length).toBeGreaterThan(0);
       expect(json.generation.negotiationEmail).toBeDefined();
@@ -90,7 +82,7 @@ Jan Kowalski, Wynajmujący i Piotr Nowak, Najemca.
       expect(res2.status).toBe(400);
     });
 
-    it("autoryzuje poprawny 6-cyfrowy kod BLIK z adresem e-mail", async () => {
+    it("nie potwierdza płatności, bo bramka BLIK nie jest podłączona (B7)", async () => {
       const req = new NextRequest("http://localhost:3000/api/paywall/blik", {
         method: "POST",
         body: JSON.stringify({
@@ -101,12 +93,11 @@ Jan Kowalski, Wynajmujący i Piotr Nowak, Najemca.
       });
 
       const res = await blikHandler(req);
-      expect(res.status).toBe(200);
+      expect(res.status).toBe(503);
 
       const json = await res.json();
-      expect(json.success).toBe(true);
-      expect(json.amountPln).toBe(39);
-      expect(json.transactionId).toBeDefined();
+      expect(json.success).toBeUndefined();
+      expect(json.transactionId).toBeUndefined();
     });
   });
 
