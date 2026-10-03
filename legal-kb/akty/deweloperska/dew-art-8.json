@@ -1,0 +1,27 @@
+{
+  "id": "dew-art-8",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 20 maja 2021 r. o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym",
+  "publicationAddress": "Dz.U. 2026 poz. 880",
+  "editorialUnit": "art. 8",
+  "content": "Art. 8. 1. Nabywca dokonuje wpłat na mieszkaniowy rachunek powierniczy zgodnie z postępem realizacji przedsięwzięcia deweloperskiego lub zadania inwestycyjnego. 2. Wysokość wpłat dokonywanych przez nabywcę jest uzależniona od faktycznego stopnia realizacji poszczególnych etapów przedsięwzięcia deweloperskiego lub zadania inwestycyjnego, określonych w ich harmonogramach. 3. Nabywca dokonuje wpłat na mieszkaniowy rachunek powierniczy po zakończeniu danego etapu przedsięwzięcia deweloperskiego lub zadania inwestycyjnego, określonego w ich harmonogramach. Deweloper informuje nabywcę na papierze lub innym trwałym nośniku o zakończeniu danego etapu przedsięwzięcia deweloperskiego lub zadania inwestycyjnego.",
+  "sourceUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/880/text.pdf",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2026-06-09",
+  "contentHashSha256": "f5962abf506e67facfe3959a333f13aae2cc165c32b44690668ac6eaa8f3e7e2",
+  "status": "active",
+  "contractTypeTags": [
+    "umowa_deweloperska"
+  ],
+  "keywords": [
+    "wpłaty",
+    "rachunek powierniczy",
+    "harmonogram",
+    "etap"
+  ],
+  "officialCitation": "Dz.U. 2026 poz. 880, art. 8",
+  "eliAddress": "DU/2021/1177",
+  "unifiedActEli": "DU/2026/880",
+  "lastVerifiedAt": "2026-10-03T17:03:40.852Z",
+  "freshnessNotes": "Tekst jednolity Dz.U. 2026 poz. 880, stan prawny na 9 czerwca 2026 r. Ustawa Dz.U. 2026 poz. 1077 (wejście w życie 11 listopada 2026 r.) zmienia wyłącznie art. 19b. Część zmian z Dz.U. 2025 poz. 1669 z odroczonym wejściem w życie dotyczy art. 50–52 (Ewidencja), nie jednostek zapisanych tutaj."
+}

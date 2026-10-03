@@ -1,0 +1,31 @@
+{
+  "id": "dew-art-41",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 20 maja 2021 r. o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym",
+  "publicationAddress": "Dz.U. 2026 poz. 880",
+  "editorialUnit": "art. 41",
+  "content": "Art. 41. 1. Przeniesienie na nabywcę praw wynikających z umowy deweloperskiej albo umowy, o której mowa w art. 2 ust. 1 pkt 2, 3 lub 5, jest poprzedzone odbiorem lokalu mieszkalnego albo domu jednorodzinnego przez nabywcę. Odbiór ten następuje odpowiednio po uprawomocnieniu się decyzji o pozwoleniu na użytkowanie albo zawiadomieniu organu nadzoru budowlanego o zakończeniu budowy domu jednorodzinnego przy braku sprzeciwu ze strony tego organu. 2. Odbiór, o którym mowa w ust. 1, jest dokonywany w obecności nabywcy. 3. Z odbioru, o którym mowa w ust. 1, sporządza się protokół, do którego nabywca może zgłosić wady lokalu mieszkalnego albo domu jednorodzinnego. W protokole odnotowuje się również odmowę dokonania odbioru przez nabywcę w przypadku stwierdzenia wady istotnej, uznanie wady istotnej przez dewelopera albo odmowę uznania wady istotnej przez dewelopera. 4. Deweloper jest obowiązany w terminie 14 dni od dnia podpisania protokołu, o którym mowa w ust. 3, przekazać nabywcy na papierze lub innym trwałym nośniku: 1) informację o uznaniu wad albo 2) oświadczenie o odmowie uznania wad oraz o przyczynach tej odmowy. 5. Jeżeli deweloper nie poinformuje nabywcy o uznaniu wad albo o odmowie uznania wad oraz jej przyczynach w terminie, o którym mowa w ust. 4, uważa się, że uznał wady. 6. Deweloper jest obowiązany w terminie 30 dni od dnia podpisania protokołu, o którym mowa w ust. 3, usunąć uznane wady lokalu mieszkalnego albo domu jednorodzinnego. 7. Jeżeli deweloper, mimo zachowania należytej staranności, nie usunie wad w terminie, o którym mowa w ust. 6, wskazuje inny termin usunięcia wad wraz z uzasadnieniem opóźnienia. Termin ten nie może powodować nadmiernych niedogodności dla nabywcy. 8. Jeżeli deweloper nie usunie wad w terminie wskazanym na podstawie ust. 7 albo nie wskaże takiego terminu, nabywca wyznacza deweloperowi nowy termin na usunięcie wad. Po bezskutecznym upływie tego terminu nabywca może usunąć wady na koszt dewelopera. 9. Nabywca może odmówić dokonania odbioru w przypadku stwierdzenia podczas odbioru, że lokal mieszkalny albo dom jednorodzinny posiada wadę istotną i jednocześnie deweloper odmówi uznania jej w protokole, o którym mowa w ust. 3. 10. Odmowa dokonania odbioru, o której mowa w ust. 9, nie ma wpływu na bieg terminu, o którym mowa w art. 43 ust. 3. 11. W przypadku uznania przez dewelopera wady istotnej w protokole, o którym mowa w ust. 3, stosuje się przepisy ust. 6–8, z tym że po bezskutecznym upływie terminu na usunięcie wady istotnej nabywca może odstąpić od umowy. 12. W przypadku odmowy dokonania odbioru ze względu na wadę istotną strony ustalają nowy termin odbioru umożliwiający deweloperowi usunięcie tej wady przed dokonaniem powtórnego odbioru. Do powtórnego odbioru stosuje się przepisy ust. 2–9. 13. Odmowa dokonania odbioru ze względu na wadę istotną w ramach powtórnego odbioru wymaga przedstawienia przez nabywcę opinii rzeczoznawcy budowlanego. Nabywca występuje z wnioskiem o wydanie opinii przez rzeczoznawcę budowlanego w terminie miesiąca od dnia odmowy. 14. Bieg terminu, o którym mowa w art. 43 ust. 3, ulega zawieszeniu do dnia przedstawienia przez nabywcę deweloperowi opinii rzeczoznawcy budowlanego, o której mowa w ust. 13. 15. W przypadku stwierdzenia przez rzeczoznawcę budowlanego w opinii, o której mowa w ust. 13, istnienia wady istotnej nabywca może odstąpić od umowy. 16. W przypadku niestwierdzenia przez rzeczoznawcę budowlanego istnienia wady istotnej koszty sporządzenia opinii przez rzeczoznawcę budowlanego obciążają w całości nabywcę. 17. W przypadku stwierdzenia przez rzeczoznawcę budowlanego istnienia wady istotnej koszty sporządzenia opinii przez rzeczoznawcę budowlanego obciążają w całości dewelopera. 18. Rozliczenie kosztów sporządzenia opinii przez rzeczoznawcę budowlanego między deweloperem a nabywcą następuje najpóźniej w dniu zawarcia umowy przenoszącej na nabywcę prawa wynikające z umowy deweloperskiej albo umowy, o której mowa w art. 2 ust. 1 pkt 2, 3 lub 5, albo w dniu złożenia oświadczenia o odstąpieniu od umowy. 19. Jeżeli wada lokalu mieszkalnego albo domu jednorodzinnego zostanie stwierdzona przez nabywcę w okresie od dnia podpisania protokołu, o którym mowa w ust. 3, do dnia zawarcia z deweloperem umowy przenoszącej na nabywcę prawa wynikające z umowy deweloperskiej albo umowy, o której mowa w art. 2 ust. 1 pkt 2, 3 lub 5, nabywca może zgłosić taką wadę deweloperowi. Przepisy ust. 4–8 stosuje się odpowiednio, z tym że bieg terminów, o których mowa w ust. 4 i 6, rozpoczyna się od dnia zgłoszenia wady.",
+  "sourceUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/880/text.pdf",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2026-06-09",
+  "contentHashSha256": "56f013fd1656c97711b23704274ff12484b723fd4d5281b53cd949a1f487e0d4",
+  "status": "active",
+  "contractTypeTags": [
+    "umowa_deweloperska"
+  ],
+  "keywords": [
+    "odbiór",
+    "protokół odbioru",
+    "wady",
+    "usunięcie wad",
+    "usunięcia wad",
+    "zgłoszone wady",
+    "wada istotna",
+    "rzeczoznawca"
+  ],
+  "officialCitation": "Dz.U. 2026 poz. 880, art. 41",
+  "eliAddress": "DU/2021/1177",
+  "unifiedActEli": "DU/2026/880",
+  "lastVerifiedAt": "2026-10-03T17:03:40.852Z",
+  "freshnessNotes": "Tekst jednolity Dz.U. 2026 poz. 880, stan prawny na 9 czerwca 2026 r. Ustawa Dz.U. 2026 poz. 1077 (wejście w życie 11 listopada 2026 r.) zmienia wyłącznie art. 19b. Część zmian z Dz.U. 2025 poz. 1669 z odroczonym wejściem w życie dotyczy art. 50–52 (Ewidencja), nie jednostek zapisanych tutaj."
+}

@@ -1,0 +1,27 @@
+{
+  "id": "dew-art-21",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 20 maja 2021 r. o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym",
+  "publicationAddress": "Dz.U. 2026 poz. 880",
+  "editorialUnit": "art. 21",
+  "content": "Art. 21. 1. Deweloper przed zawarciem umowy deweloperskiej, umowy, o której mowa w art. 2 ust. 1 pkt 2, 3 lub 5, lub poprzedzającej te umowy umowy rezerwacyjnej, o której mowa w art. 29 ust. 2, doręcza osobie zainteresowanej zawarciem umowy prospekt informacyjny wraz z załącznikami. 2. Prospekt informacyjny wraz z załącznikami deweloper doręcza nieodpłatnie na trwałym nośniku. 3. W przypadku doręczenia prospektu informacyjnego wraz z załącznikami wyłącznie na trwałym nośniku innym niż papier deweloper jest obowiązany, na żądanie osoby zainteresowanej zawarciem umowy deweloperskiej, umowy, o której mowa w art. 2 ust. 1 pkt 2, 3 lub 5, lub poprzedzającej te umowy umowy rezerwacyjnej, o której mowa w art. 29 ust. 2, do udostępnienia prospektu informacyjnego wraz z załącznikami na papierze w lokalu przedsiębiorstwa.",
+  "sourceUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/880/text.pdf",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2026-06-09",
+  "contentHashSha256": "cf20b41b958cb69d4d33cc02b1bd7effa485aca4f57a261d9ff9ee4458431c73",
+  "status": "active",
+  "contractTypeTags": [
+    "umowa_deweloperska",
+    "umowa_rezerwacyjna"
+  ],
+  "keywords": [
+    "prospekt informacyjny",
+    "doręczenie prospektu",
+    "trwały nośnik"
+  ],
+  "officialCitation": "Dz.U. 2026 poz. 880, art. 21",
+  "eliAddress": "DU/2021/1177",
+  "unifiedActEli": "DU/2026/880",
+  "lastVerifiedAt": "2026-10-03T17:03:40.852Z",
+  "freshnessNotes": "Tekst jednolity Dz.U. 2026 poz. 880, stan prawny na 9 czerwca 2026 r. Ustawa Dz.U. 2026 poz. 1077 (wejście w życie 11 listopada 2026 r.) zmienia wyłącznie art. 19b. Część zmian z Dz.U. 2025 poz. 1669 z odroczonym wejściem w życie dotyczy art. 50–52 (Ewidencja), nie jednostek zapisanych tutaj."
+}

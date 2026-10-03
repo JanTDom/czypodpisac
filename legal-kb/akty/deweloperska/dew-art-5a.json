@@ -1,0 +1,28 @@
+{
+  "id": "dew-art-5a",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 20 maja 2021 r. o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym",
+  "publicationAddress": "Dz.U. 2026 poz. 880",
+  "editorialUnit": "art. 5a",
+  "content": "Art. 5a. W umowach, o których mowa w art. 2–4, i w umowie rezerwacyjnej, o której mowa w art. 29 ust. 2, cenę lokalu lub domu jednorodzinnego określa się jako iloczyn m² ich powierzchni użytkowej oraz ceny za 1 m² powierzchni użytkowej. Powierzchnię użytkową ustala się zgodnie z zasadami zawartymi w Polskiej Normie dotyczącej określania i obliczania wskaźników powierzchniowych i kubaturowych w budownictwie, obowiązującej w dniu złożenia wniosku o pozwolenie na budowę lub dokonania zgłoszenia budowy, o którym mowa w art. 29 ust. 1 pkt 1 ustawy z dnia 7 lipca 1994 r. – Prawo budowlane, dotyczącego lokalu lub domu jednorodzinnego, którego powierzchnia jest ustalana.",
+  "sourceUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/880/text.pdf",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2026-06-09",
+  "contentHashSha256": "6ea4d17ad0b8b759258f2c6fa3d399fc08dcf9370ab6f4a42392da7e3e057369",
+  "status": "active",
+  "contractTypeTags": [
+    "umowa_deweloperska",
+    "umowa_rezerwacyjna"
+  ],
+  "keywords": [
+    "cena",
+    "cena za metr",
+    "powierzchnia użytkowa",
+    "iloczyn"
+  ],
+  "officialCitation": "Dz.U. 2026 poz. 880, art. 5a",
+  "eliAddress": "DU/2021/1177",
+  "unifiedActEli": "DU/2026/880",
+  "lastVerifiedAt": "2026-10-03T17:03:40.852Z",
+  "freshnessNotes": "Tekst jednolity Dz.U. 2026 poz. 880, stan prawny na 9 czerwca 2026 r. Ustawa Dz.U. 2026 poz. 1077 (wejście w życie 11 listopada 2026 r.) zmienia wyłącznie art. 19b. Część zmian z Dz.U. 2025 poz. 1669 z odroczonym wejściem w życie dotyczy art. 50–52 (Ewidencja), nie jednostek zapisanych tutaj."
+}

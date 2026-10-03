@@ -70,7 +70,7 @@ export const CORE_ACTS_REGISTRY: CoreActDefinition[] = [
     title: "Ustawa z dnia 20 maja 2021 r. o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym",
     shortTitle: "Ustawa deweloperska",
     baseEliId: "DU/2021/1177",
-    latestKnownUnifiedEli: "DU/2024/695",
+    latestKnownUnifiedEli: "DU/2026/880",
     officialPublisher: "DU",
     coverageScope: "full",
     contractTypeTags: ["umowa_deweloperska", "umowa_rezerwacyjna", "umowa_przedwstepna", "konsument"],

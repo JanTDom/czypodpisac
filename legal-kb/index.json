@@ -1,16 +1,17 @@
 {
   "version": "2026.10-all-contracts",
-  "generatedAt": "2026-10-03T14:26:42.248Z",
-  "totalUnits": 70,
+  "generatedAt": "2026-10-03T17:03:40.852Z",
+  "totalUnits": 93,
   "unitsByAct": {
     "Ustawa o ochronie praw lokatorów": 22,
     "Kodeks cywilny": 33,
     "Kodeks pracy": 6,
     "Rejestr Klauzul UOKiK": 5,
-    "Orzecznictwo SN i TSUE": 4
+    "Orzecznictwo SN i TSUE": 4,
+    "Ustawa deweloperska": 23
   },
   "unitsByType": {
-    "statute": 61,
+    "statute": 84,
     "uokik_clause": 5,
     "court_ruling": 4
   },
@@ -948,6 +949,290 @@
         "najem_lokalu_mieszkalnego",
         "najem_okazjonalny",
         "konsument"
+      ]
+    },
+    {
+      "id": "dew-art-5",
+      "unitType": "statute",
+      "editorialUnit": "art. 5 pkt 5–6",
+      "actTitle": "Ustawa z dnia 20 maja 2021 r. o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym",
+      "filePath": "akty/deweloperska/dew-art-5.json",
+      "legalStateDate": "2026-06-09",
+      "status": "active",
+      "contractTypeTags": [
+        "umowa_deweloperska"
+      ]
+    },
+    {
+      "id": "dew-art-5a",
+      "unitType": "statute",
+      "editorialUnit": "art. 5a",
+      "actTitle": "Ustawa z dnia 20 maja 2021 r. o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym",
+      "filePath": "akty/deweloperska/dew-art-5a.json",
+      "legalStateDate": "2026-06-09",
+      "status": "active",
+      "contractTypeTags": [
+        "umowa_deweloperska",
+        "umowa_rezerwacyjna"
+      ]
+    },
+    {
+      "id": "dew-art-6",
+      "unitType": "statute",
+      "editorialUnit": "art. 6",
+      "actTitle": "Ustawa z dnia 20 maja 2021 r. o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym",
+      "filePath": "akty/deweloperska/dew-art-6.json",
+      "legalStateDate": "2026-06-09",
+      "status": "active",
+      "contractTypeTags": [
+        "umowa_deweloperska"
+      ]
+    },
+    {
+      "id": "dew-art-8",
+      "unitType": "statute",
+      "editorialUnit": "art. 8",
+      "actTitle": "Ustawa z dnia 20 maja 2021 r. o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym",
+      "filePath": "akty/deweloperska/dew-art-8.json",
+      "legalStateDate": "2026-06-09",
+      "status": "active",
+      "contractTypeTags": [
+        "umowa_deweloperska"
+      ]
+    },
+    {
+      "id": "dew-art-14",
+      "unitType": "statute",
+      "editorialUnit": "art. 14",
+      "actTitle": "Ustawa z dnia 20 maja 2021 r. o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym",
+      "filePath": "akty/deweloperska/dew-art-14.json",
+      "legalStateDate": "2026-06-09",
+      "status": "active",
+      "contractTypeTags": [
+        "umowa_deweloperska"
+      ]
+    },
+    {
+      "id": "dew-art-21",
+      "unitType": "statute",
+      "editorialUnit": "art. 21",
+      "actTitle": "Ustawa z dnia 20 maja 2021 r. o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym",
+      "filePath": "akty/deweloperska/dew-art-21.json",
+      "legalStateDate": "2026-06-09",
+      "status": "active",
+      "contractTypeTags": [
+        "umowa_deweloperska",
+        "umowa_rezerwacyjna"
+      ]
+    },
+    {
+      "id": "dew-art-23",
+      "unitType": "statute",
+      "editorialUnit": "art. 23",
+      "actTitle": "Ustawa z dnia 20 maja 2021 r. o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym",
+      "filePath": "akty/deweloperska/dew-art-23.json",
+      "legalStateDate": "2026-06-09",
+      "status": "active",
+      "contractTypeTags": [
+        "umowa_deweloperska",
+        "umowa_rezerwacyjna"
+      ]
+    },
+    {
+      "id": "dew-art-24",
+      "unitType": "statute",
+      "editorialUnit": "art. 24",
+      "actTitle": "Ustawa z dnia 20 maja 2021 r. o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym",
+      "filePath": "akty/deweloperska/dew-art-24.json",
+      "legalStateDate": "2026-06-09",
+      "status": "active",
+      "contractTypeTags": [
+        "umowa_deweloperska"
+      ]
+    },
+    {
+      "id": "dew-art-25",
+      "unitType": "statute",
+      "editorialUnit": "art. 25",
+      "actTitle": "Ustawa z dnia 20 maja 2021 r. o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym",
+      "filePath": "akty/deweloperska/dew-art-25.json",
+      "legalStateDate": "2026-06-09",
+      "status": "active",
+      "contractTypeTags": [
+        "umowa_deweloperska"
+      ]
+    },
+    {
+      "id": "dew-art-29",
+      "unitType": "statute",
+      "editorialUnit": "art. 29",
+      "actTitle": "Ustawa z dnia 20 maja 2021 r. o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym",
+      "filePath": "akty/deweloperska/dew-art-29.json",
+      "legalStateDate": "2026-06-09",
+      "status": "active",
+      "contractTypeTags": [
+        "umowa_deweloperska",
+        "umowa_rezerwacyjna"
+      ]
+    },
+    {
+      "id": "dew-art-30",
+      "unitType": "statute",
+      "editorialUnit": "art. 30",
+      "actTitle": "Ustawa z dnia 20 maja 2021 r. o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym",
+      "filePath": "akty/deweloperska/dew-art-30.json",
+      "legalStateDate": "2026-06-09",
+      "status": "active",
+      "contractTypeTags": [
+        "umowa_deweloperska",
+        "umowa_rezerwacyjna"
+      ]
+    },
+    {
+      "id": "dew-art-31",
+      "unitType": "statute",
+      "editorialUnit": "art. 31",
+      "actTitle": "Ustawa z dnia 20 maja 2021 r. o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym",
+      "filePath": "akty/deweloperska/dew-art-31.json",
+      "legalStateDate": "2026-06-09",
+      "status": "active",
+      "contractTypeTags": [
+        "umowa_deweloperska",
+        "umowa_rezerwacyjna"
+      ]
+    },
+    {
+      "id": "dew-art-32",
+      "unitType": "statute",
+      "editorialUnit": "art. 32",
+      "actTitle": "Ustawa z dnia 20 maja 2021 r. o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym",
+      "filePath": "akty/deweloperska/dew-art-32.json",
+      "legalStateDate": "2026-06-09",
+      "status": "active",
+      "contractTypeTags": [
+        "umowa_deweloperska",
+        "umowa_rezerwacyjna"
+      ]
+    },
+    {
+      "id": "dew-art-34",
+      "unitType": "statute",
+      "editorialUnit": "art. 34",
+      "actTitle": "Ustawa z dnia 20 maja 2021 r. o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym",
+      "filePath": "akty/deweloperska/dew-art-34.json",
+      "legalStateDate": "2026-06-09",
+      "status": "active",
+      "contractTypeTags": [
+        "umowa_deweloperska",
+        "umowa_rezerwacyjna"
+      ]
+    },
+    {
+      "id": "dew-art-35",
+      "unitType": "statute",
+      "editorialUnit": "art. 35",
+      "actTitle": "Ustawa z dnia 20 maja 2021 r. o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym",
+      "filePath": "akty/deweloperska/dew-art-35.json",
+      "legalStateDate": "2026-06-09",
+      "status": "active",
+      "contractTypeTags": [
+        "umowa_deweloperska"
+      ]
+    },
+    {
+      "id": "dew-art-39",
+      "unitType": "statute",
+      "editorialUnit": "art. 39",
+      "actTitle": "Ustawa z dnia 20 maja 2021 r. o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym",
+      "filePath": "akty/deweloperska/dew-art-39.json",
+      "legalStateDate": "2026-06-09",
+      "status": "active",
+      "contractTypeTags": [
+        "umowa_deweloperska"
+      ]
+    },
+    {
+      "id": "dew-art-40",
+      "unitType": "statute",
+      "editorialUnit": "art. 40",
+      "actTitle": "Ustawa z dnia 20 maja 2021 r. o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym",
+      "filePath": "akty/deweloperska/dew-art-40.json",
+      "legalStateDate": "2026-06-09",
+      "status": "active",
+      "contractTypeTags": [
+        "umowa_deweloperska"
+      ]
+    },
+    {
+      "id": "dew-art-41",
+      "unitType": "statute",
+      "editorialUnit": "art. 41",
+      "actTitle": "Ustawa z dnia 20 maja 2021 r. o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym",
+      "filePath": "akty/deweloperska/dew-art-41.json",
+      "legalStateDate": "2026-06-09",
+      "status": "active",
+      "contractTypeTags": [
+        "umowa_deweloperska"
+      ]
+    },
+    {
+      "id": "dew-art-41a",
+      "unitType": "statute",
+      "editorialUnit": "art. 41a",
+      "actTitle": "Ustawa z dnia 20 maja 2021 r. o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym",
+      "filePath": "akty/deweloperska/dew-art-41a.json",
+      "legalStateDate": "2026-06-09",
+      "status": "active",
+      "contractTypeTags": [
+        "umowa_deweloperska"
+      ]
+    },
+    {
+      "id": "dew-art-42",
+      "unitType": "statute",
+      "editorialUnit": "art. 42",
+      "actTitle": "Ustawa z dnia 20 maja 2021 r. o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym",
+      "filePath": "akty/deweloperska/dew-art-42.json",
+      "legalStateDate": "2026-06-09",
+      "status": "active",
+      "contractTypeTags": [
+        "umowa_deweloperska"
+      ]
+    },
+    {
+      "id": "dew-art-43",
+      "unitType": "statute",
+      "editorialUnit": "art. 43",
+      "actTitle": "Ustawa z dnia 20 maja 2021 r. o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym",
+      "filePath": "akty/deweloperska/dew-art-43.json",
+      "legalStateDate": "2026-06-09",
+      "status": "active",
+      "contractTypeTags": [
+        "umowa_deweloperska"
+      ]
+    },
+    {
+      "id": "dew-art-44",
+      "unitType": "statute",
+      "editorialUnit": "art. 44 ust. 1–3",
+      "actTitle": "Ustawa z dnia 20 maja 2021 r. o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym",
+      "filePath": "akty/deweloperska/dew-art-44.json",
+      "legalStateDate": "2026-06-09",
+      "status": "active",
+      "contractTypeTags": [
+        "umowa_deweloperska"
+      ]
+    },
+    {
+      "id": "dew-art-45",
+      "unitType": "statute",
+      "editorialUnit": "art. 45",
+      "actTitle": "Ustawa z dnia 20 maja 2021 r. o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym",
+      "filePath": "akty/deweloperska/dew-art-45.json",
+      "legalStateDate": "2026-06-09",
+      "status": "active",
+      "contractTypeTags": [
+        "umowa_deweloperska"
       ]
     }
   ]

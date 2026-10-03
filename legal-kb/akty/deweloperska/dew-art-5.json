@@ -1,0 +1,26 @@
+{
+  "id": "dew-art-5",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 20 maja 2021 r. o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym",
+  "publicationAddress": "Dz.U. 2026 poz. 880",
+  "editorialUnit": "art. 5 pkt 5–6",
+  "content": "5) nabywca – osobę fizyczną, która w celu niezwiązanym bezpośrednio z jej działalnością gospodarczą lub zawodową zawiera z: a) deweloperem jedną z umów, o których mowa w art. 2 albo art. 3, albo b) przedsiębiorcą innym niż deweloper jedną z umów, o których mowa w art. 4, albo c) deweloperem albo przedsiębiorcą innym niż deweloper umowę, o której mowa w art. 28 ust. 1; 6) umowa deweloperska – umowę zawartą między nabywcą a deweloperem, na podstawie której deweloper zobowiązuje się do wybudowania budynku oraz ustanowienia odrębnej własności lokalu mieszkalnego i przeniesienia własności tego lokalu oraz praw niezbędnych do korzystania z tego lokalu na nabywcę albo zabudowania nieruchomości gruntowej stanowiącej przedmiot własności lub użytkowania wieczystego domem jednorodzinnym i przeniesienia na nabywcę własności tej nieruchomości lub użytkowania wieczystego nieruchomości gruntowej i własności domu jednorodzinnego na niej posadowionego stanowiącego odrębną nieruchomość lub przeniesienia ułamkowej części własności tej nieruchomości wraz z prawem do wyłącznego korzystania z części nieruchomości służącej zaspokajaniu potrzeb mieszkaniowych, a nabywca zobowiązuje się do spełnienia świadczenia pieniężnego na poczet nabycia tego prawa;",
+  "sourceUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/880/text.pdf",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2026-06-09",
+  "contentHashSha256": "5ebd3ec7a96933a179e5225c0a173569e56f3095fc125f6825110c7025829fd9",
+  "status": "active",
+  "contractTypeTags": [
+    "umowa_deweloperska"
+  ],
+  "keywords": [
+    "nabywca",
+    "umowa deweloperska",
+    "definicja"
+  ],
+  "officialCitation": "Dz.U. 2026 poz. 880, art. 5 pkt 5–6",
+  "eliAddress": "DU/2021/1177",
+  "unifiedActEli": "DU/2026/880",
+  "lastVerifiedAt": "2026-10-03T17:03:40.852Z",
+  "freshnessNotes": "Tekst jednolity Dz.U. 2026 poz. 880, stan prawny na 9 czerwca 2026 r. Ustawa Dz.U. 2026 poz. 1077 (wejście w życie 11 listopada 2026 r.) zmienia wyłącznie art. 19b. Część zmian z Dz.U. 2025 poz. 1669 z odroczonym wejściem w życie dotyczy art. 50–52 (Ewidencja), nie jednostek zapisanych tutaj."
+}

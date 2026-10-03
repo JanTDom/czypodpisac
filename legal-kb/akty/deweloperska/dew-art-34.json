@@ -1,0 +1,27 @@
+{
+  "id": "dew-art-34",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 20 maja 2021 r. o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym",
+  "publicationAddress": "Dz.U. 2026 poz. 880",
+  "editorialUnit": "art. 34",
+  "content": "Art. 34. 1. Opłata rezerwacyjna, o której mowa w art. 32 ust. 1, jest niezwłocznie zwracana rezerwującemu w przypadku, gdy: 1) rezerwujący nie uzyskał pozytywnej decyzji kredytowej lub przyrzeczenia udzielenia kredytu, o których mowa w art. 31 zdanie drugie, w związku z negatywną oceną zdolności kredytowej w rozumieniu art. 4 pkt 11 ustawy z dnia 23 marca 2017 r. o kredycie hipotecznym oraz o nadzorze nad pośrednikami kredytu hipotecznego i agentami; 2) deweloper albo przedsiębiorca inny niż deweloper, o którym mowa w art. 4, nie wykonuje zobowiązania wynikającego z umowy rezerwacyjnej; 3) deweloper dokonał zmiany w prospekcie informacyjnym lub jego załącznikach bez poinformowania rezerwującego. 2. W przypadku gdy umowa, o której mowa w art. 3 albo art. 4, została poprzedzona umową rezerwacyjną, a deweloper albo przedsiębiorca inny niż deweloper nie usunął wad zgłoszonych do protokołu odbioru i nabywca nie przystąpił do podpisania umowy przenoszącej własność nieruchomości, opłata rezerwacyjna jest zwracana w podwójnej wysokości. 3. W przypadku, o którym mowa w ust. 1 pkt 2, opłata rezerwacyjna jest zwracana w podwójnej wysokości.",
+  "sourceUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/880/text.pdf",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2026-06-09",
+  "contentHashSha256": "ea87195202ac57fd63dff9db29dead39be71fc9aa36ebcf6e92a4e169da830eb",
+  "status": "active",
+  "contractTypeTags": [
+    "umowa_deweloperska",
+    "umowa_rezerwacyjna"
+  ],
+  "keywords": [
+    "opłata rezerwacyjna",
+    "zwrot opłaty rezerwacyjnej",
+    "podwójna wysokość"
+  ],
+  "officialCitation": "Dz.U. 2026 poz. 880, art. 34",
+  "eliAddress": "DU/2021/1177",
+  "unifiedActEli": "DU/2026/880",
+  "lastVerifiedAt": "2026-10-03T17:03:40.852Z",
+  "freshnessNotes": "Tekst jednolity Dz.U. 2026 poz. 880, stan prawny na 9 czerwca 2026 r. Ustawa Dz.U. 2026 poz. 1077 (wejście w życie 11 listopada 2026 r.) zmienia wyłącznie art. 19b. Część zmian z Dz.U. 2025 poz. 1669 z odroczonym wejściem w życie dotyczy art. 50–52 (Ewidencja), nie jednostek zapisanych tutaj."
+}

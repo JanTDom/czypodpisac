@@ -1,0 +1,26 @@
+{
+  "id": "dew-art-23",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 20 maja 2021 r. o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym",
+  "publicationAddress": "Dz.U. 2026 poz. 880",
+  "editorialUnit": "art. 23",
+  "content": "Art. 23. 1. Deweloper przekazuje nabywcy szczegółowe dane i informacje dotyczące swojej sytuacji prawno-finansowej oraz przedsięwzięcia deweloperskiego lub zadania inwestycyjnego, w tym konkretnego oferowanego do sprzedaży lokalu mieszkalnego lub domu jednorodzinnego – w zakresie określonym w prospekcie informacyjnym. 2. Prospekt informacyjny wraz z załącznikami stanowi integralną część umowy deweloperskiej, umowy, o której mowa w art. 2 ust. 1 pkt 2, 3 lub 5, lub poprzedzającej te umowy umowy rezerwacyjnej, o której mowa w art. 29 ust. 2.",
+  "sourceUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/880/text.pdf",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2026-06-09",
+  "contentHashSha256": "b77ce7c21240f5ed2201b57b8b07e51cd998c87cedcd78b71add84d96851a595",
+  "status": "active",
+  "contractTypeTags": [
+    "umowa_deweloperska",
+    "umowa_rezerwacyjna"
+  ],
+  "keywords": [
+    "prospekt informacyjny",
+    "integralna część umowy"
+  ],
+  "officialCitation": "Dz.U. 2026 poz. 880, art. 23",
+  "eliAddress": "DU/2021/1177",
+  "unifiedActEli": "DU/2026/880",
+  "lastVerifiedAt": "2026-10-03T17:03:40.852Z",
+  "freshnessNotes": "Tekst jednolity Dz.U. 2026 poz. 880, stan prawny na 9 czerwca 2026 r. Ustawa Dz.U. 2026 poz. 1077 (wejście w życie 11 listopada 2026 r.) zmienia wyłącznie art. 19b. Część zmian z Dz.U. 2025 poz. 1669 z odroczonym wejściem w życie dotyczy art. 50–52 (Ewidencja), nie jednostek zapisanych tutaj."
+}

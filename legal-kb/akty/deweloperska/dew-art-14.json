@@ -1,0 +1,26 @@
+{
+  "id": "dew-art-14",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 20 maja 2021 r. o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym",
+  "publicationAddress": "Dz.U. 2026 poz. 880",
+  "editorialUnit": "art. 14",
+  "content": "Art. 14. 1. Koszty, opłaty i prowizje za prowadzenie mieszkaniowego rachunku powierniczego obciążają dewelopera. 2. Środki pieniężne wpłacone przez nabywcę na mieszkaniowy rachunek powierniczy nie mogą być pomniejszone o koszty, opłaty i prowizje, o których mowa w ust. 1.",
+  "sourceUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/880/text.pdf",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2026-06-09",
+  "contentHashSha256": "dba5f51c9c4fc70eeea220cf5b5d09724b43581d8c480bc2e5aed7cb7fa6f8b0",
+  "status": "active",
+  "contractTypeTags": [
+    "umowa_deweloperska"
+  ],
+  "keywords": [
+    "koszty rachunku powierniczego",
+    "prowizje",
+    "opłaty"
+  ],
+  "officialCitation": "Dz.U. 2026 poz. 880, art. 14",
+  "eliAddress": "DU/2021/1177",
+  "unifiedActEli": "DU/2026/880",
+  "lastVerifiedAt": "2026-10-03T17:03:40.852Z",
+  "freshnessNotes": "Tekst jednolity Dz.U. 2026 poz. 880, stan prawny na 9 czerwca 2026 r. Ustawa Dz.U. 2026 poz. 1077 (wejście w życie 11 listopada 2026 r.) zmienia wyłącznie art. 19b. Część zmian z Dz.U. 2025 poz. 1669 z odroczonym wejściem w życie dotyczy art. 50–52 (Ewidencja), nie jednostek zapisanych tutaj."
+}

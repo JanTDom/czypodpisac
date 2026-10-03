@@ -1,0 +1,26 @@
+{
+  "id": "dew-art-29",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 20 maja 2021 r. o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym",
+  "publicationAddress": "Dz.U. 2026 poz. 880",
+  "editorialUnit": "art. 29",
+  "content": "Art. 29. 1. Umowa deweloperska albo umowa, o której mowa w art. 2 ust. 1 pkt 2, 3 lub 5 lub art. 3 albo art. 4, może być poprzedzona zawarciem umowy rezerwacyjnej. 2. Umowa rezerwacyjna to umowa między deweloperem albo przedsiębiorcą innym niż deweloper, o którym mowa w art. 4, a osobą zainteresowaną ofertą sprzedaży, zwaną dalej „rezerwującym”, której przedmiotem jest zobowiązanie do czasowego wyłączenia z oferty sprzedaży lokalu mieszkalnego albo domu jednorodzinnego wybranego przez rezerwującego.",
+  "sourceUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/880/text.pdf",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2026-06-09",
+  "contentHashSha256": "c856e53a6ca0d78a4467171bd2b773c685ca05250d2f3419b98e657b272407a3",
+  "status": "active",
+  "contractTypeTags": [
+    "umowa_deweloperska",
+    "umowa_rezerwacyjna"
+  ],
+  "keywords": [
+    "umowa rezerwacyjna",
+    "rezerwacja"
+  ],
+  "officialCitation": "Dz.U. 2026 poz. 880, art. 29",
+  "eliAddress": "DU/2021/1177",
+  "unifiedActEli": "DU/2026/880",
+  "lastVerifiedAt": "2026-10-03T17:03:40.852Z",
+  "freshnessNotes": "Tekst jednolity Dz.U. 2026 poz. 880, stan prawny na 9 czerwca 2026 r. Ustawa Dz.U. 2026 poz. 1077 (wejście w życie 11 listopada 2026 r.) zmienia wyłącznie art. 19b. Część zmian z Dz.U. 2025 poz. 1669 z odroczonym wejściem w życie dotyczy art. 50–52 (Ewidencja), nie jednostek zapisanych tutaj."
+}

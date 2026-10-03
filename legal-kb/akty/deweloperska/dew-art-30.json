@@ -1,0 +1,27 @@
+{
+  "id": "dew-art-30",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 20 maja 2021 r. o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym",
+  "publicationAddress": "Dz.U. 2026 poz. 880",
+  "editorialUnit": "art. 30",
+  "content": "Art. 30. 1. Umowę rezerwacyjną zawiera się w formie pisemnej pod rygorem nieważności. 2. Umowa rezerwacyjna określa w szczególności: 1) strony, miejsce i datę zawarcia umowy; 2) cenę lokalu mieszkalnego albo domu jednorodzinnego wybranego przez rezerwującego z oferty sprzedaży; 3) wysokość opłaty rezerwacyjnej, o której mowa w art. 32 ust. 1, jeżeli taka opłata została przewidziana przez strony; 4) okres, na jaki lokal mieszkalny albo dom jednorodzinny wybrany przez rezerwującego będzie wyłączony z oferty sprzedaży; 5) określenie usytuowania lokalu mieszkalnego w budynku; 6) określenie powierzchni użytkowej lokalu mieszkalnego albo domu jednorodzinnego, powierzchni i układu pomieszczeń. 3. Nie dokonuje się przeniesienia na osobę trzecią wierzytelności wynikających z umowy rezerwacyjnej. Dokonanie takiego przeniesienia jest nieważne. 4. W przypadku gdy rezerwujący dokonuje przeniesienia wierzytelności wynikających z umowy rezerwacyjnej na osobę zaliczaną do I albo II grupy podatkowej, o których mowa w art. 14 ust. 3 pkt 1 albo 2 ustawy z dnia 28 lipca 1983 r. o podatku od spadków i darowizn (Dz. U. z 2026 r. poz. 478), przepisu ust. 3 nie stosuje się.",
+  "sourceUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/880/text.pdf",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2026-06-09",
+  "contentHashSha256": "d009fefae92b1f21a706bf617bc95aaf4a33b4f29e42cf87b525852f4fc99254",
+  "status": "active",
+  "contractTypeTags": [
+    "umowa_deweloperska",
+    "umowa_rezerwacyjna"
+  ],
+  "keywords": [
+    "umowa rezerwacyjna",
+    "forma pisemna",
+    "rezerwacja"
+  ],
+  "officialCitation": "Dz.U. 2026 poz. 880, art. 30",
+  "eliAddress": "DU/2021/1177",
+  "unifiedActEli": "DU/2026/880",
+  "lastVerifiedAt": "2026-10-03T17:03:40.852Z",
+  "freshnessNotes": "Tekst jednolity Dz.U. 2026 poz. 880, stan prawny na 9 czerwca 2026 r. Ustawa Dz.U. 2026 poz. 1077 (wejście w życie 11 listopada 2026 r.) zmienia wyłącznie art. 19b. Część zmian z Dz.U. 2025 poz. 1669 z odroczonym wejściem w życie dotyczy art. 50–52 (Ewidencja), nie jednostek zapisanych tutaj."
+}

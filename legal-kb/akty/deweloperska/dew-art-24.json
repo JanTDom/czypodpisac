@@ -1,0 +1,26 @@
+{
+  "id": "dew-art-24",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 20 maja 2021 r. o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym",
+  "publicationAddress": "Dz.U. 2026 poz. 880",
+  "editorialUnit": "art. 24",
+  "content": "Art. 24. 1. Deweloper ma obowiązek sporządzić harmonogram przedsięwzięcia deweloperskiego lub zadania inwestycyjnego, który określa co najmniej: 1) etapy realizacji przedsięwzięcia deweloperskiego lub zadania inwestycyjnego; 2) procentowy, szacunkowy podział kosztów poszczególnych etapów w całkowitych kosztach przedsięwzięcia deweloperskiego lub zadania inwestycyjnego; 3) termin zakończenia każdego z etapów. 2. Harmonogram przedsięwzięcia deweloperskiego lub zadania inwestycyjnego zawiera co najmniej cztery etapy realizacji. Koszt każdego z etapów nie może być wyższy niż 25 % i niższy niż 10 % całkowitych kosztów przedsięwzięcia deweloperskiego lub zadania inwestycyjnego, wynikających z harmonogramu.",
+  "sourceUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/880/text.pdf",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2026-06-09",
+  "contentHashSha256": "b0135d0d219146e0806ef1523bddc1220411e3b7b03f64961bd171ef2231eb1c",
+  "status": "active",
+  "contractTypeTags": [
+    "umowa_deweloperska"
+  ],
+  "keywords": [
+    "harmonogram",
+    "etapy",
+    "koszt etapu"
+  ],
+  "officialCitation": "Dz.U. 2026 poz. 880, art. 24",
+  "eliAddress": "DU/2021/1177",
+  "unifiedActEli": "DU/2026/880",
+  "lastVerifiedAt": "2026-10-03T17:03:40.852Z",
+  "freshnessNotes": "Tekst jednolity Dz.U. 2026 poz. 880, stan prawny na 9 czerwca 2026 r. Ustawa Dz.U. 2026 poz. 1077 (wejście w życie 11 listopada 2026 r.) zmienia wyłącznie art. 19b. Część zmian z Dz.U. 2025 poz. 1669 z odroczonym wejściem w życie dotyczy art. 50–52 (Ewidencja), nie jednostek zapisanych tutaj."
+}

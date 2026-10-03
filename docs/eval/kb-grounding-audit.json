@@ -1,16 +1,200 @@
 {
-  "checkedAt": "2026-10-03T16:39:42.478Z",
+  "checkedAt": "2026-10-03T17:12:11.997Z",
   "summary": {
-    "potwierdzona": 61,
+    "potwierdzona": 84,
     "niepotwierdzona": 9
   },
   "results": [
+    {
+      "id": "dew-art-14",
+      "unitType": "statute",
+      "file": "legal-kb/akty/deweloperska/dew-art-14.json",
+      "status": "potwierdzona",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
+      "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/880/text.pdf"
+    },
+    {
+      "id": "dew-art-21",
+      "unitType": "statute",
+      "file": "legal-kb/akty/deweloperska/dew-art-21.json",
+      "status": "potwierdzona",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
+      "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/880/text.pdf"
+    },
+    {
+      "id": "dew-art-23",
+      "unitType": "statute",
+      "file": "legal-kb/akty/deweloperska/dew-art-23.json",
+      "status": "potwierdzona",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
+      "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/880/text.pdf"
+    },
+    {
+      "id": "dew-art-24",
+      "unitType": "statute",
+      "file": "legal-kb/akty/deweloperska/dew-art-24.json",
+      "status": "potwierdzona",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
+      "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/880/text.pdf"
+    },
+    {
+      "id": "dew-art-25",
+      "unitType": "statute",
+      "file": "legal-kb/akty/deweloperska/dew-art-25.json",
+      "status": "potwierdzona",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
+      "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/880/text.pdf"
+    },
+    {
+      "id": "dew-art-29",
+      "unitType": "statute",
+      "file": "legal-kb/akty/deweloperska/dew-art-29.json",
+      "status": "potwierdzona",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
+      "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/880/text.pdf"
+    },
+    {
+      "id": "dew-art-30",
+      "unitType": "statute",
+      "file": "legal-kb/akty/deweloperska/dew-art-30.json",
+      "status": "potwierdzona",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
+      "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/880/text.pdf"
+    },
+    {
+      "id": "dew-art-31",
+      "unitType": "statute",
+      "file": "legal-kb/akty/deweloperska/dew-art-31.json",
+      "status": "potwierdzona",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
+      "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/880/text.pdf"
+    },
+    {
+      "id": "dew-art-32",
+      "unitType": "statute",
+      "file": "legal-kb/akty/deweloperska/dew-art-32.json",
+      "status": "potwierdzona",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
+      "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/880/text.pdf"
+    },
+    {
+      "id": "dew-art-34",
+      "unitType": "statute",
+      "file": "legal-kb/akty/deweloperska/dew-art-34.json",
+      "status": "potwierdzona",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
+      "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/880/text.pdf"
+    },
+    {
+      "id": "dew-art-35",
+      "unitType": "statute",
+      "file": "legal-kb/akty/deweloperska/dew-art-35.json",
+      "status": "potwierdzona",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
+      "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/880/text.pdf"
+    },
+    {
+      "id": "dew-art-39",
+      "unitType": "statute",
+      "file": "legal-kb/akty/deweloperska/dew-art-39.json",
+      "status": "potwierdzona",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
+      "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/880/text.pdf"
+    },
+    {
+      "id": "dew-art-40",
+      "unitType": "statute",
+      "file": "legal-kb/akty/deweloperska/dew-art-40.json",
+      "status": "potwierdzona",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
+      "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/880/text.pdf"
+    },
+    {
+      "id": "dew-art-41",
+      "unitType": "statute",
+      "file": "legal-kb/akty/deweloperska/dew-art-41.json",
+      "status": "potwierdzona",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
+      "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/880/text.pdf"
+    },
+    {
+      "id": "dew-art-41a",
+      "unitType": "statute",
+      "file": "legal-kb/akty/deweloperska/dew-art-41a.json",
+      "status": "potwierdzona",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
+      "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/880/text.pdf"
+    },
+    {
+      "id": "dew-art-42",
+      "unitType": "statute",
+      "file": "legal-kb/akty/deweloperska/dew-art-42.json",
+      "status": "potwierdzona",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
+      "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/880/text.pdf"
+    },
+    {
+      "id": "dew-art-43",
+      "unitType": "statute",
+      "file": "legal-kb/akty/deweloperska/dew-art-43.json",
+      "status": "potwierdzona",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
+      "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/880/text.pdf"
+    },
+    {
+      "id": "dew-art-44",
+      "unitType": "statute",
+      "file": "legal-kb/akty/deweloperska/dew-art-44.json",
+      "status": "potwierdzona",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
+      "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/880/text.pdf"
+    },
+    {
+      "id": "dew-art-45",
+      "unitType": "statute",
+      "file": "legal-kb/akty/deweloperska/dew-art-45.json",
+      "status": "potwierdzona",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
+      "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/880/text.pdf"
+    },
+    {
+      "id": "dew-art-5",
+      "unitType": "statute",
+      "file": "legal-kb/akty/deweloperska/dew-art-5.json",
+      "status": "potwierdzona",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
+      "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/880/text.pdf"
+    },
+    {
+      "id": "dew-art-5a",
+      "unitType": "statute",
+      "file": "legal-kb/akty/deweloperska/dew-art-5a.json",
+      "status": "potwierdzona",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
+      "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/880/text.pdf"
+    },
+    {
+      "id": "dew-art-6",
+      "unitType": "statute",
+      "file": "legal-kb/akty/deweloperska/dew-art-6.json",
+      "status": "potwierdzona",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
+      "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/880/text.pdf"
+    },
+    {
+      "id": "dew-art-8",
+      "unitType": "statute",
+      "file": "legal-kb/akty/deweloperska/dew-art-8.json",
+      "status": "potwierdzona",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
+      "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/880/text.pdf"
+    },
     {
       "id": "kc-art-385-1",
       "unitType": "statute",
       "file": "legal-kb/akty/kc/kc-art-385-1.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2024/1061/text.html"
     },
     {
@@ -18,7 +202,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/kc/kc-art-385-2.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2024/1061/text.html"
     },
     {
@@ -26,7 +210,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/kc/kc-art-385-3.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2024/1061/text.html"
     },
     {
@@ -34,7 +218,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/kc/kc-art-385-5.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2024/1061/text.html"
     },
     {
@@ -42,7 +226,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/kc/kc-art-627.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2024/1061/text.html"
     },
     {
@@ -50,7 +234,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/kc/kc-art-644.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2024/1061/text.html"
     },
     {
@@ -58,7 +242,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/kc/kc-art-659.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2024/1061/text.html"
     },
     {
@@ -66,7 +250,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/kc/kc-art-660.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2024/1061/text.html"
     },
     {
@@ -74,7 +258,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/kc/kc-art-662.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2024/1061/text.html"
     },
     {
@@ -82,7 +266,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/kc/kc-art-663.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2024/1061/text.html"
     },
     {
@@ -90,7 +274,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/kc/kc-art-664.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2024/1061/text.html"
     },
     {
@@ -98,7 +282,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/kc/kc-art-666.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2024/1061/text.html"
     },
     {
@@ -106,7 +290,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/kc/kc-art-667.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2024/1061/text.html"
     },
     {
@@ -114,7 +298,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/kc/kc-art-668.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2024/1061/text.html"
     },
     {
@@ -122,7 +306,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/kc/kc-art-669.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2024/1061/text.html"
     },
     {
@@ -130,7 +314,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/kc/kc-art-672.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2024/1061/text.html"
     },
     {
@@ -138,7 +322,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/kc/kc-art-673.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2024/1061/text.html"
     },
     {
@@ -146,7 +330,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/kc/kc-art-675.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2024/1061/text.html"
     },
     {
@@ -154,7 +338,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/kc/kc-art-677.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2024/1061/text.html"
     },
     {
@@ -162,7 +346,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/kc/kc-art-680.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2024/1061/text.html"
     },
     {
@@ -170,7 +354,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/kc/kc-art-681.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2024/1061/text.html"
     },
     {
@@ -178,7 +362,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/kc/kc-art-683.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2024/1061/text.html"
     },
     {
@@ -186,7 +370,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/kc/kc-art-684.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2024/1061/text.html"
     },
     {
@@ -194,7 +378,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/kc/kc-art-685-1.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2024/1061/text.html"
     },
     {
@@ -202,7 +386,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/kc/kc-art-685.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2024/1061/text.html"
     },
     {
@@ -210,7 +394,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/kc/kc-art-687.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2024/1061/text.html"
     },
     {
@@ -218,7 +402,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/kc/kc-art-688-1.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2024/1061/text.html"
     },
     {
@@ -226,7 +410,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/kc/kc-art-688.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2024/1061/text.html"
     },
     {
@@ -234,7 +418,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/kc/kc-art-691.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2024/1061/text.html"
     },
     {
@@ -242,7 +426,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/kc/kc-art-734.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2024/1061/text.html"
     },
     {
@@ -250,7 +434,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/kc/kc-art-735.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2024/1061/text.html"
     },
     {
@@ -258,7 +442,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/kc/kc-art-746.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2024/1061/text.html"
     },
     {
@@ -266,7 +450,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/kc/kc-art-750.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2024/1061/text.html"
     },
     {
@@ -274,7 +458,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/kp/kp-art-101-1.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2023/1465/text.html"
     },
     {
@@ -282,7 +466,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/kp/kp-art-101-2.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2023/1465/text.html"
     },
     {
@@ -290,7 +474,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/kp/kp-art-22.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2023/1465/text.html"
     },
     {
@@ -298,7 +482,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/kp/kp-art-25.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2023/1465/text.html"
     },
     {
@@ -306,7 +490,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/kp/kp-art-29.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2023/1465/text.html"
     },
     {
@@ -314,7 +498,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/kp/kp-art-30.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2023/1465/text.html"
     },
     {
@@ -322,7 +506,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/uopl/uopl-art-11.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2023/725/text.html"
     },
     {
@@ -330,7 +514,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/uopl/uopl-art-19a.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2023/725/text.html"
     },
     {
@@ -338,7 +522,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/uopl/uopl-art-19b.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2023/725/text.html"
     },
     {
@@ -346,7 +530,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/uopl/uopl-art-19c.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2023/725/text.html"
     },
     {
@@ -354,7 +538,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/uopl/uopl-art-19d.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2023/725/text.html"
     },
     {
@@ -362,7 +546,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/uopl/uopl-art-19e.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2023/725/text.html"
     },
     {
@@ -370,7 +554,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/uopl/uopl-art-19f.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2023/725/text.html"
     },
     {
@@ -378,7 +562,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/uopl/uopl-art-19g.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2023/725/text.html"
     },
     {
@@ -386,7 +570,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/uopl/uopl-art-19h.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2023/725/text.html"
     },
     {
@@ -394,7 +578,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/uopl/uopl-art-19i.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2023/725/text.html"
     },
     {
@@ -402,7 +586,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/uopl/uopl-art-19j.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2023/725/text.html"
     },
     {
@@ -410,7 +594,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/uopl/uopl-art-19k.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2023/725/text.html"
     },
     {
@@ -418,7 +602,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/uopl/uopl-art-2.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2023/725/text.html"
     },
     {
@@ -426,7 +610,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/uopl/uopl-art-5.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2023/725/text.html"
     },
     {
@@ -434,7 +618,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/uopl/uopl-art-6.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2023/725/text.html"
     },
     {
@@ -442,7 +626,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/uopl/uopl-art-6a.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2023/725/text.html"
     },
     {
@@ -450,7 +634,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/uopl/uopl-art-6b.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2023/725/text.html"
     },
     {
@@ -458,7 +642,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/uopl/uopl-art-6c.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2023/725/text.html"
     },
     {
@@ -466,7 +650,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/uopl/uopl-art-6d.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2023/725/text.html"
     },
     {
@@ -474,7 +658,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/uopl/uopl-art-6e.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2023/725/text.html"
     },
     {
@@ -482,7 +666,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/uopl/uopl-art-8a.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2023/725/text.html"
     },
     {
@@ -490,7 +674,7 @@
       "unitType": "statute",
       "file": "legal-kb/akty/uopl/uopl-art-9.json",
       "status": "potwierdzona",
-      "reason": "zgodność z tekstem ELI: 100%",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2023/725/text.html"
     },
     {
@@ -498,7 +682,7 @@
       "unitType": "court_ruling",
       "file": "legal-kb/orzecznictwo/sn-iii-czp-11-13.json",
       "status": "niepotwierdzona",
-      "reason": "HTTP 200, text/html, 1888 B — źródło nie zwraca dokumentu",
+      "reason": "HTTP 200, text/html, 1753 B — źródło nie zwraca dokumentu",
       "checkedUrl": "http://www.sn.pl/sites/orzecznictwo/orzeczenia3/iii%20czp%2011-13.pdf"
     },
     {
@@ -506,7 +690,7 @@
       "unitType": "court_ruling",
       "file": "legal-kb/orzecznictwo/sn-iii-czp-52-19.json",
       "status": "niepotwierdzona",
-      "reason": "HTTP 200, text/html, 1887 B — źródło nie zwraca dokumentu",
+      "reason": "HTTP 200, text/html, 1753 B — źródło nie zwraca dokumentu",
       "checkedUrl": "http://www.sn.pl/sites/orzecznictwo/orzeczenia3/iii%20czp%2052-19.pdf"
     },
     {
@@ -514,7 +698,7 @@
       "unitType": "court_ruling",
       "file": "legal-kb/orzecznictwo/sn-v-csk-31-08.json",
       "status": "niepotwierdzona",
-      "reason": "HTTP 200, text/html, 1888 B — źródło nie zwraca dokumentu",
+      "reason": "HTTP 200, text/html, 1753 B — źródło nie zwraca dokumentu",
       "checkedUrl": "http://www.sn.pl/sites/orzecznictwo/orzeczenia2/v%20csk%2031-08-1.pdf"
     },
     {

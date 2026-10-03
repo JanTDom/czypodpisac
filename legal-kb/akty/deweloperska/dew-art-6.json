@@ -1,0 +1,27 @@
+{
+  "id": "dew-art-6",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 20 maja 2021 r. o ochronie praw nabywcy lokalu mieszkalnego lub domu jednorodzinnego oraz Deweloperskim Funduszu Gwarancyjnym",
+  "publicationAddress": "Dz.U. 2026 poz. 880",
+  "editorialUnit": "art. 6",
+  "content": "Art. 6. 1. Deweloper zapewnia nabywcy jeden z następujących środków ochrony wpłat dokonywanych przez nabywcę: 1) otwarty mieszkaniowy rachunek powierniczy; 2) zamknięty mieszkaniowy rachunek powierniczy. 2. Deweloper ma obowiązek dokonywać terminowych wpłat składek na Deweloperski Fundusz Gwarancyjny odpowiednio do wybranego rodzaju środka ochrony, o którym mowa w ust. 1, na zasadach określonych w art. 49.",
+  "sourceUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/880/text.pdf",
+  "fetchDate": "2026-10-03",
+  "legalStateDate": "2026-06-09",
+  "contentHashSha256": "19788997cba78f9c919acd6558a8efd07ceb4d50815c42bf1d6fbe757d69024d",
+  "status": "active",
+  "contractTypeTags": [
+    "umowa_deweloperska"
+  ],
+  "keywords": [
+    "mieszkaniowy rachunek powierniczy",
+    "ochrona wpłat",
+    "rachunek powierniczy",
+    "Deweloperski Fundusz Gwarancyjny"
+  ],
+  "officialCitation": "Dz.U. 2026 poz. 880, art. 6",
+  "eliAddress": "DU/2021/1177",
+  "unifiedActEli": "DU/2026/880",
+  "lastVerifiedAt": "2026-10-03T17:03:40.852Z",
+  "freshnessNotes": "Tekst jednolity Dz.U. 2026 poz. 880, stan prawny na 9 czerwca 2026 r. Ustawa Dz.U. 2026 poz. 1077 (wejście w życie 11 listopada 2026 r.) zmienia wyłącznie art. 19b. Część zmian z Dz.U. 2025 poz. 1669 z odroczonym wejściem w życie dotyczy art. 50–52 (Ewidencja), nie jednostek zapisanych tutaj."
+}
