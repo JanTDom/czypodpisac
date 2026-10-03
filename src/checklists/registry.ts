@@ -1,6 +1,7 @@
 import { ContractType } from "../pipeline/schemas/stage02-classification";
 import { LegalKnowledgeBase } from "../kb";
 import { ContractChecklist, ChecklistItem } from "./types";
+import { checklistUniwersalna } from "./uniwersalna";
 import { checklistNajemLokaluMieszkalnego } from "./najem-lokalu-mieszkalnego";
 import { checklistNajemOkazjonalny } from "./najem-okazjonalny";
 import { checklistNajemInstytucjonalny } from "./najem-instytucjonalny";
@@ -9,6 +10,7 @@ import { checklistNajemLokaluUzytkowego } from "./najem-lokalu-uzytkowego";
 export class ChecklistRegistry {
   private static instance: ChecklistRegistry | null = null;
   private checklists: Map<ContractType, ContractChecklist> = new Map();
+  private universalChecklist: ContractChecklist = checklistUniwersalna;
 
   constructor() {
     this.registerDefaults();
@@ -26,6 +28,23 @@ export class ChecklistRegistry {
     this.checklists.set("najem_okazjonalny", checklistNajemOkazjonalny);
     this.checklists.set("najem_instytucjonalny", checklistNajemInstytucjonalny);
     this.checklists.set("najem_lokalu_uzytkowego", checklistNajemLokaluUzytkowego);
+  }
+
+  public getUniversalChecklist(): ContractChecklist {
+    return this.universalChecklist;
+  }
+
+  /**
+   * Zwraca efektywny zestaw punktów kontrolnych dla danego typu umowy:
+   * Punkty uniwersalne (18 obszarów) + dedykowane punkty specyficzne dla typu umowy.
+   */
+  public getEffectiveChecklist(contractType: ContractType): ChecklistItem[] {
+    const specific = this.getChecklist(contractType);
+    const universalItems = this.universalChecklist.items;
+    if (!specific) {
+      return universalItems;
+    }
+    return [...universalItems, ...specific.items];
   }
 
   public registerChecklist(checklist: ContractChecklist): void {

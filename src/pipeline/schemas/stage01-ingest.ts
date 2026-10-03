@@ -44,13 +44,14 @@ export type IngestPage = z.infer<typeof IngestPageSchema>;
  */
 export const IngestInputSchema = z.object({
   fileName: z.string().min(1),
-  fileSizeBytes: z.number().int().positive(),
+  fileSizeBytes: z.number().int().nonnegative().default(0),
   mimeType: z.enum([
     "application/pdf",
     "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
     "image/jpeg",
     "image/png",
     "image/webp",
+    "text/plain",
   ]),
   fileBuffer: z.instanceof(Uint8Array).optional(),
   storagePath: z.string().min(1).optional(),
