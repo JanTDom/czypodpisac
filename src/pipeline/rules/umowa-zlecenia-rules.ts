@@ -23,6 +23,24 @@ interface WorkRelationSignal {
   quote: string;
 }
 
+function extractMatchingParagraph(text: string, pattern: RegExp): string {
+  // 1. Rozdziel na ustępy / podpunkty
+  const parts = text.split(/(?:\r?\n){1,2}|(?<=\n)(?=\d+\.|\w\))/).map(p => p.trim()).filter(Boolean);
+  for (const part of parts) {
+    if (pattern.test(part)) {
+      return part.slice(0, 240);
+    }
+  }
+  // 2. Rozdziel na zdania
+  const sentences = text.split(/(?<=[.;\n])\s+/).map(s => s.trim()).filter(Boolean);
+  for (const s of sentences) {
+    if (pattern.test(s)) {
+      return s.slice(0, 240);
+    }
+  }
+  return text.slice(0, 160).trim();
+}
+
 export function evaluateZlecenieContract(
   clauses: readonly ExtractedClause[],
   userRole: string = "wykonawca"
@@ -43,7 +61,7 @@ export function evaluateZlecenieContract(
         category: "czas_pracy",
         label: "Wyznaczone sztywne godziny pracy przez zlecającego",
         clauseId: clause.id,
-        quote: text.slice(0, 160),
+        quote: extractMatchingParagraph(text, /(?:od poniedziałku|godzinach|od 9|harmonogram)/i),
       });
     }
 
@@ -56,7 +74,7 @@ export function evaluateZlecenieContract(
         category: "miejsce_pracy",
         label: "Miejsce wykonywania czynności wyznaczone w siedzibie zlecającego",
         clauseId: clause.id,
-        quote: text.slice(0, 160),
+        quote: extractMatchingParagraph(text, /(?:podstawowym miejscem|miejscem wykonywania|w siedzibie)/i),
       });
     }
 
@@ -69,7 +87,7 @@ export function evaluateZlecenieContract(
         category: "kierownictwo",
         label: "Bieżące podporządkowanie i obowiązek wykonywania poleceń przełożonych",
         clauseId: clause.id,
-        quote: text.slice(0, 160),
+        quote: extractMatchingParagraph(text, /(?:kierownictw|poleceń|podlega|wykonywanie poleceń)/i),
       });
     }
 
@@ -82,7 +100,7 @@ export function evaluateZlecenieContract(
         category: "osobiste_swiadczenie",
         label: "Bezwzględny obowiązek osobistego świadczenia bez prawa do swobodnego zastępcy",
         clauseId: clause.id,
-        quote: text.slice(0, 160),
+        quote: extractMatchingParagraph(text, /(?:osobiście|osobistego wykonywania|osobie trzeciej|zastępc)/i),
       });
     }
 
@@ -95,7 +113,7 @@ export function evaluateZlecenieContract(
         category: "dyspozycyjnosc_urlopy",
         label: "Wymóg zgody na nieobecność (pozorny urlop) i wymuszona dyspozycyjność",
         clauseId: clause.id,
-        quote: text.slice(0, 160),
+        quote: extractMatchingParagraph(text, /(?:dyspozycyjn|nieobecnoś|wymaga akceptacji|odmówić zgody)/i),
       });
     }
 
@@ -108,7 +126,7 @@ export function evaluateZlecenieContract(
         category: "narzedzia",
         label: "Praca na narzędziach i w infrastrukturze zlecającego",
         clauseId: clause.id,
-        quote: text.slice(0, 160),
+        quote: extractMatchingParagraph(text, /(?:komputer|telefon|sprzęt|system redakcyjn|narzędzia)/i),
       });
     }
 
@@ -129,12 +147,13 @@ export function evaluateZlecenieContract(
         tytulPoLudzku: "Nieodpłatny zakaz konkurencji z wysoką karą umowną",
         doslownyCytatZUmowy: penaltyMatch ? penaltyMatch[0] : text.slice(0, 140),
         uzasadnienie:
-          "Umowa nakłada bardzo szeroki zakaz konkurencji bez jakiegokolwiek odrębnego odszkodowania za powstrzymywanie się od działalności. Dodatkowo obwarowany jest rażąco wygórowaną karą umowną (art. 483 i 484 § 2 k.c.).",
+          "Dla laika: Podpisujesz zakaz pracy dla jakichkolwiek innych mediów, ale zleceniodawca nie płaci Ci za to ani grosza rekompensaty. Jeśli złamiesz zakaz, grozi Ci ogromna kara finansowa.\n\n" +
+          "Co mówi prawo: Zgodnie z zasadami współżycia społecznego i orzecznictwem Sądu Najwyższego nieodpłatny zakaz konkurencji bez ekwiwalentu narusza równowagę kontraktową (art. 353¹ k.c., art. 483 i 484 § 2 k.c.).",
         zrodlaIds: ["kc-art-483", "kc-art-484"],
         pewnosc: 0.95,
         kwotaRyzyka: penaltyAmount,
         zalozeniaKwoty: penaltyAmount ? `Wysokość kary za naruszenie zakazu konkurencji: ${penaltyAmount} zł.` : undefined,
-        propozycjaZmianyKierunek: "Wykreśl zakaz konkurencji lub wprowadź za niego ekwiwalentne comiesięczne odszkodowanie płatne przez Zleceniodawcę.",
+        propozycjaZmianyKierunek: "Wykreśl zakaz konkurencji lub zażądaj odrębnego, comiesięcznego wynagrodzenia za powstrzymywanie się od innej działalności.",
       });
     }
 
@@ -155,7 +174,8 @@ export function evaluateZlecenieContract(
         tytulPoLudzku: "Wygórowana kara umowna za naruszenie poufności",
         doslownyCytatZUmowy: penaltyMatch ? penaltyMatch[0] : text.slice(0, 140),
         uzasadnienie:
-          "Zastrzeżenie kary umownej w oderwaniu od rzeczywistej szkody i możliwości jej miarkowania narusza zasady współżycia społecznego i stanowi rażąco wygórowaną karę umowną (art. 484 § 2 k.c.).",
+          "Dla laika: Kara umowna 30 000 zł jest oderwana od jakiejkolwiek realnej szkody i wielokrotnie przewyższa Twoje miesięczne wynagrodzenie. Dodatkowo firma zastrzega możliwość żądania jeszcze wyższego odszkodowania.\n\n" +
+          "Co mówi prawo: Zastrzeżenie kary umownej w oderwaniu od rzeczywistej szkody i możliwości jej miarkowania narusza zasady współżycia społecznego i stanowi rażąco wygórowaną karę umowną (art. 484 § 2 k.c.).",
         zrodlaIds: ["kc-art-483", "kc-art-484"],
         pewnosc: 0.92,
         kwotaRyzyka: penaltyAmount,
@@ -177,10 +197,11 @@ export function evaluateZlecenieContract(
         tytulPoLudzku: "Asymetryczne natychmiastowe rozwiązanie zlecenia (utrata zaufania)",
         doslownyCytatZUmowy: text.slice(0, 140),
         uzasadnienie:
-          "Zgodnie z art. 746 § 1 i 2 k.c. wypowiedzenie zlecenia ze skutkiem natychmiastowym bez ważnego powodu rodzi obowiązek naprawienia szkody. Klauzula przyznaje zlecającemu prawo do natychmiastowego zerwania kontraktu pod subiektywnym pretekstem 'utraty zaufania' lub braku spełnienia oczekiwań, przy jednoczesnym zobowiązaniu zleceniobiorcy do 30-dniowego okresu wypowiedzenia.",
+          "Dla laika: Druga strona może zerwać współpracę z dnia na dzień pod dowolnym, subiektywnym pretekstem („utrata zaufania”), podczas gdy Ty musisz czekać pełny miesiąc wypowiedzenia. To rażąca dysproporcja praw.\n\n" +
+          "Co mówi prawo: Zgodnie z art. 746 § 1 i 2 k.c. wypowiedzenie zlecenia ze skutkiem natychmiastowym bez ważnego powodu rodzi obowiązek naprawienia szkody. Subiektywna utrata zaufania nie stanowi obiektywnego ważnego powodu.",
         zrodlaIds: ["kc-art-746"],
         pewnosc: 0.92,
-        propozycjaZmianyKierunek: "Wprowadź symetryczne okresy wypowiedzenia dla obu stron lub jednoznacznie sprecyzuj obiektywne, rażące naruszenia umowy jako ważne powody.",
+        propozycjaZmianyKierunek: "Wprowadź równy okres wypowiedzenia dla obu stron lub jednoznacznie sprecyzuj obiektywne, rażące naruszenia umowy jako wyłączne powody natychmiastowego zerwania.",
       });
     }
 
@@ -196,7 +217,8 @@ export function evaluateZlecenieContract(
         tytulPoLudzku: "Przeniesienie praw autorskich do wszelkich utworów w ramach ryczałtu",
         doslownyCytatZUmowy: text.slice(0, 140),
         uzasadnienie:
-          "Zgodnie z art. 41 ust. 3 ustawy o prawie autorskim nieważna jest umowa w części dotyczącej wszystkich utworów lub wszystkich utworów określonego rodzaju tego samego twórcy mających powstać w przyszłości. Przeniesienie praw powinno precyzować konkretne dzieła i pola eksploatacji.",
+          "Dla laika: Firma przejmuje wszelkie prawa autorskie do wszystkich Twoich przyszłych tekstów w ramach jednej stałej kwoty, a nawet zastrzega sobie prawo do publikowania Twoich artykułów bez podawania Twojego nazwiska.\n\n" +
+          "Co mówi prawo: Zgodnie z art. 41 ust. 3 ustawy o prawie autorskim nieważna jest umowa w części dotyczącej wszystkich utworów lub wszystkich utworów określonego rodzaju tego samego twórcy mających powstać w przyszłości.",
         zrodlaIds: ["praut-art-41"],
         pewnosc: 0.88,
         propozycjaZmianyKierunek: "Wprowadź wymóg akceptacji i protokołu przekazania praw do konkretnie wymienionych utworów lub licencję niewyłączną.",
@@ -205,10 +227,19 @@ export function evaluateZlecenieContract(
   }
 
   // AGREGACJA SYGNAŁÓW STOSUNKU PRACY (Art. 22 Kodeksu pracy)
-  if (signals.length >= 2) {
-    const isHeavy = signals.length >= 3 || signals.some(s => s.category === "kierownictwo");
-    const firstSignal = signals[0];
-    const quotesList = signals.map(s => `• ${s.label}: „${s.quote.trim()}”`).join("\n");
+  // Deduplikujemy sygnały wg kategorii, aby uniknąć powtarzania tego samego zarzutu
+  const uniqueSignalsMap = new Map<string, WorkRelationSignal>();
+  for (const s of signals) {
+    if (!uniqueSignalsMap.has(s.category)) {
+      uniqueSignalsMap.set(s.category, s);
+    }
+  }
+  const uniqueSignals = Array.from(uniqueSignalsMap.values());
+
+  if (uniqueSignals.length >= 2) {
+    const isHeavy = uniqueSignals.length >= 3 || uniqueSignals.some(s => s.category === "kierownictwo");
+    const firstSignal = uniqueSignals[0];
+    const quotesList = uniqueSignals.map(s => `• ${s.label}:\n„${s.quote.trim()}”`).join("\n\n");
 
     evaluations.unshift({
       clauseId: firstSignal.clauseId,
@@ -217,11 +248,13 @@ export function evaluateZlecenieContract(
       tytulPoLudzku: "Umowa zlecenia zawiera kluczowe cechy umowy o pracę (art. 22 k.p.)",
       doslownyCytatZUmowy: firstSignal.quote,
       uzasadnienie:
-        `Wykryto ${signals.length} istotnych elementów podporządkowania pracowniczego: wyznaczone godziny i miejsce pracy, bieżące polecenia przełożonych, konieczność uzyskiwania zgody na nieobecności oraz osobiste świadczenie. Zgodnie z art. 22 § 1¹ i § 1² Kodeksu pracy zatrudnienie w takich warunkach jest stosunkiem pracy bez względu na nazwę umowy, a zastępowanie umowy o pracę umową cywilnoprawną jest prawnie zakazane.\n\nSygnały wykryte w umowie:\n${quotesList}`,
+        `Dla laika: Ta umowa ma tylko nazwę zlecenia, ale w rzeczywistości narzuca Ci rygory etatu (sztywne godziny, obecność w redakcji, wykonywanie poleceń przełożonych i brak prawa do zastępcy) bez żadnych praw pracowniczych, takich jak płatny urlop, chorobowe czy ochrona przed zwolnieniem.\n\n` +
+        `Co mówi prawo:\nZgodnie z art. 22 § 1¹ i § 1² Kodeksu pracy zatrudnienie w takich warunkach jest z mocy prawa umową o pracę — bez względu na to, jak strony ją nazwą. Zastępowanie umowy o pracę umową cywilnoprawną jest wykroczeniem przeciwko prawom pracownika.\n\n` +
+        `Dowody wykryte w Twojej umowie:\n${quotesList}`,
       zrodlaIds: ["kp-art-22"],
       pewnosc: 0.98,
       propozycjaZmianyKierunek:
-        "Jeśli praca ma być zleceniem, usuń sztywne godziny, dyspozycyjność i polecenia kierownicze. Jeżeli warunki te są konieczne, powinieneś podpisać umowę o pracę zapewniającą urlop, płatne nadgodziny i ochronę przed zwolnieniem.",
+        "Jeśli praca ma być zleceniem: usuń sztywne godziny, dyspozycyjność i polecenia służbowe. Jeżeli zlecający wymaga tych warunków: powinieneś podpisać umowę o pracę, która gwarantuje Ci płatny urlop, płatne chorobowe i ochronę przed zwolnieniem.",
     });
   }
 

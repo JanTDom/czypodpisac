@@ -175,6 +175,7 @@ export async function executeValidation(
       powodOdrzuceniaLubNiepewnosci: !isFullyVerified
         ? `Cytat zweryfikowany: ${isQuoteVerified}, werdykt weryfikatora: ${verifierResult.werdykt}`
         : undefined,
+      propozycjaZmianyKierunek: evalItem.propozycjaZmianyKierunek,
     };
 
     if (isFullyVerified) {

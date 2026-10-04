@@ -15,6 +15,8 @@ import {
   TrendingDown,
   Info,
   Check,
+  Scale,
+  Lightbulb,
 } from "lucide-react";
 import { AggregatedReport } from "../pipeline/schemas/stage09-aggregation";
 import { ValidatedFinding } from "../pipeline/schemas/stage07-validation";
@@ -518,27 +520,194 @@ function FindingCard({
         &quot;{finding.doslownyCytatZUmowy}&quot;
       </div>
 
-      {/* Co to dla Ciebie znaczy */}
-      <div className="mt-3 text-xs text-slate-600 leading-relaxed">
-        <span className="font-semibold text-slate-900">Co to dla Ciebie znaczy: </span>
-        {finding.uzasadnienie}
+      {/* Ustrukturyzowane wyjaśnienie i wskazówki */}
+      <div className="mt-4">
+        <StructuredExplanation
+          rawText={finding.uzasadnienie}
+          recommendation={finding.propozycjaZmianyKierunek}
+        />
       </div>
 
       {/* Podstawa prawna z linkiem i stanem prawnym */}
       {finding.zweryfikowaneZrodlaIds.length > 0 && (
-        <div className="mt-3 flex items-center gap-2 text-[11px] text-slate-500 pt-2 border-t border-slate-100">
+        <div className="mt-4 flex flex-wrap items-center gap-2 text-[11px] text-slate-500 pt-3 border-t border-slate-100">
           <span className="font-semibold text-slate-700">Podstawa prawna:</span>
-          <span>{finding.zweryfikowaneZrodlaIds.join(", ")}</span>
+          <span className="font-mono font-medium text-slate-800">{finding.zweryfikowaneZrodlaIds.join(", ")}</span>
           <span className="text-slate-400">•</span>
           <a
             href="https://isap.sejm.gov.pl"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-blue-700 hover:underline"
+            className="inline-flex items-center gap-1 font-medium text-blue-700 hover:underline"
           >
             Oficjalny tekst ELI/ISAP
             <ExternalLink className="h-3 w-3" />
           </a>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function StructuredExplanation({
+  rawText,
+  recommendation,
+}: {
+  rawText: string;
+  recommendation?: string;
+}) {
+  let mainPart = rawText.trim();
+  let evidencePart = "";
+  let actionText = recommendation?.trim() || "";
+
+  // 1. Wyciągnięcie sekcji dowodów / sygnałów
+  const evidenceSplitIndex = mainPart.search(/(?:Dowody wykryte|Sygnały wykryte)[^\n]*:/i);
+  if (evidenceSplitIndex !== -1) {
+    evidencePart = mainPart.slice(evidenceSplitIndex).trim();
+    mainPart = mainPart.slice(0, evidenceSplitIndex).trim();
+  }
+
+  // 2. Wyciągnięcie rekomendacji / działania z tekstu (jeśli nie przekazano w propsie)
+  if (!actionText) {
+    const actionMatch = mainPart.match(/(?:Rekomendowane działanie|Rekomendacja|Co zrobić|Jak to zmienić):\s*([\s\S]+)$/i);
+    if (actionMatch && actionMatch.index !== undefined) {
+      actionText = actionMatch[1].trim();
+      mainPart = mainPart.slice(0, actionMatch.index).trim();
+    }
+  }
+
+  // 3. Wyciągnięcie sekcji prawnej ("Co mówi prawo:")
+  let lawText = "";
+  const lawMatch = mainPart.match(/(?:Co mówi (?:polskie )?prawo|Podstawa prawna|Z punktu widzenia prawa):\s*([\s\S]+)$/i);
+  if (lawMatch && lawMatch.index !== undefined) {
+    lawText = lawMatch[1].trim();
+    mainPart = mainPart.slice(0, lawMatch.index).trim();
+  } else {
+    // Sprawdź czy po podziale na akapity któryś zaczyna się od odwołania do przepisów
+    const paragraphs = mainPart.split(/\n\s*\n/);
+    if (paragraphs.length >= 2) {
+      const legalParaIndex = paragraphs.findIndex((p) =>
+        /^(?:Zgodnie z|Art\.\s*\d+|Na mocy|W polskim prawie|Przepisy|Zastrzeżenie kary umownej w oderwaniu)/i.test(p.trim())
+      );
+      if (legalParaIndex > 0) {
+        lawText = paragraphs.slice(legalParaIndex).join("\n\n").trim();
+        mainPart = paragraphs.slice(0, legalParaIndex).join("\n\n").trim();
+      }
+    }
+  }
+
+  // 4. Oczyszczenie wstępu dla laika z prefiksów technicznych
+  let intro = mainPart
+    .replace(/^(?:Dla laika|W praktyce|Podsumowanie dla Ciebie|Co to oznacza):\s*/i, "")
+    .trim();
+
+  // 5. Parsowanie punktów dowodowych
+  const items: Array<{ title: string; quote?: string }> = [];
+
+  if (evidencePart) {
+    const cleanEvidence = evidencePart.replace(/^(?:Dowody|Sygnały)[^\n]*:\s*/i, "").trim();
+    const rawItems = cleanEvidence.split(/(?:^|\n)\s*[•\-]\s*/).filter(Boolean);
+
+    for (const rawItem of rawItems) {
+      const trimmed = rawItem.trim();
+      if (!trimmed) continue;
+
+      const quoteMatch = trimmed.match(/[„"]([\s\S]+?)[”"]/);
+      if (quoteMatch) {
+        const title = trimmed.slice(0, quoteMatch.index).replace(/:\s*$/, "").trim();
+        const quote = quoteMatch[1].trim();
+        items.push({ title: title || "Fragment z umowy", quote });
+      } else {
+        const lines = trimmed.split("\n").map((l) => l.trim()).filter(Boolean);
+        items.push({
+          title: lines[0] || trimmed,
+          quote: lines.slice(1).join(" "),
+        });
+      }
+    }
+  } else if (intro.includes("•")) {
+    const parts = intro.split(/(?:^|\n)\s*[•\-]\s*/).filter(Boolean);
+    if (parts.length > 1) {
+      intro = parts[0].trim();
+      for (const p of parts.slice(1)) {
+        const trimmed = p.trim();
+        const quoteMatch = trimmed.match(/[„"]([\s\S]+?)[”"]/);
+        if (quoteMatch) {
+          items.push({
+            title: trimmed.slice(0, quoteMatch.index).replace(/:\s*$/, "").trim(),
+            quote: quoteMatch[1].trim(),
+          });
+        } else {
+          items.push({ title: trimmed });
+        }
+      }
+    }
+  }
+
+  return (
+    <div className="space-y-3 text-left">
+      {/* 1. Wyjaśnienie po ludzku */}
+      {intro && (
+        <div className="text-xs text-slate-700 leading-relaxed">
+          <span className="font-bold text-slate-900 block mb-1 text-[11px] uppercase tracking-wider text-slate-500">
+            Co to oznacza dla Ciebie w praktyce:
+          </span>
+          <p className="whitespace-pre-line">{intro}</p>
+        </div>
+      )}
+
+      {/* 2. Co mówi prawo (wyróżniony elegancki boks z ikoną wagi) */}
+      {lawText && (
+        <div className="rounded-xl border border-blue-200/80 bg-blue-50/70 p-3.5 text-xs text-blue-950 flex items-start gap-2.5">
+          <Scale className="h-4 w-4 text-blue-700 shrink-0 mt-0.5" aria-hidden="true" />
+          <div className="leading-relaxed">
+            <span className="font-bold block text-[11px] uppercase tracking-wider text-blue-800 mb-0.5">
+              Co mówi polskie prawo:
+            </span>
+            <p className="whitespace-pre-line text-blue-900">{lawText}</p>
+          </div>
+        </div>
+      )}
+
+      {/* 3. Wykryte dowody i zapisy (karty punkt po punkcie zamiast zbitej ściany tekstu) */}
+      {items.length > 0 && (
+        <div className="space-y-2 pt-1">
+          <span className="text-[11px] font-bold uppercase tracking-wider text-slate-600 block">
+            Wykryte dowody w Twojej umowie ({items.length}):
+          </span>
+          <div className="grid grid-cols-1 gap-2">
+            {items.map((it, idx) => (
+              <div
+                key={idx}
+                className="rounded-xl border border-slate-200/90 bg-slate-50/70 p-3 text-xs text-slate-800"
+              >
+                <div className="flex items-start gap-2 font-semibold text-slate-900">
+                  <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-red-100 text-[10px] font-bold text-red-700">
+                    {idx + 1}
+                  </span>
+                  <span>{it.title}</span>
+                </div>
+                {it.quote && (
+                  <div className="mt-2 rounded-lg border border-slate-200/80 bg-white p-2.5 font-mono text-[11px] text-slate-700 leading-relaxed italic">
+                    &quot;{it.quote}&quot;
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* 4. Rekomendowane działanie / jak to naprawić */}
+      {actionText && (
+        <div className="rounded-xl border border-emerald-200 bg-emerald-50/80 p-3.5 text-xs text-emerald-950 flex items-start gap-2.5">
+          <Lightbulb className="h-4 w-4 text-emerald-700 shrink-0 mt-0.5" aria-hidden="true" />
+          <div className="leading-relaxed">
+            <span className="font-bold block text-[11px] uppercase tracking-wider text-emerald-800 mb-0.5">
+              Rekomendowane działanie:
+            </span>
+            <p className="whitespace-pre-line text-emerald-900">{actionText}</p>
+          </div>
         </div>
       )}
     </div>

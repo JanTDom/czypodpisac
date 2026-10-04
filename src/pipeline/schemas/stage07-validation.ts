@@ -66,6 +66,7 @@ export const ValidatedFindingSchema = z.object({
   kwotaRyzyka: z.number().nonnegative().optional(),
   zalozeniaKwoty: z.string().optional(),
   powodOdrzuceniaLubNiepewnosci: z.string().optional(),
+  propozycjaZmianyKierunek: z.string().optional(),
 });
 
 export type ValidatedFinding = z.infer<typeof ValidatedFindingSchema>;
