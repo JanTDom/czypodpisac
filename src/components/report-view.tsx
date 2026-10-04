@@ -529,24 +529,53 @@ function FindingCard({
       </div>
 
       {/* Podstawa prawna z linkiem i stanem prawnym */}
-      {finding.zweryfikowaneZrodlaIds.length > 0 && (
-        <div className="mt-4 flex flex-wrap items-center gap-2 text-[11px] text-slate-500 pt-3 border-t border-slate-100">
-          <span className="font-semibold text-slate-700">Podstawa prawna:</span>
-          <span className="font-mono font-medium text-slate-800">{finding.zweryfikowaneZrodlaIds.join(", ")}</span>
-          <span className="text-slate-400">•</span>
-          <a
-            href="https://isap.sejm.gov.pl"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 font-medium text-blue-700 hover:underline"
-          >
-            Oficjalny tekst ELI/ISAP
-            <ExternalLink className="h-3 w-3" />
-          </a>
-        </div>
-      )}
+      {finding.zweryfikowaneZrodlaIds.length > 0 && (() => {
+        const sourceInfo = getLegalSourceInfo(finding.zweryfikowaneZrodlaIds);
+        return (
+          <div className="mt-4 flex flex-wrap items-center gap-2 text-[11px] text-slate-500 pt-3 border-t border-slate-100">
+            <span className="font-semibold text-slate-700">Podstawa prawna:</span>
+            <span className="font-mono font-medium text-slate-800">{finding.zweryfikowaneZrodlaIds.join(", ")}</span>
+            <span className="text-slate-400">•</span>
+            <a
+              href={sourceInfo.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 font-medium text-blue-700 hover:underline"
+            >
+              {sourceInfo.label}
+              <ExternalLink className="h-3 w-3" />
+            </a>
+          </div>
+        );
+      })()}
     </div>
   );
+}
+
+function getLegalSourceInfo(sourceIds: string[]) {
+  const idsCombined = sourceIds.join(" ").toLowerCase();
+  if (idsCombined.includes("uokik")) {
+    return {
+      label: "Rejestr klauzul UOKiK",
+      href: "https://decyzje.uokik.gov.pl/bp/kndz.nsf",
+    };
+  }
+  if (idsCombined.includes("sn-") || idsCombined.includes("orzecznictwo")) {
+    return {
+      label: "Orzecznictwo Sądu Najwyższego",
+      href: "https://www.sn.pl/orzecznictwo",
+    };
+  }
+  if (idsCombined.includes("ue") || idsCombined.includes("eur-") || idsCombined.includes("93/13")) {
+    return {
+      label: "Prawo UE (EUR-Lex)",
+      href: "https://eur-lex.europa.eu",
+    };
+  }
+  return {
+    label: "Oficjalny tekst Sejmu (ELI/ISAP)",
+    href: "https://isap.sejm.gov.pl",
+  };
 }
 
 function StructuredExplanation({
