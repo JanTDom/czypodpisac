@@ -54,19 +54,30 @@ export default function RootLayout({
               <span>czypodpisac<span className="text-cyan-300">.pl</span></span>
             </Link>
 
-            <nav aria-label="Główna nawigacja" className="flex items-center gap-1.5 text-sm font-medium sm:gap-3">
+            <nav aria-label="Główna nawigacja" className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm font-medium">
               <Link
                 href="/#jak-dziala"
-                className="hidden rounded-lg px-3 py-2 text-slate-300 transition hover:bg-white/10 hover:text-white focus-visible:rounded-lg sm:inline-flex"
+                className="rounded-lg px-2.5 py-1.5 text-slate-300 transition hover:bg-white/10 hover:text-white focus-visible:rounded-lg"
               >
-                Jak to działa
+                Jak to działa i baza prawa
               </Link>
               <Link
                 href="/#przyklad"
-                className="rounded-lg px-3 py-2 text-slate-300 transition hover:bg-white/10 hover:text-white focus-visible:rounded-lg"
+                className="hidden sm:inline-flex rounded-lg px-2.5 py-1.5 text-slate-300 transition hover:bg-white/10 hover:text-white focus-visible:rounded-lg"
               >
-                <span className="sm:hidden">Raport</span>
-                <span className="hidden sm:inline">Przykładowy raport</span>
+                Przykładowy raport
+              </Link>
+              <Link
+                href="/kontakt"
+                className="rounded-lg px-2.5 py-1.5 text-slate-300 transition hover:bg-white/10 hover:text-white focus-visible:rounded-lg"
+              >
+                Kontakt & Płatności P24
+              </Link>
+              <Link
+                href="/regulamin"
+                className="hidden md:inline-flex rounded-lg px-2.5 py-1.5 text-slate-300 transition hover:bg-white/10 hover:text-white focus-visible:rounded-lg"
+              >
+                Regulamin
               </Link>
             </nav>
           </div>

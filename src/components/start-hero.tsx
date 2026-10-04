@@ -110,9 +110,9 @@ export function StartHero({ onSubmit, isLoading }: StartHeroProps) {
             </p>
 
             <div className="mt-8 flex flex-wrap gap-x-5 gap-y-3 text-sm text-slate-200">
-              <span className="inline-flex items-center gap-2"><Check className="h-4 w-4 text-cyan-300" /> Bez prawniczego żargonu</span>
-              <span className="inline-flex items-center gap-2"><Check className="h-4 w-4 text-cyan-300" /> Baza Sejmu RP (ELI)</span>
-              <span className="inline-flex items-center gap-2"><Check className="h-4 w-4 text-cyan-300" /> 100% poufności</span>
+              <span className="inline-flex items-center gap-2"><Check className="h-4 w-4 text-cyan-300" /> Wyjaśnienia dla laika (zero żargonu)</span>
+              <span className="inline-flex items-center gap-2"><Check className="h-4 w-4 text-cyan-300" /> 4 źródła prawa (Sejm ELI, UOKiK, SN, UE)</span>
+              <span className="inline-flex items-center gap-2"><Check className="h-4 w-4 text-cyan-300" /> Płatności Przelewy24 / BLIK (KNF)</span>
             </div>
 
             <div className="logo-stage mt-12 hidden max-w-md items-center gap-4 rounded-2xl p-3 sm:flex">
@@ -306,8 +306,8 @@ export function StartHero({ onSubmit, isLoading }: StartHeroProps) {
           </div>
         </div>
 
-        {/* Prawdziwe gwarancje prywatności */}
-        <div id="jak-dziala" className="mt-14 grid gap-3 border-t border-white/10 pt-6 sm:grid-cols-3 sm:gap-4 text-left">
+        {/* Prawdziwe gwarancje prywatności i operator płatności */}
+        <div id="gwarancje" className="mt-14 grid gap-3 border-t border-white/10 pt-6 sm:grid-cols-2 lg:grid-cols-4 sm:gap-4 text-left">
           <TrustItem
             icon={<ShieldCheck className="h-5 w-5" />}
             title="Przetwarzanie w UE"
@@ -315,13 +315,18 @@ export function StartHero({ onSubmit, isLoading }: StartHeroProps) {
           />
           <TrustItem
             icon={<FileCheck className="h-5 w-5" />}
-            title="Zero zapisu w bazie danych"
+            title="Zero zapisu na dyskach"
             text="Analiza odbywa się w ulotnej pamięci RAM. Dokument znika natychmiast po audycie."
           />
           <TrustItem
             icon={<Sparkles className="h-5 w-5" />}
             title="Brak trenowania AI"
             text="Twoje prywatne umowy i dane nigdy nie posłużą do uczenia modeli."
+          />
+          <TrustItem
+            icon={<ShieldCheck className="h-5 w-5" />}
+            title="Przelewy24 / BLIK"
+            text="Licencjonowany operator PayPro S.A. pod bezpośrednim nadzorem KNF (IP24/2014)."
           />
         </div>
       </div>

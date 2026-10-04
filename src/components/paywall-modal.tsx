@@ -155,9 +155,28 @@ export function PaywallModal({
           </div>
         </form>
 
-        <div className="mt-4 flex items-center justify-center gap-2 text-[11px] text-slate-400">
-          <Shield className="h-3.5 w-3.5 text-emerald-600" />
-          <span>Bezpieczne płatności obsługiwane przez Przelewy24 (PayPro SA)</span>
+        <div className="mt-4 pt-3 border-t border-slate-100 text-center space-y-1.5 text-[11px] text-slate-500">
+          <p className="leading-tight">
+            Klikając „Płacę z Przelewy24”, akceptujesz{" "}
+            <a href="/regulamin" target="_blank" className="text-blue-700 underline">
+              Regulamin
+            </a>{" "}
+            oraz potwierdzasz zgodę na natychmiastowe udostępnienie raportu cyfrowego przed upływem terminu odstąpienia od umowy (art. 38 pkt 13 ustawy o prawach konsumenta).
+          </p>
+          <div className="flex items-center justify-center gap-3 text-slate-400 pt-1">
+            <span className="flex items-center gap-1 text-slate-600 font-medium">
+              <Shield className="h-3.5 w-3.5 text-emerald-600" />
+              PayPro S.A. (Przelewy24) KNF
+            </span>
+            <span>•</span>
+            <a href="/polityka-prywatnosci" target="_blank" className="hover:text-slate-600 underline">
+              Prywatność
+            </a>
+            <span>•</span>
+            <a href="/kontakt" target="_blank" className="hover:text-slate-600 underline">
+              Kontakt i pomoc
+            </a>
+          </div>
         </div>
       </div>
     </div>
