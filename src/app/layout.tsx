@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import "./globals.css";
 
 export const viewport: Viewport = {
@@ -12,6 +13,11 @@ export const metadata: Metadata = {
   title: "czypodpisac.pl — Czy podpisać tę umowę?",
   description:
     "Wrzuć umowę. W minutę wiesz, czy podpisać, co zmienić i jak o to poprosić. Rzetelna analiza ryzyka prawnego oparta na prawie polskim i orzecznictwie.",
+  icons: {
+    icon: "/brand/favicon-128.png",
+    shortcut: "/brand/favicon-32.png",
+    apple: "/brand/favicon-128.png",
+  },
 };
 
 export default function RootLayout({
@@ -21,7 +27,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pl" className="h-full">
-      <body className="flex min-h-screen flex-col bg-slate-50 text-slate-900">
+      <body className="flex min-h-screen flex-col bg-[#f5f8fc] text-slate-950">
         {/* Skip-link dla dostępności (WCAG 2.2 AA) */}
         <a
           href="#main-content"
@@ -31,24 +37,36 @@ export default function RootLayout({
         </a>
 
         {/* Nagłówek serwisu */}
-        <header className="border-b border-slate-200 bg-white/95 backdrop-blur sticky top-0 z-40">
-          <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
+        <header className="site-header sticky top-0 z-40 border-b border-white/10 bg-[#071426]/90 text-white backdrop-blur-xl">
+          <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3.5 sm:px-8">
             <Link
               href="/"
-              className="flex items-center gap-2 text-xl font-bold tracking-tight text-slate-900 hover:text-blue-700 focus-visible:rounded"
+              className="flex items-center gap-2.5 text-base font-semibold tracking-tight text-white hover:text-cyan-200 focus-visible:rounded-lg sm:text-lg"
             >
-              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-700 text-white font-extrabold text-sm">
-                CZP
-              </span>
-              <span>czypodpisac<span className="text-blue-700">.pl</span></span>
+              <Image
+                src="/brand/favicon.png"
+                alt=""
+                width={34}
+                height={34}
+                className="h-8 w-8 rounded-xl object-contain sm:h-9 sm:w-9"
+                priority
+              />
+              <span>czypodpisac<span className="text-cyan-300">.pl</span></span>
             </Link>
 
-            <nav aria-label="Główna nawigacja" className="flex items-center gap-4 text-sm font-medium">
+            <nav aria-label="Główna nawigacja" className="flex items-center gap-1.5 text-sm font-medium sm:gap-3">
+              <Link
+                href="/#jak-dziala"
+                className="hidden rounded-lg px-3 py-2 text-slate-300 transition hover:bg-white/10 hover:text-white focus-visible:rounded-lg sm:inline-flex"
+              >
+                Jak to działa
+              </Link>
               <Link
                 href="/#przyklad"
-                className="text-slate-600 hover:text-slate-900 focus-visible:rounded px-2 py-1"
+                className="rounded-lg px-3 py-2 text-slate-300 transition hover:bg-white/10 hover:text-white focus-visible:rounded-lg"
               >
-                Przykładowy raport
+                <span className="sm:hidden">Raport</span>
+                <span className="hidden sm:inline">Przykładowy raport</span>
               </Link>
             </nav>
           </div>
@@ -60,14 +78,14 @@ export default function RootLayout({
         </main>
 
         {/* Stopka serwisu */}
-        <footer className="border-t border-slate-200 bg-white py-8 text-xs text-slate-500 no-print">
-          <div className="mx-auto max-w-6xl px-4 sm:px-6">
-            <div className="flex flex-col sm:flex-row justify-between items-center gap-4 border-b border-slate-100 pb-6">
+        <footer className="border-t border-slate-200 bg-white py-10 text-xs text-slate-500 no-print">
+          <div className="mx-auto max-w-7xl px-5 sm:px-8">
+            <div className="flex flex-col gap-4 border-b border-slate-100 pb-7 sm:flex-row sm:items-center sm:justify-between">
               <div className="flex items-center gap-2">
-                <span className="h-2 w-2 rounded-full bg-emerald-500" aria-hidden="true" />
-                <span className="font-semibold text-slate-700">Centrum danych UE (Frankfurt / Warszawa)</span>
+                <span className="h-2 w-2 rounded-full bg-cyan-500" aria-hidden="true" />
+                <span className="font-semibold text-slate-700">Dane przetwarzamy w UE</span>
                 <span className="text-slate-400">•</span>
-                <span>Automatyczne usuwanie po 7 dniach</span>
+                <span>Pliki usuwamy po 7 dniach</span>
               </div>
               <div className="text-slate-400">
                 Stan prawny bazy: 2026-10-03 (API Sejmu ELI)
@@ -75,10 +93,9 @@ export default function RootLayout({
             </div>
 
             <div className="pt-6 flex flex-col md:flex-row justify-between gap-4">
-              <p className="max-w-2xl text-slate-500 leading-relaxed">
-                Raport jest generowany przy użyciu dedykowanego systemu sztucznej inteligencji czypodpisac.pl.
-                Ma charakter informacyjno-edukacyjny i projektowy; nie stanowi pomocy prawnej w rozumieniu ustawy o radcach prawnych.
-                Przed podpisaniem umów o skrajnym ryzyku zawsze zalecamy bezpośrednią konsultację z radcą prawnym lub adwokatem.
+              <p className="max-w-3xl leading-relaxed text-slate-500">
+                Raport powstaje z użyciem AI i ma charakter informacyjny. Nie zastępuje porady prawnej.
+                Przy wysokim ryzyku skonsultuj umowę z radcą prawnym lub adwokatem.
               </p>
               <p className="text-slate-400 self-start md:self-end">
                 © 2026 <a href="https://multinewsroom.pl/" target="_blank" rel="noopener noreferrer" className="hover:text-slate-700 underline underline-offset-2">Multinewsroom</a>. Wszelkie prawa zastrzeżone.

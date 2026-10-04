@@ -1,14 +1,93 @@
 @import "tailwindcss";
 
 @layer base {
+  :root {
+    --ink: #071426;
+    --ink-soft: #0d1f37;
+    --cobalt: #2f74ff;
+    --cyan: #1bd4e5;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
   body {
     min-height: 100vh;
+    overflow-x: hidden;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   }
 
   /* Wyraźny wskaźnik focusu klawiatury dla WCAG 2.2 AA */
   :focus-visible {
     outline: 2px solid #2563eb;
     outline-offset: 2px;
+  }
+}
+
+.site-header {
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.hero-grid {
+  background:
+    radial-gradient(circle at 82% 24%, rgba(27, 212, 229, 0.2), transparent 30%),
+    radial-gradient(circle at 18% 5%, rgba(47, 116, 255, 0.22), transparent 38%),
+    linear-gradient(135deg, #071426 0%, #0a1c33 52%, #0d2743 100%);
+}
+
+.hero-grid::after {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  opacity: 0.18;
+  background-image: linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(to bottom, black, transparent 85%);
+}
+
+.hero-orb {
+  position: absolute;
+  width: 22rem;
+  height: 22rem;
+  right: -8rem;
+  top: 4rem;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(27, 212, 229, 0.28), transparent 67%);
+  filter: blur(5px);
+  pointer-events: none;
+}
+
+.upload-panel {
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.28), 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+.trust-item {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.logo-stage {
+  background: radial-gradient(circle at 50% 34%, rgba(36, 116, 255, 0.23), transparent 58%), rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.soft-enter {
+  animation: soft-enter 520ms cubic-bezier(.22,1,.36,1) both;
+}
+
+@keyframes soft-enter {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }
 

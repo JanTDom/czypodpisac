@@ -19,7 +19,7 @@ export function DemoSampleReport() {
               Zobacz, jak wygląda raport analizy
             </h2>
             <p className="mt-1 text-xs sm:text-sm text-slate-600">
-              Przykład autentycznej analizy standardowej umowy najmu lokalu mieszkalnego z Warszawy.
+              Przykładowy raport na podstawie umowy testowej. Pokazuje sposób prezentacji ryzyka.
             </p>
           </div>
 
@@ -58,8 +58,8 @@ export function DemoSampleReport() {
 
           <div className="mt-4 flex flex-wrap gap-2 text-xs font-semibold">
             <span className="rounded-full bg-red-600 px-3 py-1 text-white">2 ryzyka czerwone</span>
-            <span className="rounded-full bg-amber-500 px-3 py-1 text-white">1 ryzyko żółte</span>
-            <span className="rounded-full bg-slate-700 px-3 py-1 text-white">Łączne ryzyko: 14 000 zł</span>
+            <span className="rounded-full bg-amber-100 px-3 py-1 text-amber-950">1 ryzyko żółte</span>
+            <span className="rounded-full bg-slate-800 px-3 py-1 text-white">Łączne ryzyko: 14 000 zł</span>
           </div>
         </div>
 

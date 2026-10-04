@@ -88,20 +88,30 @@ export async function executeAggregation(
   let verdictOneSentence: string;
   let recommendedAction: NextActionRecommendation;
 
-  if (totalCriticalRed === 0 && yellowCount === 0) {
-    verdictOneSentence = "PODPISZ: Umowa jest bezpieczna i nie zawiera klauzul abuzywnych ani istotnych ryzyk.";
-    recommendedAction = "mozesz_podpisac";
-  } else if (totalCriticalRed >= 4 || (totalRiskAmount && totalRiskAmount >= 50000)) {
+  const isUnknownOrNoChecklist =
+    classification.contractType === "inna_nieznana" ||
+    !registry.hasChecklist(classification.contractType) ||
+    checklist.matches.length === 0;
+
+  if (totalCriticalRed >= 4 || (totalRiskAmount && totalRiskAmount >= 50000)) {
     verdictOneSentence = "NIE PODPISUJ BEZ PRAWNIKA: Wykryto liczne niedozwolone klauzule i wysokie ryzyko finansowe.";
     recommendedAction = "skonsultuj_z_prawnikiem";
   } else if (totalCriticalRed > 0) {
     const keyRiskTitles = redFindings.slice(0, 2).map((r) => r.tytulPoLudzku.toLowerCase()).join(" oraz ");
     verdictOneSentence = `PODPISZ PO ZMIANACH: Przed podpisaniem bezwzględnie zmień zapisy (${keyRiskTitles || "wykryte klauzule wysokiego ryzyka"}).`;
     recommendedAction = "popros_o_zmiany";
-  } else {
+  } else if (yellowCount > 0) {
     // Brak uwag czerwonych, są tylko żółte uwagi
     verdictOneSentence = "PODPISZ PO ZMIANACH: Umowa jest ogólnie poprawna, ale wymaga doprecyzowania kilku postanowień.";
     recommendedAction = "popros_o_zmiany";
+  } else if (isUnknownOrNoChecklist) {
+    // Brak uwag czerwonych i żółtych, ale umowa jest nietypowa lub nie posiada certyfikowanej checklisty w bazie
+    verdictOneSentence = "DO WERYFIKACJI Z PRAWNIKIEM: Umowa nietypowa. Nie wykryto rażących pułapek ogólnych, ale wymaga indywidualnej oceny prawnika.";
+    recommendedAction = "skonsultuj_z_prawnikiem";
+  } else {
+    // Sprawdzona certyfikowana checklista, brak jakichkolwiek naruszeń
+    verdictOneSentence = "PODPISZ: Umowa jest bezpieczna i nie zawiera klauzul abuzywnych ani istotnych ryzyk.";
+    recommendedAction = "mozesz_podpisac";
   }
 
   return {

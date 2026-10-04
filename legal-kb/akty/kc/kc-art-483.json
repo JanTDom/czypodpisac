@@ -1,0 +1,29 @@
+{
+  "id": "kc-art-483",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. – Kodeks cywilny",
+  "publicationAddress": "Dz.U. 2026 poz. 795",
+  "editorialUnit": "art. 483",
+  "content": "Art. 483. § 1. Można zastrzec w umowie, że naprawienie szkody wynikłej z niewykonania lub nienależytego wykonania zobowiązania niepieniężnego nastąpi przez zapłatę określonej sumy (kara umowna).\n§ 2. Dłużnik nie może bez zgody wierzyciela zwolnić się z zobowiązania przez zapłatę kary umownej.",
+  "sourceUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/795/text.pdf",
+  "fetchDate": "2026-10-04",
+  "legalStateDate": "2026-05-27",
+  "contentHashSha256": "ff074e9c425312ca44dd434a9cff80eef04689d5caadd79dbf82455729c9ec6f",
+  "status": "active",
+  "contractTypeTags": [
+    "zlecenie",
+    "dzielo",
+    "b2b",
+    "najem",
+    "ogolne"
+  ],
+  "keywords": [
+    "kara umowna",
+    "zobowiązanie niepieniężne",
+    "naprawienie szkody"
+  ],
+  "officialCitation": "Dz.U. 2026 poz. 795, art. 483",
+  "eliAddress": "DU/1964/93",
+  "unifiedActEli": "DU/2026/795",
+  "lastVerifiedAt": "2026-10-04T07:05:00.000Z"
+}

@@ -1,7 +1,7 @@
 {
   "version": "2026.10-all-contracts",
   "generatedAt": "2026-10-03T17:03:40.852Z",
-  "totalUnits": 93,
+  "totalUnits": 96,
   "unitsByAct": {
     "Ustawa o ochronie praw lokatorów": 22,
     "Kodeks cywilny": 33,
@@ -1233,6 +1233,53 @@
       "status": "active",
       "contractTypeTags": [
         "umowa_deweloperska"
+      ]
+    },
+    {
+      "id": "kc-art-483",
+      "unitType": "statute",
+      "editorialUnit": "art. 483",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. – Kodeks cywilny",
+      "filePath": "akty/kc/kc-art-483.json",
+      "legalStateDate": "2026-05-27",
+      "status": "active",
+      "contractTypeTags": [
+        "zlecenie",
+        "dzielo",
+        "b2b",
+        "najem",
+        "ogolne"
+      ]
+    },
+    {
+      "id": "kc-art-484",
+      "unitType": "statute",
+      "editorialUnit": "art. 484",
+      "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. – Kodeks cywilny",
+      "filePath": "akty/kc/kc-art-484.json",
+      "legalStateDate": "2026-05-27",
+      "status": "active",
+      "contractTypeTags": [
+        "zlecenie",
+        "dzielo",
+        "b2b",
+        "najem",
+        "ogolne"
+      ]
+    },
+    {
+      "id": "praut-art-41",
+      "unitType": "statute",
+      "editorialUnit": "art. 41",
+      "actTitle": "Ustawa z dnia 4 lutego 1994 r. o prawie autorskim i prawach pokrewnych",
+      "filePath": "akty/praut/praut-art-41.json",
+      "legalStateDate": "2024-12-06",
+      "status": "active",
+      "contractTypeTags": [
+        "zlecenie",
+        "dzielo",
+        "b2b",
+        "prawa_autorskie"
       ]
     }
   ]

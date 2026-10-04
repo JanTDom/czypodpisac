@@ -1,0 +1,29 @@
+{
+  "id": "kc-art-484",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 23 kwietnia 1964 r. – Kodeks cywilny",
+  "publicationAddress": "Dz.U. 2026 poz. 795",
+  "editorialUnit": "art. 484",
+  "content": "Art. 484. § 1. W razie niewykonania lub nienależytego wykonania zobowiązania kara umowna należy się wierzycielowi w zastrzeżonej na ten wypadek wysokości bez względu na wysokość poniesionej szkody. Żądanie odszkodowania przenoszącego wysokość zastrzeżonej kary nie jest dopuszczalne, chyba że strony inaczej postanowiły.\n§ 2. Jeżeli zobowiązanie zostało w znacznej części wykonane, dłużnik może żądać zmniejszenia kary umownej; to samo dotyczy wypadku, gdy kara umowna jest rażąco wygórowana.",
+  "sourceUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/795/text.pdf",
+  "fetchDate": "2026-10-04",
+  "legalStateDate": "2026-05-27",
+  "contentHashSha256": "fe4f4a8b354ea92c56ae97c2aa76e6ac013553d3fdb9cc72592821c8bb2695f7",
+  "status": "active",
+  "contractTypeTags": [
+    "zlecenie",
+    "dzielo",
+    "b2b",
+    "najem",
+    "ogolne"
+  ],
+  "keywords": [
+    "miarkowanie kary umownej",
+    "rażąco wygórowana kara umowna",
+    "odszkodowanie uzupełniające"
+  ],
+  "officialCitation": "Dz.U. 2026 poz. 795, art. 484",
+  "eliAddress": "DU/1964/93",
+  "unifiedActEli": "DU/2026/795",
+  "lastVerifiedAt": "2026-10-04T07:05:00.000Z"
+}

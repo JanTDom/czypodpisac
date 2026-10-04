@@ -5,6 +5,8 @@ import { ClassificationOutput } from "../schemas/stage02-classification";
 import { EvaluationOutput, SingleClauseEvaluation } from "../schemas/stage06-evaluation";
 import { ChecklistRegistry } from "../../checklists/registry";
 import { evaluateDeveloperContract } from "../rules/umowa-deweloperska-rules";
+import { evaluateZlecenieContract } from "../rules/umowa-zlecenia-rules";
+import { evaluateGeneralContractRules } from "../rules/general-contract-rules";
 
 /**
  * Etap 6: Ocena ryzyka prawnego klauzul
@@ -206,6 +208,31 @@ export async function executeEvaluation(
   // Domyślny rejestr jej nie zawiera, dopóki prawnik nie zatwierdzi punktów (typ nieaktywny w produkcji).
   if (classification.contractType === "umowa_deweloperska" && registry.hasChecklist("umowa_deweloperska")) {
     evaluations.push(...evaluateDeveloperContract(segmentation.clauses));
+  }
+
+  // 6. REGUŁY UMOWY ZLECENIA / B2B — audyt cech stosunku pracy (art. 22 k.p.) i pułapek zlecenia
+  if (classification.contractType === "zlecenie" || classification.contractType === "b2b_uslugi_freelancer") {
+    evaluations.push(...evaluateZlecenieContract(segmentation.clauses, classification.userRole));
+  }
+
+  // 7. UNIWERSALNE REGUŁY BEZPIECZEŃSTWA PRAWNEGO — dla każdej umowy (kary, zrzeczenia, prawa autorskie)
+  const fullContractText = segmentation.clauses.map((c) => c.fullText).join("\n\n");
+  const generalFindings = evaluateGeneralContractRules(fullContractText, classification.userRole);
+  for (const gf of generalFindings) {
+    // Unikaj duplikowania tego samego typu ryzyka, jeśli już zostało zgłoszone
+    const alreadyPresent = evaluations.some(
+      (e) => e.checklistItemId === gf.checklistItemId || (gf.kwotaRyzyka && e.kwotaRyzyka === gf.kwotaRyzyka)
+    );
+    if (!alreadyPresent) {
+      // Przypisz do pasującej klauzuli z segmentacji
+      const matchingClause = segmentation.clauses.find((c) =>
+        c.fullText.includes(gf.doslownyCytatZUmowy.slice(0, 30))
+      );
+      evaluations.push({
+        ...gf,
+        clauseId: matchingClause?.id || segmentation.clauses[0]?.id || "clause-1",
+      });
+    }
   }
 
   return {

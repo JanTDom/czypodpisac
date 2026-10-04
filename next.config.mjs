@@ -29,6 +29,7 @@ const securityHeaders = [
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  serverExternalPackages: ["pdfjs-dist"],
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
   },

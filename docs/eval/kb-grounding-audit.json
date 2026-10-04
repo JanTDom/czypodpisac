@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-10-03T17:42:14.575Z",
+  "checkedAt": "2026-10-04T07:59:11.906Z",
   "summary": {
-    "potwierdzona": 84,
+    "potwierdzona": 87,
     "niepotwierdzona": 9
   },
   "results": [
@@ -220,6 +220,22 @@
       "status": "potwierdzona",
       "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2024/1061/text.html"
+    },
+    {
+      "id": "kc-art-483",
+      "unitType": "statute",
+      "file": "legal-kb/akty/kc/kc-art-483.json",
+      "status": "potwierdzona",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
+      "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/795/text.pdf"
+    },
+    {
+      "id": "kc-art-484",
+      "unitType": "statute",
+      "file": "legal-kb/akty/kc/kc-art-484.json",
+      "status": "potwierdzona",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
+      "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/795/text.pdf"
     },
     {
       "id": "kc-art-627",
@@ -475,7 +491,7 @@
       "file": "legal-kb/akty/kp/kp-art-22.json",
       "status": "potwierdzona",
       "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
-      "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2023/1465/text.html"
+      "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/1245/text.pdf"
     },
     {
       "id": "kp-art-25",
@@ -500,6 +516,14 @@
       "status": "potwierdzona",
       "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
       "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2023/1465/text.html"
+    },
+    {
+      "id": "praut-art-41",
+      "unitType": "statute",
+      "file": "legal-kb/akty/praut/praut-art-41.json",
+      "status": "potwierdzona",
+      "reason": "zgodność z tekstem ELI: 100.0% (fragmenty niezgodne: 0)",
+      "checkedUrl": "https://api.sejm.gov.pl/eli/acts/DU/2025/24/text.pdf"
     },
     {
       "id": "uopl-art-11",
@@ -698,7 +722,7 @@
       "unitType": "court_ruling",
       "file": "legal-kb/orzecznictwo/sn-v-csk-31-08.json",
       "status": "niepotwierdzona",
-      "reason": "HTTP 200, text/html, 1887 B — źródło nie zwraca dokumentu",
+      "reason": "HTTP 200, text/html, 1886 B — źródło nie zwraca dokumentu",
       "checkedUrl": "http://www.sn.pl/sites/orzecznictwo/orzeczenia2/v%20csk%2031-08-1.pdf"
     },
     {

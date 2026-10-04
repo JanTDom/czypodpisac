@@ -1,24 +1,33 @@
 {
   "id": "kp-art-22",
   "unitType": "statute",
-  "actTitle": "Ustawa z dnia 26 czerwca 1974 r. - Kodeks pracy",
-  "publicationAddress": "Dz.U. 2023 poz. 1465",
+  "actTitle": "Ustawa z dnia 26 czerwca 1974 r. – Kodeks pracy",
+  "publicationAddress": "Dz.U. 2026 poz. 1245",
   "editorialUnit": "art. 22",
-  "content": "Art. 22. 1. Do funkcjonujących przed dniem wejścia w życie niniejszej ustawy rodzin wspierających, rodzin zastępczych i rodzin pomocowych oraz do osób, które przed dniem wejścia w życie niniejszej ustawy zostały kandydatami do pełnienia funkcji rodziny zastępczej, kandydatami do prowadzenia rodzinnego domu dziecka, osobami prowadzącymi rodzinny dom dziecka, osobami podejmującymi się wspierania działań wychowawczych, o których mowa w art. 96 ustawy zmienianej w art. 1, kandydatami do przysposobienia dziecka, kierownikami, dyrektorami, osobami zatrudnionymi, osobami świadczącymi usługi lub wolontariuszami w jednostce organizacyjnej wspierania rodziny i systemu pieczy zastępczej, rodzinie zastępczej lub rodzinnym domu dziecka, stosuje się przepisy art. 7b ustawy zmienianej w art. 1 w brzmieniu nadanym niniejszą ustawą. 2. Podmioty, organy i osoby, o których mowa w art. 7b ust. 2 ustawy zmienianej w art. 1 w brzmieniu nadanym niniejszą ustawą, obowiązane do sprawdzenia i potwierdzenia informacji o figurowaniu albo niefigurowaniu w bazie danych Rejestru Sprawców Przestępstw na Tle Seksualnym z dostępem ograniczonym sprawdzają i potwierdzają te informacje w odniesieniu do osób, o których mowa w ust. 1, w terminie 6 miesięcy od dnia wejścia w życie niniejszej ustawy. 3. W przypadku gdy osoby, o których mowa w ust. 1, figurują w Rejestrze Sprawców Przestępstw na Tle Seksualnym z dostępem ograniczonym, osoby te, z dniem powzięcia o tym informacji przez podmioty, organy i osoby, o których mowa w art. 7b ust. 2 ustawy zmienianej w art. 1 w brzmieniu nadanym niniejszą ustawą, obowiązane do sprawdzenia i potwierdzenia informacji o figurowaniu albo niefigurowaniu w bazie danych Rejestru Sprawców Przestępstw na Tle Seksualnym z dostępem ograniczonym, tracą wynikające z ustawy zmienianej w art. 1 uprawnienia do wykonywania zadań związanych ze sprawowaniem opieki nad dzieckiem lub z kontaktem z dzieckiem, a w przypadku gdy wykonywanie tych zadań powierzone było umową - ulega ona rozwiązaniu bez zachowania okresu wypowiedzenia, natomiast w przypadku zatrudnienia na podstawie umowy o pracę ulega ona rozwiązaniu w trybie art. 52 § 1 pkt 3 ustawy zmienianej w art. 4. 4. W przypadku gdy osoby figurujące w Rejestrze Sprawców Przestępstw na Tle Seksualnym z dostępem ograniczonym pełnią funkcję rodziny zastępczej, prowadzą rodzinny dom dziecka lub pełnią funkcję rodziny pomocowej, starosta jest obowiązany do zapewnienia dzieciom umieszczonym w tych rodzinach zastępczych, rodzinnych domach dziecka lub rodzinach pomocowych miejsca w innych rodzinach zastępczych, rodzinnych domach dziecka lub rodzinach pomocowych i jednoczesnego zawiadomienia właściwego sądu o konieczności wydania odpowiednich zarządzeń lub orzeczeń. ” „",
-  "sourceUrl": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20230001465",
-  "fetchDate": "2026-10-03",
-  "legalStateDate": "2023-04-26",
-  "contentHashSha256": "df95fa7e8264025ac845d2d1f0a751948b77e3e1192a60d4ddfbc95754b19e70",
+  "content": "Art. 22. § 1. Przez nawiązanie stosunku pracy pracownik zobowiązuje się do wykonywania pracy określonego rodzaju na rzecz pracodawcy i pod jego kierownictwem oraz w miejscu i czasie wyznaczonym przez pracodawcę, a pracodawca – do zatrudniania pracownika za wynagrodzeniem. § 1 . Zatrudnienie w warunkach określonych w § 1 jest zatrudnieniem na podstawie stosunku pracy, bez względu na nazwę zawartej przez strony umowy. § 1 . Nie jest dopuszczalne zastąpienie umowy o pracę umową cywilnoprawną przy zachowaniu warunków wykonywania pracy, określonych w § 1. § 2. Pracownikiem może być osoba, która ukończyła 18 lat. Na warunkach określonych w dziale dziewiątym pracownikiem może być również osoba, która nie ukończyła 18 lat. § 3. Osoba ograniczona w zdolności do czynności prawnych może bez zgody przedstawiciela ustawowego nawiązać stosunek pracy oraz dokonywać czynności prawnych, które dotyczą tego stosunku. Jednakże gdy stosunek pracy sprzeciwia się dobru tej osoby, przedstawiciel ustawowy za zezwoleniem sądu opiekuńczego może stosunek pracy rozwiązać.",
+  "sourceUrl": "https://api.sejm.gov.pl/eli/acts/DU/2026/1245/text.pdf",
+  "fetchDate": "2026-10-04",
+  "legalStateDate": "2026-09-01",
+  "contentHashSha256": "e5606211da17267b32d4260a462fe8daf193e60d581ae1a407c41ee46146a481",
   "status": "active",
   "contractTypeTags": [
-    "umowa_o_prace",
     "zlecenie",
-    "b2b_uslugi_freelancer"
+    "dzielo",
+    "b2b",
+    "praca"
   ],
   "keywords": [
     "stosunek pracy",
+    "cechy stosunku pracy",
+    "podporządkowanie",
+    "kierownictwo",
+    "miejsce i czas wyznaczony przez pracodawcę",
     "zakaz zastępowania umowy o pracę umową cywilnoprawną",
-    "praca pod kierownictwem"
+    "pozorny kontrakt"
   ],
-  "officialCitation": "Dz.U. 2023 poz. 1465, art. 22"
+  "officialCitation": "Dz.U. 2026 poz. 1245, art. 22",
+  "eliAddress": "DU/1974/141",
+  "unifiedActEli": "DU/2026/1245",
+  "lastVerifiedAt": "2026-10-04T07:05:00.000Z",
+  "freshnessNotes": "Tekst jednolity Dz.U. 2026 poz. 1245, ogłoszony 1 września 2026 r."
 }

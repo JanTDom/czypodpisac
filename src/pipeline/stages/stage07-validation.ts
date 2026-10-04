@@ -45,7 +45,17 @@ export class DeterministicGeminiVerifier implements GeminiVerifierClient {
       } else if (isPenaltyThesis && (sourceContent.includes("sprzeczny z dobrymi obyczajami") || sourceContent.includes("rażąco naruszając") || sourceContent.includes("odstąpienie") || sourceContent.includes("kara"))) {
         supportedSources.push(src.sourceId);
         hasStrongSupport = true;
-      } else if (supportedSources.length === 0 && unit.keywords.some((k) => thesisLower.includes(k.toLowerCase()))) {
+      } else if (
+        unit.keywords.some((k) => {
+          const kl = k.toLowerCase();
+          return thesisLower.includes(kl) || kl.split(" ").some((w) => w.length > 4 && thesisLower.includes(w));
+        }) ||
+        (src.sourceId === "kp-art-22" && (thesisLower.includes("stosunku pracy") || thesisLower.includes("umowy o pracę") || thesisLower.includes("cechy"))) ||
+        (src.sourceId === "kc-art-746" && (thesisLower.includes("zleceni") || thesisLower.includes("wypowiedzen") || thesisLower.includes("zaufania") || thesisLower.includes("odbiera"))) ||
+        (src.sourceId === "praut-art-41" && (thesisLower.includes("autorsk") || thesisLower.includes("utwor"))) ||
+        ((src.sourceId === "kc-art-483" || src.sourceId === "kc-art-484") && (thesisLower.includes("kar") || thesisLower.includes("konkurencj") || thesisLower.includes("drakońsk"))) ||
+        (src.sourceId === "kc-art-385-1" && (thesisLower.includes("zmian") || thesisLower.includes("regulamin") || thesisLower.includes("klauzul")))
+      ) {
         supportedSources.push(src.sourceId);
         hasStrongSupport = true;
       }

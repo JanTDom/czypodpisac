@@ -106,7 +106,7 @@ export function ReportView({
           </div>
 
           {/* Liczniki uwag */}
-          <div className="flex items-center gap-2 self-start sm:self-auto">
+          <div className="flex flex-wrap items-center gap-2 self-start sm:self-auto">
             {report.counts.red > 0 && (
               <span className="inline-flex items-center gap-1 rounded-full bg-red-600 px-3 py-1 text-xs font-bold text-white shadow-2xs">
                 {report.counts.red} czerwone
@@ -204,11 +204,11 @@ export function ReportView({
 
       {/* 3. ZAKŁADKI: UWAGI VS POPRAWKI I MAIL */}
       <div className="mt-8 border-b border-slate-200">
-        <nav className="flex gap-4">
+        <nav className="flex gap-4 overflow-x-auto pb-1">
           <button
             type="button"
             onClick={() => setActiveTab("findings")}
-            className={`pb-3 text-sm font-bold border-b-2 transition-all ${
+            className={`shrink-0 whitespace-nowrap pb-3 text-sm font-bold border-b-2 transition-all ${
               activeTab === "findings"
                 ? "border-blue-700 text-blue-700"
                 : "border-transparent text-slate-500 hover:text-slate-900"
@@ -225,7 +225,7 @@ export function ReportView({
                 setActiveTab("amendments");
               }
             }}
-            className={`pb-3 text-sm font-bold border-b-2 flex items-center gap-1.5 transition-all ${
+            className={`shrink-0 whitespace-nowrap pb-3 text-sm font-bold border-b-2 flex items-center gap-1.5 transition-all ${
               activeTab === "amendments"
                 ? "border-blue-700 text-blue-700"
                 : "border-transparent text-slate-500 hover:text-slate-900"
@@ -401,8 +401,8 @@ export function ReportView({
       {/* Modal zgłoszenia uwagi (Nie zgadzam się) */}
       {disputeInputId && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 p-4 backdrop-blur-xs">
-          <div className="w-full max-w-md rounded-2xl border border-slate-200 bg-white p-6 shadow-2xl">
-            <h3 className="text-base font-bold text-slate-900">Nie zgadzasz się z tą uwagą?</h3>
+          <div role="dialog" aria-modal="true" aria-labelledby="dispute-dialog-title" className="w-full max-w-md rounded-2xl border border-slate-200 bg-white p-6 shadow-2xl">
+            <h3 id="dispute-dialog-title" className="text-base font-bold text-slate-900">Nie zgadzasz się z tą uwagą?</h3>
             <p className="text-xs text-slate-500 mt-1 mb-4">
               Twoja opinia trafi bezpośrednio do prawnika weryfikującego działanie silnika czypodpisac.pl.
             </p>
@@ -453,7 +453,15 @@ function FindingCard({
 
   return (
     <div
+      role="button"
+      tabIndex={0}
       onClick={onSelect}
+      onKeyDown={(event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          onSelect();
+        }
+      }}
       className={`rounded-2xl border p-5 transition-all cursor-pointer ${
         isActive
           ? "border-blue-600 ring-2 ring-blue-600/20 bg-white shadow-md"

@@ -1,14 +1,28 @@
 "use client";
 
-import React, { useState, useRef } from "react";
-import { UploadCloud, Camera, FileText, ShieldCheck, Clock, Lock } from "lucide-react";
-import { MultiPageCamera, CapturedPage } from "./multi-page-camera";
+import React, { useRef, useState } from "react";
+import Image from "next/image";
+import {
+  ArrowRight,
+  Check,
+  FileText,
+  ScanText,
+  ShieldCheck,
+  Sparkles,
+  UploadCloud,
+  Camera,
+  FileCheck,
+  UserCheck,
+} from "lucide-react";
+
+export type UserRoleSelection = "wykonawca" | "zamawiajacy" | "auto";
 
 export interface ContractSubmission {
   file?: File;
+  files?: File[];
   text?: string;
-  pages?: CapturedPage[];
   fileName: string;
+  userRole?: UserRoleSelection;
 }
 
 interface StartHeroProps {
@@ -17,206 +31,314 @@ interface StartHeroProps {
 }
 
 export function StartHero({ onSubmit, isLoading }: StartHeroProps) {
-  const [isCameraActive, setIsCameraActive] = useState(false);
   const [isPasteActive, setIsPasteActive] = useState(false);
   const [pastedText, setPastedText] = useState("");
   const [dragOver, setDragOver] = useState(false);
+  const [fileError, setFileError] = useState<string | null>(null);
+  const [selectedRole, setSelectedRole] = useState<UserRoleSelection>("wykonawca");
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const cameraInputRef = useRef<HTMLInputElement>(null);
+
+  const handleFiles = (fileList: FileList | null) => {
+    if (!fileList || fileList.length === 0) return;
+    setFileError(null);
+
+    const files = Array.from(fileList);
+    const first = files[0];
+
+    // Sprawdź rozszerzenie
+    const name = first.name.toLowerCase();
+    const isSupported =
+      name.endsWith(".pdf") ||
+      name.endsWith(".docx") ||
+      name.endsWith(".doc") ||
+      name.endsWith(".txt") ||
+      first.type.startsWith("image/") ||
+      name.endsWith(".jpg") ||
+      name.endsWith(".jpeg") ||
+      name.endsWith(".png") ||
+      name.endsWith(".webp");
+
+    if (!isSupported) {
+      setFileError("Obsługujemy pliki PDF, Word (.docx), tekstowe (.txt) oraz zdjęcia stron umowy (JPG, PNG).");
+      return;
+    }
+
+    if (files.length === 1) {
+      onSubmit({ file: first, fileName: first.name, userRole: selectedRole });
+    } else {
+      onSubmit({ files, fileName: `${files.length} stron umowy`, userRole: selectedRole });
+    }
+  };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      onSubmit({
-        file,
-        fileName: file.name,
-      });
-    }
+    handleFiles(e.target.files);
+    e.target.value = "";
   };
 
   const handleDrop = (e: React.DragEvent) => {
     e.preventDefault();
     setDragOver(false);
-    const file = e.dataTransfer.files?.[0];
-    if (file) {
-      onSubmit({
-        file,
-        fileName: file.name,
-      });
-    }
+    handleFiles(e.dataTransfer.files);
   };
 
   const handlePastedSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (pastedText.trim().length > 30) {
-      onSubmit({
-        text: pastedText,
-        fileName: "wklejona_umowa.txt",
-      });
+    if (pastedText.trim().length >= 50) {
+      onSubmit({ text: pastedText, fileName: "wklejona_umowa.txt", userRole: selectedRole });
+    } else {
+      setFileError("Wklejony tekst jest za krótki. Wklej co najmniej kilka zdań lub artykułów umowy.");
     }
   };
 
-  const handleCameraComplete = (pages: CapturedPage[]) => {
-    const combinedText = pages.map((p) => `--- Strona ${p.pageNumber} ---\n${p.name}`).join("\n\n");
-    onSubmit({
-      text: combinedText,
-      pages,
-      fileName: `skan_umowy_${pages.length}_stron.pdf`,
-    });
-  };
-
   return (
-    <section className="relative overflow-hidden pt-8 pb-12 sm:pt-14 sm:pb-20">
-      <div className="mx-auto max-w-4xl px-4 sm:px-6">
-        {/* Widok robienia zdjęć aparatem (jeśli aktywny) */}
-        {isCameraActive ? (
-          <MultiPageCamera
-            onComplete={handleCameraComplete}
-            onCancel={() => setIsCameraActive(false)}
-          />
-        ) : (
-          <div className="flex flex-col items-center text-center">
-            {/* Nagłówek startowy — dokładnie wg reguły 01 */}
-            <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
+    <section className="hero-grid relative overflow-hidden text-white">
+      <div className="hero-orb" aria-hidden="true" />
+      <div className="relative z-10 mx-auto max-w-7xl px-5 pb-14 pt-12 sm:px-8 sm:pb-20 sm:pt-20">
+        <div className="grid items-center gap-8 md:grid-cols-[minmax(0,1fr)_minmax(330px,0.92fr)] md:gap-8 lg:gap-14">
+          <div className="soft-enter max-w-2xl text-left">
+            <div className="mb-6 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-cyan-200">
+              <Sparkles className="h-4 w-4" aria-hidden="true" />
+              Rzetelna analiza umowy w minutę
+            </div>
+            <h1 className="max-w-xl text-4xl font-black leading-[1.04] tracking-[-0.04em] sm:text-5xl lg:text-6xl">
               Czy podpisać tę umowę?
             </h1>
-            <p className="mt-3 text-base text-slate-600 sm:text-lg max-w-xl">
-              Wrzuć dokument lub zrób zdjęcie. W minutę sprawdzisz pułapki prawne, limity finansowe i gotowe poprawki.
+            <p className="mt-6 max-w-xl text-base leading-7 text-slate-300 sm:text-lg">
+              Wyjaśniamy umowę prosto i po ludzku — jak dla laika. Dostaniesz jasny werdykt, kwoty ryzyka,
+              wskazanie pułapek i gotowy wzór maila do drugiej strony.
             </p>
 
-            {/* Jedno główne pole uploadu — powyżej linii przewijania */}
-            <div className="mt-8 w-full max-w-2xl">
-              {!isPasteActive ? (
-                <div
-                  onDragOver={(e) => {
-                    e.preventDefault();
-                    setDragOver(true);
-                  }}
-                  onDragLeave={() => setDragOver(false)}
-                  onDrop={handleDrop}
-                  className={`relative flex flex-col items-center justify-center rounded-2xl border-2 border-dashed p-8 sm:p-12 transition-all ${
-                    dragOver
-                      ? "border-blue-600 bg-blue-50/50 scale-[1.01]"
-                      : "border-slate-300 bg-white hover:border-slate-400 hover:shadow-sm"
+            <div className="mt-8 flex flex-wrap gap-x-5 gap-y-3 text-sm text-slate-200">
+              <span className="inline-flex items-center gap-2"><Check className="h-4 w-4 text-cyan-300" /> Bez prawniczego żargonu</span>
+              <span className="inline-flex items-center gap-2"><Check className="h-4 w-4 text-cyan-300" /> Baza Sejmu RP (ELI)</span>
+              <span className="inline-flex items-center gap-2"><Check className="h-4 w-4 text-cyan-300" /> 100% poufności</span>
+            </div>
+
+            <div className="logo-stage mt-12 hidden max-w-md items-center gap-4 rounded-2xl p-3 sm:flex">
+              <Image
+                src="/brand/logo.png"
+                alt="czypodpisac.pl"
+                width={1536}
+                height={1024}
+                className="h-auto w-full max-w-[280px] object-contain"
+                priority
+              />
+              <p className="max-w-[145px] text-xs leading-5 text-slate-300">
+                Spokojna decyzja zaczyna się od zrozumiałej umowy.
+              </p>
+            </div>
+          </div>
+
+          {/* Panel wgrywania dokumentu */}
+          <div className="upload-panel soft-enter rounded-[1.75rem] border border-white/15 bg-[#0d213c] p-5 text-white sm:p-7 text-left" style={{ animationDelay: "80ms" }}>
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <p className="text-xs font-bold uppercase tracking-[0.16em] text-cyan-400">Natychmiastowy audyt</p>
+                <h2 className="mt-2 text-2xl font-black tracking-tight sm:text-3xl">Wgraj umowę</h2>
+                <p className="mt-1 text-xs leading-5 text-slate-300">PDF, Word (DOCX), tekst lub zdjęcia stron z telefonu.</p>
+              </div>
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-cyan-950 text-cyan-300 border border-cyan-800/40">
+                <ScanText className="h-5 w-5" aria-hidden="true" />
+              </div>
+            </div>
+
+            {/* Wybór strony umowy ("Która strona to my") */}
+            <div className="mt-5 rounded-2xl border border-white/10 bg-[#091a31] p-3.5">
+              <label className="block text-xs font-bold uppercase tracking-wider text-cyan-200">
+                W tej umowie reprezentujesz:
+              </label>
+              <div className="mt-2.5 grid grid-cols-1 gap-2 sm:grid-cols-2">
+                <button
+                  type="button"
+                  onClick={() => setSelectedRole("wykonawca")}
+                  className={`flex flex-col rounded-xl border p-2.5 text-left transition ${
+                    selectedRole === "wykonawca"
+                      ? "border-cyan-400 bg-cyan-950/70 text-white shadow-sm"
+                      : "border-white/10 bg-white/5 text-slate-300 hover:border-white/20"
                   }`}
                 >
-                  <input
-                    ref={fileInputRef}
-                    type="file"
-                    accept=".txt,text/plain"
-                    onChange={handleFileChange}
-                    className="hidden"
-                    id="contract-file-upload"
-                  />
+                  <span className="text-xs font-bold">Wykonawcę / Najemcę / Kupującego</span>
+                  <span className="text-[10px] text-slate-400 mt-0.5">Słabsza strona — szukamy pułapek i kar</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setSelectedRole("zamawiajacy")}
+                  className={`flex flex-col rounded-xl border p-2.5 text-left transition ${
+                    selectedRole === "zamawiajacy"
+                      ? "border-cyan-400 bg-cyan-950/70 text-white shadow-sm"
+                      : "border-white/10 bg-white/5 text-slate-300 hover:border-white/20"
+                  }`}
+                >
+                  <span className="text-xs font-bold">Zleceniodawcę / Wynajmującego</span>
+                  <span className="text-[10px] text-slate-400 mt-0.5">Zlecający — szukamy ryzyk formalnych i ZUS/PIP</span>
+                </button>
+              </div>
+            </div>
 
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-blue-50 text-blue-700 mb-4">
-                    <UploadCloud className="h-8 w-8" aria-hidden="true" />
+            {!isPasteActive ? (
+              <div className="mt-5">
+                {/* Ukryte inputy */}
+                <input
+                  ref={fileInputRef}
+                  type="file"
+                  accept=".pdf,.docx,.doc,.txt,text/plain,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,image/*"
+                  aria-label="Wybierz plik z umową"
+                  onChange={handleFileChange}
+                  className="sr-only"
+                  id="contract-file-upload"
+                />
+                <input
+                  ref={cameraInputRef}
+                  type="file"
+                  accept="image/*"
+                  capture="environment"
+                  multiple
+                  aria-label="Zrób zdjęcie stron umowy aparatem"
+                  onChange={handleFileChange}
+                  className="sr-only"
+                  id="contract-camera-upload"
+                />
+
+                {/* Strefa Drag & Drop */}
+                <div
+                  onDragOver={(e) => { e.preventDefault(); setDragOver(true); }}
+                  onDragLeave={() => setDragOver(false)}
+                  onDrop={handleDrop}
+                  className={`rounded-2xl border-2 border-dashed p-5 transition sm:p-6 ${
+                    dragOver ? "border-cyan-400 bg-cyan-400/10" : "border-white/20 bg-[#091a31] hover:border-cyan-400"
+                  }`}
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10 text-cyan-200 shadow-sm">
+                      <UploadCloud className="h-5 w-5" aria-hidden="true" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-bold text-white">Upuść plik umowy tutaj</p>
+                      <p className="mt-0.5 text-xs text-slate-400">PDF, Word (DOCX), TXT lub zdjęcia stron</p>
+                    </div>
                   </div>
 
-                  <p className="text-base font-semibold text-slate-900 sm:text-lg">
-                    Wklej treść umowy
-                  </p>
-                  <p className="mt-1 text-xs text-slate-500 max-w-md">
-                    Na razie czytamy tylko tekst: wklejony albo z pliku .txt. Zdjęcia, PDF i DOCX wkrótce.
-                  </p>
-
-                  <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+                  <div className="mt-5 grid grid-cols-1 gap-2.5 sm:grid-cols-2">
                     <button
                       type="button"
                       disabled={isLoading}
                       onClick={() => fileInputRef.current?.click()}
-                      className="inline-flex items-center gap-2 rounded-xl bg-blue-700 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-800 focus-visible:rounded-xl"
+                      className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-blue-600 px-4 py-3 text-xs font-bold text-white shadow-lg shadow-blue-600/25 transition hover:bg-blue-700 disabled:opacity-50"
                     >
-                      <UploadCloud className="h-4 w-4" />
-                      Wybierz plik .txt
+                      <FileCheck className="h-4 w-4" aria-hidden="true" />
+                      Wybierz plik z dysku
                     </button>
-                  </div>
 
-                  <button
-                    type="button"
-                    onClick={() => setIsPasteActive(true)}
-                    className="mt-4 text-xs font-medium text-slate-500 hover:text-blue-700 underline underline-offset-4"
-                  >
-                    albo wklej treść umowy jako tekst
-                  </button>
-                </div>
-              ) : (
-                /* Formularz wklejania tekstu */
-                <form
-                  onSubmit={handlePastedSubmit}
-                  className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm text-left"
-                >
-                  <div className="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
-                    <span className="text-sm font-bold text-slate-900 flex items-center gap-2">
-                      <FileText className="h-4 w-4 text-blue-700" />
-                      Wklej treść umowy
-                    </span>
                     <button
                       type="button"
-                      onClick={() => setIsPasteActive(false)}
-                      className="text-xs text-slate-500 hover:text-slate-800"
+                      disabled={isLoading}
+                      onClick={() => cameraInputRef.current?.click()}
+                      className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/10 px-4 py-3 text-xs font-bold text-white transition hover:bg-white/15 disabled:opacity-50"
                     >
-                      Wróć do wyboru pliku
+                      <Camera className="h-4 w-4 text-cyan-300" aria-hidden="true" />
+                      Zrób zdjęcie aparatem
                     </button>
                   </div>
-
-                  <label htmlFor="pasted-contract-textarea" className="sr-only">
-                    Treść umowy
-                  </label>
-                  <textarea
-                    id="pasted-contract-textarea"
-                    rows={8}
-                    required
-                    value={pastedText}
-                    onChange={(e) => setPastedText(e.target.value)}
-                    placeholder="Wklej tutaj tekst umowy (np. § 1. Przedmiot umowy...)"
-                    className="w-full rounded-lg border border-slate-200 p-3 text-sm font-mono text-slate-800 placeholder-slate-400 focus:border-blue-600 focus:outline-none"
-                  />
-
-                  <div className="mt-4 flex items-center justify-between">
-                    <span className="text-xs text-slate-400">
-                      Znaki: {pastedText.length}
-                    </span>
-                    <button
-                      type="submit"
-                      disabled={pastedText.trim().length < 30 || isLoading}
-                      className="inline-flex items-center gap-2 rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-800 disabled:opacity-50"
-                    >
-                      Sprawdź tę umowę
-                    </button>
-                  </div>
-                </form>
-              )}
-
-              {/* Trzy zdania zaufania — bezwzględny wymóg reguły 01 */}
-              <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3 text-left">
-                <div className="flex items-start gap-2.5 rounded-xl border border-slate-200/80 bg-white/70 p-3.5 shadow-2xs">
-                  <Lock className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" aria-hidden="true" />
-                  <div className="text-xs">
-                    <p className="font-semibold text-slate-900">Dane w UE</p>
-                    <p className="text-slate-500 mt-0.5">Przetwarzanie wyłącznie na serwerach w Unii Europejskiej.</p>
-                  </div>
                 </div>
 
-                <div className="flex items-start gap-2.5 rounded-xl border border-slate-200/80 bg-white/70 p-3.5 shadow-2xs">
-                  <Clock className="h-4 w-4 text-blue-600 shrink-0 mt-0.5" aria-hidden="true" />
-                  <div className="text-xs">
-                    <p className="font-semibold text-slate-900">Usuwane po 7 dniach</p>
-                    <p className="text-slate-500 mt-0.5">Twoje pliki są automatycznie i trwale kasowane.</p>
-                  </div>
-                </div>
+                {fileError && (
+                  <p role="alert" className="mt-3 rounded-xl border border-red-500/30 bg-red-950/40 px-3 py-2.5 text-xs font-semibold leading-5 text-red-300">
+                    {fileError}
+                  </p>
+                )}
 
-                <div className="flex items-start gap-2.5 rounded-xl border border-slate-200/80 bg-white/70 p-3.5 shadow-2xs">
-                  <ShieldCheck className="h-4 w-4 text-purple-600 shrink-0 mt-0.5" aria-hidden="true" />
-                  <div className="text-xs">
-                    <p className="font-semibold text-slate-900">Brak trenowania AI</p>
-                    <p className="text-slate-500 mt-0.5">Nie trenujemy modeli sztucznej inteligencji na Twoich umowach.</p>
-                  </div>
-                </div>
+                <button
+                  type="button"
+                  onClick={() => setIsPasteActive(true)}
+                  className="mt-3 inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-xs font-semibold text-white transition hover:border-cyan-300 hover:text-cyan-100"
+                >
+                  <FileText className="h-4 w-4" aria-hidden="true" /> Wklej treść umowy jako tekst
+                </button>
               </div>
-            </div>
+            ) : (
+              <form onSubmit={handlePastedSubmit} className="mt-5">
+                <label htmlFor="pasted-contract-textarea" className="mb-2 block text-xs font-bold uppercase tracking-wider text-cyan-200">
+                  Wklej treść umowy (np. z maila lub schowka)
+                </label>
+                <textarea
+                  id="pasted-contract-textarea"
+                  rows={8}
+                  required
+                  value={pastedText}
+                  onChange={(e) => {
+                    setPastedText(e.target.value);
+                    if (fileError) setFileError(null);
+                  }}
+                  placeholder="Np. § 1. Przedmiot umowy... Zleceniobiorca zobowiązuje się do..."
+                  className="w-full resize-y rounded-2xl border border-white/15 bg-[#091a31] p-4 text-xs leading-6 text-white outline-none transition placeholder:text-slate-500 focus:border-cyan-400 focus:ring-4 focus:ring-cyan-400/10"
+                />
+
+                {fileError && (
+                  <p role="alert" className="mt-2 rounded-xl border border-red-500/30 bg-red-950/40 px-3 py-2 text-xs font-semibold text-red-300">
+                    {fileError}
+                  </p>
+                )}
+
+                <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
+                  <span className="text-xs text-slate-400">{pastedText.length} znaków</span>
+                  <button
+                    type="submit"
+                    disabled={pastedText.trim().length < 50 || isLoading}
+                    className="inline-flex min-h-11 items-center gap-2 rounded-xl bg-blue-600 px-5 py-3 text-xs font-bold text-white shadow-lg shadow-blue-600/25 transition hover:bg-blue-700 disabled:opacity-50"
+                  >
+                    Sprawdź tę umowę <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </button>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setIsPasteActive(false)}
+                  className="mt-3 min-h-11 text-xs font-semibold text-slate-300 underline decoration-slate-500 underline-offset-4 hover:text-white"
+                >
+                  Wróć do wyboru pliku
+                </button>
+              </form>
+            )}
+
+            <p className="mt-4 text-center text-[11px] leading-5 text-slate-400">
+              Analiza ma charakter informacyjny i edukacyjny. Nie stanowi porady radcy prawnego ani adwokata.
+            </p>
           </div>
-        )}
+        </div>
+
+        {/* Prawdziwe gwarancje prywatności */}
+        <div id="jak-dziala" className="mt-14 grid gap-3 border-t border-white/10 pt-6 sm:grid-cols-3 sm:gap-4 text-left">
+          <TrustItem
+            icon={<ShieldCheck className="h-5 w-5" />}
+            title="Przetwarzanie w UE"
+            text="Serwery i algorytmy działają wyłącznie w europejskiej strefie prawnej RODO."
+          />
+          <TrustItem
+            icon={<FileCheck className="h-5 w-5" />}
+            title="Zero zapisu w bazie danych"
+            text="Analiza odbywa się w ulotnej pamięci RAM. Dokument znika natychmiast po audycie."
+          />
+          <TrustItem
+            icon={<Sparkles className="h-5 w-5" />}
+            title="Brak trenowania AI"
+            text="Twoje prywatne umowy i dane nigdy nie posłużą do uczenia modeli."
+          />
+        </div>
       </div>
     </section>
+  );
+}
+
+function TrustItem({ icon, title, text }: { icon: React.ReactNode; title: string; text: string }) {
+  return (
+    <div className="trust-item flex items-start gap-3 rounded-2xl p-4 bg-[#091a31]/60 border border-white/10">
+      <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-cyan-950 border border-cyan-800/40 text-cyan-300">
+        {icon}
+      </div>
+      <div>
+        <p className="text-sm font-bold text-white">{title}</p>
+        <p className="mt-1 text-xs leading-5 text-slate-300">{text}</p>
+      </div>
+    </div>
   );
 }

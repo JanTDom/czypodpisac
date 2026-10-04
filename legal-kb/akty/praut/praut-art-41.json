@@ -1,0 +1,29 @@
+{
+  "id": "praut-art-41",
+  "unitType": "statute",
+  "actTitle": "Ustawa z dnia 4 lutego 1994 r. o prawie autorskim i prawach pokrewnych",
+  "publicationAddress": "Dz.U. 2025 poz. 24",
+  "editorialUnit": "art. 41",
+  "content": "Art. 41. 1. Jeżeli ustawa nie stanowi inaczej:\n1) autorskie prawa majątkowe mogą przejść na inne osoby w drodze dziedziczenia lub na podstawie umowy;\n2) nabywca autorskich praw majątkowych może przenieść je na inne osoby, chyba że umowa stanowi inaczej.\n2. Umowa o przeniesienie autorskich praw majątkowych lub licencja obejmują pola eksploatacji wyraźnie w nich wymienione.\n3. Nieważna jest umowa w części dotyczącej wszystkich utworów lub wszystkich utworów określonego rodzaju tego samego twórcy mających powstać w przyszłości.\n4. Umowa może dotyczyć tylko pól eksploatacji, które są znane w chwili jej zawarcia.",
+  "sourceUrl": "https://api.sejm.gov.pl/eli/acts/DU/2025/24/text.pdf",
+  "fetchDate": "2026-10-04",
+  "legalStateDate": "2024-12-06",
+  "contentHashSha256": "b0478a1cfcc059702a78b4999546502903fd3770a212361108893f4b283d7519",
+  "status": "active",
+  "contractTypeTags": [
+    "zlecenie",
+    "dzielo",
+    "b2b",
+    "prawa_autorskie"
+  ],
+  "keywords": [
+    "prawa autorskie",
+    "pola eksploatacji",
+    "utwory mające powstać w przyszłości",
+    "nieważność umowy"
+  ],
+  "officialCitation": "Dz.U. 2025 poz. 24, art. 41",
+  "eliAddress": "DU/1994/83",
+  "unifiedActEli": "DU/2025/24",
+  "lastVerifiedAt": "2026-10-04T07:05:00.000Z"
+}

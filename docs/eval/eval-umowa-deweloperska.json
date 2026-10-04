@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-10-03T17:12:13.524Z",
+  "generatedAt": "2026-10-04T07:58:41.434Z",
   "versions": {
-    "gitCommit": "216ea0a",
+    "gitCommit": "db4094f",
     "evalSet": "2026.10.03-1",
-    "groundingAuditAt": "2026-10-03T17:12:11.997Z",
+    "groundingAuditAt": "2026-10-04T07:06:13.663Z",
     "models": {
-      "fast": "gemini-2.0-flash",
-      "flagship": "gemini-1.5-pro-002",
-      "verifier": "gemini-1.5-pro-002"
+      "fast": "gemini-3.6-flash",
+      "flagship": "gemini-2.5-pro",
+      "verifier": "gemini-2.5-pro"
     },
     "engineNote": "Silnik w tej wersji nie wywołuje Gemini; ocena i weryfikator są regułowe (DeterministicGeminiVerifier). Checklista umowy deweloperskiej ma status draft i nie jest aktywna w domyślnym rejestrze."
   },
@@ -24,7 +24,7 @@
   "gates": {
     "groundingAuditPresent": true,
     "zeroUnconfirmedSources": true,
-    "noRedRecallDrop": null,
+    "noRedRecallDrop": true,
     "correctVerdictOnCorrectContracts": true,
     "expectationsApprovedByLawyer": false
   },

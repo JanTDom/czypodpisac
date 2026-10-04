@@ -3,6 +3,7 @@ import { PipelineOrchestrator } from "../../../pipeline/orchestrator";
 import { LegalKnowledgeBase } from "../../../kb";
 import { ChecklistRegistry } from "../../../checklists/registry";
 import { MAX_CONTRACT_CHARS, looksLikePlaceholder, rateLimit } from "../../../lib/request-guards";
+import { getP24Config, computeSha256, verifyPaymentToken } from "../../../payments/p24";
 
 const kb = LegalKnowledgeBase.getInstance();
 const registry = ChecklistRegistry.getInstance();
@@ -37,11 +38,19 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // B7: płatny raport tylko po potwierdzonej płatności. Bramka płatności nie jest
-    // jeszcze podłączona, więc serwer nie wydaje płatnej części nikomu.
-    if (isPaid) {
+    // Weryfikacja tokenu płatności (odblokowanie pełnego raportu)
+    let isFullyUnlocked = false;
+    if (body.paymentToken && typeof body.paymentToken === "string") {
+      const p24Config = getP24Config();
+      if (p24Config) {
+        const docHash = computeSha256(contractText);
+        isFullyUnlocked = verifyPaymentToken(body.paymentToken, docHash, p24Config.paymentSecret);
+      }
+    }
+
+    if (isPaid && !isFullyUnlocked) {
       return NextResponse.json(
-        { error: "Płatny raport nie jest jeszcze dostępny." },
+        { error: "Brak ważnego potwierdzenia płatności za pełny raport." },
         { status: 402 }
       );
     }
