@@ -47,9 +47,9 @@ export default function KontaktPage() {
                 </div>
                 <dl className="text-xs space-y-1.5 text-slate-700">
                   <div><strong className="text-slate-900">Firma:</strong> Multinewsroom Jan Domaniewski</div>
-                  <div><strong className="text-slate-900">Siedziba:</strong> ul. Barcicka 44, 01-839 Warszawa</div>
                   <div><strong className="text-slate-900">NIP:</strong> 525-218-92-41</div>
                   <div><strong className="text-slate-900">REGON:</strong> 147154574</div>
+                  <div><strong className="text-slate-900">E-mail:</strong> <a href="mailto:kontakt@czypodpisac.pl" className="text-blue-700 hover:underline">kontakt@czypodpisac.pl</a></div>
                 </dl>
               </div>
 

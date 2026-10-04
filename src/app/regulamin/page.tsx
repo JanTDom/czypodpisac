@@ -55,7 +55,6 @@ export default function RegulaminPage() {
             </p>
             <div className="rounded-xl border border-slate-200 bg-slate-50/70 p-4 text-xs font-mono text-slate-800 space-y-1">
               <p><strong>Firma:</strong> Multinewsroom Jan Domaniewski</p>
-              <p><strong>Adres:</strong> ul. Barcicka 44, 01-839 Warszawa</p>
               <p><strong>NIP:</strong> 525-218-92-41</p>
               <p><strong>REGON:</strong> 147154574</p>
               <p><strong>E-mail:</strong> <a href="mailto:kontakt@czypodpisac.pl" className="text-blue-700 hover:underline">kontakt@czypodpisac.pl</a></p>

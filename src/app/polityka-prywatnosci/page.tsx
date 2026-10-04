@@ -62,7 +62,6 @@ export default function PolitykaPrywatnosciPage() {
             </p>
             <div className="rounded-xl border border-slate-200 bg-slate-50/70 p-4 text-xs font-mono text-slate-800 space-y-1">
               <p><strong>Multinewsroom Jan Domaniewski</strong></p>
-              <p>ul. Barcicka 44, 01-839 Warszawa</p>
               <p>NIP: 525-218-92-41 • REGON: 147154574</p>
               <p>E-mail: <a href="mailto:kontakt@czypodpisac.pl" className="text-blue-700 hover:underline">kontakt@czypodpisac.pl</a></p>
             </div>
